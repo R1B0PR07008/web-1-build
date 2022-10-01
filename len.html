@@ -27,8 +27,7 @@
       </div>
     </div>
     <a href="/Membership.html" class="navbar-brand">Membership</a>
-  </div>
-  <h1>Length Program
+  </div><h1>Length Program
 </h1>
  <form action="" method="post">
   <input
@@ -37,12 +36,15 @@
     name="len"
     id="NUM-LEN"
   />
-  <input
-    type="text"
-    placeholder="Unit"
-    name="unit"
-    id="UNIT-LEN"
-  />
+  <select name="UNIT-len" id="UNIT-LEN">
+    <option value="M">Meters</option>
+    <option value="KM">Kilometers</option>
+    <option value="CM">Centimeters</option>
+    <option value="FT">Feet</option>
+    <option value="YD">Yards</option>
+    <option value="MI">Miles</option>
+    <option value="IN">Inches</option>
+    </select>
   <br />
   <button onclick="Len()" class="btn-default" type="button" id="BTN-1-LEN">Enter</button>
 </form>
@@ -51,15 +53,9 @@
   <h2 class="ans-text">
     The answer: 
   </h2>
-<div id="BTN-1-LEN-IF">
-    <p class="ans-footer">
-  To get your answer enter a number in the left slot and the value.
-  </p>
-</div>
 
-<div id="main-text-len">
+    
 
-</div>
   <div id="ans">
   <p class="ans-text" > <span id="len-1-text"></span> <span id="01-len"></span></p>
   <p class="ans-text" > <span id="len-2-text"></span> <span id="02-len"></span></p>
@@ -67,6 +63,9 @@
   <p class="ans-text" > <span id="len-4-text"></span> <span id="04-len"></span></p>
   <p class="ans-text" > <span id="len-5-text"></span> <span id="05-len"></span></p>
   <p class="ans-text" > <span id="len-6-text"></span> <span id="06-len"></span></p>
+  <p id="1-LEN-IF">
+  To get your answer enter a number in the left slot and the value.
+  </p>
   <h2 id="ans-text">Formulas</h2>
   <p class="ans-text"> <span id="len-7-text"></span> <span class="ans-text-NUM"></span> <span id="len-1-formula"></span></p>
   <p class="ans-text"> <span id="len-8-text"></span> <span class="ans-text-NUM"></span> <span id="len-2-formula"></span></p>
@@ -74,6 +73,7 @@
   <p class="ans-text"> <span id="len-10-text"></span> <span class="ans-text-NUM"></span> <span id="len-4-formula"></span></p>
   <p class="ans-text"> <span id="len-11-text"></span> <span class="ans-text-NUM"></span> <span id="len-5-formula"></span></p>
   <p class="ans-text"> <span id="len-12-text"></span> <span class="ans-text-NUM"></span> <span id="len-6-formula"></span></p>
+  <p id="2-LEN-IF">Tp get the formulas please enter a number and select a unit. </p>
   </div>
 </div>
 
