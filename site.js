@@ -1,12 +1,5 @@
 // *setting up database for username,psw,profile img, ect... AND setting up login/register functions
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
-function getIdP(id, ih) {
-    document.getElementById(id).innerHTML=ih
-}
-function getClassP(id,ih) {
-    document.getElementsByClassName(id).innerHTML= ih
-}
-
 // const sqlite3 = require('sqlite3')
 // let sql = 'INSERT INTO userData(Username, Password) VALUES(?,?,?,?,?)';
 // let row3 = 'SELECT User-ID FROM userDATA'
@@ -336,6 +329,4 @@ if (document.URL.includes("len.html")) {
         };
     };
 };
-
-
 
