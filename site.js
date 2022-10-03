@@ -87,7 +87,20 @@ console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't 
              UNIT === 'MI' ||
              UNIT === 'IN' ||
 
-            UNIT === 'G'
+            UNIT === 'G' ||
+            UNIT === 'KG' ||
+            UNIT === 'TON' ||
+            UNIT === 'LBS' ||
+            UNIT === 'MG' ||
+
+            UNIT === 'S' ||
+            UNIT === 'M' ||
+            UNIT === 'H' ||
+
+            UNIT === 'K' ||
+            UNIT === 'C' ||
+            UNIT === 'F'
+
         ) {
             document.getElementById('1-LEN-IF').style.visibility = "hidden";
             document.getElementById('2-LEN-IF').style.visibility = "hidden";
@@ -343,7 +356,7 @@ if (document.URL.includes("mass.html")) {
     function Mass() {
         let NUM = document.getElementById('NUM-MASS').value || 1;
         let UNIT = document.getElementById('UNIT-MASS').value || 'undefined';
-        console.log("btn 'BTN-1-' pressed.");
+        console.log("btn 'BTN-1-MASS' pressed.");
         console.log(NUM);
         console.log(UNIT);
 
@@ -465,3 +478,109 @@ if (document.URL.includes("mass.html")) {
         };
     };
 };
+
+if (document.URL.includes("time.html")) {
+    console.log("you are in the time page");
+
+    function Time() {
+        let NUM = document.getElementById('NUM-TIME').value || 1;
+        let UNIT = document.getElementById('UNIT-TIME').value || 'undefined';
+        console.log("btn 'BTN-1-TIME' pressed.");
+        console.log(NUM);
+        console.log(UNIT);
+
+        if (UNIT === 'S') {
+            document.getElementById("time-1-text").innerHTML = "S to M:";
+            document.getElementById("time-2-text").innerHTML = "S to H:";
+            document.getElementById("time-3-text").innerHTML = "S to M:";
+            document.getElementById("time-4-text").innerHTML = "S to H:";
+
+            document.getElementById("01-time").innerHTML = (NUM / 60   );
+            document.getElementById("02-time").innerHTML = (NUM / 3600 );
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("time-1-formula").innerHTML = "/ 60   ";
+            document.getElementById("time-2-formula").innerHTML = "/ 3600 ";
+            Hide(UNIT)
+        } if (UNIT === 'M') {
+            document.getElementById("time-1-text").innerHTML = "S to S:";
+            document.getElementById("time-2-text").innerHTML = "S to H:";
+            document.getElementById("time-3-text").innerHTML = "S to S:";
+            document.getElementById("time-4-text").innerHTML = "S to H:";
+
+            document.getElementById("01-time").innerHTML = (NUM * 60   );
+            document.getElementById("02-time").innerHTML = (NUM / 60 );
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("time-1-formula").innerHTML = "* 60   ";
+            document.getElementById("time-2-formula").innerHTML = "/ 60 ";
+            Hide(UNIT)
+        } if (UNIT === 'H') {
+            document.getElementById("time-1-text").innerHTML = "S to S:";
+            document.getElementById("time-2-text").innerHTML = "S to M:";
+            document.getElementById("time-3-text").innerHTML = "S to S:";
+            document.getElementById("time-4-text").innerHTML = "S to M:";
+
+            document.getElementById("01-time").innerHTML = (NUM * 60   );
+            document.getElementById("02-time").innerHTML = (NUM * 3600 );
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("time-1-formula").innerHTML = "* 60   ";
+            document.getElementById("time-2-formula").innerHTML = "* 3600 ";
+            Hide(UNIT)
+        };
+    }; 
+};
+
+if (document.URL.includes("temp.html")) {
+    console.log("you are in the temp page");
+
+    function Temp() {
+        let NUM = document.getElementById('NUM-TEMP').value || 1;
+        let UNIT = document.getElementById('UNIT-TEMP').value || 'undefined';
+        console.log("btn 'BTN-1-TEMP' pressed.");
+        console.log(NUM);
+        console.log(UNIT);
+
+        if (UNIT === 'K') {
+            document.getElementById("temp-1-text").innerHTML = "K to C:";
+            document.getElementById("temp-2-text").innerHTML = "K to F:";
+            document.getElementById("temp-3-text").innerHTML = "K to C:";
+            document.getElementById("temp-4-text").innerHTML = "K to F(Formula):";
+
+            document.getElementById("01-temp").innerHTML = (NUM - 273.15);
+            document.getElementById("02-temp").innerHTML = ((NUM - 273.15) * 9/5 + 32);
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("temp-1-formula").innerHTML = "- 273.15";
+            document.getElementById("temp-2-formula").innerHTML = "(NUMBER - 273.15) * 9/5 + 32)";
+            Hide(UNIT)
+        } if (UNIT === 'C') {
+            document.getElementById("temp-1-text").innerHTML = "C to K:";
+            document.getElementById("temp-2-text").innerHTML = "C to F:";
+            document.getElementById("temp-3-text").innerHTML = "C to K:";
+            document.getElementById("temp-4-text").innerHTML = "C to F(Formula):";
+
+            document.getElementById("01-temp").innerHTML = (NUM + 273.15);
+            document.getElementById("02-temp").innerHTML = ((NUM * 9/5) + 32);
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("temp-1-formula").innerHTML = "+ 273.15";
+            document.getElementById("temp-2-formula").innerHTML = "(NUMBER * 9/5) + 32)";
+            Hide(UNIT)
+        } if (UNIT === 'F') {
+            document.getElementById("temp-1-text").innerHTML = "F to K:";
+            document.getElementById("temp-2-text").innerHTML = "F to C:";
+            document.getElementById("temp-3-text").innerHTML = "F to K(Formula):";
+            document.getElementById("temp-4-text").innerHTML = "F to C(Formula):";
+
+            document.getElementById("01-temp").innerHTML = ((NUM - 32) * 5/9 + 273.15);
+            document.getElementById("02-temp").innerHTML = ((NUM - 32) * 5/9);
+            document.getElementsByClassName('ans-text-NUM').innerHTML = "";
+
+            document.getElementById("temp-1-formula").innerHTML = "(NUMBER - 32) * 5/9 + 273.15)";
+            document.getElementById("temp-2-formula").innerHTML = "(NUMBER - 32) * 5/9";
+            Hide(UNIT)
+        }
+    }
+}
