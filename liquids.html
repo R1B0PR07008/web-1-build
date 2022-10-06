@@ -27,24 +27,23 @@
     <a href="/Membership.html" class="navbar-brand">Membership</a>
   </div>
 <h1>
-  Mass Program
+  Liquids Program
 </h1>
 <form action="" method="post">
   <input
     type="float"
     placeholder="Number"
-    name="mass"
-    id="NUM-MASS"
+    name="lq"
+    id="NUM-LQ"
   />
-  <select name="UNIT-MASS" id="UNIT-MASS">
-    <option value="KG">Kilograms</option>
-    <option value="G">grams</option>
-    <option value="TON">Tons</option>
-    <option value="LBS">Pounds</option>
-    <option value="MG">Milligrams</option>
+  <select name="UNIT-LQ" id="UNIT-LQ">
+    <option value="L">Liters</option>
+    <option value="CL">Centiliters</option>
+    <option value="ML">Milliliters</option>
+    <option value="OZ">Ounce</option>
   </select>
   <br>
-  <button onclick="Mass()" class="btn-default" type="button" id="BTN-1-MASS">Enter</button>
+  <button onclick="Liquids()" class="btn-default" type="button" id="BTN-1-LQ">Enter</button>
 </form>
 
 <div class="Ans-block">
@@ -52,25 +51,20 @@
     The answer: 
   </h2>
 
-    
-
   <div id="ans">
-    <p class="ans-text" > <span id="mass-1-text"></span> <span id="01-mass"></span></p>
-    <p class="ans-text" > <span id="mass-2-text"></span> <span id="02-mass"></span></p>
-    <p class="ans-text" > <span id="mass-3-text"></span> <span id="03-mass"></span></p>
-    <p class="ans-text" > <span id="mass-4-text"></span> <span id="04-mass"></span></p>
+    <p class="ans-text" > <span id="lq-1-text"></span> <span id="01-lq"></span></p>
+    <p class="ans-text" > <span id="lq-2-text"></span> <span id="02-lq"></span></p>
+    <p class="ans-text" > <span id="lq-3-text"></span> <span id="03-lq"></span></p>
     <p id="1-LEN-IF">
   To get your answer enter a number in the left slot and the value.
   </p>
     <h2 id="ans-text">Formulas</h2>
-    <p class="ans-text"> <span id="mass-5-text"></span> <span class="ans-text-NUM"></span> <span id="mass-1-formula"></span></p>
-    <p class="ans-text"> <span id="mass-6-text"></span> <span class="ans-text-NUM"></span> <span id="mass-2-formula"></span></p>
-    <p class="ans-text"> <span id="mass-7-text"></span> <span class="ans-text-NUM"></span> <span id="mass-3-formula"></span></p>
-    <p class="ans-text"> <span id="mass-8-text"></span> <span class="ans-text-NUM"></span> <span id="mass-4-formula"></span></p>
-    <p id="2-LEN-IF">Tp get the formulas please enter a number and select a unit. </p>
+    <p class="ans-text"> <span id="lq-4-text"></span> <span class="ans-text-NUM"></span> <span id="lq-1-formula"></span></p>
+    <p class="ans-text"> <span id="lq-5-text"></span> <span class="ans-text-NUM"></span> <span id="lq-2-formula"></span></p>
+    <p class="ans-text"> <span id="lq-6-text"></span> <span class="ans-text-NUM"></span> <span id="lq-3-formula"></span></p>
+    <p id="2-LEN-IF">To get the formulas please enter a number and select a unit. </p>
     </div>
 </div>
-
 <div class="Legend-block">
   <h2 class="Legend-text"> The Legend: </h2>
   <p class="Legend-text"> L = Liter/litro </p>
@@ -79,5 +73,4 @@
   <p class="Legend-text"> OZ = Ounce/Onza </p>
 </div>
 </body>
-
 </html>

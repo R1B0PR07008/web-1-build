@@ -99,8 +99,12 @@ console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't 
 
             UNIT === 'K' ||
             UNIT === 'C' ||
-            UNIT === 'F'
+            UNIT === 'F' ||
 
+            UNIT === "L" ||
+            UNIT === "CL" ||
+            UNIT === "ML" ||
+            UNIT === "OZ" 
         ) {
             document.getElementById('1-LEN-IF').style.visibility = "hidden";
             document.getElementById('2-LEN-IF').style.visibility = "hidden";
@@ -144,7 +148,7 @@ if (document.URL.includes("len.html")) {
             document.getElementById("04-len").innerHTML = (NUM * 1.094);
             document.getElementById("05-len").innerHTML = (NUM / 1809);
             document.getElementById("06-len").innerHTML = (NUM * 39.37);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+            document.getElementsByClassName("ans-NUM").innerHTML = NUM;
 
             document.getElementById("len-1-formula").innerHTML = "/ 1000";
             document.getElementById("len-2-formula").innerHTML = "* 100";
@@ -580,6 +584,92 @@ if (document.URL.includes("temp.html")) {
 
             document.getElementById("temp-1-formula").innerHTML = "(NUMBER - 32) * 5/9 + 273.15)";
             document.getElementById("temp-2-formula").innerHTML = "(NUMBER - 32) * 5/9";
+            Hide(UNIT)
+        }
+    }
+}
+
+if (document.URL.includes("liquids.html")) {
+    console.log("you are in the liquids page.")
+
+    function Liquids() {
+        let NUM = document.getElementById('NUM-LQ').value || 1;
+        let UNIT = document.getElementById('UNIT-LQ').value || 'undefined';
+        console.log("btn 'BTN-1-LQ' pressed.");
+        console.log(NUM);
+        console.log(UNIT);
+
+        if (UNIT === "L") {
+            document.getElementById("lq-1-text").innerHTML = "L to CL:";
+            document.getElementById("lq-2-text").innerHTML = "L to ML:";
+            document.getElementById("lq-3-text").innerHTML = "L to OZ:";
+
+            document.getElementById("lq-4-text").innerHTML = "L to CL:";
+            document.getElementById("lq-5-text").innerHTML = "L to ML:";
+            document.getElementById("lq-6-text").innerHTML = "L to OZ:";
+
+            document.getElementById("01-lq").innerHTML = (NUM * 100    );
+            document.getElementById("02-lq").innerHTML = (NUM * 1000   );
+            document.getElementById("03-lq").innerHTML = (NUM * 32.1951);
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("lq-1-formula").innerHTML = "* 100    ";
+            document.getElementById("lq-2-formula").innerHTML = "* 1000   ";
+            document.getElementById("lq-3-formula").innerHTML = "* 32.1951";
+            Hide(UNIT)
+        } if (UNIT === "CL") {
+            document.getElementById("lq-1-text").innerHTML = "CL to L:";
+            document.getElementById("lq-2-text").innerHTML = "CL to ML:";
+            document.getElementById("lq-3-text").innerHTML = "CL to OZ:";
+
+            document.getElementById("lq-4-text").innerHTML = "CL to L:";
+            document.getElementById("lq-5-text").innerHTML = "CL to ML:";
+            document.getElementById("lq-6-text").innerHTML = "CL to OZ:";
+
+            document.getElementById("01-lq").innerHTML = (NUM / 100  );
+            document.getElementById("02-lq").innerHTML = (NUM * 10   );
+            document.getElementById("03-lq").innerHTML = (NUM / 2.841);
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("lq-1-formula").innerHTML = "/ 100  ";
+            document.getElementById("lq-2-formula").innerHTML = "* 10   ";
+            document.getElementById("lq-3-formula").innerHTML = "/ 2.841";
+            Hide(UNIT)
+        } if (UNIT === "ML") {
+            document.getElementById("lq-1-text").innerHTML = "ML to L:";
+            document.getElementById("lq-2-text").innerHTML = "ML to CL:";
+            document.getElementById("lq-3-text").innerHTML = "ML to OZ:";
+
+            document.getElementById("lq-4-text").innerHTML = "ML to L:";
+            document.getElementById("lq-5-text").innerHTML = "ML to CL:";
+            document.getElementById("lq-6-text").innerHTML = "ML to OZ:";
+
+            document.getElementById("01-lq").innerHTML = (NUM / 1000  );
+            document.getElementById("02-lq").innerHTML = (NUM / 10    );
+            document.getElementById("03-lq").innerHTML = (NUM / 28.413);
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("lq-1-formula").innerHTML = "/ 1000  ";
+            document.getElementById("lq-2-formula").innerHTML = "/ 10    ";
+            document.getElementById("lq-3-formula").innerHTML = "/ 28.413";
+            Hide(UNIT)
+        } if (UNIT === "OZ") {
+            document.getElementById("lq-1-text").innerHTML = "OZ to L:";
+            document.getElementById("lq-2-text").innerHTML = "OZ to CL:";
+            document.getElementById("lq-3-text").innerHTML = "OZ to ML:";
+
+            document.getElementById("lq-4-text").innerHTML = "OZ to L:";
+            document.getElementById("lq-5-text").innerHTML = "OZ to CL:";
+            document.getElementById("lq-6-text").innerHTML = "OZ to ML:";
+
+            document.getElementById("01-lq").innerHTML = (NUM / 35.195);
+            document.getElementById("02-lq").innerHTML = (NUM * 2.841 );
+            document.getElementById("03-lq").innerHTML = (NUM * 28.413);
+            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+            document.getElementById("lq-1-formula").innerHTML = "/ 35.195";
+            document.getElementById("lq-2-formula").innerHTML = "* 2.841 ";
+            document.getElementById("lq-3-formula").innerHTML = "* 28.413";
             Hide(UNIT)
         }
     }
