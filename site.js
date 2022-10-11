@@ -587,7 +587,7 @@ if (document.URL.includes("temp.html")) {
             Hide(UNIT)
         }
     }
-}
+};
 
 if (document.URL.includes("liquids.html")) {
     console.log("you are in the liquids page.")
@@ -671,6 +671,109 @@ if (document.URL.includes("liquids.html")) {
             document.getElementById("lq-2-formula").innerHTML = "* 2.841 ";
             document.getElementById("lq-3-formula").innerHTML = "* 28.413";
             Hide(UNIT)
-        }
-    }
-}
+        };
+    };
+};
+
+if (document.URL.includes("pa.html")) {
+    console.log("you are in the PA page.");
+    let f1 = document.getElementById("PA-F1").value || 0;
+    let f2 = document.getElementById("PA-F2").value || 0;
+    let a1 = document.getElementById("PA-A1").value || 0;
+    let a2 = document.getElementById("PA-A2").value || 0;
+
+    function Hide_pa(f1, f2, a1, a2) {
+        if (f1 === 0 && f2 === 0 && a1 === 0 && a2 === 0) {
+            document.getElementById("ans-footer").style.visibility = "visible";
+            document.getElementById("ans").style.visibility = "hidden";
+        } else {
+            document.getElementById("ans-footer").style.visibility = "hidden";
+            document.getElementById("ans").style.visibility = "visible";
+        };
+    };
+
+    Hide_pa(f1, f2, a1, a2);
+
+    function PA() {
+        console.log("btn 'BTN-1-PA' pressed.");
+
+        document.getElementById("pa-f1").innerHTML = "";
+        document.getElementById("pa-f2").innerHTML = "";
+        document.getElementById("pa-a1").innerHTML = "";
+        document.getElementById("pa-a2").innerHTML = "";
+
+        let f1 = document.getElementById("PA-F1").value || 0;
+        let f2 = document.getElementById("PA-F2").value || 0;
+        let a1 = document.getElementById("PA-A1").value || 0;
+        let a2 = document.getElementById("PA-A2").value || 0;
+
+        console.log("f1 "+ f1);
+        console.log("f2 "+ f2);
+        console.log("a1 "+ a1);
+        console.log("a2 "+ a2);
+
+        Hide_pa(f1, f2, a1, a2);
+
+        if (f1 === 0) {
+            let st1 = a1 * f2;
+            document.getElementById("pa-f1").innerHTML = (st1 / a2);
+            // st1 == step 1
+        } if (f2 === 0) {
+            let st1 = f1 * a2;
+            document.getElementById("pa-f2").innerHTML = (st1 / a1);
+            // st1 == step 1
+        } if (a1 === 0) {
+            let st1 = f1 * a2;
+            document.getElementById("pa-a1").innerHTML = (st1 / f2);
+            // st1 == step 1
+        } if (a2 === 0) {
+            let st1 = f2 * a1;
+            document.getElementById("pa-a2").innerHTML = (st1 / f1);
+            // st1 == step 1
+        };
+    };
+};
+
+if (document.URL.includes("qf.html")) {
+    console.log("you are in the quadratic functions page. ");
+
+    function Hide_qf(a,b,c) {
+        if (a === 0 && b === 0 && c === 0) {
+            document.getElementById("ans-footer").style.visibility = "visible";
+            document.getElementById("ans").style.visibility = "hidden";
+        } else {
+            document.getElementById("ans-footer").style.visibility = "hidden";
+            document.getElementById("ans").style.visibility = "visible";
+        }; 
+    };
+
+    let a = document.getElementById("QF-A").value || 0;
+    let b = document.getElementById("QF-B").value || 0;
+    let c = document.getElementById("QF-C").value || 0;
+    Hide_qf(a,b,c);
+
+    function Qf() {
+        let a = document.getElementById("QF-A").value || 0;
+        let b = document.getElementById("QF-B").value || 0;
+        let c = document.getElementById("QF-C").value || 0;
+
+        Hide_qf(a,b,c);
+
+        console.log("A " + a)
+        console.log("B " + b)
+        console.log("C " + c)
+
+        let x = (-1* b)/(2*a)
+        document.getElementById("qf-1").innerHTML = x
+        let x2 = x**2
+        console.log("x2 "+ x2)
+        let C = (c * -1) * -1
+        console.log("c "+C)
+        let A = a * x2;
+        console.log("a "+A)
+        let B = b * x
+        console.log("b "+B)
+        document.getElementById("qf-2").innerHTML = (A+B+C)
+
+    };
+};

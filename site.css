@@ -53,8 +53,17 @@
 
 /* *customizing  */
 
+/* * PA Page */
+.pa-f1-a1-MARGIN {
+    margin-left: 1%;
+}
 
 /* ! Tittle */
+
+/* *QF Page */
+.QF-MARGIN {
+    margin-left: 1%;
+}
 
 .Tittle {
     font-family: 'Patrick Hand';
