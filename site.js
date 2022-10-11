@@ -759,21 +759,120 @@ if (document.URL.includes("qf.html")) {
 
         Hide_qf(a,b,c);
 
-        console.log("A " + a)
-        console.log("B " + b)
-        console.log("C " + c)
+        console.log("A " + a);
+        console.log("B " + b);
+        console.log("C " + c);
 
-        let x = (-1* b)/(2*a)
-        document.getElementById("qf-1").innerHTML = x
-        let x2 = x**2
-        console.log("x2 "+ x2)
-        let C = (c * -1) * -1
-        console.log("c "+C)
+        let x = (-1* b)/(2*a);
+        document.getElementById("qf-1").innerHTML = x;
+        let x2 = x**2;
+        console.log("x2 "+ x2);
+        let C = (c * -1) * -1;
+        console.log("c "+C);
         let A = a * x2;
-        console.log("a "+A)
-        let B = b * x
-        console.log("b "+B)
-        document.getElementById("qf-2").innerHTML = (A+B+C)
+        console.log("a "+A);
+        let B = b * x;
+        console.log("b "+B);
+        document.getElementById("qf-2").innerHTML = (A+B+C);
 
+    };
+};
+
+if (document.URL.includes("qf2.html")) {
+    console.log("You are in the qf2 page.")
+
+    function Hide_qf2(a,b,c,x1,x2,x3) {
+        if (a === null && b === null && c === null && x1 === null && x2 === null && x3 === null) {
+            document.getElementById("ans-footer").style.visibility = "visible";
+            document.getElementById("ans").style.visibility = "hidden";
+            document.getElementById("ans-2").style.visibility = "hidden";
+        } else if (x1 != null && x2 != null && x3 != null && a != null && b != null && c != null) {
+            document.getElementById("ans-footer").style.visibility = "hidden";
+            document.getElementById("ans").style.visibility = "visible";
+            document.getElementById("ans-2").style.visibility = "visible";
+        } else if (a != null && b != null && c != null && x1 === null && x2 === null && x3 === null) {
+            document.getElementById("ans-footer").style.visibility = "hidden";
+            document.getElementById("ans").style.visibility = "visible";
+            document.getElementById("ans-2").style.visibility = "hidden";
+        };
+    };
+
+    let a = document.getElementById("QF-A").value || null;
+    let b = document.getElementById("QF-B").value || null;
+    let c = document.getElementById("QF-C").value || null;
+    let x1 = document.getElementById("QF2-x1").value || null;
+    let x2 = document.getElementById("QF2-x2").value || null;
+    let x3 = document.getElementById("QF2-x3").value || null; 
+
+    Hide_qf2(a,b,c,x1,x2,x3)
+
+    function Qf() {
+        let a = document.getElementById("QF-A").value || null;
+        let b = document.getElementById("QF-B").value || null;
+        let c = document.getElementById("QF-C").value || null;
+        let x1 = document.getElementById("QF2-x1").value || null;
+        let x2 = document.getElementById("QF2-x2").value || null;
+        let x3 = document.getElementById("QF2-x3").value || null; 
+
+        Hide_qf2(a,b,c,x1,x2,x3);
+
+        console.log("A " + a);        
+        let x = (-1* b)/(2*a);
+        document.getElementById("qf-1").innerHTML = x;
+        let x2_ = x**2;
+        console.log("x2 "+ x2_);
+        let C = (c * -1) * -1;
+        console.log("c "+C);
+        let A = a * x2;;
+        console.log("a "+A);
+        let B = b * x;
+        console.log("b "+B);
+        document.getElementById("qf-2").innerHTML = (A+B+C);
+    };
+
+    function solve_y(a,b,c,x) {
+        let x2_ = x**2;
+        let C = (c * -1) * -1;
+        let A = a * x2_;
+        let B = b * x;
+        let ans = (A+B+C)
+        return ans
+    };
+
+    function Qfx() {
+        let a = document.getElementById("QF-A").value || null;
+        let b = document.getElementById("QF-B").value || null;
+        let c = document.getElementById("QF-C").value || null;
+        let x1 = document.getElementById("QF2-x1").value || null;
+        let x2 = document.getElementById("QF2-x2").value || null;
+        let x3 = document.getElementById("QF2-x3").value || null;     
+
+        Hide_qf2(a,b,c,x1,x2,x3)
+
+        console.log("Qfx function")
+        console.log("a ",a)
+        console.log("b ",b)
+        console.log("c ",c)
+        console.log("x1 ",x1)
+        console.log("x2 ",x2)
+        console.log("x3 ",x3)
+
+        document.getElementById("qf2-1").innerHTML = x1;
+        document.getElementById("qf2-1-2").innerHTML = solve_y(a,b,c,x1);
+        console.log("x1")
+        console.log(x1);
+        console.log(solve_y(a,b,c,x1));
+
+        document.getElementById("qf2-2").innerHTML = x2;
+        document.getElementById("qf2-2-2").innerHTML = solve_y(a,b,c,x2);
+        console.log("x2")
+        console.log(x2);
+        console.log(solve_y(a,b,c,x2));
+
+        document.getElementById("qf2-3").innerHTML = x3;
+        document.getElementById("qf2-3-2").innerHTML = solve_y(a,b,c,x3);
+        console.log("x3")
+        console.log(x3);
+        console.log(solve_y(a,b,c,x3));
     };
 };

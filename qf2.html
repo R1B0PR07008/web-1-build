@@ -9,68 +9,75 @@
     href="/site.css"
   />
   <title>!</title>
-  <script src="/site.js"></script>
 </head>
-<h1>{% block title %} Quadratic Functions Program
+<h1> Quadratic Functions Program
 </h1>
 <body>
   
 
-<form action="" method="post">
-  <input type="float" placeholder="A" name="a" value="{{ request.form.a }}" />
-  <input type="float" placeholder="B" name="b" value="{{ request.form.b }}" />
-  <input type="float" placeholder="C" name="c" value="{{ request.form.c }}" />
-  <input
-    class="btn btn-default"
-    type="submit"
-    name="submit"
-    value="Enter Y Values"
-  />
-  <br />
-  <input
+  <form action="" method="post">
+    <input
+      type="float"
+      placeholder="A"
+      name="A"
+      id="QF-A"
+      class="QF-MARGIN"
+    />
+    <input
+      type="float"
+      placeholder="B"
+      name="B"
+      id="QF-B"
+    />
+    <input
+      type="float"
+      placeholder="C"
+      name="C"
+      id="QF-C"
+    />
+    <button onclick="Qf()" class="btn-default" type="button" id="BTN-1-PA">Enter Y Values</button>
+    <br>
+    <input
     type="float"
     placeholder="X1"
     name="x1"
-    value="{{ request.form.x1 }}"
+    id="QF2-x1"
+    class="QF-MARGIN"
   />
   <input
     type="float"
     placeholder="X2"
     name="x2"
-    value="{{ request.form.x2 }}"
+    id="QF2-x2"
   />
   <input
     type="float"
     placeholder="X3"
     name="x3"
-    value="{{ request.form.x3 }}"
+    id="QF2-x3"
   />
-  <input
-    class="btn btn-default"
-    type="submit"
-    name="submit"
-    value="Enter X Values"
-  />
-</form>
+    
+    <button onclick="Qfx()" class="btn-default" type="button">Enter X values</button>  
+  </form>
 
 <div class="Ans-block">
   <h2 class="ans-text">
     The answer: 
   </h2>
-  {% if request.form['submit'] != "Enter Y Values" or request.form['submit'] !=  "Enter X Values":  %}
-  <p class="ans-footer">
+  <p id="ans-footer">
   To get your answer enter a number in the indicated slots.
   </p>
-  {% endif %}
-  {% if request.form.submit == 'Enter Y Values': %}
-  <p>Your first X value is: {{ x }}</p>
-  <p>Your first Y value is: {{ y }}</p>
-  {% endif %} {% if request.form.submit == 'Enter X Values': %}
-  <p>Second Coordinate {{ x1 }} , {{y1 }}</p>
-  <p>Third Coordinate {{ x2 }} , {{ y2 }}</p>
-  <p>Fourth Coordinate {{ x3 }} , {{ y3 }}</p>
-  <p>Then just duplicate the points on the other side of the Symmetry line.</p>
-  {% endif %}
+  <div id="ans">
+    <p>Your first X value is: <span id="qf-1"></span></p>
+    <p>Your first Y value is: <span id="qf-2"></span></p>
+  </div>
+  <br>
+  <div id="ans-2">
+    <p>Second Coordinate <span id="qf2-1"></span> , <span id="qf2-1-2"></span></p>
+    <p>Third Coordinate <span id="qf2-2"></span> , <span id="qf2-2-2"></span></p>
+    <p>Fourth Coordinate <span id="qf2-3"></span> , <span id="qf2-3-2"></span></p>
+    <p>Then just duplicate the points on the other side of the Symmetry line.</p>
+  </div>
 </div>
 
 <div class="Legend-block">
@@ -86,4 +93,5 @@
   <p class="Legend-text"> Please enter A, B ,C values before pressing the "Enter More X Values" button. </p>
 </div>
 </body>
+<script src="/site.js"></script>
 </html>
