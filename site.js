@@ -876,3 +876,183 @@ if (document.URL.includes("qf2.html")) {
         console.log(solve_y(a,b,c,x3));
     };
 };
+
+if (document.URL.includes("re.html")) {
+    console.log("you are in the re page")
+
+    function Hide_RE(num_res,r1,r2,r3,r4,r5) {
+        if (num_res === "null") {
+            document.getElementById('RE-R1').style.visibility = 'hidden';
+            document.getElementById('RE-R2').style.visibility = 'hidden';
+            document.getElementById('RE-R3').style.visibility = 'hidden';
+            document.getElementById('RE-R4').style.visibility = 'hidden';
+            document.getElementById('RE-R5').style.visibility = 'hidden';
+
+            if (r1 === 0 && r2 === 0 && r3 === 0 && r4 === 0 && r5 === 0) {
+                document.getElementById('re-1').style.visibility = 'hidden';
+ 
+            }; 
+
+            console.log("num_res = null")
+        };
+        if (num_res === '1') {
+            document.getElementById('RE-R1').style.visibility = 'visible';
+            document.getElementById('RE-R2').style.visibility = 'hidden';
+            document.getElementById('RE-R3').style.visibility = 'hidden';
+            document.getElementById('RE-R4').style.visibility = 'hidden';
+            document.getElementById('RE-R5').style.visibility = 'hidden'; 
+            
+        if (r1 === 0 && r2 === 0 && r3 === 0 && r4 === 0 && r5 === 0) {
+            document.getElementById('re-1').style.visibility = 'hidden';
+
+        } else {
+            document.getElementById('re-1').style.visibility = "visible";
+        };
+
+        console.log("num_res = 1")
+        };
+        if (num_res === '2') {
+            document.getElementById('RE-R1').style.visibility = 'visible';
+            document.getElementById('RE-R2').style.visibility = 'visible';
+            document.getElementById('RE-R3').style.visibility = 'hidden';
+            document.getElementById('RE-R4').style.visibility = 'hidden';
+            document.getElementById('RE-R5').style.visibility = 'hidden'; 
+
+            if (r1 === 0 && r2 === 0 && r3 === 0 && r4 === 0 && r5 === 0) {
+                document.getElementById('re-1').style.visibility = 'hidden';
+
+            } else {
+                document.getElementById('re-1').style.visibility = 'visible';
+
+            };
+            
+        console.log("num_res = 2")
+
+        };
+        if (num_res === '3') {
+            document.getElementById('RE-R1').style.visibility = 'visible';
+            document.getElementById('RE-R2').style.visibility = 'visible';
+            document.getElementById('RE-R3').style.visibility = 'visible';
+            document.getElementById('RE-R4').style.visibility = 'hidden';
+            document.getElementById('RE-R5').style.visibility = 'hidden'; 
+
+            if (r1 === 0 && r2 === 0 && r3 === 0 && r4 === 0 && r5 === 0) {
+                document.getElementById('re-1').style.visibility = 'hidden';
+            } else {
+                document.getElementById('re-1').style.visibility = 'visible';
+
+            };
+
+        console.log("num_res = 3")
+
+        };
+        if (num_res === '4') {
+            document.getElementById('RE-R1').style.visibility = 'visible';
+            document.getElementById('RE-R2').style.visibility = 'visible';
+            document.getElementById('RE-R3').style.visibility = 'visible';
+            document.getElementById('RE-R4').style.visibility = 'visible';
+            document.getElementById('RE-R5').style.visibility = 'hidden';
+            
+            if (r1 === 0 && r2 === 0 && r3 === 0 && r4 === 0 && r5 === 0) {
+                document.getElementById('re-1').style.visibility = 'hidden';
+            } else {
+                document.getElementById('re-1').style.visibility = 'visible';
+            };
+
+            console.log("num_res = 4")
+             
+        };
+        if (num_res === '5') {
+            document.getElementById('RE-R1').style.visibility = 'visible';
+            document.getElementById('RE-R2').style.visibility = 'visible';
+            document.getElementById('RE-R3').style.visibility = 'visible';
+            document.getElementById('RE-R4').style.visibility = 'visible';
+            document.getElementById('RE-R5').style.visibility = 'visible'; 
+        
+            if (r1 === 0 && r2 === 0 && r3 === 0 && r4 === 0 && r5 === 0) {
+                document.getElementById('re-1').style.visibility = 'hidden';
+            } else {
+                document.getElementById('re-1').style.visibility = 'visible';
+            };
+
+            console.log("num_res = 5")
+
+        };
+    };
+
+    let r1 = document.getElementById("RE-R1").value || 0;
+    let r2 = document.getElementById("RE-R2").value || 0;
+    let r3 = document.getElementById("RE-R3").value || 0;
+    let r4 = document.getElementById("RE-R4").value || 0;
+    let r5 = document.getElementById("RE-R5").value || 0;
+
+    let num_res = document.getElementById('RE-#RECIS').value || null;
+
+    console.log("r1", r1)
+    console.log("r2", r2)
+    console.log("r3", r3)
+    console.log("r4", r4)
+    console.log("r5", r5)
+    console.log("num_res", num_res)
+
+    Hide_RE(num_res,r1,r2,r3,r4,r5)
+
+    function RE() {
+        
+
+        let r1_ = document.getElementById("RE-R1").value || 0;
+        let r2_ = document.getElementById("RE-R2").value || 0;
+        let r3_ = document.getElementById("RE-R3").value || 0;
+        let r4_ = document.getElementById("RE-R4").value || 0;
+        let r5_ = document.getElementById("RE-R5").value || 0;
+        
+        let r1 = (r1_ * -1) *-1
+        let r2 = (r2_ * -1) *-1
+        let r3 = (r3_ * -1) *-1
+        let r4 = (r4_ * -1) *-1
+        let r5 = (r5_ * -1) *-1
+
+        let srpl = document.getElementById("RE-SRPL").value || null;
+
+        let num_res = document.getElementById('RE-#RECIS').value || null;
+        
+        Hide_RE(num_res,r1,r2,r3,r4,r5)
+        
+        console.log("r1", r1)
+        console.log("r2", r2)
+        console.log("r3", r3)
+        console.log("r4", r4)
+        console.log("r5", r5)
+        console.log("num_res", num_res)
+    
+        if (num_res === "1") {
+            document.getElementById("re-1-2").innerHTML = r1;
+        } 
+        
+        //! SR Code
+        if (srpl === "SR") {
+	        if (num_res === "2") {
+	            document.getElementById("re-1-2").innerHTML = (r1+r2);
+	        } if (num_res === "3") {
+	            document.getElementById("re-1-2").innerHTML = (r1+r2+r3);
+	        } if (num_res === "4") {
+	            document.getElementById("re-1-2").innerHTML = (r1+r2+r3+r4);
+	        } if (num_res === "5") {
+	            document.getElementById("re-1-2").innerHTML = (r1+r2+r3+r4+r5);
+	        };
+        } 
+        // ! PL Code
+        if (srpl === "PL") {
+            if (num_res === "2") {
+                document.getElementById("re-1-2").innerHTML = (1/r1+1/r2)** -1;
+            } if (num_res === "3") {
+                document.getElementById("re-1-2").innerHTML = (1/r1+1/r2+1/r3)** -1;
+            } if (num_res === "4") {
+                document.getElementById("re-1-2").innerHTML = (1/r1+1/r2+1/r3+1/r4) ** -1;
+            } if (num_res === "5") {
+                document.getElementById("re-1-2").innerHTML = (1/r1+1/r2+1/r3+1/r4+1/r5) ** -1;
+            };
+        };
+    };
+
+};
