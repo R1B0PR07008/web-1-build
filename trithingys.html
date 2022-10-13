@@ -9,43 +9,88 @@
     href="/site.css"
   />
   <title>!</title>
-  <script src="/site.js"></script>
+  
 </head>
 <body>
-  <h1>{% block title %} Triangle Formulas Programs
+  <div class="navbar">
+    <a href="/Home.html" class="navbar-brand">Home</a>
+    <a href="/register.html" class="navbar-brand-right-base" id="singup-nav">Sing Up!</a>
+    <a href="/login.html" class="navbar-brand-right-base">Log In</a>
+    <div class="dropdown">
+      <button class="dropbtn" type="button">Program</button>
+      <div class="dropdown-content">
+        <a href="/trithingys.html">Triangle Formulas</a>
+        <a href="/Conversions.html">Conversions</a>
+        <a href="/program.html">Science/Math Formulas</a>
+      </div>
+    </div>
+    <a href="/Membership.html" class="navbar-brand">Membership</a>
+  </div>  
+  <h1> Triangle Formulas Programs
 </h1>
   <form action="" method="post">
     <input
-      type="text"
-      placeholder="Selec Triangle Formula"
+      type="float"
+      placeholder="Top number"
       name="function"
-      value="{{ request.form.fucntion }}"
+      id="TRY-1-NEEDS_MARGIN"
     />
-    <input class="btn btn-default" type="submit" name="submit" value="Enter" />
+    <br>
+    <input
+      type="float"
+      placeholder="Left number"
+      name="function"
+      id="TRY-2"
+    />   
+    <input
+    type="float"
+    placeholder="Right number"
+    name="function"
+    id="TRY-3"
+    />   
+    <br>
+    <select aria-label="type of triangles" name="tot" id="try-tot">
+      <option value="null">select type of triangle</option>
+      <option value="RHO">RHO</option>
+      <option value="Q">Q</option>
+      <option value="EC">ec</option>
+      <option value="ACC">acceleration</option>
+      <option value="V">V</option>
+      <option value="V2">V^2</option>
+      <option value="F">Forces</option>
+      <option value="LAMBDA">Wavelength(λ)</option>
+    </select>
+    <button onclick="TRYTHINGYS()" class="btn-default" type="button" id="BTN-1-TRY">Enter</button>
   </form>
 
-  <h1>Types of Triangle Formulas</h1>
-  <a class="Program-link" href="{{url_for('ro')}}">Density | M, ρ, V (ro)</a>
-  <br />
-  <a class="Program-link" href="{{url_for('EC')}}">EC | F, E, Q (EC)</a>
-  <br />
-  <a class="Program-link" href="{{url_for('Q')}}">Charge | Q, I, T (Q)</a>
-  <br />
-  <a class="Program-link" href="{{url_for('V')}}">Voltage | V, R, I (V)</a>
-  <br />
-  <a class="Program-link" href="{{url_for('V2')}}"
-    >Voltage^2 | V^2, P, R (V2)</a
-  >
-  <br />
-  <a class="Program-link" href="{{url_for('forces')}}">Forces | W, F, D (F)</a>
-  <br />
-  <a class="Program-link" href="{{url_for('acceleration')}}"
-    >Acceleration | F, M, A (A)</a
-  >
-  <br />
-  <a class="Program-link" href="{{url_for('lamda')}}"
-    >Wave Length | V, λ, F (WL)</a
-  >
-</body>
+  <div class="Ans-block">
+    <h2 class="ans-text">
+      The answer: 
+    </h2>
+    <p id="ans-footer">
+    To get your answer enter a number in the left slot and the value.
+    </p>
+    <div id="ans">
+      <p class="ans-text"><span id="try-1-1">Top number:</span> <span id="try-1"></span></p>
+      <p class="ans-text"><span id="try-2-1">Left number:</span> <span id="try-2"></span></p> 
+      <p class="ans-text"><span id="try-3-1">Right number:</span> <span id="try-3"></span></p>
+    </div>
+  </div>
 
+  <div class="Legend-block">
+    <h2 class="Legend-text"> The Legend: </h2>
+    <img src="/img/WEB-1__1_-removebg.png" alt="explanation for dumb people" id="img-1-WEB-1">
+    <h2 class="Legend-text"> Types of triangles: </h2>
+    <p class="Legend-text"> RHO = Density</p>
+    <p class="Legend-text"> Q = Charge</p>
+    <p class="Legend-text"> EC = ?</p>
+    <p class="Legend-text"> Acceleration = Acceleration</p>
+    <p class="Legend-text"> V = Voltage</p>
+    <p class="Legend-text"> V^2 = Voltage squared</p>
+    <p class="Legend-text"> Forces = Force</p>
+    <p class="Legend-text"> λ = Wavelength </p>
+  </div>
+  
+</body>
+<script src="/site.js"></script>
 </html>

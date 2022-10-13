@@ -907,6 +907,7 @@ if (document.URL.includes("re.html")) {
 
         } else {
             document.getElementById('re-1').style.visibility = "visible";
+            document.getElementById('ans-footer').style.visibility = "hidden";
         };
 
         console.log("num_res = 1")
@@ -923,7 +924,7 @@ if (document.URL.includes("re.html")) {
 
             } else {
                 document.getElementById('re-1').style.visibility = 'visible';
-
+                document.getElementById('ans-footer').style.visibility = "hidden";
             };
             
         console.log("num_res = 2")
@@ -940,7 +941,7 @@ if (document.URL.includes("re.html")) {
                 document.getElementById('re-1').style.visibility = 'hidden';
             } else {
                 document.getElementById('re-1').style.visibility = 'visible';
-
+                document.getElementById('ans-footer').style.visibility = "hidden";
             };
 
         console.log("num_res = 3")
@@ -957,6 +958,7 @@ if (document.URL.includes("re.html")) {
                 document.getElementById('re-1').style.visibility = 'hidden';
             } else {
                 document.getElementById('re-1').style.visibility = 'visible';
+                document.getElementById('ans-footer').style.visibility = "hidden";
             };
 
             console.log("num_res = 4")
@@ -973,6 +975,7 @@ if (document.URL.includes("re.html")) {
                 document.getElementById('re-1').style.visibility = 'hidden';
             } else {
                 document.getElementById('re-1').style.visibility = 'visible';
+                document.getElementById('ans-footer').style.visibility = "hidden";
             };
 
             console.log("num_res = 5")
@@ -1052,6 +1055,74 @@ if (document.URL.includes("re.html")) {
             } if (num_res === "5") {
                 document.getElementById("re-1-2").innerHTML = (1/r1+1/r2+1/r3+1/r4+1/r5) ** -1;
             };
+        };
+    };
+
+};
+
+if (document.URL.includes("trithingys.html")) { 
+    console.log("You are in the triangle formulas page.")
+
+
+    function hide_try() {
+
+    };
+
+    function TRYTHINGYS() {
+        let top_ = document.getElementById('TRY-1-NEEDS_MARGIN').value || 1;
+        let left_ = document.getElementById('TRY-2').value || 1;
+        let right_ = document.getElementById('TRY-3').value || 1;
+
+        let top = (top_ * -1) * -1;
+        let left = (left_ * -1) * -1;
+        let right = (right_ * -1) * -1;
+
+        let tot = document.getElementById('try-tot').value || null;
+
+        console.log("top ",top)
+        console.log("left ",left)
+        console.log("right ",right)
+
+        document.getElementById('try-1').innerHTML = (left * right);
+        document.getElementById('try-2').innerHTML = (top / right);
+        document.getElementById('try-3').innerHTML = (top / left);
+
+        if (tot === 'RHO') {
+            document.getElementById('try-1-1').innerHTML = "Mass:";
+            document.getElementById('try-2-1').innerHTML = "Density:";
+            document.getElementById('try-3-1').innerHTML = "Volume:";
+        } if (tot === 'Q') {
+            document.getElementById('try-1-1').innerHTML = "Charge:";
+            document.getElementById('try-2-1').innerHTML = "Electric current:";
+            document.getElementById('try-3-1').innerHTML = "Time:";
+        } if (tot === 'EC') {
+            document.getElementById('try-1-1').innerHTML = "Force";
+            document.getElementById('try-2-1').innerHTML = "Electric field:";
+            document.getElementById('try-3-1').innerHTML = "Charge:";
+        } if (tot === 'ACC') {
+            document.getElementById('try-1-1').innerHTML = "Force";
+            document.getElementById('try-2-1').innerHTML = "Mass:";
+            document.getElementById('try-3-1').innerHTML = "Acceleration:";  
+        } if (tot === 'V') {
+            document.getElementById('try-1-1').innerHTML = "Voltage:";
+            document.getElementById('try-2-1').innerHTML = "Resistance:";
+            document.getElementById('try-3-1').innerHTML = "Electric current:";
+        } if (tot === 'V2') {
+            document.getElementById('try-1-1').innerHTML = "Voltage^2:";
+            document.getElementById('try-2-1').innerHTML = "Watts:";
+            document.getElementById('try-3-1').innerHTML = "Resistance:";
+
+            document.getElementById('try-1').innerHTML = (Math.sqrt(left * right));
+            document.getElementById('try-2').innerHTML = ((top**2) / right);
+            document.getElementById('try-3').innerHTML = ((top**2) / left);
+        } if (tot === 'F') {
+            document.getElementById('try-1-1').innerHTML = "Work:";
+            document.getElementById('try-2-1').innerHTML = "Force:";
+            document.getElementById('try-3-1').innerHTML = "Distance:";
+        } if (tot === 'LAMBDA') {
+            document.getElementById('try-1-1').innerHTML = "Voltage:";
+            document.getElementById('try-2-1').innerHTML = "Lambda(λ):";
+            document.getElementById('try-3-1').innerHTML = "Watts:";
         };
     };
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %} Membership Page{% endblock %}</title>
+  <title>Membership Page</title>
   <link
     rel="stylesheet"
     type="text/css"
@@ -12,6 +12,20 @@
 </head>
 
 <body>
+  <div class="navbar">
+    <a href="/Home.html" class="navbar-brand">Home</a>
+    <a href="/register.html" class="navbar-brand-right-base" id="singup-nav">Sing Up!</a>
+    <a href="/login.html" class="navbar-brand-right-base">Log In</a>
+    <div class="dropdown">
+      <button class="dropbtn" type="button">Program</button>
+      <div class="dropdown-content">
+        <a href="/trithingys.html">Triangle Formulas</a>
+        <a href="/Conversions.html">Conversions</a>
+        <a href="/program.html">Science/Math Formulas</a>
+      </div>
+    </div>
+    <a href="/Membership.html" class="navbar-brand">Membership</a>
+  </div>  
   <h1 class="Membership-page-tittle">Membership page</h1>
   <div class="membership-page" id="free">
     <h1 class="Membership-page-text">Free</h1>
@@ -49,13 +63,13 @@
       advanced membership you get all the features of the free membership plus
       all the features of the more advanced membership.
     </p>
-    <h1 class="Membership-page-h2_tittles">Limited Access</h1>
+    <!-- <h1 class="Membership-page-h2_tittles">Limited Access</h1>
     <p class="Membership-page-normal_text">
       With Limited Access you can use the following programs: <br />
       • Quadratic functions program (only vertex) <br />
       • Some "Tools" programs (to be decided) <br />
       This is best for people that don't need all the other stuff.
-    </p>
+    </p> -->
     <h1 class="Membership-page-h2_tittles">Premium Access</h1>
     <p class="Membership-page-normal_text">
       Premium Access lets you access everything, from the conventions programs

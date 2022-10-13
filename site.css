@@ -58,12 +58,23 @@
     margin-left: 1%;
 }
 
-/* ! Tittle */
-
 /* *QF Page */
 .QF-MARGIN {
     margin-left: 1%;
 }
+
+/* *trythingyd page */
+#TRY-1-NEEDS_MARGIN {
+    margin-left: 6%;
+}
+
+#img-1-WEB-1 {
+    width: 100%;
+}
+
+/* ! Tittle */
+
+
 
 .Tittle {
     font-family: 'Patrick Hand';
@@ -171,10 +182,10 @@ p.ans-footer {
     text-align: center;
 }
 
-/* MEMBERSHIP PAGE */
+/* !MEMBERSHIP PAGE */
 
 div.membership-page {
-    background-color: rgb(255, 219, 87);
+    background-color: rgb(255, 240, 0);
     width: 25%;
     height: auto;
     border-radius: 5mm;
@@ -182,7 +193,7 @@ div.membership-page {
 
 }
 
-div #free {
+#free {
     /* margin-left: 12.5%; */
     margin-left: 25%;
 }
