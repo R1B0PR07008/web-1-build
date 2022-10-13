@@ -79,16 +79,18 @@
 .Tittle {
     font-family: 'Patrick Hand';
     text-align: right;
-    margin-right: 3%;
+    margin-right: 10%;
     font-size: 1000%;
 }
 
 .Tittle-Div {
-    background-image: url(/img/WEB-1-tTittle_Div.png);
+    background-image: url(/img/WEB-1NewNewTittleImage.png);
     background-size: contain;
     background-repeat: no-repeat;
-    height: 19cm;
+    height: 22cm;
 }
+
+
 
 input {
     border-radius: 8px;
