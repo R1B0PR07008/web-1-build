@@ -1,25 +1,7 @@
-// const fs = require("fs")
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
-
 // !setting up database for username,psw,profile img, ect... AND setting up login/register functions
 // if  (document.URL.includes("login.html")) {
 //     console.log("you are in the login page.")
-
-
-//     fs.createReadStream("./USER_DATA - Sheet1.csv");
-
-//     fs.createReadStream("./USER_DATA - Sheet1.csv")
-//     .pipe(parse({ delimiter: ",", from_line: 2 }))
-//     .on("data", function (row) {
-//         console.log(row);
-//     })
-//     .on("error", function (error) {
-//         console.log(error.message);
-//     })
-//     .on("end", function () {
-//         console.log("finished");
-//     });
-// };
 
 // !PAGE CODE
     function Hide(UNIT) {
