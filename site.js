@@ -1,7 +1,39 @@
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
 // !setting up database for username,psw,profile img, ect... AND setting up login/register functions
-// if  (document.URL.includes("login.html")) {
-//     console.log("you are in the login page.")
+
+        let usernames = ['test','test2']
+        let passwords = ['test','test2p'] 
+
+if  (document.URL.includes("login.html")) {
+    console.log("you are in the login page.")
+
+document.cookie = 'Username=anonymous; password=anonymous'
+
+    function login() {
+
+
+
+        let enteredUsername = document.getElementById('Username-Login').value || 'anonymous';
+        let enteredPassword = document.getElementById('Password-Login').value || 'anonymous';
+
+        console.log(enteredUsername);
+        console.log(enteredPassword);
+
+        if (usernames.includes(enteredUsername) && passwords.includes(enteredPassword)) {
+            location.href='logedin.html';
+
+            document.cookie = 'Username=test2; Password=test2p'
+
+            let COOKIES = document.cookie;
+        };
+    };
+};
+
+if (document.URL.includes('logedin.html')) {
+    let COOKIES = document.cookie;
+    console.log(COOKIES)
+}
+
 
 // !PAGE CODE
     function Hide(UNIT) {
@@ -696,15 +728,15 @@ if (document.URL.includes("qf.html")) {
         console.log("B " + b);
         console.log("C " + c);
 
-        let x = (-1* b)/(2*a);
-        document.getElementById("qf-1").innerHTML = x;
-        let x2 = x**2;
+        let COOKIES = (-1* b)/(2*a);
+        document.getElementById("qf-1").innerHTML = COOKIES;
+        let x2 = COOKIES**2;
         console.log("x2 "+ x2);
         let C = (c * -1) * -1;
         console.log("c "+C);
         let A = a * x2;
         console.log("a "+A);
-        let B = b * x;
+        let B = b * COOKIES;
         console.log("b "+B);
         document.getElementById("qf-2").innerHTML = (A+B+C);
 
@@ -750,24 +782,24 @@ if (document.URL.includes("qf2.html")) {
         Hide_qf2(a,b,c,x1,x2,x3);
 
         console.log("A " + a);        
-        let x = (-1* b)/(2*a);
-        document.getElementById("qf-1").innerHTML = x;
-        let x2_ = x**2;
+        let COOKIES = (-1* b)/(2*a);
+        document.getElementById("qf-1").innerHTML = COOKIES;
+        let x2_ = COOKIES**2;
         console.log("x2 "+ x2_);
         let C = (c * -1) * -1;
         console.log("c "+C);
         let A = a * x2;;
         console.log("a "+A);
-        let B = b * x;
+        let B = b * COOKIES;
         console.log("b "+B);
         document.getElementById("qf-2").innerHTML = (A+B+C);
     };
 
-    function solve_y(a,b,c,x) {
-        let x2_ = x**2;
+    function solve_y(a,b,c,COOKIES) {
+        let x2_ = COOKIES**2;
         let C = (c * -1) * -1;
         let A = a * x2_;
-        let B = b * x;
+        let B = b * COOKIES;
         let ans = (A+B+C)
         return ans
     };

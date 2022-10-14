@@ -72,6 +72,21 @@
     width: 100%;
 }
 
+/* *LOGIN PAGE */
+.NEEDS_MARGIN {
+    margin-left: 2%;
+}
+
+/* *LOGEDIN PAGE */
+
+.loggedInPageDisplayDivs {
+    display: inline-block;
+    width: 33%;
+    background-color: rgb(255, 240, 0);
+    border-radius: 5mm;
+    height: 8cm;
+}
+
 /* ! Tittle */
 
 
