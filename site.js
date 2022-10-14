@@ -1,76 +1,27 @@
-// *setting up database for username,psw,profile img, ect... AND setting up login/register functions
+// const fs = require("fs")
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
-// const sqlite3 = require('sqlite3')
-// let sql = 'INSERT INTO userData(Username, Password) VALUES(?,?,?,?,?)';
-// let row3 = 'SELECT User-ID FROM userDATA'
 
-// function userId() {
-//   let userId = row3
-//   userId++ 
-//   return userId
-// }
+// !setting up database for username,psw,profile img, ect... AND setting up login/register functions
+// if  (document.URL.includes("login.html")) {
+//     console.log("you are in the login page.")
 
-// !open database in memory
-// let db = new sqlite3.Database('./User-DATA-DB.db', sqlite3.OPEN_READWRITE, (err) => {
-//   if (err) {
-//     console.error(err.message);
-//   }
-//   console.log('Connected to the database.');
-// });
 
-// if (document.URL.includes('register.html')){
-  
-//   //!Variables for INPUT
-//   let Email = document.getElementById("Email-register").value || 'UNDEFINED';
-//   let Name = document.getElementById("Name-register").value || 'UNDEFINED';
-//   let UserName = document.getElementById("Username-register").value || 'UNDEFINED';
-//   let Password = document.getElementById("Password-register").value || 'UNDEFINED';  
-  
-//   document.getElementsByName('btn-register-1').onclick = function () {
-//     console.log('btn-register-1 Pressed');
-//     sql = 'INSERT INTO userData(Username, Password, User-ID, Name, EMAIL) VALUES(?,?,?,?,?)';
-  
-//     db.run(
-//     sql, 
-//     [UserName, Password, userId, Name, Email], 
-//     (err) => {
-//     if (err) return console.error(err.message)
-    
-//     console.log('DATA ADDED')
-//     }); 
-//   };
+//     fs.createReadStream("./USER_DATA - Sheet1.csv");
+
+//     fs.createReadStream("./USER_DATA - Sheet1.csv")
+//     .pipe(parse({ delimiter: ",", from_line: 2 }))
+//     .on("data", function (row) {
+//         console.log(row);
+//     })
+//     .on("error", function (error) {
+//         console.log(error.message);
+//     })
+//     .on("end", function () {
+//         console.log("finished");
+//     });
 // };
 
-
-
-// sql = 'SELECT * FROM userData';
-
-// db.all(sql, [], (err, rows)=>{
-//   if (err) return console.error(err.message)
-
-//   rows.forEach(row => {
-//     console.log(row)
-//   });
-// })
-
-// // !close the database connection
-// db.close((err) => {
-//   if (err) {
-//     return console.error(err.message);
-//   }
-//   console.log('Close the database connection.');
-// });
-
-//* app code below, database code above
-
-//! Page DATA
-
-//* LOGIN AND REGISTER PAGES
-// if (document.URL.includes("login.html")) {
-//  let empty = true 
-// }
-
-//* OTHER PAGES
+// !PAGE CODE
     function Hide(UNIT) {
         let un = 'undefined';
         if (UNIT === un ) {

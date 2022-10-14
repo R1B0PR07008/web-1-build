@@ -2,10 +2,12 @@
   "name": "web-1",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "site.js",
   "dependencies": {
     "bignumber.js": "^9.0.0",
     "core-util-is": "^1.0.3",
+    "csv-parse": "^5.3.1",
     "inherits": "^2.0.4",
     "isarray": "^1.0.0",
     "mysql": "^2.18.1",
