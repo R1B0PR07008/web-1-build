@@ -1,39 +1,4 @@
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
-// !setting up database for username,psw,profile img, ect... AND setting up login/register functions
-
-        let usernames = ['test','test2']
-        let passwords = ['test','test2p'] 
-
-if  (document.URL.includes("login.html")) {
-    console.log("you are in the login page.")
-
-document.cookie = 'Username=anonymous; password=anonymous'
-
-    function login() {
-
-
-
-        let enteredUsername = document.getElementById('Username-Login').value || 'anonymous';
-        let enteredPassword = document.getElementById('Password-Login').value || 'anonymous';
-
-        console.log(enteredUsername);
-        console.log(enteredPassword);
-
-        if (usernames.includes(enteredUsername) && passwords.includes(enteredPassword)) {
-            location.href='logedin.html';
-
-            document.cookie = 'Username=test2; Password=test2p'
-
-            let COOKIES = document.cookie;
-        };
-    };
-};
-
-if (document.URL.includes('logedin.html')) {
-    let COOKIES = document.cookie;
-    console.log(COOKIES)
-}
-
 
 // !PAGE CODE
     function Hide(UNIT) {
