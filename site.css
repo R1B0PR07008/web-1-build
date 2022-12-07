@@ -108,9 +108,8 @@
 .main-div-nav {
     display: inline-block;
     background-color: rgb(255, 240, 0);
-    height: 330px;
-    width: 32%;
-    margin: .54%;
+    min-height: 330px;
+    max-width: 33%;
     border-radius: 2mm;
     vertical-align: top;
 }
