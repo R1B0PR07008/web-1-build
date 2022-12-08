@@ -53,6 +53,12 @@
 
 /* *customizing  */
 
+#W3C {
+    border:0;
+    width:88px;
+    height:31px;
+}
+
 /* * PA Page */
 .pa-f1-a1-MARGIN {
     margin-left: 1%;
@@ -70,6 +76,10 @@
 
 #img-1-WEB-1 {
     width: 100%;
+}
+
+#try-tot {
+    width: 250px;
 }
 
 /* *LOGIN PAGE */
@@ -109,7 +119,7 @@
     display: inline-block;
     background-color: rgb(255, 240, 0);
     min-height: 330px;
-    max-width: 33%;
+    width: 33%;
     border-radius: 2mm;
     vertical-align: top;
 }
@@ -117,11 +127,43 @@
 /* *Other Stuff */
 
 input {
+    margin-left: 0.5%;
     border-radius: 8px;
     border-color: inherit;
     border-style: none;
-    height: 20px;
-    background-color: rgb(206, 206, 206);
+    height: 30px;
+    background-color: #ffffff;
+    border-color: black;
+    border-style: ridge;
+    border-width: 0.8mm;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.btn-default {
+    margin-left: 0.5%;
+    margin: 2mm;
+    height: 30px;
+    border-radius: 1.5mm;
+    background-color: #ffffff;
+    border-style: none;
+    font-size: larger;
+    font-weight: 600;
+    background-color: #cacaca;
+    min-width: 100px;
+}
+
+select {
+    height: 38px;
+    width: 120px;
+    border-radius: 1.5mm;
+    border-style: ridge;
+    border-width: 0.8mm;
+    border-color: black;
+    font-size: larger;
+    font-weight: 600;
+    color: black;
+    padding: 1mm;
 }
 
 mail { 
@@ -158,12 +200,6 @@ h1.doc {
     padding-bottom: 2px;
 }
 
-.btn-default {
-    border-radius: 1.5mm;
-    background-color: #E8F0FE;
-    border-style: none;
-}
-
 /* All Conversion pages */
 .Ans-block {
     background-color: rgb(255, 240, 0);
@@ -174,6 +210,7 @@ h1.doc {
     border-radius: 5mm;
     margin-left: .5%;
     display: inline-block;
+    vertical-align: top;
 }
 
 .Legend-block {
@@ -186,6 +223,11 @@ h1.doc {
     margin-bottom: 2%;
     display: inline-block;
     position: absolute;
+    vertical-align: top;
+}
+
+.vertical-align {
+    vertical-align: top;
 }
 
 .ans-text.ans-text-NUM {
