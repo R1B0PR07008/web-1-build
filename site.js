@@ -29,17 +29,14 @@ function nav() {
 
 
 if (document.URL.includes("Home.html")) {
-    if (window.innerWidth < 630 ) {
-        document.getElementById("nav-text").style.fontSize = "2em"
-    }
-
-   if (window.innerWidth <= 870) {
+    if (window.innerWidth <= 870) {
         console.log('Phone screen');
         elementWidth(1, 3, 99)
         element(1).style.marginBottom = "2mm";
         element(2).style.marginBottom = "2mm";
         document.getElementById("Tittle").style.fontSize = "800%";
         if (window.innerWidth <= 790) {
+            document.getElementById("nav-text").style.fontSize = "2em"
             document.getElementById("Tittle-Div").style.backgroundImage = "none";
             document.getElementById("Tittle").style.fontSize = "800%";
         }
