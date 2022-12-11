@@ -138,6 +138,7 @@ input {
     border-width: 0.8mm;
     font-size: larger;
     font-weight: 600;
+    font-family: 'Poppins';
 }
 
 .btn-default {
@@ -151,6 +152,7 @@ input {
     font-weight: 600;
     background-color: #cacaca;
     min-width: 100px;
+    font-family: 'Poppins';
 }
 
 select {
@@ -164,6 +166,7 @@ select {
     font-weight: 600;
     color: black;
     padding: 1mm;
+    font-family: 'Poppins';
 }
 
 mail { 
@@ -322,6 +325,7 @@ div.membership-page {
     font-size: 1.2em;
     font-weight: 600;
     border-radius: 30px;
+    font-family: 'Poppins';
   }
 
   /* The container <div> - needed to position the dropdown content */
@@ -339,7 +343,7 @@ div.membership-page {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    border-radius: 15%;
+    border-radius: 2mm;
   }
   
   /* Links inside the dropdown */
