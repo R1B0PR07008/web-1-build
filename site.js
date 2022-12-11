@@ -1,5 +1,57 @@
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
 
+//* optimizing for phone use!
+
+function elementWidth(i, n, w) {
+    for (i; i <= n; i++) {
+        let element = document.getElementById("react-" + i).style.width = w + '%';
+        console.log(element);
+        console.log(i);
+        console.log(n);
+    };
+    return element;
+}
+
+function element(n) {
+    let element = document.getElementById("react-" + n);
+    return element;
+}
+
+function nav() {
+    if (window.innerWidth > 630) {
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button">Conversions</button><div class="dropdown-content"><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a></div></div><div class="dropdown"><button class="dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+    }
+    else if (window.innerWidth < 630 ) {
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/menu_FILL0_wght500_GRAD0_opsz40.svg" alt="Menu Button"></button><div class="dropdown-content"><h1>Convertions</h1><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav-text").style.fontSize = "2em"
+    }
+}
+
+
+if (document.URL.includes("Home.html")) {
+    if (window.innerWidth < 630 ) {
+        document.getElementById("nav-text").style.fontSize = "2em"
+    }
+
+   if (window.innerWidth <= 870) {
+        console.log('Phone screen');
+        elementWidth(1, 3, 99)
+        element(1).style.marginBottom = "2mm";
+        element(2).style.marginBottom = "2mm";
+        document.getElementById("Tittle").style.fontSize = "800%";
+        if (window.innerWidth <= 790) {
+            document.getElementById("Tittle-Div").style.backgroundImage = "none";
+            document.getElementById("Tittle").style.fontSize = "800%";
+        }
+        else {
+            document.getElementById("Tittle-Div").style.backgroundImage = "/img/WEB-1NewNewTittleImage.png";
+        };
+    }; 
+};
+
+
+
+
 // !PAGE CODE
     function Hide(UNIT) {
         let un = 'undefined';
@@ -44,7 +96,19 @@ console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't 
     };
 
 if (document.URL.includes("len.html")) {
+    nav()
     console.log("you are in the len page");
+
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(22, 23, 99)
+    }
+    else {
+        element(22).style.height = "600px"
+        element(22).style.width = "60%"
+        element(23).style.width = "35%"
+    }
 
     let UNIT = document.getElementById('UNIT-LEN').value || 'undefined';
     // Hide(UNIT);
@@ -285,7 +349,19 @@ if (document.URL.includes("len.html")) {
 };
 
 if (document.URL.includes("mass.html")) {
+    nav()
     console.log("you are in the mass page");
+
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(20, 21, 99)
+    }
+    else {
+        element(20).style.height = "600px"
+        element(20).style.width = "60%"
+        element(21).style.width = "35%"
+    }
 
     function Mass() {
         let NUM = document.getElementById('NUM-MASS').value || 1;
@@ -414,7 +490,19 @@ if (document.URL.includes("mass.html")) {
 };
 
 if (document.URL.includes("time.html")) {
+    nav()
     console.log("you are in the time page");
+
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(18, 19, 99)
+    }
+    else {
+        element(18).style.height = "600px"
+        element(18).style.width = "60%"
+        element(19).style.width = "35%"
+    }
 
     function Time() {
         let NUM = document.getElementById('NUM-TIME').value || 1;
@@ -467,6 +555,18 @@ if (document.URL.includes("time.html")) {
 };
 
 if (document.URL.includes("temp.html")) {
+    nav()
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(16, 17, 99)
+    }
+    else {
+        element(16).style.height = "600px"
+        element(16).style.width = "60%"
+        element(17).style.width = "35%"
+    }
+
     console.log("you are in the temp page");
 
     function Temp() {
@@ -520,9 +620,22 @@ if (document.URL.includes("temp.html")) {
 };
 
 if (document.URL.includes("liquids.html")) {
+    nav()
     console.log("you are in the liquids page.")
 
+        if (window.innerWidth <= 910) {
+            console.log(window.innerWidth)
+            console.log("Phone Screen")
+            elementWidth(14, 15, 99)
+        }
+        else {
+            element(14).style.height = "600px"
+            element(14).style.width = "60%"
+            element(15).style.width = "35%"
+        }
+
     function Liquids() {
+
         let NUM = document.getElementById('NUM-LQ').value || 1;
         let UNIT = document.getElementById('UNIT-LQ').value || 'undefined';
         console.log("btn 'BTN-1-LQ' pressed.");
@@ -606,7 +719,20 @@ if (document.URL.includes("liquids.html")) {
 };
 
 if (document.URL.includes("pa.html")) {
+    nav()
     console.log("you are in the PA page.");
+
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(12, 13, 99)
+    }
+    else {
+        element(12).style.width = "60%"
+        element(12).style.height = "600px"
+        element(13).style.width = "35%"
+    }
+
     let f1 = document.getElementById("PA-F1").value || 0;
     let f2 = document.getElementById("PA-F2").value || 0;
     let a1 = document.getElementById("PA-A1").value || 0;
@@ -665,7 +791,20 @@ if (document.URL.includes("pa.html")) {
 };
 
 if (document.URL.includes("qf.html")) {
+    nav()
     console.log("you are in the quadratic functions page. ");
+
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(10, 11, 99)
+    }
+    else {
+        element(10).style.width = "60%"
+        element(10).style.height = "600px"
+        element(11).style.width = "35%"
+    }
+
 
     function Hide_qf(a,b,c) {
         if (a === 0 && b === 0 && c === 0) {
@@ -709,7 +848,20 @@ if (document.URL.includes("qf.html")) {
 };
 
 if (document.URL.includes("qf2.html")) {
+    nav()
     console.log("You are in the qf2 page.")
+
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(8, 9, 99)
+    }
+    else {
+        element(8).style.width = "60%"
+        element(8).style.height = "600px"
+        element(9).style.width = "35%"
+    }
+
 
     function Hide_qf2(a,b,c,x1,x2,x3) {
         if (a === null && b === null && c === null && x1 === null && x2 === null && x3 === null) {
@@ -808,7 +960,19 @@ if (document.URL.includes("qf2.html")) {
 };
 
 if (document.URL.includes("re.html")) {
+    nav()
     console.log("you are in the re page")
+
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(6, 7, 99)
+    }
+    else {
+        element(6).style.width = "60%"
+        element(6).style.height = "600px"
+        element(7).style.width = "35%"
+    }
 
     function Hide_RE(num_res,r1,r2,r3,r4,r5) {
         if (num_res === "null") {
@@ -990,13 +1154,22 @@ if (document.URL.includes("re.html")) {
 
 };
 
-if (document.URL.includes("trithingys.html")) { 
+if (document.URL.includes("trithingys.html")) {
+    nav()
     console.log("You are in the triangle formulas page.")
 
+    console.log(window.innerWidth)
 
-    function hide_try() {
-
-    };
+    if (window.innerWidth <= 910) {
+        console.log(window.innerWidth)
+        console.log("Phone Screen")
+        elementWidth(4, 5, 99)
+    }
+    else {
+        element(4).style.width = "60%"
+        element(4).style.height = "600px"
+        element(5).style.width = "35%"
+    }
 
     function TRYTHINGYS() {
         let top_ = document.getElementById('TRY-1-NEEDS_MARGIN').value || 1;
