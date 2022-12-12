@@ -106,6 +106,20 @@
 
 /* *main page stuff */
 
+.insta {
+    vertical-align: middle;
+}
+
+#insta-logo {
+    width: auto;
+    height: 30px;
+    margin-left: 3%;
+}
+
+#insta-link {
+    font-size: 1.2em;
+}
+
 #Tittle {
     font-family: 'Patrick Hand';
     text-align: right;
