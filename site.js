@@ -28,7 +28,7 @@ function nav() {
 }
 
 
-if (document.URL.includes("Home.html") || document.URL.includes("home") || document.URL.includes("")) {
+if (document.URL.includes("Home.html") || document.URL.includes("home")) {
     if (window.innerWidth <= 870) {
         console.log('Phone screen');
         elementWidth(1, 3, 99)
