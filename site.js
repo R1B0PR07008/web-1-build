@@ -19,7 +19,8 @@ function element(n) {
 
 function nav() {
     if (window.innerWidth > 630) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button">Conversions</button><div class="dropdown-content"><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a></div></div><div class="dropdown"><button class="dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center, dropbtn" type="button">Conversions</button><div class="dropdown-content"><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a></div></div><div class="dropdown"><button class="center, dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center, dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav-text").style.fontSize = "1.2em"
     }
     else if (window.innerWidth < 630 ) {
         document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/menu_FILL0_wght500_GRAD0_opsz40.svg" alt="Menu Button"></button><div class="dropdown-content"><h1>Convertions</h1><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
@@ -1187,6 +1188,11 @@ if (document.URL.includes("trithingys.html")) {
         document.getElementById('try-2').innerHTML = (top / right);
         document.getElementById('try-3').innerHTML = (top / left);
 
+        if (tot === 'null') {
+            document.getElementById('try-1-1').innerHTML = "Top Number:";
+            document.getElementById('try-2-1').innerHTML = "Left Number:";
+            document.getElementById('try-3-1').innerHTML = "Right Number:";
+        }
         if (tot === 'RHO') {
             document.getElementById('try-1-1').innerHTML = "Mass:";
             document.getElementById('try-2-1').innerHTML = "Density:";
