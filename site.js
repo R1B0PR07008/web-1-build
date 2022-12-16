@@ -47,7 +47,13 @@ if (document.URL.includes("Home.html") || document.URL.includes("home")) {
     }; 
 };
 
+// * making it posible to press enter instead of click
 
+function enter(id, func) {
+    let element = document.getElementById(id); 
+
+    element.onkeydown(func)
+}
 
 
 // !PAGE CODE
@@ -103,9 +109,9 @@ if (document.URL.includes("len.html")) {
         elementWidth(22, 23, 99)
     }
     else {
-        element(22).style.height = "600px"
-        element(22).style.width = "60%"
-        element(23).style.width = "35%"
+        element(22).style.minHeight = "600px"
+        element(23).style.minWidth = "35%"
+        element(22).style.minWidth = "60%"
     }
 
     let UNIT = document.getElementById('UNIT-LEN').value || 'undefined';
