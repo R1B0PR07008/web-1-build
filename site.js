@@ -47,15 +47,6 @@ if (document.URL.includes("Home.html") || document.URL.includes("home")) {
     }; 
 };
 
-// * making it posible to press enter instead of click
-
-function enter(id, func) {
-    let element = document.getElementById(id); 
-
-    element.onkeydown(func)
-}
-
-
 // !PAGE CODE
     function Hide(UNIT) {
         let un = 'undefined';
