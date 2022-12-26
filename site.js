@@ -2,32 +2,34 @@ console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't 
 
 
 //* optimizing for phone use!
+function elementWidth(i, n, w) {
+    for (i; i <= n; i++) {
+        let element = document.getElementById("react-" + i).style.width = w + '%';
+        console.log(element);
+        console.log(i);
+        console.log(n);
+    };
+    return element;
+}
+
+function element(n) {
+    let element = document.getElementById("react-" + n);
+    return element;
+}
+
+function nav() {
+    if (window.innerWidth > 630) {
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center, dropbtn" type="button">Conversions</button><div class="dropdown-content"><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a></div></div><div class="dropdown"><button class="center, dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center, dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav-text").style.fontSize = "1.2em"
+    }
+    else if (window.innerWidth < 630 ) {
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/menu_FILL0_wght500_GRAD0_opsz40.svg" alt="Menu Button"></button><div class="dropdown-content"><h1>Convertions</h1><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav-text").style.fontSize = "2em"
+    }
+
+}
 
 function phoneMode(p) {
-    function elementWidth(i, n, w) {
-        for (i; i <= n; i++) {
-            let element = document.getElementById("react-" + i).style.width = w + '%';
-            console.log(element);
-            console.log(i);
-            console.log(n);
-        };
-        return element;
-    }
-    
-    function element(n) {
-        let element = document.getElementById("react-" + n);
-        return element;
-    }
-    
-    function nav() {
-        if (window.innerWidth > 630) {
-            document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center, dropbtn" type="button">Conversions</button><div class="dropdown-content"><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a></div></div><div class="dropdown"><button class="center, dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center, dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
-            document.getElementById("nav-text").style.fontSize = "1.2em"
-        }
-        else if (window.innerWidth < 630 ) {
-            document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/menu_FILL0_wght500_GRAD0_opsz40.svg" alt="Menu Button"></button><div class="dropdown-content"><h1>Convertions</h1><a class="Program-link" href="/len.html">Length</a><a class="Program-link" href="/time.html">Time</a><a class="Program-link" href="/mass.html">Mass</a><a class="Program-link" href="/temp.html">Temperature</a><a class="Program-link" href="/liquids.html">Liquids</a><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
-            document.getElementById("nav-text").style.fontSize = "2em"
-        }
         if (p === 'h') {
             if (window.innerWidth <= 870) {
                 console.log('Phone screen');
@@ -166,7 +168,6 @@ function phoneMode(p) {
             }
         }
     } 
-}
 
 
 if (document.URL.includes("Home.html") || document.URL.includes("home")) {
