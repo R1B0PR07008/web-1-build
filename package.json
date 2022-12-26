@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "web-1-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "screenAdapt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R1B0PR07008/web-1-build.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R1B0PR07008/web-1-build/issues"
+  },
+  "homepage": "https://github.com/R1B0PR07008/web-1-build#readme"
+}
