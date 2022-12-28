@@ -226,7 +226,6 @@ h1.doc {
 .Ans-block {
     background-color: rgb(255, 240, 0);
     width: 60%;
-    min-height: 600px;
     height: auto;
     border-radius: 5mm;
     margin-left: .5%;
