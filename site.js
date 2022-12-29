@@ -1,6 +1,5 @@
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
 
-
 //* optimizing for phone use!
 function elementWidth(i, n, w) {
     for (i; i <= n; i++) {
@@ -10,12 +9,12 @@ function elementWidth(i, n, w) {
         console.log(n);
     };
     return element;
-}
+};
 
 function element(n) {
     let element = document.getElementById("react-" + n);
     return element;
-}
+};
 
 function nav() {
     if (window.innerWidth > 630) {
@@ -27,14 +26,13 @@ function nav() {
         document.getElementById("nav-text").style.fontSize = "2em"
     }
 
-}
+};
 
 function phoneMode(p) {
         if (p === 'h') {
             if (window.innerWidth <= 870) {
                 console.log('Phone screen');
-                elementWidth(1, 3, 99)
-                element(1).style.marginBottom = "2mm";
+                elementWidth(2, 3, 99)
                 element(2).style.marginBottom = "2mm";
                 document.getElementById("Tittle").style.fontSize = "800%";
                 if (window.innerWidth <= 790) {
@@ -46,65 +44,15 @@ function phoneMode(p) {
                     document.getElementById("Tittle-Div").style.backgroundImage = "/img/WEB-1NewNewTittleImage.png";
                 };
             }; 
-        } else if (p === 'l') {
-            nav()
             if (window.innerWidth <= 910) {
                 console.log(window.innerWidth)
                 console.log("Phone Screen")
-                elementWidth(22, 23, 99)
+                elementWidth(4, 5, 99)
             }
             else {
-                element(22).style.minHeight = "600px"
-                element(23).style.minWidth = "35%"
-                element(22).style.minWidth = "60%"
-            }
-        } else if (p === 'm') {
-            nav()
-            if (window.innerWidth <= 910) {
-                console.log(window.innerWidth)
-                console.log("Phone Screen")
-                elementWidth(20, 21, 99)
-            }
-            else {
-                element(20).style.minHeight = "600px"
-                element(20).style.width = "60%"
-                element(21).style.width = "35%"
-            }
-        } else if (p === 't') {
-            nav()
-            if (window.innerWidth <= 910) {
-                console.log(window.innerWidth)
-                console.log("Phone Screen")
-                elementWidth(18, 19, 99)
-            }
-            else {
-                element(18).style.minHeight = "600px"
-                element(18).style.width = "60%"
-                element(19).style.width = "35%"
-            } 
-        } else if (p === 't2') {
-            nav()
-            if (window.innerWidth <= 910) {
-                console.log(window.innerWidth)
-                console.log("Phone Screen")
-                elementWidth(16, 17, 99)
-            }
-            else {
-                element(16).style.minHeight = "600px"
-                element(16).style.width = "60%"
-                element(17).style.width = "35%"
-            }
-        } else if (p === 'l2') {
-            nav()
-            if (window.innerWidth <= 910) {
-                console.log(window.innerWidth)
-                console.log("Phone Screen")
-                elementWidth(14, 15, 99)
-            }
-            else {
-                element(14).style.minHeight = "600px"
-                element(14).style.width = "60%"
-                element(15).style.width = "35%"
+                element(4).style.width = "60%"
+                element(4).style.minHeight = "600px"
+                element(5).style.width = "35%"
             }
         } else if (p === 'p') {
             nav()            
@@ -167,35 +115,15 @@ function phoneMode(p) {
                 element(5).style.width = "35%"
             }
         }
-    } 
+}; 
 
-
-if (document.URL.includes("Home.html") || document.URL.includes("home")) {
-    if (window.innerWidth <= 870) {
-        console.log('Phone screen');
-        elementWidth(1, 3, 99)
-        element(1).style.marginBottom = "2mm";
-        element(2).style.marginBottom = "2mm";
-        document.getElementById("Tittle").style.fontSize = "800%";
-        if (window.innerWidth <= 790) {
-            document.getElementById("nav-text").style.fontSize = "2em"
-            document.getElementById("Tittle-Div").style.backgroundImage = "none";
-            document.getElementById("Tittle").style.fontSize = "800%";
-        }
-        else {
-            document.getElementById("Tittle-Div").style.backgroundImage = "/img/WEB-1NewNewTittleImage.png";
-        };
-    }; 
-};
-
-// !PAGE CODE
-    function Hide(UNIT) {
+function Hide(UNIT) {
         let un = 'undefined';
         if (UNIT === un ) {
             document.getElementsByClassName("ans-text").visibility = "hidden";
             document.getElementById('ans-text').style.visibility = "hidden";
-            document.getElementById('1-LEN-IF').style.visibility = "visible";
-            document.getElementById('2-LEN-IF').style.visibility = "visible";
+            document.getElementById('1-IF').style.visibility = "visible";
+            document.getElementById('2-IF').style.visibility = "visible";
         } if (
              UNIT === 'M' ||
              UNIT === 'KM' ||
@@ -233,1182 +161,1219 @@ if (document.URL.includes("Home.html") || document.URL.includes("home")) {
             UNIT === "ML" ||
             UNIT === "OZ" 
         ) {
-            document.getElementById('1-LEN-IF').style.visibility = "hidden";
-            document.getElementById('2-LEN-IF').style.visibility = "hidden";
+            document.getElementById('1-IF').style.visibility = "hidden";
+            document.getElementById('2-IF').style.visibility = "hidden";
             document.getElementById('ans-text').style.visibility = "visible";
             document.getElementsByClassName("ans-text").visibility = "visible";
         };
-    };
-
-if (document.URL.includes("len.html")) {
-    console.log("you are in the len page");
-
-    let UNIT = document.getElementById('UNIT-LEN').value || 'undefined';
-    // Hide(UNIT);
-
-    function Len() {
-        let NUM = document.getElementById('NUM-LEN').value || 1;
-        let UNIT = document.getElementById('UNIT-LEN').value || 'undefined';
-        console.log("btn 'BTN-1-LEN' pressed.");
-        console.log(NUM);
-        console.log(UNIT);
-        if (UNIT === 'M') {
-
-            document.getElementById("len-1-text").innerHTML = "M to KM";
-            document.getElementById("len-2-text").innerHTML = "M to CM";
-            document.getElementById("len-3-text").innerHTML = "M to FT";
-            document.getElementById("len-4-text").innerHTML = "M to YD";
-            document.getElementById("len-5-text").innerHTML = "M to MI";
-            document.getElementById("len-6-text").innerHTML = "M to IN";
-            document.getElementById("len-7-text").innerHTML = "M to MM ";
-            document.getElementById("len-8-text").innerHTML = "M to μM ";
-            document.getElementById("len-9-text").innerHTML = "M to NM ";
-            document.getElementById("len-10-text").innerHTML = "M to NMI";
-
-            document.getElementById("len-11-text").innerHTML = "M to KM";
-            document.getElementById("len-12-text").innerHTML = "M to CM";
-            document.getElementById("len-13-text").innerHTML = "M to FT";
-            document.getElementById("len-14-text").innerHTML = "M to YD";
-            document.getElementById("len-15-text").innerHTML = "M to MI";
-            document.getElementById("len-16-text").innerHTML = "M to IN";
-            document.getElementById("len-17-text").innerHTML = "M to MM ";
-            document.getElementById("len-18-text").innerHTML = "M to μM ";
-            document.getElementById("len-19-text").innerHTML = "M to NM ";
-            document.getElementById("len-20-text").innerHTML = "M to NMI";
-
-
-            document.getElementById("01-len").innerHTML = (NUM / 1000);
-            document.getElementById("02-len").innerHTML = (NUM * 100);
-            document.getElementById("03-len").innerHTML = (NUM * 3.28);
-            document.getElementById("04-len").innerHTML = (NUM * 1.094);
-            document.getElementById("05-len").innerHTML = (NUM / 1809);
-            document.getElementById("06-len").innerHTML = (NUM * 39.37);
-            document.getElementById("07-len").innerHTML = (NUM * 1000);
-            document.getElementById("08-len").innerHTML = (NUM * 1e+6);
-            document.getElementById("09-len").innerHTML = (NUM * 1e+9);
-            document.getElementById("10-len").innerHTML = (NUM / 1852);
-            document.getElementsByClassName("ans-NUM").innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = "/ 1000";
-            document.getElementById("len-2-formula").innerHTML = "* 100";
-            document.getElementById("len-3-formula").innerHTML = "*3.28";
-            document.getElementById("len-4-formula").innerHTML = "* 1.094";
-            document.getElementById("len-5-formula").innerHTML = "/ 1809";
-            document.getElementById("len-6-formula").innerHTML = "* 39.37";
-            document.getElementById("len-7-formula").innerHTML = "* 1000";
-            document.getElementById("len-8-formula").innerHTML = "* 1e+6";
-            document.getElementById("len-9-formula").innerHTML = "* 1e+9";
-            document.getElementById("len-10-formula").innerHTML = "/ 1852";
-
-            Hide(UNIT)
-        } if (UNIT === 'KM') {
-            document.getElementById("len-1-text").innerHTML = "KM to M:";
-            document.getElementById("len-2-text").innerHTML = "KM to CM:";
-            document.getElementById("len-3-text").innerHTML = "KM to FT:";
-            document.getElementById("len-4-text").innerHTML = "KM to YD:";
-            document.getElementById("len-5-text").innerHTML = "KM to MI:";
-            document.getElementById("len-6-text").innerHTML = "KM to IN:";
-            document.getElementById("len-7-text").innerHTML = "KM to MM ";
-            document.getElementById("len-8-text").innerHTML = "KM to μM ";
-            document.getElementById("len-9-text").innerHTML = "KM to NM ";
-            document.getElementById("len-10-text").innerHTML = "KM to NMI";
-
-
-            document.getElementById("len-11-text").innerHTML = "KM to M:";
-            document.getElementById("len-12-text").innerHTML = "KM to CM:";
-            document.getElementById("len-13-text").innerHTML = "KM to FT:";
-            document.getElementById("len-14-text").innerHTML ="KM to YD:";
-            document.getElementById("len-15-text").innerHTML ="KM to MI:";
-            document.getElementById("len-16-text").innerHTML ="KM to IN:";
-            document.getElementById("len-17-text").innerHTML = "KM to MM ";
-            document.getElementById("len-18-text").innerHTML = "KM to μM ";
-            document.getElementById("len-19-text").innerHTML = "KM to NM ";
-            document.getElementById("len-20-text").innerHTML = "KM to NMI";
-
-
-            document.getElementById("01-len").innerHTML = (NUM * 1000  );
-            document.getElementById("02-len").innerHTML = (NUM * 100000);
-            document.getElementById("03-len").innerHTML = (NUM * 3281  );
-            document.getElementById("04-len").innerHTML = (NUM * 1094  );
-            document.getElementById("05-len").innerHTML = (NUM / 1.609 );
-            document.getElementById("06-len").innerHTML = (NUM * 39370 );
-            document.getElementById("07-len").innerHTML = (NUM * 1e+6 );
-            document.getElementById("08-len").innerHTML = (NUM * 1e+9 );
-            document.getElementById("09-len").innerHTML = (NUM * 1e+12);
-            document.getElementById("10-len").innerHTML = (NUM / 1.852);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = "* 1000  ";
-            document.getElementById("len-2-formula").innerHTML = "* 100000";
-            document.getElementById("len-3-formula").innerHTML = "* 3281  ";
-            document.getElementById("len-4-formula").innerHTML = "* 1094  ";
-            document.getElementById("len-5-formula").innerHTML = "/ 1.609 ";
-            document.getElementById("len-6-formula").innerHTML = "* 39370 ";
-            document.getElementById("len-7-formula").innerHTML = "* 1e+6 ";
-            document.getElementById("len-8-formula").innerHTML = "* 1e+9 ";
-            document.getElementById("len-9-formula").innerHTML = "* 1e+12";
-            document.getElementById("len-10-formula").innerHTML = "/ 1.852";
-
-            Hide(UNIT)
-        } if (UNIT === 'CM') {
-            document.getElementById("len-1-text").innerHTML = "CM to M:";
-            document.getElementById("len-2-text").innerHTML = "CM to KM:";
-            document.getElementById("len-3-text").innerHTML = "CM to FT:";
-            document.getElementById("len-4-text").innerHTML = "CM to YD:";
-            document.getElementById("len-5-text").innerHTML = "CM to MI:";
-            document.getElementById("len-6-text").innerHTML = "CM to IN:";
-            document.getElementById("len-7-text").innerHTML = "CM to MM ";
-            document.getElementById("len-8-text").innerHTML = "CM to μM ";
-            document.getElementById("len-9-text").innerHTML = "CM to NM ";
-            document.getElementById("len-10-text").innerHTML = "CM to NMI";
-
-
-            document.getElementById("len-11-text").innerHTML = "CM to M:";
-            document.getElementById("len-12-text").innerHTML = "CM to KM:";
-            document.getElementById("len-13-text").innerHTML = "CM to FT:";
-            document.getElementById("len-14-text").innerHTML = "CM to YD:";
-            document.getElementById("len-15-text").innerHTML = "CM to MI:";
-            document.getElementById("len-16-text").innerHTML = "CM to IN:";
-            document.getElementById("len-17-text").innerHTML = "CM to MM ";
-            document.getElementById("len-18-text").innerHTML = "CM to μM ";
-            document.getElementById("len-19-text").innerHTML = "CM to NM ";
-            document.getElementById("len-20-text").innerHTML = "CM to NMI";
-
-
-            document.getElementById("01-len").innerHTML = (NUM / 100   );
-            document.getElementById("02-len").innerHTML = (NUM / 1e+6  );
-            document.getElementById("03-len").innerHTML = (NUM / 30.48 );
-            document.getElementById("04-len").innerHTML = (NUM / 41.44 );
-            document.getElementById("05-len").innerHTML = (NUM / 160934);
-            document.getElementById("06-len").innerHTML = (NUM / 2.54  );
-            document.getElementById("07-len").innerHTML = (NUM * 10     );
-            document.getElementById("08-len").innerHTML = (NUM * 10000  );
-            document.getElementById("09-len").innerHTML = (NUM * 1e+7   );
-            document.getElementById("10-len").innerHTML = (NUM / 1852e+2);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = "/ 100   ";
-            document.getElementById("len-2-formula").innerHTML = "/ 1e+6  ";
-            document.getElementById("len-3-formula").innerHTML = "/ 30.48 ";
-            document.getElementById("len-4-formula").innerHTML = "/ 41.44 ";
-            document.getElementById("len-5-formula").innerHTML = "/ 160934";
-            document.getElementById("len-6-formula").innerHTML = "/ 2.54  ";
-            document.getElementById("len-7-formula").innerHTML = "* 10     ";
-            document.getElementById("len-8-formula").innerHTML = "* 10000  ";
-            document.getElementById("len-9-formula").innerHTML = "* 1e+7   ";
-            document.getElementById("len-10-formula").innerHTML = "/ 1852e+2";
-
-            Hide(UNIT)
-        } if (UNIT === 'FT') {
-            document.getElementById("len-1-text").innerHTML = "FT to M:";
-            document.getElementById("len-2-text").innerHTML = "FT to KM:";
-            document.getElementById("len-3-text").innerHTML = "FT to CM:";
-            document.getElementById("len-4-text").innerHTML = "FT to YD:";
-            document.getElementById("len-5-text").innerHTML = "FT to MI:";
-            document.getElementById("len-6-text").innerHTML = "FT to IN:";
-            document.getElementById("len-7-text").innerHTML = "FT to MM ";
-            document.getElementById("len-8-text").innerHTML = "FT to μM ";
-            document.getElementById("len-9-text").innerHTML = "FT to NM ";
-            document.getElementById("len-10-text").innerHTML = "FT to NMI";
-            
-
-            document.getElementById("len-11-text").innerHTML = "FTto M:";
-            document.getElementById("len-12-text").innerHTML = "FTto KM:";
-            document.getElementById("len-13-text").innerHTML = "FTto CM:";
-            document.getElementById("len-14-text").innerHTML ="FTto YD:";
-            document.getElementById("len-15-text").innerHTML ="FTto MI:";
-            document.getElementById("len-16-text").innerHTML ="FTto IN:";
-            document.getElementById("len-17-text").innerHTML = "FT to MM ";
-            document.getElementById("len-18-text").innerHTML = "FT to μM ";
-            document.getElementById("len-19-text").innerHTML = "FT to NM ";
-            document.getElementById("len-20-text").innerHTML = "FT to NMI";
-
-
-            document.getElementById("01-len").innerHTML = (NUM * 3.281 );
-            document.getElementById("02-len").innerHTML = (NUM / 3281  );
-            document.getElementById("03-len").innerHTML = (NUM * 30.48 );
-            document.getElementById("04-len").innerHTML = (NUM * 3     );
-            document.getElementById("05-len").innerHTML = (NUM / 5280  );
-            document.getElementById("06-len").innerHTML = (NUM * 12    );
-            document.getElementById("07-len").innerHTML = (NUM * 304.8   );
-            document.getElementById("08-len").innerHTML = (NUM * 304800  );
-            document.getElementById("09-len").innerHTML = (NUM * 3.048e+8);
-            document.getElementById("10-len").innerHTML = (NUM / 6076    );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = "* 3.281 ";
-            document.getElementById("len-2-formula").innerHTML = "/ 3281  ";
-            document.getElementById("len-3-formula").innerHTML = "* 30.48 ";
-            document.getElementById("len-4-formula").innerHTML = "* 3     ";
-            document.getElementById("len-5-formula").innerHTML = "/ 5280  ";
-            document.getElementById("len-6-formula").innerHTML = "* 12    ";
-            document.getElementById("len-7-formula").innerHTML = "* 304.8   ";
-            document.getElementById("len-8-formula").innerHTML = "* 304800  ";
-            document.getElementById("len-9-formula").innerHTML = "* 3.048e+8";
-            document.getElementById("len-10-formula").innerHTML = "/ 6076    ";
-
-            Hide(UNIT)
-        } if (UNIT === 'YD') {
-            document.getElementById("len-1-text").innerHTML = "YD to M:";
-            document.getElementById("len-2-text").innerHTML = "YD to KM:";
-            document.getElementById("len-3-text").innerHTML = "YD to CM:";
-            document.getElementById("len-4-text").innerHTML = "YD to FT:";
-            document.getElementById("len-5-text").innerHTML = "YD to MI:";
-            document.getElementById("len-6-text").innerHTML = "YD to IN:";
-            document.getElementById("len-7-text").innerHTML = "YD to MM ";
-            document.getElementById("len-8-text").innerHTML = "YD to μM ";
-            document.getElementById("len-9-text").innerHTML = "YD to NM ";
-            document.getElementById("len-10-text").innerHTML = "YD to NMI";
-
-            document.getElementById("len-11-text").innerHTML = "YD to M:";
-            document.getElementById("len-12-text").innerHTML = "YD to KM:";
-            document.getElementById("len-13-text").innerHTML = "YD to CM:";
-            document.getElementById("len-14-text").innerHTML ="YD to FT:";
-            document.getElementById("len-15-text").innerHTML ="YD to MI:";
-            document.getElementById("len-16-text").innerHTML ="YD to IN:";
-            document.getElementById("len-17-text").innerHTML = "YD to MM ";
-            document.getElementById("len-18-text").innerHTML = "YD to μM ";
-            document.getElementById("len-19-text").innerHTML = "YD to NM ";
-            document.getElementById("len-20-text").innerHTML = "YD to NMI";
-
-
-            document.getElementById("01-len").innerHTML = (NUM * 1.094 );
-            document.getElementById("02-len").innerHTML = (NUM / 1094  );
-            document.getElementById("03-len").innerHTML = (NUM * 91.44 );
-            document.getElementById("04-len").innerHTML = (NUM * 3     );
-            document.getElementById("05-len").innerHTML = (NUM / 1760  );
-            document.getElementById("06-len").innerHTML = (NUM / 12    );
-            document.getElementById("07-len").innerHTML = (NUM * 914.4   );
-            document.getElementById("08-len").innerHTML = (NUM * 914400  );
-            document.getElementById("09-len").innerHTML = (NUM * 9.144e+8);
-            document.getElementById("10-len").innerHTML = (NUM / 2025    );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = "* 1.094 ";
-            document.getElementById("len-2-formula").innerHTML = "/ 1094  ";
-            document.getElementById("len-3-formula").innerHTML = "* 91.44 ";
-            document.getElementById("len-4-formula").innerHTML = "* 3     ";
-            document.getElementById("len-5-formula").innerHTML = "/ 1760  ";
-            document.getElementById("len-6-formula").innerHTML = "/ 12    ";
-            document.getElementById("len-7-formula").innerHTML = "* 914.4   ";
-            document.getElementById("len-8-formula").innerHTML = "* 914400  ";
-            document.getElementById("len-9-formula").innerHTML = "* 9.144e+8";
-            document.getElementById("len-10-formula").innerHTML = "/ 2025    ";
-
-            Hide(UNIT)
-        } if (UNIT === 'MI') {
-            document.getElementById("len-1-text").innerHTML = "MI to M:";
-            document.getElementById("len-2-text").innerHTML = "MI to KM:";
-            document.getElementById("len-3-text").innerHTML = "MI to CM:";
-            document.getElementById("len-4-text").innerHTML = "MI to FT:";
-            document.getElementById("len-5-text").innerHTML = "MI to YD:";
-            document.getElementById("len-6-text").innerHTML = "MI to IN:";
-            document.getElementById("len-7-text").innerHTML = "MI to MM ";
-            document.getElementById("len-8-text").innerHTML = "MI to μM ";
-            document.getElementById("len-9-text").innerHTML = "MI to NM ";
-            document.getElementById("len-10-text").innerHTML = "MI to NMI";
-
-            document.getElementById("len-11-text").innerHTML = "MI to M:";
-            document.getElementById("len-12-text").innerHTML = "MI to KM:";
-            document.getElementById("len-13-text").innerHTML = "MI to CM:";
-            document.getElementById("len-14-text").innerHTML ="MI to FT:";
-            document.getElementById("len-15-text").innerHTML ="MI to YD:";
-            document.getElementById("len-16-text").innerHTML ="MI to IN:";
-            document.getElementById("len-17-text").innerHTML = "MI to MM ";
-            document.getElementById("len-18-text").innerHTML = "MI to μM ";
-            document.getElementById("len-19-text").innerHTML = "MI to NM ";
-            document.getElementById("len-20-text").innerHTML = "MI to NMI";
-
-
-            document.getElementById("01-len").innerHTML = (NUM * 1609   );
-            document.getElementById("02-len").innerHTML = (NUM * 1.609 );
-            document.getElementById("03-len").innerHTML = (NUM * 160934);
-            document.getElementById("04-len").innerHTML = (NUM * 5280  );
-            document.getElementById("05-len").innerHTML = (NUM * 1760  );
-            document.getElementById("06-len").innerHTML = (NUM * 63360 );
-            document.getElementById("07-len").innerHTML = (NUM * 1.609e+6 );
-            document.getElementById("08-len").innerHTML = (NUM * 1.609e+9 );
-            document.getElementById("09-len").innerHTML = (NUM * 1.609e+12);
-            document.getElementById("10-len").innerHTML = (NUM / 1.151    );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = "* 1609  ";
-            document.getElementById("len-2-formula").innerHTML = "* 1.609 ";
-            document.getElementById("len-3-formula").innerHTML = "* 160934";
-            document.getElementById("len-4-formula").innerHTML = "* 5280  ";
-            document.getElementById("len-5-formula").innerHTML = "* 1760  ";
-            document.getElementById("len-6-formula").innerHTML = "* 63360 ";
-            document.getElementById("len-7-formula").innerHTML = "* 1.609e+6 ";
-            document.getElementById("len-8-formula").innerHTML = "* 1.609e+9 ";
-            document.getElementById("len-9-formula").innerHTML = "* 1.609e+12";
-            document.getElementById("len-10-formula").innerHTML = "/ 1.151";
-
-            Hide(UNIT)
-        } if (UNIT === 'IN') {
-            document.getElementById("len-1-text").innerHTML = "IN to M:";
-            document.getElementById("len-2-text").innerHTML = "IN to KM:";
-            document.getElementById("len-3-text").innerHTML = "IN to CM:";
-            document.getElementById("len-4-text").innerHTML = "IN to FT:";
-            document.getElementById("len-5-text").innerHTML = "IN to YD:";
-            document.getElementById("len-6-text").innerHTML = "IN to MI:";
-            document.getElementById("len-7-text").innerHTML = "IN to MM ";
-            document.getElementById("len-8-text").innerHTML = "IN to μM ";
-            document.getElementById("len-9-text").innerHTML = "IN to NM ";
-            document.getElementById("len-10-text").innerHTML = "IN to NMI";
-
-            document.getElementById("len-11-text").innerHTML = "IN to M:";
-            document.getElementById("len-12-text").innerHTML = "IN to KM:";
-            document.getElementById("len-13-text").innerHTML = "IN to CM:";
-            document.getElementById("len-14-text").innerHTML ="IN to FT:";
-            document.getElementById("len-15-text").innerHTML ="IN to YD:";
-            document.getElementById("len-16-text").innerHTML ="IN to MI:";
-            document.getElementById("len-17-text").innerHTML = "IN to MM ";
-            document.getElementById("len-18-text").innerHTML = "IN to μM ";
-            document.getElementById("len-19-text").innerHTML = "IN to NM ";
-            document.getElementById("len-20-text").innerHTML = "IN to NMI";
-
-
-            document.getElementById("01-len").innerHTML = (NUM / 39.37 );
-            document.getElementById("02-len").innerHTML = (NUM / 39370 );
-            document.getElementById("03-len").innerHTML = (NUM * 2.54  );
-            document.getElementById("04-len").innerHTML = (NUM / 12    );
-            document.getElementById("05-len").innerHTML = (NUM / 36    );
-            document.getElementById("06-len").innerHTML = (NUM / 63360 );
-            document.getElementById("07-len").innerHTML = (NUM  * 25.4   );
-            document.getElementById("08-len").innerHTML = (NUM  * 25400  );
-            document.getElementById("09-len").innerHTML = (NUM  * 2.54e+7);
-            document.getElementById("10-len").innerHTML = (NUM  / 72910  );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = "/ 39.37 ";
-            document.getElementById("len-2-formula").innerHTML = "/ 39370 ";
-            document.getElementById("len-3-formula").innerHTML = "* 2.54  ";
-            document.getElementById("len-4-formula").innerHTML = "/ 12    ";
-            document.getElementById("len-5-formula").innerHTML = "/ 36    ";
-            document.getElementById("len-6-formula").innerHTML = "/ 63360 ";
-            document.getElementById("len-7-formula").innerHTML = " * 25.4   ";
-            document.getElementById("len-8-formula").innerHTML = " * 25400  ";
-            document.getElementById("len-9-formula").innerHTML = " * 2.54e+7";
-            document.getElementById("len-10-formula").innerHTML = "/ 72910  ";
-
-            Hide(UNIT)
-        } if (UNIT === 'MM') {
-            document.getElementById("len-1-text").innerHTML = "MM to M:  ";
-            document.getElementById("len-2-text").innerHTML = "MM to KM: ";
-            document.getElementById("len-3-text").innerHTML = "MM to CM: ";
-            document.getElementById("len-4-text").innerHTML = "MM to FT: ";
-            document.getElementById("len-5-text").innerHTML = "MM to YD: ";
-            document.getElementById("len-6-text").innerHTML = "MM to MI: ";
-            document.getElementById("len-7-text").innerHTML = "MM to IN: ";
-            document.getElementById("len-8-text").innerHTML = "MM to μM: ";
-            document.getElementById("len-9-text").innerHTML = "MM to NM: ";
-            document.getElementById("len-10-text").innerHTML = "MM to NMI:";
-
-            document.getElementById("len-11-text").innerHTML = "MM to M:  ";
-            document.getElementById("len-12-text").innerHTML = "MM to KM: ";
-            document.getElementById("len-13-text").innerHTML = "MM to CM: ";
-            document.getElementById("len-14-text").innerHTML = "MM to FT: ";
-            document.getElementById("len-15-text").innerHTML = "MM to YD: ";
-            document.getElementById("len-16-text").innerHTML = "MM to MI: ";
-            document.getElementById("len-17-text").innerHTML = "MM to IN: ";
-            document.getElementById("len-18-text").innerHTML = "MM to μM: ";
-            document.getElementById("len-19-text").innerHTML = "MM to NM: ";
-            document.getElementById("len-20-text").innerHTML = "MM to NMI:";
-
-            document.getElementById("01-len").innerHTML = (NUM / 1000    );
-            document.getElementById("02-len").innerHTML = (NUM / 1e+6    );
-            document.getElementById("03-len").innerHTML = (NUM / 10      );
-            document.getElementById("04-len").innerHTML = (NUM / 304.8  );
-            document.getElementById("05-len").innerHTML = (NUM / 914.4   );
-            document.getElementById("06-len").innerHTML = (NUM / 1.609e+6);
-            document.getElementById("07-len").innerHTML = (NUM / 25.4    );
-            document.getElementById("08-len").innerHTML = (NUM * 1000    );
-            document.getElementById("09-len").innerHTML = (NUM * 1e+6    );
-            document.getElementById("10-len").innerHTML = (NUM / 1.852e+6);
-            document.getElementsByClassName("ans-NUM").innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = " / 1000    ";
-            document.getElementById("len-2-formula").innerHTML = " / 1e+6    ";
-            document.getElementById("len-3-formula").innerHTML = " / 10      ";
-            document.getElementById("len-4-formula").innerHTML = " / 304.48  ";
-            document.getElementById("len-5-formula").innerHTML = " / 914.4   ";
-            document.getElementById("len-6-formula").innerHTML = " / 1.609e+6";
-            document.getElementById("len-7-formula").innerHTML = " / 25.4    ";
-            document.getElementById("len-8-formula").innerHTML = " * 1000    ";
-            document.getElementById("len-9-formula").innerHTML = " * 1e+6    ";
-            document.getElementById("len-10-formula").innerHTML = "/ 1.852e+6";
-        } if (UNIT === 'μM') {
-            document.getElementById("len-1-text").innerHTML = "μM to M:  ";
-            document.getElementById("len-2-text").innerHTML = "μM to KM: ";
-            document.getElementById("len-3-text").innerHTML = "μM to CM: ";
-            document.getElementById("len-4-text").innerHTML = "μM to FT: ";
-            document.getElementById("len-5-text").innerHTML = "μM to YD: ";
-            document.getElementById("len-6-text").innerHTML = "μM to MI: ";
-            document.getElementById("len-7-text").innerHTML = "μM to IN: ";
-            document.getElementById("len-8-text").innerHTML = "μM to MM: ";
-            document.getElementById("len-9-text").innerHTML = "μM to NM: ";
-            document.getElementById("len-10-text").innerHTML = "μM to NMI:";
-
-            document.getElementById("len-11-text").innerHTML = "μM to M:  ";
-            document.getElementById("len-12-text").innerHTML = "μM to KM: ";
-            document.getElementById("len-13-text").innerHTML = "μM to CM: ";
-            document.getElementById("len-14-text").innerHTML = "μM to FT: ";
-            document.getElementById("len-15-text").innerHTML = "μM to YD: ";
-            document.getElementById("len-16-text").innerHTML = "μM to MI: ";
-            document.getElementById("len-17-text").innerHTML = "μM to IN: ";
-            document.getElementById("len-18-text").innerHTML = "μM to MM: ";
-            document.getElementById("len-19-text").innerHTML = "μM to NM: ";
-            document.getElementById("len-20-text").innerHTML = "μM to NMI:";
-
-            document.getElementById("01-len").innerHTML = (NUM / 1000000 );
-            document.getElementById("02-len").innerHTML = (NUM / 1e+9    );
-            document.getElementById("03-len").innerHTML = (NUM / 10000   );
-            document.getElementById("04-len").innerHTML = (NUM / 304800  );
-            document.getElementById("05-len").innerHTML = (NUM / 914400  );
-            document.getElementById("06-len").innerHTML = (NUM / 1.609e+9);
-            document.getElementById("07-len").innerHTML = (NUM / 25400    );
-            document.getElementById("08-len").innerHTML = (NUM / 1000    );
-            document.getElementById("09-len").innerHTML = (NUM * 1000    );
-            document.getElementById("10-len").innerHTML = (NUM / 1.852e+6);
-            document.getElementsByClassName("ans-NUM").innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = " / 1000000 ";
-            document.getElementById("len-2-formula").innerHTML = " / 1e+9    ";
-            document.getElementById("len-3-formula").innerHTML = " / 10000   ";
-            document.getElementById("len-4-formula").innerHTML = " / 304800  ";
-            document.getElementById("len-5-formula").innerHTML = " / 914400  ";
-            document.getElementById("len-6-formula").innerHTML = " / 1.609e+9";
-            document.getElementById("len-7-formula").innerHTML = " / 25.4    ";
-            document.getElementById("len-8-formula").innerHTML = " / 1000    ";
-            document.getElementById("len-9-formula").innerHTML = " * 1000    ";
-            document.getElementById("len-10-formula").innerHTML = "/ 1.852e+6";
-
-        } if (UNIT === 'NM') {
-            document.getElementById("len-1-text").innerHTML = "NM to M:  ";
-            document.getElementById("len-2-text").innerHTML = "NM to KM: ";
-            document.getElementById("len-3-text").innerHTML = "NM to CM: ";
-            document.getElementById("len-4-text").innerHTML = "NM to FT: ";
-            document.getElementById("len-5-text").innerHTML = "NM to YD: ";
-            document.getElementById("len-6-text").innerHTML = "NM to MI: ";
-            document.getElementById("len-7-text").innerHTML = "NM to IN: ";
-            document.getElementById("len-8-text").innerHTML = "NM to MM: ";
-            document.getElementById("len-9-text").innerHTML = "NM to μM: ";
-           document.getElementById("len-10-text").innerHTML = "NM to NMI:";
-
-            document.getElementById("len-11-text").innerHTML = "NM to M:  ";
-            document.getElementById("len-12-text").innerHTML = "NM to KM: ";
-            document.getElementById("len-13-text").innerHTML = "NM to CM: ";
-            document.getElementById("len-14-text").innerHTML = "NM to FT: ";
-            document.getElementById("len-15-text").innerHTML = "NM to YD: ";
-            document.getElementById("len-16-text").innerHTML = "NM to MI: ";
-            document.getElementById("len-17-text").innerHTML = "NM to IN: ";
-            document.getElementById("len-18-text").innerHTML = "NM to MM: ";
-            document.getElementById("len-19-text").innerHTML = "NM to μM: ";
-            document.getElementById("len-20-text").innerHTML = "NM to NMI:";
-
-            document.getElementById("01-len").innerHTML = (NUM / 1e+9     );
-            document.getElementById("02-len").innerHTML = (NUM / 1e+12    );
-            document.getElementById("03-len").innerHTML = (NUM / 1e+7     );
-            document.getElementById("04-len").innerHTML = (NUM / 3.048e+8 );
-            document.getElementById("05-len").innerHTML = (NUM / 9.144e+8 );
-            document.getElementById("06-len").innerHTML = (NUM / 1.609e+12);
-            document.getElementById("07-len").innerHTML = (NUM / 254e+7   );
-            document.getElementById("08-len").innerHTML = (NUM / 1e+6     );
-            document.getElementById("09-len").innerHTML = (NUM / 1000     );
-            document.getElementById("10-len").innerHTML = (NUM / 1.852e+12);
-            document.getElementsByClassName("ans-NUM").innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = " / 1e+9     ";
-            document.getElementById("len-2-formula").innerHTML = " / 1e+12    ";
-            document.getElementById("len-3-formula").innerHTML = " / 1e+7     ";
-            document.getElementById("len-4-formula").innerHTML = " / 3.048e+8 ";
-            document.getElementById("len-5-formula").innerHTML = " / 9.144e+8 ";
-            document.getElementById("len-6-formula").innerHTML = " / 1.609e+12";
-            document.getElementById("len-7-formula").innerHTML = " / 254e+7   ";
-            document.getElementById("len-8-formula").innerHTML = " / 1e+6     ";
-            document.getElementById("len-9-formula").innerHTML = " / 1000     ";
-            document.getElementById("len-10-formula").innerHTML = "/ 1.852e+12";
-        } if (UNIT === 'NMI') {
-            document.getElementById("len-1-text").innerHTML = "NMI to M:  ";
-            document.getElementById("len-2-text").innerHTML = "NMI to KM: ";
-            document.getElementById("len-3-text").innerHTML = "NMI to CM: ";
-            document.getElementById("len-4-text").innerHTML = "NMI to FT: ";
-            document.getElementById("len-5-text").innerHTML = "NMI to YD: ";
-            document.getElementById("len-6-text").innerHTML = "NMI to MI: ";
-            document.getElementById("len-7-text").innerHTML = "NMI to IN: ";
-            document.getElementById("len-8-text").innerHTML = "NMI to MM: ";
-            document.getElementById("len-9-text").innerHTML = "NMI to μM: ";
-           document.getElementById("len-10-text").innerHTML = "NMI to NMI:";
-
-            document.getElementById("len-11-text").innerHTML = "NMI to M:  ";
-            document.getElementById("len-12-text").innerHTML = "NMI to KM: ";
-            document.getElementById("len-13-text").innerHTML = "NMI to CM: ";
-            document.getElementById("len-14-text").innerHTML = "NMI to FT: ";
-            document.getElementById("len-15-text").innerHTML = "NMI to YD: ";
-            document.getElementById("len-16-text").innerHTML = "NMI to MI: ";
-            document.getElementById("len-17-text").innerHTML = "NMI to IN: ";
-            document.getElementById("len-18-text").innerHTML = "NMI to MM: ";
-            document.getElementById("len-19-text").innerHTML = "NMI to μM: ";
-            document.getElementById("len-20-text").innerHTML = "NMI to NM:";
-
-            document.getElementById("01-len").innerHTML = (NUM * 1852     );
-            document.getElementById("02-len").innerHTML = (NUM * 1.852    );
-            document.getElementById("03-len").innerHTML = (NUM * 1.852e+2 );
-            document.getElementById("04-len").innerHTML = (NUM * 6076     );
-            document.getElementById("05-len").innerHTML = (NUM * 2025     );
-            document.getElementById("06-len").innerHTML = (NUM * 1.151    );
-            document.getElementById("07-len").innerHTML = (NUM * 72910    );
-            document.getElementById("08-len").innerHTML = (NUM * 1.852e+6 );
-            document.getElementById("09-len").innerHTML = (NUM * 1.852e+9 );
-            document.getElementById("10-len").innerHTML = (NUM * 1.852e+12);
-            document.getElementsByClassName("ans-NUM").innerHTML = NUM;
-
-            document.getElementById("len-1-formula").innerHTML = " * 1852     ";
-            document.getElementById("len-2-formula").innerHTML = " * 1.852    ";
-            document.getElementById("len-3-formula").innerHTML = " * 1.852e+2 ";
-            document.getElementById("len-4-formula").innerHTML = " * 6076     ";
-            document.getElementById("len-5-formula").innerHTML = " * 2025     ";
-            document.getElementById("len-6-formula").innerHTML = " * 1.151    ";
-            document.getElementById("len-7-formula").innerHTML = " * 72910    ";
-            document.getElementById("len-8-formula").innerHTML = " * 1.852e+6 ";
-            document.getElementById("len-9-formula").innerHTML = " * 1.852e+9 ";
-            document.getElementById("len-10-formula").innerHTML = "* 1.852e+12";
-        }
-    };
 };
 
-if (document.URL.includes("mass.html")) {
+// ! CODE FOR CONVERSIONS
 
-    console.log("you are in the mass page");
+function Len() {
+    let NUM = document.getElementById('NUM').value || 1;
+    let UNIT = document.getElementById('UNIT').value || 'undefined';
+    console.log("btn 'BTN-1' pressed.");
+    console.log(NUM);
+    console.log(UNIT);
+    if (UNIT === 'M') {
 
-    function Mass() {
-        let NUM = document.getElementById('NUM-MASS').value || 1;
-        let UNIT = document.getElementById('UNIT-MASS').value || 'undefined';
-        console.log("btn 'BTN-1-MASS' pressed.");
-        console.log(NUM);
-        console.log(UNIT);
+        document.getElementById("1-text").innerHTML = "M to KM";
+        document.getElementById("2-text").innerHTML = "M to CM";
+        document.getElementById("3-text").innerHTML = "M to FT";
+        document.getElementById("4-text").innerHTML = "M to YD";
+        document.getElementById("5-text").innerHTML = "M to MI";
+        document.getElementById("6-text").innerHTML = "M to IN";
+        document.getElementById("7-text").innerHTML = "M to MM ";
+        document.getElementById("8-text").innerHTML = "M to μM ";
+        document.getElementById("9-text").innerHTML = "M to NM ";
+        document.getElementById("10-text").innerHTML = "M to NMI";
 
-        if (UNIT === 'KG') {
-            document.getElementById("mass-1-text").innerHTML = "KG to G:     ";
-            document.getElementById("mass-2-text").innerHTML = "KG to MG:    ";
-            document.getElementById("mass-3-text").innerHTML = "KG to μG:    ";
-            document.getElementById("mass-4-text").innerHTML = "KG to TONNE: ";
-            document.getElementById("mass-5-text").innerHTML = "KG to I-TON: ";
-            document.getElementById("mass-6-text").innerHTML = "KG to US-TON:";
-            document.getElementById("mass-7-text").innerHTML = "KG to STONE: ";
-            document.getElementById("mass-8-text").innerHTML = "KG to LBS:   ";
-            document.getElementById("mass-9-text").innerHTML = "KG to OZ:    ";
+        document.getElementById("11-text").innerHTML = "M to KM";
+        document.getElementById("12-text").innerHTML = "M to CM";
+        document.getElementById("13-text").innerHTML = "M to FT";
+        document.getElementById("14-text").innerHTML = "M to YD";
+        document.getElementById("15-text").innerHTML = "M to MI";
+        document.getElementById("16-text").innerHTML = "M to IN";
+        document.getElementById("17-text").innerHTML = "M to MM ";
+        document.getElementById("18-text").innerHTML = "M to μM ";
+        document.getElementById("19-text").innerHTML = "M to NM ";
+        document.getElementById("20-text").innerHTML = "M to NMI";
 
-            document.getElementById("mass-10-text").innerHTML = "KG to G:     ";
-            document.getElementById("mass-11-text").innerHTML = "KG to MG:    ";
-            document.getElementById("mass-12-text").innerHTML = "KG to μG:    ";
-            document.getElementById("mass-13-text").innerHTML = "KG to TONNE: ";
-            document.getElementById("mass-14-text").innerHTML = "KG to I-TON: ";
-            document.getElementById("mass-15-text").innerHTML = "KG to US-TON:";
-            document.getElementById("mass-16-text").innerHTML = "KG to STONE: ";
-            document.getElementById("mass-17-text").innerHTML = "KG to LBS:   ";
-            document.getElementById("mass-18-text").innerHTML = "KG to OZ:    ";
 
-            document.getElementById("01-mass").innerHTML = (NUM * 1e+3 );
-            document.getElementById("02-mass").innerHTML = (NUM * 1e+6 );
-            document.getElementById("03-mass").innerHTML = (NUM * 1e+9 );
-            document.getElementById("04-mass").innerHTML = (NUM / 1000 );
-            document.getElementById("05-mass").innerHTML = (NUM / 1016 );
-            document.getElementById("06-mass").innerHTML = (NUM /907.6 );
-            document.getElementById("07-mass").innerHTML = (NUM / 6.35 );
-            document.getElementById("08-mass").innerHTML = (NUM *2.205 );
-            document.getElementById("09-mass").innerHTML = (NUM *35.274);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("01").innerHTML = (NUM / 1000);
+        document.getElementById("02").innerHTML = (NUM * 100);
+        document.getElementById("03").innerHTML = (NUM * 3.28);
+        document.getElementById("04").innerHTML = (NUM * 1.094);
+        document.getElementById("05").innerHTML = (NUM / 1809);
+        document.getElementById("06").innerHTML = (NUM * 39.37);
+        document.getElementById("07").innerHTML = (NUM * 1000);
+        document.getElementById("08").innerHTML = (NUM * 1e+6);
+        document.getElementById("09").innerHTML = (NUM * 1e+9);
+        document.getElementById("10").innerHTML = (NUM / 1852);
+        document.getElementsByClassName("ans-NUM").innerHTML = NUM;
 
-            document.getElementById("mass-1-formula").innerHTML = "* 1e+3 ";
-            document.getElementById("mass-2-formula").innerHTML = "* 1e+6 ";
-            document.getElementById("mass-3-formula").innerHTML = "* 1e+9 ";
-            document.getElementById("mass-4-formula").innerHTML = "/ 1000 ";
-            document.getElementById("mass-5-formula").innerHTML = "/ 1016 ";
-            document.getElementById("mass-6-formula").innerHTML = "/907.6 ";
-            document.getElementById("mass-7-formula").innerHTML = "/ 6.35 ";
-            document.getElementById("mass-8-formula").innerHTML = "*2.205 ";
-            document.getElementById("mass-9-formula").innerHTML = "*35.274";
+        document.getElementById("1-formula").innerHTML = "/ 1000";
+        document.getElementById("2-formula").innerHTML = "* 100";
+        document.getElementById("3-formula").innerHTML = "*3.28";
+        document.getElementById("4-formula").innerHTML = "* 1.094";
+        document.getElementById("5-formula").innerHTML = "/ 1809";
+        document.getElementById("6-formula").innerHTML = "* 39.37";
+        document.getElementById("7-formula").innerHTML = "* 1000";
+        document.getElementById("8-formula").innerHTML = "* 1e+6";
+        document.getElementById("9-formula").innerHTML = "* 1e+9";
+        document.getElementById("10-formula").innerHTML = "/ 1852";
 
-            Hide(UNIT);
-        } if (UNIT === 'G') {
-            document.getElementById("mass-1-text").innerHTML = "G to KG:     ";
-            document.getElementById("mass-2-text").innerHTML = "G to MG:    ";
-            document.getElementById("mass-3-text").innerHTML = "G to μG:    ";
-            document.getElementById("mass-4-text").innerHTML = "G to TONNE: ";
-            document.getElementById("mass-5-text").innerHTML = "G to I-TON: ";
-            document.getElementById("mass-6-text").innerHTML = "G to US-TON:";
-            document.getElementById("mass-7-text").innerHTML = "G to STONE: ";
-            document.getElementById("mass-9-text").innerHTML = "G to OZ:    ";
-            document.getElementById("mass-8-text").innerHTML = "G to LBS:   ";
+        Hide(UNIT)
+    } if (UNIT === 'KM') {
+        document.getElementById("1-text").innerHTML = "KM to M:";
+        document.getElementById("2-text").innerHTML = "KM to CM:";
+        document.getElementById("3-text").innerHTML = "KM to FT:";
+        document.getElementById("4-text").innerHTML = "KM to YD:";
+        document.getElementById("5-text").innerHTML = "KM to MI:";
+        document.getElementById("6-text").innerHTML = "KM to IN:";
+        document.getElementById("7-text").innerHTML = "KM to MM ";
+        document.getElementById("8-text").innerHTML = "KM to μM ";
+        document.getElementById("9-text").innerHTML = "KM to NM ";
+        document.getElementById("10-text").innerHTML = "KM to NMI";
 
-            document.getElementById("mass-10-text").innerHTML = "G to KG:     ";
-            document.getElementById("mass-11-text").innerHTML = "G to MG:    ";
-            document.getElementById("mass-12-text").innerHTML = "G to μG:    ";
-            document.getElementById("mass-13-text").innerHTML = "G to TONNE: ";
-            document.getElementById("mass-14-text").innerHTML = "G to I-TON: ";
-            document.getElementById("mass-15-text").innerHTML = "G to US-TON:";
-            document.getElementById("mass-16-text").innerHTML = "G to STONE: ";
-            document.getElementById("mass-17-text").innerHTML = "G to LBS:   ";
-            document.getElementById("mass-18-text").innerHTML = "G to OZ:    ";
 
-            document.getElementById("01-mass").innerHTML = (NUM / 1000  );
-            document.getElementById("02-mass").innerHTML = (NUM * 1000  );
-            document.getElementById("04-mass").innerHTML = (NUM / 1e+6  );
-            document.getElementById("03-mass").innerHTML = (NUM * 1e+6  );
-            document.getElementById("05-mass").innerHTML = (NUM /1.01e+6);
-            document.getElementById("06-mass").innerHTML = (NUM /907200 );
-            document.getElementById("07-mass").innerHTML = (NUM /6350   );
-            document.getElementById("08-mass").innerHTML = (NUM / 453.6 );
-            document.getElementById("09-mass").innerHTML = (NUM / 28.35 );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("11-text").innerHTML = "KM to M:";
+        document.getElementById("12-text").innerHTML = "KM to CM:";
+        document.getElementById("13-text").innerHTML = "KM to FT:";
+        document.getElementById("14-text").innerHTML ="KM to YD:";
+        document.getElementById("15-text").innerHTML ="KM to MI:";
+        document.getElementById("16-text").innerHTML ="KM to IN:";
+        document.getElementById("17-text").innerHTML = "KM to MM ";
+        document.getElementById("18-text").innerHTML = "KM to μM ";
+        document.getElementById("19-text").innerHTML = "KM to NM ";
+        document.getElementById("20-text").innerHTML = "KM to NMI";
 
-            document.getElementById("mass-1-formula").innerHTML = "/ 1000  ";
-            document.getElementById("mass-2-formula").innerHTML = "* 1000  ";
-            document.getElementById("mass-3-formula").innerHTML = "/ 1e+6  ";
-            document.getElementById("mass-4-formula").innerHTML = "* 1e+6  ";
-            document.getElementById("mass-5-formula").innerHTML = "/1.01e+6";
-            document.getElementById("mass-6-formula").innerHTML = "/907200 ";
-            document.getElementById("mass-7-formula").innerHTML = "/6350   ";
-            document.getElementById("mass-8-formula").innerHTML = "/ 453.6 ";
-            document.getElementById("mass-9-formula").innerHTML = "/ 28.35 ";
 
-            Hide(UNIT);
-        } if (UNIT === 'US-TON') {
-            document.getElementById("mass-1-text").innerHTML = "US-TON to KG:    ";
-            document.getElementById("mass-2-text").innerHTML = "US-TON to G:     ";
-            document.getElementById("mass-3-text").innerHTML = "US-TON to MG:    ";
-            document.getElementById("mass-4-text").innerHTML = "US-TON to μG:    "; 
-            document.getElementById("mass-5-text").innerHTML = "US-TON to TONNE: ";
-            document.getElementById("mass-6-text").innerHTML = "US-TON to I-TON  ";
-            document.getElementById("mass-7-text").innerHTML = "US-TON to STONE: ";
-            document.getElementById("mass-9-text").innerHTML = "US-TON to OZ:    ";
-            document.getElementById("mass-8-text").innerHTML = "US-TON to LBS:   ";
+        document.getElementById("01").innerHTML = (NUM * 1000  );
+        document.getElementById("02").innerHTML = (NUM * 100000);
+        document.getElementById("03").innerHTML = (NUM * 3281  );
+        document.getElementById("04").innerHTML = (NUM * 1094  );
+        document.getElementById("05").innerHTML = (NUM / 1.609 );
+        document.getElementById("06").innerHTML = (NUM * 39370 );
+        document.getElementById("07").innerHTML = (NUM * 1e+6 );
+        document.getElementById("08").innerHTML = (NUM * 1e+9 );
+        document.getElementById("09").innerHTML = (NUM * 1e+12);
+        document.getElementById("10").innerHTML = (NUM / 1.852);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("mass-10-text").innerHTML = "US-TON to KG:    ";
-            document.getElementById("mass-11-text").innerHTML = "US-TON to G:     ";
-            document.getElementById("mass-12-text").innerHTML = "US-TON to MG:    ";
-            document.getElementById("mass-13-text").innerHTML = "US-TON to μG:    ";
-            document.getElementById("mass-14-text").innerHTML = "US-TON to TONNE: ";
-            document.getElementById("mass-15-text").innerHTML = "US-TON to I-TON  ";
-            document.getElementById("mass-16-text").innerHTML = "US-TON to STONE: ";
-            document.getElementById("mass-17-text").innerHTML = "US-TON to OZ:    ";
-            document.getElementById("mass-18-text").innerHTML = "US-TON to LBS:   ";
+        document.getElementById("1-formula").innerHTML = "* 1000  ";
+        document.getElementById("2-formula").innerHTML = "* 100000";
+        document.getElementById("3-formula").innerHTML = "* 3281  ";
+        document.getElementById("4-formula").innerHTML = "* 1094  ";
+        document.getElementById("5-formula").innerHTML = "/ 1.609 ";
+        document.getElementById("6-formula").innerHTML = "* 39370 ";
+        document.getElementById("7-formula").innerHTML = "* 1e+6 ";
+        document.getElementById("8-formula").innerHTML = "* 1e+9 ";
+        document.getElementById("9-formula").innerHTML = "* 1e+12";
+        document.getElementById("10-formula").innerHTML = "/ 1.852";
 
-            document.getElementById("01-mass").innerHTML = (NUM * 907.2    );
-            document.getElementById("02-mass").innerHTML = (NUM * 907200   );
-            document.getElementById("03-mass").innerHTML = (NUM * 9.072e+8 );
-            document.getElementById("04-mass").innerHTML = (NUM * 9.072e+11);
-            document.getElementById("05-mass").innerHTML = (NUM / 1.102    );
-            document.getElementById("06-mass").innerHTML = (NUM / 1.12     );
-            document.getElementById("07-mass").innerHTML = (NUM * 142.9    );
-            document.getElementById("08-mass").innerHTML = (NUM * 2000     );
-            document.getElementById("09-mass").innerHTML = (NUM * 32000    );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        Hide(UNIT)
+    } if (UNIT === 'CM') {
+        document.getElementById("1-text").innerHTML = "CM to M:";
+        document.getElementById("2-text").innerHTML = "CM to KM:";
+        document.getElementById("3-text").innerHTML = "CM to FT:";
+        document.getElementById("4-text").innerHTML = "CM to YD:";
+        document.getElementById("5-text").innerHTML = "CM to MI:";
+        document.getElementById("6-text").innerHTML = "CM to IN:";
+        document.getElementById("7-text").innerHTML = "CM to MM ";
+        document.getElementById("8-text").innerHTML = "CM to μM ";
+        document.getElementById("9-text").innerHTML = "CM to NM ";
+        document.getElementById("10-text").innerHTML = "CM to NMI";
 
-            document.getElementById("mass-1-formula").innerHTML = "* 907.2    ";
-            document.getElementById("mass-2-formula").innerHTML = "* 907200   ";
-            document.getElementById("mass-3-formula").innerHTML = "* 9.072e+8 ";
-            document.getElementById("mass-4-formula").innerHTML = "* 9.072e+11";
-            document.getElementById("mass-5-formula").innerHTML = "/ 1.102    ";
-            document.getElementById("mass-6-formula").innerHTML = "/ 1.12     ";
-            document.getElementById("mass-7-formula").innerHTML = "* 142.9    ";
-            document.getElementById("mass-8-formula").innerHTML = "* 2000     ";
-            document.getElementById("mass-9-formula").innerHTML = "* 32000    ";
 
-            Hide(UNIT);
-        } if (UNIT === 'LBS') {
-            document.getElementById("mass-1-text").innerHTML = "LBS to KG:   ";
-            document.getElementById("mass-2-text").innerHTML = "LBS to G:    ";
-            document.getElementById("mass-3-text").innerHTML = "LBS to MG:   ";
-            document.getElementById("mass-4-text").innerHTML = "LBS to μG:   "; 
-            document.getElementById("mass-5-text").innerHTML = "LBS to TONNE: ";
-            document.getElementById("mass-6-text").innerHTML = "LBS to I-TON: ";
-            document.getElementById("mass-7-text").innerHTML = "LBS to US-TON:";
-            document.getElementById("mass-9-text").innerHTML = "LBS to STONE: ";
-            document.getElementById("mass-8-text").innerHTML = "LBS to OZ:    ";
+        document.getElementById("11-text").innerHTML = "CM to M:";
+        document.getElementById("12-text").innerHTML = "CM to KM:";
+        document.getElementById("13-text").innerHTML = "CM to FT:";
+        document.getElementById("14-text").innerHTML = "CM to YD:";
+        document.getElementById("15-text").innerHTML = "CM to MI:";
+        document.getElementById("16-text").innerHTML = "CM to IN:";
+        document.getElementById("17-text").innerHTML = "CM to MM ";
+        document.getElementById("18-text").innerHTML = "CM to μM ";
+        document.getElementById("19-text").innerHTML = "CM to NM ";
+        document.getElementById("20-text").innerHTML = "CM to NMI";
 
-            document.getElementById("mass-10-text").innerHTML = "LBS to KG:   ";
-            document.getElementById("mass-11-text").innerHTML = "LBS to G:    ";
-            document.getElementById("mass-12-text").innerHTML = "LBS to MG:   ";
-            document.getElementById("mass-13-text").innerHTML = "LBS to μG:   ";
-            document.getElementById("mass-14-text").innerHTML = "LBS to TONNE: ";
-            document.getElementById("mass-15-text").innerHTML = "LBS to I-TON: ";
-            document.getElementById("mass-16-text").innerHTML = "LBS to US-TON:";
-            document.getElementById("mass-17-text").innerHTML = "LBS to STONE: ";
-            document.getElementById("mass-18-text").innerHTML = "LBS to OZ:    ";
 
-            document.getElementById("01-mass").innerHTML = (NUM / 2.205    );
-            document.getElementById("02-mass").innerHTML = (NUM * 453.6    );
-            document.getElementById("03-mass").innerHTML = (NUM * 453600   );
-            document.getElementById("04-mass").innerHTML = (NUM * 34.536e+8);
-            document.getElementById("05-mass").innerHTML = (NUM / 2205     );
-            document.getElementById("06-mass").innerHTML = (NUM / 2240     );
-            document.getElementById("07-mass").innerHTML = (NUM / 2000     );
-            document.getElementById("08-mass").innerHTML = (NUM / 14       );
-            document.getElementById("09-mass").innerHTML = (NUM * 16       );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("01").innerHTML = (NUM / 100   );
+        document.getElementById("02").innerHTML = (NUM / 1e+6  );
+        document.getElementById("03").innerHTML = (NUM / 30.48 );
+        document.getElementById("04").innerHTML = (NUM / 41.44 );
+        document.getElementById("05").innerHTML = (NUM / 160934);
+        document.getElementById("06").innerHTML = (NUM / 2.54  );
+        document.getElementById("07").innerHTML = (NUM * 10     );
+        document.getElementById("08").innerHTML = (NUM * 10000  );
+        document.getElementById("09").innerHTML = (NUM * 1e+7   );
+        document.getElementById("10").innerHTML = (NUM / 1852e+2);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("mass-1-formula").innerHTML = "/ 2.205    ";
-            document.getElementById("mass-2-formula").innerHTML = "* 453.6    ";
-            document.getElementById("mass-3-formula").innerHTML = "* 453600   ";
-            document.getElementById("mass-4-formula").innerHTML = "* 34.536e+8";
-            document.getElementById("mass-5-formula").innerHTML = "/ 2205     ";
-            document.getElementById("mass-6-formula").innerHTML = "/ 2240     ";
-            document.getElementById("mass-7-formula").innerHTML = "/ 2000     ";
-            document.getElementById("mass-8-formula").innerHTML = "/ 14       ";
-            document.getElementById("mass-9-formula").innerHTML = "* 16       ";
+        document.getElementById("1-formula").innerHTML = "/ 100   ";
+        document.getElementById("2-formula").innerHTML = "/ 1e+6  ";
+        document.getElementById("3-formula").innerHTML = "/ 30.48 ";
+        document.getElementById("4-formula").innerHTML = "/ 41.44 ";
+        document.getElementById("5-formula").innerHTML = "/ 160934";
+        document.getElementById("6-formula").innerHTML = "/ 2.54  ";
+        document.getElementById("7-formula").innerHTML = "* 10     ";
+        document.getElementById("8-formula").innerHTML = "* 10000  ";
+        document.getElementById("9-formula").innerHTML = "* 1e+7   ";
+        document.getElementById("10-formula").innerHTML = "/ 1852e+2";
 
-            Hide(UNIT);
-        } if (UNIT === 'MG') {
-            document.getElementById("mass-1-text").innerHTML = "MG to KG:    ";
-            document.getElementById("mass-2-text").innerHTML = "MG to G:     ";
-            document.getElementById("mass-3-text").innerHTML = "MG to μG:    ";
-            document.getElementById("mass-4-text").innerHTML = "MG to TONNE: "; 
-            document.getElementById("mass-5-text").innerHTML = "MG to I-TON: ";
-            document.getElementById("mass-6-text").innerHTML = "MG to US-TON:";
-            document.getElementById("mass-7-text").innerHTML = "MG to STONE: ";
-            document.getElementById("mass-9-text").innerHTML = "MG to LBS:   ";
-            document.getElementById("mass-8-text").innerHTML = "MG to OZ:    ";
+        Hide(UNIT)
+    } if (UNIT === 'FT') {
+        document.getElementById("1-text").innerHTML = "FT to M:";
+        document.getElementById("2-text").innerHTML = "FT to KM:";
+        document.getElementById("3-text").innerHTML = "FT to CM:";
+        document.getElementById("4-text").innerHTML = "FT to YD:";
+        document.getElementById("5-text").innerHTML = "FT to MI:";
+        document.getElementById("6-text").innerHTML = "FT to IN:";
+        document.getElementById("7-text").innerHTML = "FT to MM ";
+        document.getElementById("8-text").innerHTML = "FT to μM ";
+        document.getElementById("9-text").innerHTML = "FT to NM ";
+        document.getElementById("10-text").innerHTML = "FT to NMI";
+        
 
-            document.getElementById("mass-10-text").innerHTML = "MG to KG:    ";
-            document.getElementById("mass-11-text").innerHTML = "MG to G:     ";
-            document.getElementById("mass-12-text").innerHTML = "MG to μG:    ";
-            document.getElementById("mass-13-text").innerHTML = "MG to TONNE: ";
-            document.getElementById("mass-14-text").innerHTML = "MG to I-TON: ";
-            document.getElementById("mass-15-text").innerHTML = "MG to US-TON:";
-            document.getElementById("mass-16-text").innerHTML = "MG to STONE: ";
-            document.getElementById("mass-17-text").innerHTML = "MG to LBS:   ";
-            document.getElementById("mass-18-text").innerHTML = "MG to OZ:    ";
+        document.getElementById("11-text").innerHTML = "FTto M:";
+        document.getElementById("12-text").innerHTML = "FTto KM:";
+        document.getElementById("13-text").innerHTML = "FTto CM:";
+        document.getElementById("14-text").innerHTML ="FTto YD:";
+        document.getElementById("15-text").innerHTML ="FTto MI:";
+        document.getElementById("16-text").innerHTML ="FTto IN:";
+        document.getElementById("17-text").innerHTML = "FT to MM ";
+        document.getElementById("18-text").innerHTML = "FT to μM ";
+        document.getElementById("19-text").innerHTML = "FT to NM ";
+        document.getElementById("20-text").innerHTML = "FT to NMI";
 
-            document.getElementById("01-mass").innerHTML = (NUM / 1e+6    );
-            document.getElementById("02-mass").innerHTML = (NUM / 1000    );
-            document.getElementById("03-mass").innerHTML = (NUM * 1000    );
-            document.getElementById("04-mass").innerHTML = (NUM / 1e+9    );
-            document.getElementById("05-mass").innerHTML = (NUM / 1.016e+6);
-            document.getElementById("06-mass").innerHTML = (NUM / 9.072e+8);
-            document.getElementById("07-mass").innerHTML = (NUM / 6.35e+6 );
-            document.getElementById("08-mass").innerHTML = (NUM / 45600   );
-            document.getElementById("09-mass").innerHTML = (NUM / 283500  );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("mass-1-formula").innerHTML = "/ 1e+6    ";
-            document.getElementById("mass-2-formula").innerHTML = "/ 1000    ";
-            document.getElementById("mass-3-formula").innerHTML = "* 1000    ";
-            document.getElementById("mass-4-formula").innerHTML = "/ 1e+9    ";
-            document.getElementById("mass-5-formula").innerHTML = "/ 1.016e+6";
-            document.getElementById("mass-6-formula").innerHTML = "/ 9.072e+8";
-            document.getElementById("mass-7-formula").innerHTML = "/ 6.35e+6 ";
-            document.getElementById("mass-8-formula").innerHTML = "/ 45600   ";
-            document.getElementById("mass-9-formula").innerHTML = "/ 283500  ";
-            Hide(UNIT);
-        } if (UNIT === 'TONE') {
-            document.getElementById("mass-1-text").innerHTML = "TONNE to KG:    ";
-            document.getElementById("mass-2-text").innerHTML = "TONNE to G:     ";
-            document.getElementById("mass-3-text").innerHTML = "TONNE to MG:    ";
-            document.getElementById("mass-4-text").innerHTML = "TONNE to μG:    "; 
-            document.getElementById("mass-5-text").innerHTML = "TONNE to I-TON: ";
-            document.getElementById("mass-6-text").innerHTML = "TONNE to US-TON:";
-            document.getElementById("mass-7-text").innerHTML = "TONNE to STONE: ";
-            document.getElementById("mass-9-text").innerHTML = "TONNE to LBS:   ";
-            document.getElementById("mass-8-text").innerHTML = "TONNE to OZ:    ";
+        document.getElementById("01").innerHTML = (NUM * 3.281 );
+        document.getElementById("02").innerHTML = (NUM / 3281  );
+        document.getElementById("03").innerHTML = (NUM * 30.48 );
+        document.getElementById("04").innerHTML = (NUM * 3     );
+        document.getElementById("05").innerHTML = (NUM / 5280  );
+        document.getElementById("06").innerHTML = (NUM * 12    );
+        document.getElementById("07").innerHTML = (NUM * 304.8   );
+        document.getElementById("08").innerHTML = (NUM * 304800  );
+        document.getElementById("09").innerHTML = (NUM * 3.048e+8);
+        document.getElementById("10").innerHTML = (NUM / 6076    );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("mass-10-text").innerHTML = "TONNE to KG:    ";
-            document.getElementById("mass-11-text").innerHTML = "TONNE to G:     ";
-            document.getElementById("mass-12-text").innerHTML = "TONNE to MG:    ";
-            document.getElementById("mass-13-text").innerHTML = "TONNE to μG:    ";
-            document.getElementById("mass-14-text").innerHTML = "TONNE to I-TON: ";
-            document.getElementById("mass-15-text").innerHTML = "TONNE to US-TON:";
-            document.getElementById("mass-16-text").innerHTML = "TONNE to STONE: ";
-            document.getElementById("mass-17-text").innerHTML = "TONNE to LBS:   ";
-            document.getElementById("mass-18-text").innerHTML = "TONNE to OZ:    ";
+        document.getElementById("1-formula").innerHTML = "* 3.281 ";
+        document.getElementById("2-formula").innerHTML = "/ 3281  ";
+        document.getElementById("3-formula").innerHTML = "* 30.48 ";
+        document.getElementById("4-formula").innerHTML = "* 3     ";
+        document.getElementById("5-formula").innerHTML = "/ 5280  ";
+        document.getElementById("6-formula").innerHTML = "* 12    ";
+        document.getElementById("7-formula").innerHTML = "* 304.8   ";
+        document.getElementById("8-formula").innerHTML = "* 304800  ";
+        document.getElementById("9-formula").innerHTML = "* 3.048e+8";
+        document.getElementById("10-formula").innerHTML = "/ 6076    ";
 
-            document.getElementById("01-mass").innerHTML = (NUM * 1000 );
-            document.getElementById("02-mass").innerHTML = (NUM * 1e+6 );
-            document.getElementById("03-mass").innerHTML = (NUM * 1e+9 );
-            document.getElementById("04-mass").innerHTML = (NUM * 1e+12);
-            document.getElementById("05-mass").innerHTML = (NUM * 1.016);
-            document.getElementById("06-mass").innerHTML = (NUM * 1.102);
-            document.getElementById("07-mass").innerHTML = (NUM * 157.5);
-            document.getElementById("08-mass").innerHTML = (NUM * 2205 );
-            document.getElementById("09-mass").innerHTML = (NUM * 35270);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        Hide(UNIT)
+    } if (UNIT === 'YD') {
+        document.getElementById("1-text").innerHTML = "YD to M:";
+        document.getElementById("2-text").innerHTML = "YD to KM:";
+        document.getElementById("3-text").innerHTML = "YD to CM:";
+        document.getElementById("4-text").innerHTML = "YD to FT:";
+        document.getElementById("5-text").innerHTML = "YD to MI:";
+        document.getElementById("6-text").innerHTML = "YD to IN:";
+        document.getElementById("7-text").innerHTML = "YD to MM ";
+        document.getElementById("8-text").innerHTML = "YD to μM ";
+        document.getElementById("9-text").innerHTML = "YD to NM ";
+        document.getElementById("10-text").innerHTML = "YD to NMI";
 
-            document.getElementById("mass-1-formula").innerHTML = "* 1000 ";
-            document.getElementById("mass-2-formula").innerHTML = "* 1e+6 ";
-            document.getElementById("mass-3-formula").innerHTML = "* 1e+9 ";
-            document.getElementById("mass-4-formula").innerHTML = "* 1e+12";
-            document.getElementById("mass-5-formula").innerHTML = "* 1.016";
-            document.getElementById("mass-6-formula").innerHTML = "* 1.102";
-            document.getElementById("mass-7-formula").innerHTML = "* 157.5";
-            document.getElementById("mass-8-formula").innerHTML = "* 2205 ";
-            document.getElementById("mass-9-formula").innerHTML = "* 35270";
-            Hide(UNIT);
-        } if (UNIT === 'MicroG') {
-            document.getElementById("mass-1-text").innerHTML = "μG to KG:    ";
-            document.getElementById("mass-2-text").innerHTML = "μG to G:     ";
-            document.getElementById("mass-3-text").innerHTML = "μG to MG:    ";
-            document.getElementById("mass-4-text").innerHTML = "μG to TONNE: "; 
-            document.getElementById("mass-5-text").innerHTML = "μG to I-TON: ";
-            document.getElementById("mass-6-text").innerHTML = "μG to US-TON:";
-            document.getElementById("mass-7-text").innerHTML = "μG to STONE: ";
-            document.getElementById("mass-9-text").innerHTML = "μG to LBS:   ";
-            document.getElementById("mass-8-text").innerHTML = "μG to OZ:    ";
+        document.getElementById("11-text").innerHTML = "YD to M:";
+        document.getElementById("12-text").innerHTML = "YD to KM:";
+        document.getElementById("13-text").innerHTML = "YD to CM:";
+        document.getElementById("14-text").innerHTML ="YD to FT:";
+        document.getElementById("15-text").innerHTML ="YD to MI:";
+        document.getElementById("16-text").innerHTML ="YD to IN:";
+        document.getElementById("17-text").innerHTML = "YD to MM ";
+        document.getElementById("18-text").innerHTML = "YD to μM ";
+        document.getElementById("19-text").innerHTML = "YD to NM ";
+        document.getElementById("20-text").innerHTML = "YD to NMI";
 
-            document.getElementById("mass-10-text").innerHTML = "μG to KG:    ";
-            document.getElementById("mass-11-text").innerHTML = "μG to G:     ";
-            document.getElementById("mass-12-text").innerHTML = "μG to MG:    ";
-            document.getElementById("mass-13-text").innerHTML = "μG to TONNE: ";
-            document.getElementById("mass-14-text").innerHTML = "μG to I-TON: ";
-            document.getElementById("mass-15-text").innerHTML = "μG to US-TON:";
-            document.getElementById("mass-16-text").innerHTML = "μG to STONE: ";
-            document.getElementById("mass-17-text").innerHTML = "μG to LBS:   ";
-            document.getElementById("mass-18-text").innerHTML = "μG to OZ:    ";
 
-            document.getElementById("01-mass").innerHTML = (NUM / 1e+9     );
-            document.getElementById("02-mass").innerHTML = (NUM / 1e+6     );
-            document.getElementById("03-mass").innerHTML = (NUM / 1000     );
-            document.getElementById("04-mass").innerHTML = (NUM / 1e+12    );
-            document.getElementById("05-mass").innerHTML = (NUM / 1.016e+12);
-            document.getElementById("06-mass").innerHTML = (NUM / 9.072e+11);
-            document.getElementById("07-mass").innerHTML = (NUM / 6.35e+9  );
-            document.getElementById("08-mass").innerHTML = (NUM / 4.536e+8 );
-            document.getElementById("09-mass").innerHTML = (NUM / 2.835e+7 );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("01").innerHTML = (NUM * 1.094 );
+        document.getElementById("02").innerHTML = (NUM / 1094  );
+        document.getElementById("03").innerHTML = (NUM * 91.44 );
+        document.getElementById("04").innerHTML = (NUM * 3     );
+        document.getElementById("05").innerHTML = (NUM / 1760  );
+        document.getElementById("06").innerHTML = (NUM / 12    );
+        document.getElementById("07").innerHTML = (NUM * 914.4   );
+        document.getElementById("08").innerHTML = (NUM * 914400  );
+        document.getElementById("09").innerHTML = (NUM * 9.144e+8);
+        document.getElementById("10").innerHTML = (NUM / 2025    );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("mass-1-formula").innerHTML = "/ 1e+9     ";
-            document.getElementById("mass-2-formula").innerHTML = "/ 1e+6     ";
-            document.getElementById("mass-3-formula").innerHTML = "/ 1000     ";
-            document.getElementById("mass-4-formula").innerHTML = "/ 1e+12    ";
-            document.getElementById("mass-5-formula").innerHTML = "/ 1.016e+12";
-            document.getElementById("mass-6-formula").innerHTML = "/ 9.072e+11";
-            document.getElementById("mass-7-formula").innerHTML = "/ 6.35e+9  ";
-            document.getElementById("mass-8-formula").innerHTML = "/ 4.536e+8 ";
-            document.getElementById("mass-9-formula").innerHTML = "/ 2.835e+7 ";
-            Hide(UNIT);
-        } if (UNIT === 'OZ') {
-            document.getElementById("mass-1-text").innerHTML = "OZ to KG:     ";
-            document.getElementById("mass-2-text").innerHTML = "OZ to G:    ";
-            document.getElementById("mass-3-text").innerHTML = "OZ to MG:    ";
-            document.getElementById("mass-4-text").innerHTML = "OZ to μG:    "; 
-            document.getElementById("mass-5-text").innerHTML = "OZ to TONNE: ";
-            document.getElementById("mass-6-text").innerHTML = "OZ to I-TON: ";
-            document.getElementById("mass-7-text").innerHTML = "OZ to US-ton:";
-            document.getElementById("mass-8-text").innerHTML = "OZ to STONE: ";
-            document.getElementById("mass-9-text").innerHTML = "OZ to LBS:   ";
+        document.getElementById("1-formula").innerHTML = "* 1.094 ";
+        document.getElementById("2-formula").innerHTML = "/ 1094  ";
+        document.getElementById("3-formula").innerHTML = "* 91.44 ";
+        document.getElementById("4-formula").innerHTML = "* 3     ";
+        document.getElementById("5-formula").innerHTML = "/ 1760  ";
+        document.getElementById("6-formula").innerHTML = "/ 12    ";
+        document.getElementById("7-formula").innerHTML = "* 914.4   ";
+        document.getElementById("8-formula").innerHTML = "* 914400  ";
+        document.getElementById("9-formula").innerHTML = "* 9.144e+8";
+        document.getElementById("10-formula").innerHTML = "/ 2025    ";
 
-            document.getElementById("mass-10-text").innerHTML = "OZ to KG:     ";
-            document.getElementById("mass-11-text").innerHTML = "OZ to G:    ";
-            document.getElementById("mass-12-text").innerHTML = "OZ to MG:    ";
-            document.getElementById("mass-13-text").innerHTML = "OZ to μG:    ";
-            document.getElementById("mass-14-text").innerHTML = "OZ to TONNE: ";
-            document.getElementById("mass-15-text").innerHTML = "OZ to I-TON: ";
-            document.getElementById("mass-16-text").innerHTML = "OZ to US-ton:";
-            document.getElementById("mass-17-text").innerHTML = "OZ to STONE: ";
-            document.getElementById("mass-18-text").innerHTML = "OZ to LBS:   ";
+        Hide(UNIT)
+    } if (UNIT === 'MI') {
+        document.getElementById("1-text").innerHTML = "MI to M:";
+        document.getElementById("2-text").innerHTML = "MI to KM:";
+        document.getElementById("3-text").innerHTML = "MI to CM:";
+        document.getElementById("4-text").innerHTML = "MI to FT:";
+        document.getElementById("5-text").innerHTML = "MI to YD:";
+        document.getElementById("6-text").innerHTML = "MI to IN:";
+        document.getElementById("7-text").innerHTML = "MI to MM ";
+        document.getElementById("8-text").innerHTML = "MI to μM ";
+        document.getElementById("9-text").innerHTML = "MI to NM ";
+        document.getElementById("10-text").innerHTML = "MI to NMI";
 
-            document.getElementById("01-mass").innerHTML = (NUM / 35.274  );
-            document.getElementById("02-mass").innerHTML = (NUM * 28.35   );
-            document.getElementById("03-mass").innerHTML = (NUM * 283500  );
-            document.getElementById("04-mass").innerHTML = (NUM * 2.835e+7);
-            document.getElementById("05-mass").innerHTML = (NUM / 35270   );
-            document.getElementById("06-mass").innerHTML = (NUM / 35840   );
-            document.getElementById("07-mass").innerHTML = (NUM / 32000   );
-            document.getElementById("08-mass").innerHTML = (NUM / 224     );
-            document.getElementById("09-mass").innerHTML = (NUM / 16      );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("11-text").innerHTML = "MI to M:";
+        document.getElementById("12-text").innerHTML = "MI to KM:";
+        document.getElementById("13-text").innerHTML = "MI to CM:";
+        document.getElementById("14-text").innerHTML ="MI to FT:";
+        document.getElementById("15-text").innerHTML ="MI to YD:";
+        document.getElementById("16-text").innerHTML ="MI to IN:";
+        document.getElementById("17-text").innerHTML = "MI to MM ";
+        document.getElementById("18-text").innerHTML = "MI to μM ";
+        document.getElementById("19-text").innerHTML = "MI to NM ";
+        document.getElementById("20-text").innerHTML = "MI to NMI";
 
-            document.getElementById("mass-1-formula").innerHTML = "/ 35.274  ";
-            document.getElementById("mass-2-formula").innerHTML = "* 28.35   ";
-            document.getElementById("mass-3-formula").innerHTML = "* 283500  ";
-            document.getElementById("mass-4-formula").innerHTML = "* 2.835e+7";
-            document.getElementById("mass-5-formula").innerHTML = "/ 35270   ";
-            document.getElementById("mass-6-formula").innerHTML = "/ 35840   ";
-            document.getElementById("mass-7-formula").innerHTML = "/ 32000   ";
-            document.getElementById("mass-8-formula").innerHTML = "/ 224     ";
-            document.getElementById("mass-9-formula").innerHTML = "/ 16      ";
-            Hide(UNIT);
-        } if (UNIT === 'I-TON') {
-            document.getElementById("mass-1-text").innerHTML = "I-TON to KG:     ";
-            document.getElementById("mass-2-text").innerHTML = "I-TON to G:    ";
-            document.getElementById("mass-3-text").innerHTML = "I-TON to MG:    ";
-            document.getElementById("mass-4-text").innerHTML = "I-TON to μG:    "; 
-            document.getElementById("mass-5-text").innerHTML = "I-TON to TONNE: ";
-            document.getElementById("mass-6-text").innerHTML = "I-TON to US-TON: ";
-            document.getElementById("mass-7-text").innerHTML = "I-TON to STONE: ";
-            document.getElementById("mass-8-text").innerHTML = "I-TON to LBS:   ";
-            document.getElementById("mass-9-text").innerHTML = "I-TON to OZ:    ";
 
-            document.getElementById("mass-10-text").innerHTML = "I-TON to KG:     ";
-            document.getElementById("mass-11-text").innerHTML = "I-TON to G:    ";
-            document.getElementById("mass-12-text").innerHTML = "I-TON to MG:    ";
-            document.getElementById("mass-13-text").innerHTML = "I-TON to μG:    ";
-            document.getElementById("mass-14-text").innerHTML = "I-TON to TONNE: ";
-            document.getElementById("mass-15-text").innerHTML = "I-TON to US-TON:";
-            document.getElementById("mass-16-text").innerHTML = "I-TON to STONE: ";
-            document.getElementById("mass-17-text").innerHTML = "I-TON to LBS:   ";
-            document.getElementById("mass-18-text").innerHTML = "I-TON to OZ:    ";
+        document.getElementById("01").innerHTML = (NUM * 1609   );
+        document.getElementById("02").innerHTML = (NUM * 1.609 );
+        document.getElementById("03").innerHTML = (NUM * 160934);
+        document.getElementById("04").innerHTML = (NUM * 5280  );
+        document.getElementById("05").innerHTML = (NUM * 1760  );
+        document.getElementById("06").innerHTML = (NUM * 63360 );
+        document.getElementById("07").innerHTML = (NUM * 1.609e+6 );
+        document.getElementById("08").innerHTML = (NUM * 1.609e+9 );
+        document.getElementById("09").innerHTML = (NUM * 1.609e+12);
+        document.getElementById("10").innerHTML = (NUM / 1.151    );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("01-mass").innerHTML = (NUM * 1016     );
-            document.getElementById("02-mass").innerHTML = (NUM * 1.01e+6  );
-            document.getElementById("03-mass").innerHTML = (NUM * 1.016e+6 );
-            document.getElementById("04-mass").innerHTML = (NUM * 1.016e+12);
-            document.getElementById("05-mass").innerHTML = (NUM * 1.016    );
-            document.getElementById("06-mass").innerHTML = (NUM * 1.12     );
-            document.getElementById("07-mass").innerHTML = (NUM * 160      );
-            document.getElementById("08-mass").innerHTML = (NUM * 2240     );
-            document.getElementById("09-mass").innerHTML = (NUM * 35840    );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("1-formula").innerHTML = "* 1609  ";
+        document.getElementById("2-formula").innerHTML = "* 1.609 ";
+        document.getElementById("3-formula").innerHTML = "* 160934";
+        document.getElementById("4-formula").innerHTML = "* 5280  ";
+        document.getElementById("5-formula").innerHTML = "* 1760  ";
+        document.getElementById("6-formula").innerHTML = "* 63360 ";
+        document.getElementById("7-formula").innerHTML = "* 1.609e+6 ";
+        document.getElementById("8-formula").innerHTML = "* 1.609e+9 ";
+        document.getElementById("9-formula").innerHTML = "* 1.609e+12";
+        document.getElementById("10-formula").innerHTML = "/ 1.151";
 
-            document.getElementById("mass-1-formula").innerHTML = "* 1016     ";
-            document.getElementById("mass-2-formula").innerHTML = "* 1.01e+6  ";
-            document.getElementById("mass-3-formula").innerHTML = "* 1.016e+6 ";
-            document.getElementById("mass-4-formula").innerHTML = "* 1.016e+12";
-            document.getElementById("mass-5-formula").innerHTML = "* 1.016    ";
-            document.getElementById("mass-6-formula").innerHTML = "* 1.12     ";
-            document.getElementById("mass-7-formula").innerHTML = "* 160      ";
-            document.getElementById("mass-8-formula").innerHTML = "* 2240     ";
-            document.getElementById("mass-9-formula").innerHTML = "* 35840    ";
-            Hide(UNIT);
-        } if (UNIT === 'STONE') {
-            document.getElementById("mass-1-text").innerHTML = "STONE? to G:     ";
-            document.getElementById("mass-2-text").innerHTML = "STONE? to KG:    ";
-            document.getElementById("mass-3-text").innerHTML = "STONE? to MG:    ";
-            document.getElementById("mass-4-text").innerHTML = "STONE? to μG:    "; 
-            document.getElementById("mass-5-text").innerHTML = "STONE? to TONNE: ";
-            document.getElementById("mass-6-text").innerHTML = "STONE? to US-TON:";
-            document.getElementById("mass-7-text").innerHTML = "STONE? to I-TON: ";
-            document.getElementById("mass-8-text").innerHTML = "STONE? to LBS:   ";
-            document.getElementById("mass-9-text").innerHTML = "STONE? to OZ:    ";
+        Hide(UNIT)
+    } if (UNIT === 'IN') {
+        document.getElementById("1-text").innerHTML = "IN to M:";
+        document.getElementById("2-text").innerHTML = "IN to KM:";
+        document.getElementById("3-text").innerHTML = "IN to CM:";
+        document.getElementById("4-text").innerHTML = "IN to FT:";
+        document.getElementById("5-text").innerHTML = "IN to YD:";
+        document.getElementById("6-text").innerHTML = "IN to MI:";
+        document.getElementById("7-text").innerHTML = "IN to MM ";
+        document.getElementById("8-text").innerHTML = "IN to μM ";
+        document.getElementById("9-text").innerHTML = "IN to NM ";
+        document.getElementById("10-text").innerHTML = "IN to NMI";
 
-            document.getElementById("mass-10-text").innerHTML = "STONE? to G:     ";
-            document.getElementById("mass-11-text").innerHTML = "STONE? to KG:    ";
-            document.getElementById("mass-12-text").innerHTML = "STONE? to MG:    ";
-            document.getElementById("mass-13-text").innerHTML = "STONE? to μG:    ";
-            document.getElementById("mass-14-text").innerHTML = "STONE? to TONNE: ";
-            document.getElementById("mass-15-text").innerHTML = "STONE? to US-TON:";
-            document.getElementById("mass-16-text").innerHTML = "STONE? to I-TON: ";
-            document.getElementById("mass-17-text").innerHTML = "STONE? to LBS:   ";
-            document.getElementById("mass-18-text").innerHTML = "STONE? to OZ:    ";
+        document.getElementById("11-text").innerHTML = "IN to M:";
+        document.getElementById("12-text").innerHTML = "IN to KM:";
+        document.getElementById("13-text").innerHTML = "IN to CM:";
+        document.getElementById("14-text").innerHTML ="IN to FT:";
+        document.getElementById("15-text").innerHTML ="IN to YD:";
+        document.getElementById("16-text").innerHTML ="IN to MI:";
+        document.getElementById("17-text").innerHTML = "IN to MM ";
+        document.getElementById("18-text").innerHTML = "IN to μM ";
+        document.getElementById("19-text").innerHTML = "IN to NM ";
+        document.getElementById("20-text").innerHTML = "IN to NMI";
 
-            document.getElementById("01-mass").innerHTML = (NUM * 6.35);
-            document.getElementById("02-mass").innerHTML = (NUM * 6350);
-            document.getElementById("03-mass").innerHTML = (NUM * 6.35e+6);
-            document.getElementById("04-mass").innerHTML = (NUM * 1.016e+12);
-            document.getElementById("05-mass").innerHTML = (NUM * 1.016);
-            document.getElementById("06-mass").innerHTML = (NUM * 142.9);
-            document.getElementById("07-mass").innerHTML = (NUM * 1.016);
-            document.getElementById("08-mass").innerHTML = (NUM * 14);
-            document.getElementById("09-mass").innerHTML = (NUM * 35270);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("mass-1-formula").innerHTML = "* 1016     ";
-            document.getElementById("mass-2-formula").innerHTML = "* 1.01e+6  ";
-            document.getElementById("mass-3-formula").innerHTML = "* 1.016e+6 ";
-            document.getElementById("mass-4-formula").innerHTML = "* 1.016e+12";
-            document.getElementById("mass-5-formula").innerHTML = "* 1.016    ";
-            document.getElementById("mass-6-formula").innerHTML = "* 1.12     ";
-            document.getElementById("mass-7-formula").innerHTML = "* 160      ";
-            document.getElementById("mass-8-formula").innerHTML = "* 2240     ";
-            document.getElementById("mass-9-formula").innerHTML = "* 35840    ";
-            Hide(UNIT);
-        }
-    };
-};
+        document.getElementById("01").innerHTML = (NUM / 39.37 );
+        document.getElementById("02").innerHTML = (NUM / 39370 );
+        document.getElementById("03").innerHTML = (NUM * 2.54  );
+        document.getElementById("04").innerHTML = (NUM / 12    );
+        document.getElementById("05").innerHTML = (NUM / 36    );
+        document.getElementById("06").innerHTML = (NUM / 63360 );
+        document.getElementById("07").innerHTML = (NUM  * 25.4   );
+        document.getElementById("08").innerHTML = (NUM  * 25400  );
+        document.getElementById("09").innerHTML = (NUM  * 2.54e+7);
+        document.getElementById("10").innerHTML = (NUM  / 72910  );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-if (document.URL.includes("time.html")) {
-    console.log("you are in the time page");
+        document.getElementById("1-formula").innerHTML = "/ 39.37 ";
+        document.getElementById("2-formula").innerHTML = "/ 39370 ";
+        document.getElementById("3-formula").innerHTML = "* 2.54  ";
+        document.getElementById("4-formula").innerHTML = "/ 12    ";
+        document.getElementById("5-formula").innerHTML = "/ 36    ";
+        document.getElementById("6-formula").innerHTML = "/ 63360 ";
+        document.getElementById("7-formula").innerHTML = " * 25.4   ";
+        document.getElementById("8-formula").innerHTML = " * 25400  ";
+        document.getElementById("9-formula").innerHTML = " * 2.54e+7";
+        document.getElementById("10-formula").innerHTML = "/ 72910  ";
 
-    function Time() {
-        let NUM = document.getElementById('NUM-TIME').value || 1;
-        let UNIT = document.getElementById('UNIT-TIME').value || 'undefined';
-        console.log("btn 'BTN-1-TIME' pressed.");
-        console.log(NUM);
-        console.log(UNIT);
+        Hide(UNIT)
+    } if (UNIT === 'MM') {
+        document.getElementById("1-text").innerHTML = "MM to M:  ";
+        document.getElementById("2-text").innerHTML = "MM to KM: ";
+        document.getElementById("3-text").innerHTML = "MM to CM: ";
+        document.getElementById("4-text").innerHTML = "MM to FT: ";
+        document.getElementById("5-text").innerHTML = "MM to YD: ";
+        document.getElementById("6-text").innerHTML = "MM to MI: ";
+        document.getElementById("7-text").innerHTML = "MM to IN: ";
+        document.getElementById("8-text").innerHTML = "MM to μM: ";
+        document.getElementById("9-text").innerHTML = "MM to NM: ";
+        document.getElementById("10-text").innerHTML = "MM to NMI:";
 
-        if (UNIT === 'S') {
-            document.getElementById("time-1-text").innerHTML = "S to M:";
-            document.getElementById("time-2-text").innerHTML = "S to H:";
-            document.getElementById("time-3-text").innerHTML = "S to M:";
-            document.getElementById("time-4-text").innerHTML = "S to H:";
+        document.getElementById("11-text").innerHTML = "MM to M:  ";
+        document.getElementById("12-text").innerHTML = "MM to KM: ";
+        document.getElementById("13-text").innerHTML = "MM to CM: ";
+        document.getElementById("14-text").innerHTML = "MM to FT: ";
+        document.getElementById("15-text").innerHTML = "MM to YD: ";
+        document.getElementById("16-text").innerHTML = "MM to MI: ";
+        document.getElementById("17-text").innerHTML = "MM to IN: ";
+        document.getElementById("18-text").innerHTML = "MM to μM: ";
+        document.getElementById("19-text").innerHTML = "MM to NM: ";
+        document.getElementById("20-text").innerHTML = "MM to NMI:";
 
-            document.getElementById("01-time").innerHTML = (NUM / 60   );
-            document.getElementById("02-time").innerHTML = (NUM / 3600 );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("01").innerHTML = (NUM / 1000    );
+        document.getElementById("02").innerHTML = (NUM / 1e+6    );
+        document.getElementById("03").innerHTML = (NUM / 10      );
+        document.getElementById("04").innerHTML = (NUM / 304.8  );
+        document.getElementById("05").innerHTML = (NUM / 914.4   );
+        document.getElementById("06").innerHTML = (NUM / 1.609e+6);
+        document.getElementById("07").innerHTML = (NUM / 25.4    );
+        document.getElementById("08").innerHTML = (NUM * 1000    );
+        document.getElementById("09").innerHTML = (NUM * 1e+6    );
+        document.getElementById("10").innerHTML = (NUM / 1.852e+6);
+        document.getElementsByClassName("ans-NUM").innerHTML = NUM;
 
-            document.getElementById("time-1-formula").innerHTML = "/ 60   ";
-            document.getElementById("time-2-formula").innerHTML = "/ 3600 ";
-            Hide(UNIT)
-        } if (UNIT === 'M') {
-            document.getElementById("time-1-text").innerHTML = "S to S:";
-            document.getElementById("time-2-text").innerHTML = "S to H:";
-            document.getElementById("time-3-text").innerHTML = "S to S:";
-            document.getElementById("time-4-text").innerHTML = "S to H:";
+        document.getElementById("1-formula").innerHTML = " / 1000    ";
+        document.getElementById("2-formula").innerHTML = " / 1e+6    ";
+        document.getElementById("3-formula").innerHTML = " / 10      ";
+        document.getElementById("4-formula").innerHTML = " / 304.48  ";
+        document.getElementById("5-formula").innerHTML = " / 914.4   ";
+        document.getElementById("6-formula").innerHTML = " / 1.609e+6";
+        document.getElementById("7-formula").innerHTML = " / 25.4    ";
+        document.getElementById("8-formula").innerHTML = " * 1000    ";
+        document.getElementById("9-formula").innerHTML = " * 1e+6    ";
+        document.getElementById("10-formula").innerHTML = "/ 1.852e+6";
+    } if (UNIT === 'μM') {
+        document.getElementById("1-text").innerHTML = "μM to M:  ";
+        document.getElementById("2-text").innerHTML = "μM to KM: ";
+        document.getElementById("3-text").innerHTML = "μM to CM: ";
+        document.getElementById("4-text").innerHTML = "μM to FT: ";
+        document.getElementById("5-text").innerHTML = "μM to YD: ";
+        document.getElementById("6-text").innerHTML = "μM to MI: ";
+        document.getElementById("7-text").innerHTML = "μM to IN: ";
+        document.getElementById("8-text").innerHTML = "μM to MM: ";
+        document.getElementById("9-text").innerHTML = "μM to NM: ";
+        document.getElementById("10-text").innerHTML = "μM to NMI:";
 
-            document.getElementById("01-time").innerHTML = (NUM * 60   );
-            document.getElementById("02-time").innerHTML = (NUM / 60 );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("11-text").innerHTML = "μM to M:  ";
+        document.getElementById("12-text").innerHTML = "μM to KM: ";
+        document.getElementById("13-text").innerHTML = "μM to CM: ";
+        document.getElementById("14-text").innerHTML = "μM to FT: ";
+        document.getElementById("15-text").innerHTML = "μM to YD: ";
+        document.getElementById("16-text").innerHTML = "μM to MI: ";
+        document.getElementById("17-text").innerHTML = "μM to IN: ";
+        document.getElementById("18-text").innerHTML = "μM to MM: ";
+        document.getElementById("19-text").innerHTML = "μM to NM: ";
+        document.getElementById("20-text").innerHTML = "μM to NMI:";
 
-            document.getElementById("time-1-formula").innerHTML = "* 60   ";
-            document.getElementById("time-2-formula").innerHTML = "/ 60 ";
-            Hide(UNIT)
-        } if (UNIT === 'H') {
-            document.getElementById("time-1-text").innerHTML = "S to S:";
-            document.getElementById("time-2-text").innerHTML = "S to M:";
-            document.getElementById("time-3-text").innerHTML = "S to S:";
-            document.getElementById("time-4-text").innerHTML = "S to M:";
+        document.getElementById("01").innerHTML = (NUM / 1000000 );
+        document.getElementById("02").innerHTML = (NUM / 1e+9    );
+        document.getElementById("03").innerHTML = (NUM / 10000   );
+        document.getElementById("04").innerHTML = (NUM / 304800  );
+        document.getElementById("05").innerHTML = (NUM / 914400  );
+        document.getElementById("06").innerHTML = (NUM / 1.609e+9);
+        document.getElementById("07").innerHTML = (NUM / 25400    );
+        document.getElementById("08").innerHTML = (NUM / 1000    );
+        document.getElementById("09").innerHTML = (NUM * 1000    );
+        document.getElementById("10").innerHTML = (NUM / 1.852e+6);
+        document.getElementsByClassName("ans-NUM").innerHTML = NUM;
 
-            document.getElementById("01-time").innerHTML = (NUM * 60   );
-            document.getElementById("02-time").innerHTML = (NUM * 3600 );
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("1-formula").innerHTML = " / 1000000 ";
+        document.getElementById("2-formula").innerHTML = " / 1e+9    ";
+        document.getElementById("3-formula").innerHTML = " / 10000   ";
+        document.getElementById("4-formula").innerHTML = " / 304800  ";
+        document.getElementById("5-formula").innerHTML = " / 914400  ";
+        document.getElementById("6-formula").innerHTML = " / 1.609e+9";
+        document.getElementById("7-formula").innerHTML = " / 25.4    ";
+        document.getElementById("8-formula").innerHTML = " / 1000    ";
+        document.getElementById("9-formula").innerHTML = " * 1000    ";
+        document.getElementById("10-formula").innerHTML = "/ 1.852e+6";
 
-            document.getElementById("time-1-formula").innerHTML = "* 60   ";
-            document.getElementById("time-2-formula").innerHTML = "* 3600 ";
-            Hide(UNIT)
-        };
-    }; 
-};
+    } if (UNIT === 'NM') {
+        document.getElementById("1-text").innerHTML = "NM to M:  ";
+        document.getElementById("2-text").innerHTML = "NM to KM: ";
+        document.getElementById("3-text").innerHTML = "NM to CM: ";
+        document.getElementById("4-text").innerHTML = "NM to FT: ";
+        document.getElementById("5-text").innerHTML = "NM to YD: ";
+        document.getElementById("6-text").innerHTML = "NM to MI: ";
+        document.getElementById("7-text").innerHTML = "NM to IN: ";
+        document.getElementById("8-text").innerHTML = "NM to MM: ";
+        document.getElementById("9-text").innerHTML = "NM to μM: ";
+       document.getElementById("10-text").innerHTML = "NM to NMI:";
 
-if (document.URL.includes("temp.html")) {
+        document.getElementById("11-text").innerHTML = "NM to M:  ";
+        document.getElementById("12-text").innerHTML = "NM to KM: ";
+        document.getElementById("13-text").innerHTML = "NM to CM: ";
+        document.getElementById("14-text").innerHTML = "NM to FT: ";
+        document.getElementById("15-text").innerHTML = "NM to YD: ";
+        document.getElementById("16-text").innerHTML = "NM to MI: ";
+        document.getElementById("17-text").innerHTML = "NM to IN: ";
+        document.getElementById("18-text").innerHTML = "NM to MM: ";
+        document.getElementById("19-text").innerHTML = "NM to μM: ";
+        document.getElementById("20-text").innerHTML = "NM to NMI:";
 
-    console.log("you are in the temp page");
+        document.getElementById("01").innerHTML = (NUM / 1e+9     );
+        document.getElementById("02").innerHTML = (NUM / 1e+12    );
+        document.getElementById("03").innerHTML = (NUM / 1e+7     );
+        document.getElementById("04").innerHTML = (NUM / 3.048e+8 );
+        document.getElementById("05").innerHTML = (NUM / 9.144e+8 );
+        document.getElementById("06").innerHTML = (NUM / 1.609e+12);
+        document.getElementById("07").innerHTML = (NUM / 254e+7   );
+        document.getElementById("08").innerHTML = (NUM / 1e+6     );
+        document.getElementById("09").innerHTML = (NUM / 1000     );
+        document.getElementById("10").innerHTML = (NUM / 1.852e+12);
+        document.getElementsByClassName("ans-NUM").innerHTML = NUM;
 
-    function Temp() {
-        let NUM = document.getElementById('NUM-TEMP').value || 1;
-        let UNIT = document.getElementById('UNIT-TEMP').value || 'undefined';
-        console.log("btn 'BTN-1-TEMP' pressed.");
-        console.log(NUM);
-        console.log(UNIT);
+        document.getElementById("1-formula").innerHTML = " / 1e+9     ";
+        document.getElementById("2-formula").innerHTML = " / 1e+12    ";
+        document.getElementById("3-formula").innerHTML = " / 1e+7     ";
+        document.getElementById("4-formula").innerHTML = " / 3.048e+8 ";
+        document.getElementById("5-formula").innerHTML = " / 9.144e+8 ";
+        document.getElementById("6-formula").innerHTML = " / 1.609e+12";
+        document.getElementById("7-formula").innerHTML = " / 254e+7   ";
+        document.getElementById("8-formula").innerHTML = " / 1e+6     ";
+        document.getElementById("9-formula").innerHTML = " / 1000     ";
+        document.getElementById("10-formula").innerHTML = "/ 1.852e+12";
+    } if (UNIT === 'NMI') {
+        document.getElementById("1-text").innerHTML = "NMI to M:  ";
+        document.getElementById("2-text").innerHTML = "NMI to KM: ";
+        document.getElementById("3-text").innerHTML = "NMI to CM: ";
+        document.getElementById("4-text").innerHTML = "NMI to FT: ";
+        document.getElementById("5-text").innerHTML = "NMI to YD: ";
+        document.getElementById("6-text").innerHTML = "NMI to MI: ";
+        document.getElementById("7-text").innerHTML = "NMI to IN: ";
+        document.getElementById("8-text").innerHTML = "NMI to MM: ";
+        document.getElementById("9-text").innerHTML = "NMI to μM: ";
+       document.getElementById("10-text").innerHTML = "NMI to NMI:";
 
-        if (UNIT === 'K') {
-            document.getElementById("temp-1-text").innerHTML = "K to C:";
-            document.getElementById("temp-2-text").innerHTML = "K to F:";
-            document.getElementById("temp-3-text").innerHTML = "K to C:";
-            document.getElementById("temp-4-text").innerHTML = "K to F(Formula):";
+        document.getElementById("11-text").innerHTML = "NMI to M:  ";
+        document.getElementById("12-text").innerHTML = "NMI to KM: ";
+        document.getElementById("13-text").innerHTML = "NMI to CM: ";
+        document.getElementById("14-text").innerHTML = "NMI to FT: ";
+        document.getElementById("15-text").innerHTML = "NMI to YD: ";
+        document.getElementById("16-text").innerHTML = "NMI to MI: ";
+        document.getElementById("17-text").innerHTML = "NMI to IN: ";
+        document.getElementById("18-text").innerHTML = "NMI to MM: ";
+        document.getElementById("19-text").innerHTML = "NMI to μM: ";
+        document.getElementById("20-text").innerHTML = "NMI to NM:";
 
-            document.getElementById("01-temp").innerHTML = (NUM - 273.15);
-            document.getElementById("02-temp").innerHTML = ((NUM - 273.15) * 9/5 + 32);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("01").innerHTML = (NUM * 1852     );
+        document.getElementById("02").innerHTML = (NUM * 1.852    );
+        document.getElementById("03").innerHTML = (NUM * 1.852e+2 );
+        document.getElementById("04").innerHTML = (NUM * 6076     );
+        document.getElementById("05").innerHTML = (NUM * 2025     );
+        document.getElementById("06").innerHTML = (NUM * 1.151    );
+        document.getElementById("07").innerHTML = (NUM * 72910    );
+        document.getElementById("08").innerHTML = (NUM * 1.852e+6 );
+        document.getElementById("09").innerHTML = (NUM * 1.852e+9 );
+        document.getElementById("10").innerHTML = (NUM * 1.852e+12);
+        document.getElementsByClassName("ans-NUM").innerHTML = NUM;
 
-            document.getElementById("temp-1-formula").innerHTML = "- 273.15";
-            document.getElementById("temp-2-formula").innerHTML = "(NUMBER - 273.15) * 9/5 + 32)";
-            Hide(UNIT)
-        } if (UNIT === 'C') {
-            document.getElementById("temp-1-text").innerHTML = "C to K:";
-            document.getElementById("temp-2-text").innerHTML = "C to F:";
-            document.getElementById("temp-3-text").innerHTML = "C to K:";
-            document.getElementById("temp-4-text").innerHTML = "C to F(Formula):";
-
-            document.getElementById("01-temp").innerHTML = (NUM + 273.15);
-            document.getElementById("02-temp").innerHTML = ((NUM * 9/5) + 32);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
-
-            document.getElementById("temp-1-formula").innerHTML = "+ 273.15";
-            document.getElementById("temp-2-formula").innerHTML = "(NUMBER * 9/5) + 32)";
-            Hide(UNIT)
-        } if (UNIT === 'F') {
-            document.getElementById("temp-1-text").innerHTML = "F to K:";
-            document.getElementById("temp-2-text").innerHTML = "F to C:";
-            document.getElementById("temp-3-text").innerHTML = "F to K(Formula):";
-            document.getElementById("temp-4-text").innerHTML = "F to C(Formula):";
-
-            document.getElementById("01-temp").innerHTML = ((NUM - 32) * 5/9 + 273.15);
-            document.getElementById("02-temp").innerHTML = ((NUM - 32) * 5/9);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = "";
-
-            document.getElementById("temp-1-formula").innerHTML = "(NUMBER - 32) * 5/9 + 273.15)";
-            document.getElementById("temp-2-formula").innerHTML = "(NUMBER - 32) * 5/9";
-            Hide(UNIT)
-        }
+        document.getElementById("1-formula").innerHTML = " * 1852     ";
+        document.getElementById("2-formula").innerHTML = " * 1.852    ";
+        document.getElementById("3-formula").innerHTML = " * 1.852e+2 ";
+        document.getElementById("4-formula").innerHTML = " * 6076     ";
+        document.getElementById("5-formula").innerHTML = " * 2025     ";
+        document.getElementById("6-formula").innerHTML = " * 1.151    ";
+        document.getElementById("7-formula").innerHTML = " * 72910    ";
+        document.getElementById("8-formula").innerHTML = " * 1.852e+6 ";
+        document.getElementById("9-formula").innerHTML = " * 1.852e+9 ";
+        document.getElementById("10-formula").innerHTML = "* 1.852e+12";
     }
 };
 
-if (document.URL.includes("liquids.html")) {
-    console.log("you are in the liquids page.")
+function Mass() {
+    let NUM = document.getElementById('NUM').value || 1;
+    let UNIT = document.getElementById('UNIT').value || 'undefined';
+    console.log("btn 'BTN-1' pressed.");
+    console.log(NUM);
+    console.log(UNIT);
 
-    function Liquids() {
+    if (UNIT === 'KG') {
+        document.getElementById("1-text").innerHTML = "KG to G:     ";
+        document.getElementById("2-text").innerHTML = "KG to MG:    ";
+        document.getElementById("3-text").innerHTML = "KG to μG:    ";
+        document.getElementById("4-text").innerHTML = "KG to TONNE: ";
+        document.getElementById("5-text").innerHTML = "KG to I-TON: ";
+        document.getElementById("6-text").innerHTML = "KG to US-TON:";
+        document.getElementById("7-text").innerHTML = "KG to STONE: ";
+        document.getElementById("8-text").innerHTML = "KG to LBS:   ";
+        document.getElementById("9-text").innerHTML = "KG to OZ:    ";
 
-        let NUM = document.getElementById('NUM-LQ').value || 1;
-        let UNIT = document.getElementById('UNIT-LQ').value || 'undefined';
-        console.log("btn 'BTN-1-LQ' pressed.");
-        console.log(NUM);
-        console.log(UNIT);
+        document.getElementById("10-text").innerHTML = "KG to G:     ";
+        document.getElementById("11-text").innerHTML = "KG to MG:    ";
+        document.getElementById("12-text").innerHTML = "KG to μG:    ";
+        document.getElementById("13-text").innerHTML = "KG to TONNE: ";
+        document.getElementById("14-text").innerHTML = "KG to I-TON: ";
+        document.getElementById("15-text").innerHTML = "KG to US-TON:";
+        document.getElementById("16-text").innerHTML = "KG to STONE: ";
+        document.getElementById("17-text").innerHTML = "KG to LBS:   ";
+        document.getElementById("18-text").innerHTML = "KG to OZ:    ";
 
-        if (UNIT === "L") {
-            document.getElementById("lq-1-text").innerHTML = "L to CL:";
-            document.getElementById("lq-2-text").innerHTML = "L to ML:";
-            document.getElementById("lq-3-text").innerHTML = "L to OZ:";
+        document.getElementById("01").innerHTML = (NUM * 1e+3 );
+        document.getElementById("02").innerHTML = (NUM * 1e+6 );
+        document.getElementById("03").innerHTML = (NUM * 1e+9 );
+        document.getElementById("04").innerHTML = (NUM / 1000 );
+        document.getElementById("05").innerHTML = (NUM / 1016 );
+        document.getElementById("06").innerHTML = (NUM /907.6 );
+        document.getElementById("07").innerHTML = (NUM / 6.35 );
+        document.getElementById("08").innerHTML = (NUM *2.205 );
+        document.getElementById("09").innerHTML = (NUM *35.274);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("lq-4-text").innerHTML = "L to CL:";
-            document.getElementById("lq-5-text").innerHTML = "L to ML:";
-            document.getElementById("lq-6-text").innerHTML = "L to OZ:";
+        document.getElementById("1-formula").innerHTML = "* 1e+3 ";
+        document.getElementById("2-formula").innerHTML = "* 1e+6 ";
+        document.getElementById("3-formula").innerHTML = "* 1e+9 ";
+        document.getElementById("4-formula").innerHTML = "/ 1000 ";
+        document.getElementById("5-formula").innerHTML = "/ 1016 ";
+        document.getElementById("6-formula").innerHTML = "/907.6 ";
+        document.getElementById("7-formula").innerHTML = "/ 6.35 ";
+        document.getElementById("8-formula").innerHTML = "*2.205 ";
+        document.getElementById("9-formula").innerHTML = "*35.274";
 
-            document.getElementById("01-lq").innerHTML = (NUM * 100    );
-            document.getElementById("02-lq").innerHTML = (NUM * 1000   );
-            document.getElementById("03-lq").innerHTML = (NUM * 32.1951);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        Hide(UNIT);
+    } if (UNIT === 'G') {
+        document.getElementById("1-text").innerHTML = "G to KG:     ";
+        document.getElementById("2-text").innerHTML = "G to MG:    ";
+        document.getElementById("3-text").innerHTML = "G to μG:    ";
+        document.getElementById("4-text").innerHTML = "G to TONNE: ";
+        document.getElementById("5-text").innerHTML = "G to I-TON: ";
+        document.getElementById("6-text").innerHTML = "G to US-TON:";
+        document.getElementById("7-text").innerHTML = "G to STONE: ";
+        document.getElementById("9-text").innerHTML = "G to OZ:    ";
+        document.getElementById("8-text").innerHTML = "G to LBS:   ";
 
-            document.getElementById("lq-1-formula").innerHTML = "* 100    ";
-            document.getElementById("lq-2-formula").innerHTML = "* 1000   ";
-            document.getElementById("lq-3-formula").innerHTML = "* 32.1951";
-            Hide(UNIT)
-        } if (UNIT === "CL") {
-            document.getElementById("lq-1-text").innerHTML = "CL to L:";
-            document.getElementById("lq-2-text").innerHTML = "CL to ML:";
-            document.getElementById("lq-3-text").innerHTML = "CL to OZ:";
+        document.getElementById("10-text").innerHTML = "G to KG:     ";
+        document.getElementById("11-text").innerHTML = "G to MG:    ";
+        document.getElementById("12-text").innerHTML = "G to μG:    ";
+        document.getElementById("13-text").innerHTML = "G to TONNE: ";
+        document.getElementById("14-text").innerHTML = "G to I-TON: ";
+        document.getElementById("15-text").innerHTML = "G to US-TON:";
+        document.getElementById("16-text").innerHTML = "G to STONE: ";
+        document.getElementById("17-text").innerHTML = "G to LBS:   ";
+        document.getElementById("18-text").innerHTML = "G to OZ:    ";
 
-            document.getElementById("lq-4-text").innerHTML = "CL to L:";
-            document.getElementById("lq-5-text").innerHTML = "CL to ML:";
-            document.getElementById("lq-6-text").innerHTML = "CL to OZ:";
+        document.getElementById("01").innerHTML = (NUM / 1000  );
+        document.getElementById("02").innerHTML = (NUM * 1000  );
+        document.getElementById("04").innerHTML = (NUM / 1e+6  );
+        document.getElementById("03").innerHTML = (NUM * 1e+6  );
+        document.getElementById("05").innerHTML = (NUM /1.01e+6);
+        document.getElementById("06").innerHTML = (NUM /907200 );
+        document.getElementById("07").innerHTML = (NUM /6350   );
+        document.getElementById("08").innerHTML = (NUM / 453.6 );
+        document.getElementById("09").innerHTML = (NUM / 28.35 );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("01-lq").innerHTML = (NUM / 100  );
-            document.getElementById("02-lq").innerHTML = (NUM * 10   );
-            document.getElementById("03-lq").innerHTML = (NUM / 2.841);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("1-formula").innerHTML = "/ 1000  ";
+        document.getElementById("2-formula").innerHTML = "* 1000  ";
+        document.getElementById("3-formula").innerHTML = "/ 1e+6  ";
+        document.getElementById("4-formula").innerHTML = "* 1e+6  ";
+        document.getElementById("5-formula").innerHTML = "/1.01e+6";
+        document.getElementById("6-formula").innerHTML = "/907200 ";
+        document.getElementById("7-formula").innerHTML = "/6350   ";
+        document.getElementById("8-formula").innerHTML = "/ 453.6 ";
+        document.getElementById("9-formula").innerHTML = "/ 28.35 ";
 
-            document.getElementById("lq-1-formula").innerHTML = "/ 100  ";
-            document.getElementById("lq-2-formula").innerHTML = "* 10   ";
-            document.getElementById("lq-3-formula").innerHTML = "/ 2.841";
-            Hide(UNIT)
-        } if (UNIT === "ML") {
-            document.getElementById("lq-1-text").innerHTML = "ML to L:";
-            document.getElementById("lq-2-text").innerHTML = "ML to CL:";
-            document.getElementById("lq-3-text").innerHTML = "ML to OZ:";
+        Hide(UNIT);
+    } if (UNIT === 'US-TON') {
+        document.getElementById("1-text").innerHTML = "US-TON to KG:    ";
+        document.getElementById("2-text").innerHTML = "US-TON to G:     ";
+        document.getElementById("3-text").innerHTML = "US-TON to MG:    ";
+        document.getElementById("4-text").innerHTML = "US-TON to μG:    "; 
+        document.getElementById("5-text").innerHTML = "US-TON to TONNE: ";
+        document.getElementById("6-text").innerHTML = "US-TON to I-TON  ";
+        document.getElementById("7-text").innerHTML = "US-TON to STONE: ";
+        document.getElementById("9-text").innerHTML = "US-TON to OZ:    ";
+        document.getElementById("8-text").innerHTML = "US-TON to LBS:   ";
 
-            document.getElementById("lq-4-text").innerHTML = "ML to L:";
-            document.getElementById("lq-5-text").innerHTML = "ML to CL:";
-            document.getElementById("lq-6-text").innerHTML = "ML to OZ:";
+        document.getElementById("10-text").innerHTML = "US-TON to KG:    ";
+        document.getElementById("11-text").innerHTML = "US-TON to G:     ";
+        document.getElementById("12-text").innerHTML = "US-TON to MG:    ";
+        document.getElementById("13-text").innerHTML = "US-TON to μG:    ";
+        document.getElementById("14-text").innerHTML = "US-TON to TONNE: ";
+        document.getElementById("15-text").innerHTML = "US-TON to I-TON  ";
+        document.getElementById("16-text").innerHTML = "US-TON to STONE: ";
+        document.getElementById("17-text").innerHTML = "US-TON to OZ:    ";
+        document.getElementById("18-text").innerHTML = "US-TON to LBS:   ";
 
-            document.getElementById("01-lq").innerHTML = (NUM / 1000  );
-            document.getElementById("02-lq").innerHTML = (NUM / 10    );
-            document.getElementById("03-lq").innerHTML = (NUM / 28.413);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("01").innerHTML = (NUM * 907.2    );
+        document.getElementById("02").innerHTML = (NUM * 907200   );
+        document.getElementById("03").innerHTML = (NUM * 9.072e+8 );
+        document.getElementById("04").innerHTML = (NUM * 9.072e+11);
+        document.getElementById("05").innerHTML = (NUM / 1.102    );
+        document.getElementById("06").innerHTML = (NUM / 1.12     );
+        document.getElementById("07").innerHTML = (NUM * 142.9    );
+        document.getElementById("08").innerHTML = (NUM * 2000     );
+        document.getElementById("09").innerHTML = (NUM * 32000    );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
 
-            document.getElementById("lq-1-formula").innerHTML = "/ 1000  ";
-            document.getElementById("lq-2-formula").innerHTML = "/ 10    ";
-            document.getElementById("lq-3-formula").innerHTML = "/ 28.413";
-            Hide(UNIT)
-        } if (UNIT === "OZ") {
-            document.getElementById("lq-1-text").innerHTML = "OZ to L:";
-            document.getElementById("lq-2-text").innerHTML = "OZ to CL:";
-            document.getElementById("lq-3-text").innerHTML = "OZ to ML:";
+        document.getElementById("1-formula").innerHTML = "* 907.2    ";
+        document.getElementById("2-formula").innerHTML = "* 907200   ";
+        document.getElementById("3-formula").innerHTML = "* 9.072e+8 ";
+        document.getElementById("4-formula").innerHTML = "* 9.072e+11";
+        document.getElementById("5-formula").innerHTML = "/ 1.102    ";
+        document.getElementById("6-formula").innerHTML = "/ 1.12     ";
+        document.getElementById("7-formula").innerHTML = "* 142.9    ";
+        document.getElementById("8-formula").innerHTML = "* 2000     ";
+        document.getElementById("9-formula").innerHTML = "* 32000    ";
 
-            document.getElementById("lq-4-text").innerHTML = "OZ to L:";
-            document.getElementById("lq-5-text").innerHTML = "OZ to CL:";
-            document.getElementById("lq-6-text").innerHTML = "OZ to ML:";
+        Hide(UNIT);
+    } if (UNIT === 'LBS') {
+        document.getElementById("1-text").innerHTML = "LBS to KG:   ";
+        document.getElementById("2-text").innerHTML = "LBS to G:    ";
+        document.getElementById("3-text").innerHTML = "LBS to MG:   ";
+        document.getElementById("4-text").innerHTML = "LBS to μG:   "; 
+        document.getElementById("5-text").innerHTML = "LBS to TONNE: ";
+        document.getElementById("6-text").innerHTML = "LBS to I-TON: ";
+        document.getElementById("7-text").innerHTML = "LBS to US-TON:";
+        document.getElementById("9-text").innerHTML = "LBS to STONE: ";
+        document.getElementById("8-text").innerHTML = "LBS to OZ:    ";
 
-            document.getElementById("01-lq").innerHTML = (NUM / 35.195);
-            document.getElementById("02-lq").innerHTML = (NUM * 2.841 );
-            document.getElementById("03-lq").innerHTML = (NUM * 28.413);
-            document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+        document.getElementById("10-text").innerHTML = "LBS to KG:   ";
+        document.getElementById("11-text").innerHTML = "LBS to G:    ";
+        document.getElementById("12-text").innerHTML = "LBS to MG:   ";
+        document.getElementById("13-text").innerHTML = "LBS to μG:   ";
+        document.getElementById("14-text").innerHTML = "LBS to TONNE: ";
+        document.getElementById("15-text").innerHTML = "LBS to I-TON: ";
+        document.getElementById("16-text").innerHTML = "LBS to US-TON:";
+        document.getElementById("17-text").innerHTML = "LBS to STONE: ";
+        document.getElementById("18-text").innerHTML = "LBS to OZ:    ";
 
-            document.getElementById("lq-1-formula").innerHTML = "/ 35.195";
-            document.getElementById("lq-2-formula").innerHTML = "* 2.841 ";
-            document.getElementById("lq-3-formula").innerHTML = "* 28.413";
-            Hide(UNIT)
-        };
+        document.getElementById("01").innerHTML = (NUM / 2.205    );
+        document.getElementById("02").innerHTML = (NUM * 453.6    );
+        document.getElementById("03").innerHTML = (NUM * 453600   );
+        document.getElementById("04").innerHTML = (NUM * 34.536e+8);
+        document.getElementById("05").innerHTML = (NUM / 2205     );
+        document.getElementById("06").innerHTML = (NUM / 2240     );
+        document.getElementById("07").innerHTML = (NUM / 2000     );
+        document.getElementById("08").innerHTML = (NUM / 14       );
+        document.getElementById("09").innerHTML = (NUM * 16       );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "/ 2.205    ";
+        document.getElementById("2-formula").innerHTML = "* 453.6    ";
+        document.getElementById("3-formula").innerHTML = "* 453600   ";
+        document.getElementById("4-formula").innerHTML = "* 34.536e+8";
+        document.getElementById("5-formula").innerHTML = "/ 2205     ";
+        document.getElementById("6-formula").innerHTML = "/ 2240     ";
+        document.getElementById("7-formula").innerHTML = "/ 2000     ";
+        document.getElementById("8-formula").innerHTML = "/ 14       ";
+        document.getElementById("9-formula").innerHTML = "* 16       ";
+
+        Hide(UNIT);
+    } if (UNIT === 'MG') {
+        document.getElementById("1-text").innerHTML = "MG to KG:    ";
+        document.getElementById("2-text").innerHTML = "MG to G:     ";
+        document.getElementById("3-text").innerHTML = "MG to μG:    ";
+        document.getElementById("4-text").innerHTML = "MG to TONNE: "; 
+        document.getElementById("5-text").innerHTML = "MG to I-TON: ";
+        document.getElementById("6-text").innerHTML = "MG to US-TON:";
+        document.getElementById("7-text").innerHTML = "MG to STONE: ";
+        document.getElementById("9-text").innerHTML = "MG to LBS:   ";
+        document.getElementById("8-text").innerHTML = "MG to OZ:    ";
+
+        document.getElementById("10-text").innerHTML = "MG to KG:    ";
+        document.getElementById("11-text").innerHTML = "MG to G:     ";
+        document.getElementById("12-text").innerHTML = "MG to μG:    ";
+        document.getElementById("13-text").innerHTML = "MG to TONNE: ";
+        document.getElementById("14-text").innerHTML = "MG to I-TON: ";
+        document.getElementById("15-text").innerHTML = "MG to US-TON:";
+        document.getElementById("16-text").innerHTML = "MG to STONE: ";
+        document.getElementById("17-text").innerHTML = "MG to LBS:   ";
+        document.getElementById("18-text").innerHTML = "MG to OZ:    ";
+
+        document.getElementById("01").innerHTML = (NUM / 1e+6    );
+        document.getElementById("02").innerHTML = (NUM / 1000    );
+        document.getElementById("03").innerHTML = (NUM * 1000    );
+        document.getElementById("04").innerHTML = (NUM / 1e+9    );
+        document.getElementById("05").innerHTML = (NUM / 1.016e+6);
+        document.getElementById("06").innerHTML = (NUM / 9.072e+8);
+        document.getElementById("07").innerHTML = (NUM / 6.35e+6 );
+        document.getElementById("08").innerHTML = (NUM / 45600   );
+        document.getElementById("09").innerHTML = (NUM / 283500  );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "/ 1e+6    ";
+        document.getElementById("2-formula").innerHTML = "/ 1000    ";
+        document.getElementById("3-formula").innerHTML = "* 1000    ";
+        document.getElementById("4-formula").innerHTML = "/ 1e+9    ";
+        document.getElementById("5-formula").innerHTML = "/ 1.016e+6";
+        document.getElementById("6-formula").innerHTML = "/ 9.072e+8";
+        document.getElementById("7-formula").innerHTML = "/ 6.35e+6 ";
+        document.getElementById("8-formula").innerHTML = "/ 45600   ";
+        document.getElementById("9-formula").innerHTML = "/ 283500  ";
+        Hide(UNIT);
+    } if (UNIT === 'TONE') {
+        document.getElementById("1-text").innerHTML = "TONNE to KG:    ";
+        document.getElementById("2-text").innerHTML = "TONNE to G:     ";
+        document.getElementById("3-text").innerHTML = "TONNE to MG:    ";
+        document.getElementById("4-text").innerHTML = "TONNE to μG:    "; 
+        document.getElementById("5-text").innerHTML = "TONNE to I-TON: ";
+        document.getElementById("6-text").innerHTML = "TONNE to US-TON:";
+        document.getElementById("7-text").innerHTML = "TONNE to STONE: ";
+        document.getElementById("9-text").innerHTML = "TONNE to LBS:   ";
+        document.getElementById("8-text").innerHTML = "TONNE to OZ:    ";
+
+        document.getElementById("10-text").innerHTML = "TONNE to KG:    ";
+        document.getElementById("11-text").innerHTML = "TONNE to G:     ";
+        document.getElementById("12-text").innerHTML = "TONNE to MG:    ";
+        document.getElementById("13-text").innerHTML = "TONNE to μG:    ";
+        document.getElementById("14-text").innerHTML = "TONNE to I-TON: ";
+        document.getElementById("15-text").innerHTML = "TONNE to US-TON:";
+        document.getElementById("16-text").innerHTML = "TONNE to STONE: ";
+        document.getElementById("17-text").innerHTML = "TONNE to LBS:   ";
+        document.getElementById("18-text").innerHTML = "TONNE to OZ:    ";
+
+        document.getElementById("01").innerHTML = (NUM * 1000 );
+        document.getElementById("02").innerHTML = (NUM * 1e+6 );
+        document.getElementById("03").innerHTML = (NUM * 1e+9 );
+        document.getElementById("04").innerHTML = (NUM * 1e+12);
+        document.getElementById("05").innerHTML = (NUM * 1.016);
+        document.getElementById("06").innerHTML = (NUM * 1.102);
+        document.getElementById("07").innerHTML = (NUM * 157.5);
+        document.getElementById("08").innerHTML = (NUM * 2205 );
+        document.getElementById("09").innerHTML = (NUM * 35270);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "* 1000 ";
+        document.getElementById("2-formula").innerHTML = "* 1e+6 ";
+        document.getElementById("3-formula").innerHTML = "* 1e+9 ";
+        document.getElementById("4-formula").innerHTML = "* 1e+12";
+        document.getElementById("5-formula").innerHTML = "* 1.016";
+        document.getElementById("6-formula").innerHTML = "* 1.102";
+        document.getElementById("7-formula").innerHTML = "* 157.5";
+        document.getElementById("8-formula").innerHTML = "* 2205 ";
+        document.getElementById("9-formula").innerHTML = "* 35270";
+        Hide(UNIT);
+    } if (UNIT === 'MicroG') {
+        document.getElementById("1-text").innerHTML = "μG to KG:    ";
+        document.getElementById("2-text").innerHTML = "μG to G:     ";
+        document.getElementById("3-text").innerHTML = "μG to MG:    ";
+        document.getElementById("4-text").innerHTML = "μG to TONNE: "; 
+        document.getElementById("5-text").innerHTML = "μG to I-TON: ";
+        document.getElementById("6-text").innerHTML = "μG to US-TON:";
+        document.getElementById("7-text").innerHTML = "μG to STONE: ";
+        document.getElementById("9-text").innerHTML = "μG to LBS:   ";
+        document.getElementById("8-text").innerHTML = "μG to OZ:    ";
+
+        document.getElementById("10-text").innerHTML = "μG to KG:    ";
+        document.getElementById("11-text").innerHTML = "μG to G:     ";
+        document.getElementById("12-text").innerHTML = "μG to MG:    ";
+        document.getElementById("13-text").innerHTML = "μG to TONNE: ";
+        document.getElementById("14-text").innerHTML = "μG to I-TON: ";
+        document.getElementById("15-text").innerHTML = "μG to US-TON:";
+        document.getElementById("16-text").innerHTML = "μG to STONE: ";
+        document.getElementById("17-text").innerHTML = "μG to LBS:   ";
+        document.getElementById("18-text").innerHTML = "μG to OZ:    ";
+
+        document.getElementById("01").innerHTML = (NUM / 1e+9     );
+        document.getElementById("02").innerHTML = (NUM / 1e+6     );
+        document.getElementById("03").innerHTML = (NUM / 1000     );
+        document.getElementById("04").innerHTML = (NUM / 1e+12    );
+        document.getElementById("05").innerHTML = (NUM / 1.016e+12);
+        document.getElementById("06").innerHTML = (NUM / 9.072e+11);
+        document.getElementById("07").innerHTML = (NUM / 6.35e+9  );
+        document.getElementById("08").innerHTML = (NUM / 4.536e+8 );
+        document.getElementById("09").innerHTML = (NUM / 2.835e+7 );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "/ 1e+9     ";
+        document.getElementById("2-formula").innerHTML = "/ 1e+6     ";
+        document.getElementById("3-formula").innerHTML = "/ 1000     ";
+        document.getElementById("4-formula").innerHTML = "/ 1e+12    ";
+        document.getElementById("5-formula").innerHTML = "/ 1.016e+12";
+        document.getElementById("6-formula").innerHTML = "/ 9.072e+11";
+        document.getElementById("7-formula").innerHTML = "/ 6.35e+9  ";
+        document.getElementById("8-formula").innerHTML = "/ 4.536e+8 ";
+        document.getElementById("9-formula").innerHTML = "/ 2.835e+7 ";
+        Hide(UNIT);
+    } if (UNIT === 'OZ') {
+        document.getElementById("1-text").innerHTML = "OZ to KG:     ";
+        document.getElementById("2-text").innerHTML = "OZ to G:    ";
+        document.getElementById("3-text").innerHTML = "OZ to MG:    ";
+        document.getElementById("4-text").innerHTML = "OZ to μG:    "; 
+        document.getElementById("5-text").innerHTML = "OZ to TONNE: ";
+        document.getElementById("6-text").innerHTML = "OZ to I-TON: ";
+        document.getElementById("7-text").innerHTML = "OZ to US-ton:";
+        document.getElementById("8-text").innerHTML = "OZ to STONE: ";
+        document.getElementById("9-text").innerHTML = "OZ to LBS:   ";
+
+        document.getElementById("10-text").innerHTML = "OZ to KG:     ";
+        document.getElementById("11-text").innerHTML = "OZ to G:    ";
+        document.getElementById("12-text").innerHTML = "OZ to MG:    ";
+        document.getElementById("13-text").innerHTML = "OZ to μG:    ";
+        document.getElementById("14-text").innerHTML = "OZ to TONNE: ";
+        document.getElementById("15-text").innerHTML = "OZ to I-TON: ";
+        document.getElementById("16-text").innerHTML = "OZ to US-ton:";
+        document.getElementById("17-text").innerHTML = "OZ to STONE: ";
+        document.getElementById("18-text").innerHTML = "OZ to LBS:   ";
+
+        document.getElementById("01").innerHTML = (NUM / 35.274  );
+        document.getElementById("02").innerHTML = (NUM * 28.35   );
+        document.getElementById("03").innerHTML = (NUM * 283500  );
+        document.getElementById("04").innerHTML = (NUM * 2.835e+7);
+        document.getElementById("05").innerHTML = (NUM / 35270   );
+        document.getElementById("06").innerHTML = (NUM / 35840   );
+        document.getElementById("07").innerHTML = (NUM / 32000   );
+        document.getElementById("08").innerHTML = (NUM / 224     );
+        document.getElementById("09").innerHTML = (NUM / 16      );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "/ 35.274  ";
+        document.getElementById("2-formula").innerHTML = "* 28.35   ";
+        document.getElementById("3-formula").innerHTML = "* 283500  ";
+        document.getElementById("4-formula").innerHTML = "* 2.835e+7";
+        document.getElementById("5-formula").innerHTML = "/ 35270   ";
+        document.getElementById("6-formula").innerHTML = "/ 35840   ";
+        document.getElementById("7-formula").innerHTML = "/ 32000   ";
+        document.getElementById("8-formula").innerHTML = "/ 224     ";
+        document.getElementById("9-formula").innerHTML = "/ 16      ";
+        Hide(UNIT);
+    } if (UNIT === 'I-TON') {
+        document.getElementById("1-text").innerHTML = "I-TON to KG:     ";
+        document.getElementById("2-text").innerHTML = "I-TON to G:    ";
+        document.getElementById("3-text").innerHTML = "I-TON to MG:    ";
+        document.getElementById("4-text").innerHTML = "I-TON to μG:    "; 
+        document.getElementById("5-text").innerHTML = "I-TON to TONNE: ";
+        document.getElementById("6-text").innerHTML = "I-TON to US-TON: ";
+        document.getElementById("7-text").innerHTML = "I-TON to STONE: ";
+        document.getElementById("8-text").innerHTML = "I-TON to LBS:   ";
+        document.getElementById("9-text").innerHTML = "I-TON to OZ:    ";
+
+        document.getElementById("10-text").innerHTML = "I-TON to KG:     ";
+        document.getElementById("11-text").innerHTML = "I-TON to G:    ";
+        document.getElementById("12-text").innerHTML = "I-TON to MG:    ";
+        document.getElementById("13-text").innerHTML = "I-TON to μG:    ";
+        document.getElementById("14-text").innerHTML = "I-TON to TONNE: ";
+        document.getElementById("15-text").innerHTML = "I-TON to US-TON:";
+        document.getElementById("16-text").innerHTML = "I-TON to STONE: ";
+        document.getElementById("17-text").innerHTML = "I-TON to LBS:   ";
+        document.getElementById("18-text").innerHTML = "I-TON to OZ:    ";
+
+        document.getElementById("01").innerHTML = (NUM * 1016     );
+        document.getElementById("02").innerHTML = (NUM * 1.01e+6  );
+        document.getElementById("03").innerHTML = (NUM * 1.016e+6 );
+        document.getElementById("04").innerHTML = (NUM * 1.016e+12);
+        document.getElementById("05").innerHTML = (NUM * 1.016    );
+        document.getElementById("06").innerHTML = (NUM * 1.12     );
+        document.getElementById("07").innerHTML = (NUM * 160      );
+        document.getElementById("08").innerHTML = (NUM * 2240     );
+        document.getElementById("09").innerHTML = (NUM * 35840    );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "* 1016     ";
+        document.getElementById("2-formula").innerHTML = "* 1.01e+6  ";
+        document.getElementById("3-formula").innerHTML = "* 1.016e+6 ";
+        document.getElementById("4-formula").innerHTML = "* 1.016e+12";
+        document.getElementById("5-formula").innerHTML = "* 1.016    ";
+        document.getElementById("6-formula").innerHTML = "* 1.12     ";
+        document.getElementById("7-formula").innerHTML = "* 160      ";
+        document.getElementById("8-formula").innerHTML = "* 2240     ";
+        document.getElementById("9-formula").innerHTML = "* 35840    ";
+        Hide(UNIT);
+    } if (UNIT === 'STONE') {
+        document.getElementById("1-text").innerHTML = "STONE? to G:     ";
+        document.getElementById("2-text").innerHTML = "STONE? to KG:    ";
+        document.getElementById("3-text").innerHTML = "STONE? to MG:    ";
+        document.getElementById("4-text").innerHTML = "STONE? to μG:    "; 
+        document.getElementById("5-text").innerHTML = "STONE? to TONNE: ";
+        document.getElementById("6-text").innerHTML = "STONE? to US-TON:";
+        document.getElementById("7-text").innerHTML = "STONE? to I-TON: ";
+        document.getElementById("8-text").innerHTML = "STONE? to LBS:   ";
+        document.getElementById("9-text").innerHTML = "STONE? to OZ:    ";
+
+        document.getElementById("10-text").innerHTML = "STONE? to G:     ";
+        document.getElementById("11-text").innerHTML = "STONE? to KG:    ";
+        document.getElementById("12-text").innerHTML = "STONE? to MG:    ";
+        document.getElementById("13-text").innerHTML = "STONE? to μG:    ";
+        document.getElementById("14-text").innerHTML = "STONE? to TONNE: ";
+        document.getElementById("15-text").innerHTML = "STONE? to US-TON:";
+        document.getElementById("16-text").innerHTML = "STONE? to I-TON: ";
+        document.getElementById("17-text").innerHTML = "STONE? to LBS:   ";
+        document.getElementById("18-text").innerHTML = "STONE? to OZ:    ";
+
+        document.getElementById("01").innerHTML = (NUM * 6.35);
+        document.getElementById("02").innerHTML = (NUM * 6350);
+        document.getElementById("03").innerHTML = (NUM * 6.35e+6);
+        document.getElementById("04").innerHTML = (NUM * 1.016e+12);
+        document.getElementById("05").innerHTML = (NUM * 1.016);
+        document.getElementById("06").innerHTML = (NUM * 142.9);
+        document.getElementById("07").innerHTML = (NUM * 1.016);
+        document.getElementById("08").innerHTML = (NUM * 14);
+        document.getElementById("09").innerHTML = (NUM * 35270);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "* 1016     ";
+        document.getElementById("2-formula").innerHTML = "* 1.01e+6  ";
+        document.getElementById("3-formula").innerHTML = "* 1.016e+6 ";
+        document.getElementById("4-formula").innerHTML = "* 1.016e+12";
+        document.getElementById("5-formula").innerHTML = "* 1.016    ";
+        document.getElementById("6-formula").innerHTML = "* 1.12     ";
+        document.getElementById("7-formula").innerHTML = "* 160      ";
+        document.getElementById("8-formula").innerHTML = "* 2240     ";
+        document.getElementById("9-formula").innerHTML = "* 35840    ";
+        Hide(UNIT);
+    }
+};
+
+function Time() {
+    let NUM = document.getElementById('NUM').value || 1;
+    let UNIT = document.getElementById('UNIT').value || 'undefined';
+    console.log("btn 'BTN-1' pressed.");
+    console.log(NUM);
+    console.log(UNIT);
+
+    if (UNIT === 'S') {
+        document.getElementById("1-text").innerHTML = "S to M:";
+        document.getElementById("2-text").innerHTML = "S to H:";
+        document.getElementById("3-text").innerHTML = "S to M:";
+        document.getElementById("4-text").innerHTML = "S to H:";
+
+        document.getElementById("01").innerHTML = (NUM / 60   );
+        document.getElementById("02").innerHTML = (NUM / 3600 );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "/ 60   ";
+        document.getElementById("2-formula").innerHTML = "/ 3600 ";
+        Hide(UNIT)
+    } if (UNIT === 'M') {
+        document.getElementById("1-text").innerHTML = "M to S:";
+        document.getElementById("2-text").innerHTML = "M to H:";
+        document.getElementById("3-text").innerHTML = "M to S:";
+        document.getElementById("4-text").innerHTML = "M to H:";
+
+        document.getElementById("01").innerHTML = (NUM * 60 );
+        document.getElementById("02").innerHTML = (NUM / 60 );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "* 60   ";
+        document.getElementById("2-formula").innerHTML = "/ 60 ";
+        Hide(UNIT)
+    } if (UNIT === 'H') {
+        document.getElementById("1-text").innerHTML = "H to S:";
+        document.getElementById("2-text").innerHTML = "H to M:";
+        document.getElementById("3-text").innerHTML = "H to S:";
+        document.getElementById("4-text").innerHTML = "H to M:";
+
+        document.getElementById("01").innerHTML = (NUM * 60   );
+        document.getElementById("02").innerHTML = (NUM * 3600 );
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "* 60   ";
+        document.getElementById("2-formula").innerHTML = "* 3600 ";
+        Hide(UNIT)
+    };
+}; 
+
+function Temp() {
+    let NUM = document.getElementById('NUM').value || 1;
+    let UNIT = document.getElementById('UNIT').value || 'undefined';
+    console.log("btn 'BTN-1' pressed.");
+    console.log(NUM);
+    console.log(UNIT);
+
+    if (UNIT === 'K') {
+        document.getElementById("1-text").innerHTML = "K to C:";
+        document.getElementById("2-text").innerHTML = "K to F:";
+        document.getElementById("3-text").innerHTML = "K to C:";
+        document.getElementById("4-text").innerHTML = "K to F(Formula):";
+
+        document.getElementById("01").innerHTML = (NUM - 273.15);
+        document.getElementById("02").innerHTML = ((NUM - 273.15) * 9/5 + 32);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "- 273.15";
+        document.getElementById("2-formula").innerHTML = "(NUMBER - 273.15) * 9/5 + 32)";
+        Hide(UNIT)
+    } if (UNIT === 'C') {
+        document.getElementById("1-text").innerHTML = "C to K:";
+        document.getElementById("2-text").innerHTML = "C to F:";
+        document.getElementById("3-text").innerHTML = "C to K:";
+        document.getElementById("4-text").innerHTML = "C to F(Formula):";
+
+        document.getElementById("01").innerHTML = (NUM + 273.15);
+        document.getElementById("02").innerHTML = ((NUM * 9/5) + 32);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "+ 273.15";
+        document.getElementById("2-formula").innerHTML = "(NUMBER * 9/5) + 32)";
+        Hide(UNIT)
+    } if (UNIT === 'F') {
+        document.getElementById("1-text").innerHTML = "F to K:";
+        document.getElementById("2-text").innerHTML = "F to C:";
+        document.getElementById("3-text").innerHTML = "F to K(Formula):";
+        document.getElementById("4-text").innerHTML = "F to C(Formula):";
+
+        document.getElementById("01").innerHTML = ((NUM - 32) * 5/9 + 273.15);
+        document.getElementById("02").innerHTML = ((NUM - 32) * 5/9);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = "";
+
+        document.getElementById("1-formula").innerHTML = "(NUMBER - 32) * 5/9 + 273.15)";
+        document.getElementById("2-formula").innerHTML = "(NUMBER - 32) * 5/9";
+        Hide(UNIT)
+    }
+};
+
+function Liquids() {
+
+    let NUM = document.getElementById('NUM').value || 1;
+    let UNIT = document.getElementById('UNIT').value || 'undefined';
+    console.log("btn 'BTN-1' pressed.");
+    console.log(NUM);
+    console.log(UNIT);
+
+    if (UNIT === "L") {
+        document.getElementById("1-text").innerHTML = "L to CL:";
+        document.getElementById("2-text").innerHTML = "L to ML:";
+        document.getElementById("3-text").innerHTML = "L to OZ:";
+
+        document.getElementById("4-text").innerHTML = "L to CL:";
+        document.getElementById("5-text").innerHTML = "L to ML:";
+        document.getElementById("6-text").innerHTML = "L to OZ:";
+
+        document.getElementById("01").innerHTML = (NUM * 100    );
+        document.getElementById("02").innerHTML = (NUM * 1000   );
+        document.getElementById("03").innerHTML = (NUM * 32.1951);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "* 100    ";
+        document.getElementById("2-formula").innerHTML = "* 1000   ";
+        document.getElementById("3-formula").innerHTML = "* 32.1951";
+        Hide(UNIT)
+    } if (UNIT === "CL") {
+        document.getElementById("1-text").innerHTML = "CL to L:";
+        document.getElementById("2-text").innerHTML = "CL to ML:";
+        document.getElementById("3-text").innerHTML = "CL to OZ:";
+
+        document.getElementById("4-text").innerHTML = "CL to L:";
+        document.getElementById("5-text").innerHTML = "CL to ML:";
+        document.getElementById("6-text").innerHTML = "CL to OZ:";
+
+        document.getElementById("01").innerHTML = (NUM / 100  );
+        document.getElementById("02").innerHTML = (NUM * 10   );
+        document.getElementById("03").innerHTML = (NUM / 2.841);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "/ 100  ";
+        document.getElementById("2-formula").innerHTML = "* 10   ";
+        document.getElementById("3-formula").innerHTML = "/ 2.841";
+        Hide(UNIT)
+    } if (UNIT === "ML") {
+        document.getElementById("1-text").innerHTML = "ML to L:";
+        document.getElementById("2-text").innerHTML = "ML to CL:";
+        document.getElementById("3-text").innerHTML = "ML to OZ:";
+
+        document.getElementById("4-text").innerHTML = "ML to L:";
+        document.getElementById("5-text").innerHTML = "ML to CL:";
+        document.getElementById("6-text").innerHTML = "ML to OZ:";
+
+        document.getElementById("01").innerHTML = (NUM / 1000  );
+        document.getElementById("02").innerHTML = (NUM / 10    );
+        document.getElementById("03").innerHTML = (NUM / 28.413);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "/ 1000  ";
+        document.getElementById("2-formula").innerHTML = "/ 10    ";
+        document.getElementById("3-formula").innerHTML = "/ 28.413";
+        Hide(UNIT)
+    } if (UNIT === "OZ") {
+        document.getElementById("1-text").innerHTML = "OZ to L:";
+        document.getElementById("2-text").innerHTML = "OZ to CL:";
+        document.getElementById("3-text").innerHTML = "OZ to ML:";
+
+        document.getElementById("4-text").innerHTML = "OZ to L:";
+        document.getElementById("5-text").innerHTML = "OZ to CL:";
+        document.getElementById("6-text").innerHTML = "OZ to ML:";
+
+        document.getElementById("01").innerHTML = (NUM / 35.195);
+        document.getElementById("02").innerHTML = (NUM * 2.841 );
+        document.getElementById("03").innerHTML = (NUM * 28.413);
+        document.getElementsByClassName('ans-text-NUM').innerHTML = NUM;
+
+        document.getElementById("1-formula").innerHTML = "/ 35.195";
+        document.getElementById("2-formula").innerHTML = "* 2.841 ";
+        document.getElementById("3-formula").innerHTML = "* 28.413";
+        Hide(UNIT)
     };
 };
+
+if (document.URL.includes("Home.html") || document.URL.includes("home")) {
+    console.log("you are in the home page")
+    let type = document.getElementById("TYPE").value || 'null';
+
+    function Type() {
+        let type = document.getElementById("TYPE").value || 'null';
+        if (type === 'null') {
+            alert("Please select a type of measurement.")
+        } if (type === 'LEN') {
+            document.getElementById("unit").innerHTML = '<select name="unit" id="UNIT"><option value="M">Meters</option><option value="KM">Kilometers</option><option value="CM">Centimeters</option><option value="FT">Feet</option><option value="YD">Yards</option><option value="MI">Miles</option><option value="IN">Inches</option><option value="MM">Millimeters</option><option value="μM">Micrometers</option><option value="NM">Nanometers</option><option value="NMI">Nautical Mile</option></select>';
+            document.getElementById("legend").innerHTML = '<p class="Legend-text"> M = Meter/Metro </p><p class="Legend-text"> KM = Kilometer/Kilómetro </p><p class="Legend-text"> CM = Centimeter/Centímetro </p><p class="Legend-text"> FT = Feet/Pies </p><p class="Legend-text"> YD = Yards/yardas </p><p class="Legend-text"> MI = Miles/Millas</p><p class="Legend-text"> IN = Inches/Pulgadas</p><p class="Legend-text"> MM = Millimeter</p><p class="Legend-text"> μM = Micrometer</p><p class="Legend-text"> NM = Nanometer</p><p class="Legend-text"> NMI = Nautical Mile</p>';
+            document.getElementById("1").innerHTML = '<p class="ans-text"> <span id="1-text"></span> <span id="01"></span></p><p class="ans-text"> <span id="2-text"></span> <span id="02"></span></p><p class="ans-text"> <span id="3-text"></span> <span id="03"></span></p><p class="ans-text"> <span id="4-text"></span> <span id="04"></span></p><p class="ans-text"> <span id="5-text"></span> <span id="05"></span></p><p class="ans-text"> <span id="6-text"></span> <span id="06"></span></p><p class="ans-text"> <span id="7-text"></span> <span id="07"></span></p><p class="ans-text"> <span id="8-text"></span> <span id="08"></span></p><p class="ans-text"> <span id="9-text"></span> <span id="09"></span></p><p class="ans-text"> <span id="10-text"></span> <span id="10"></span></p>';
+            document.getElementById("2").innerHTML = '<p class="ans-text"> <span id="11-text"></span> <span class="ans-text-NUM"></span> <span id="1-formula"></span></p><p class="ans-text"> <span id="12-text"></span> <span class="ans-text-NUM"></span> <span id="2-formula"></span></p><p class="ans-text"> <span id="13-text"></span> <span class="ans-text-NUM"></span> <span id="3-formula"></span></p><p class="ans-text, delete-1"> <span id="14-text"></span> <span class="ans-text-NUM"></span> <span id="4-formula"></span></p><p class="ans-text, delete-2"> <span id="15-text"></span> <span class="ans-text-NUM"></span> <span id="5-formula"></span></p><p class="ans-text, delete-3"> <span id="16-text"></span> <span class="ans-text-NUM"></span> <span id="6-formula"></span></p><p class="ans-text, delete-4"> <span id="17-text"></span> <span class="ans-text-NUM"></span> <span id="7-formula"></span></p><p class="ans-text, delete-5"> <span id="18-text"></span> <span class="ans-text-NUM"></span> <span id="8-formula"></span></p><p class="ans-text, delete-6"> <span id="19-text"></span> <span class="ans-text-NUM"></span> <span id="9-formula"></span></p><p class="ans-text, delete-7"> <span id="20-text"></span> <span class="ans-text-NUM"></span> <span id="10-formula"></span></p>';
+        } if (type === 'TIME') {
+            document.getElementById("unit").innerHTML = '<select aria-label="unit selector" name="UNIT" id="UNIT"><option value="H">Hours</option><option value="S">Seconds</option><option value="M">Minutes</option></select>';
+            document.getElementById("legend").innerHTML = '<p class="Legend-text"> S = Second/Segundo </p><p class="Legend-text"> M = Minute/Minuto </p><p class="Legend-text"> H = Hours/Horas </p>';
+            document.getElementById("1").innerHTML = '<p class="ans-text" > <span id="1-text"></span> <span id="01"></span></p><p class="ans-text" > <span id="2-text"></span> <span id="02"></span></p>'
+            document.getElementById("2").innerHTML = '<p class="ans-text"> <span id="3-text"></span> <span class="ans-text-NUM"></span> <span id="1-formula"></span></p><p class="ans-text"> <span id="4-text"></span> <span class="ans-text-NUM"></span> <span id="2-formula"></span></p>'
+        } if (type === 'MASS') {
+            document.getElementById("unit").innerHTML = '<select aria-label="unit selector" name="UNIT" id="UNIT"><option value="KG">Kilograms</option><option value="G">grams</option><option value="MG">Milligrams</option><option value="MicroG">Micrograms</option><option value="TONE">Metric TON(TONNE)</option><option value="I-TON">Imperial TON</option><option value="US-TON">US Tons</option><option value="STONE">Stone</option><option value="LBS">Pounds</option><option value="OZ">Ounce</option></select>'; 
+            document.getElementById("legend").innerHTML = '<p class="Legend-text"> KG = Kilogram/Kilogramo </p><p class="Legend-text"> G = Gram/Gramo </p><p class="Legend-text"> MG = Milligram/Miligramo </p><p class="Legend-text"> μG = Microgram/Micro gramo </p><p class="Legend-text"> LBS = Pound/Libra </p><p class="Legend-text"> US-TON = US Ton/Tonelada Americana </p><p class="Legend-text"> I-TON = Imperial Ton/Tonelada Imperial </p><p class="Legend-text"> TONNE = Metric Ton/Tonelada Métrica </p><p class="Legend-text"> OZ = Ounce/Onza </p><p class="Legend-text"> STONE = Literal Stone/Roca </p>';
+            document.getElementById("1").innerHTML = '<p class="ans-text" > <span id="1-text"></span> <span id="01"></span></p><p class="ans-text" > <span id="2-text"></span> <span id="02"></span></p><p class="ans-text" > <span id="3-text"></span> <span id="03"></span></p><p class="ans-text" > <span id="4-text"></span> <span id="04"></span></p><p class="ans-text" > <span id="5-text"></span> <span id="05"></span></p><p class="ans-text" > <span id="6-text"></span> <span id="06"></span></p><p class="ans-text" > <span id="7-text"></span> <span id="07"></span></p><p class="ans-text" > <span id="8-text"></span> <span id="08"></span></p><p class="ans-text" > <span id="9-text"></span> <span id="09"></span></p>';
+            document.getElementById("2").innerHTML = '<p class="ans-text"> <span id="10-text"></span> <span class="ans-text-NUM"></span> <span id="1-formula"></span></p><p class="ans-text"> <span id="11-text"></span> <span class="ans-text-NUM"></span> <span id="2-formula"></span></p><p class="ans-text"> <span id="12-text"></span> <span class="ans-text-NUM"></span> <span id="3-formula"></span></p><p class="ans-text"> <span id="13-text"></span> <span class="ans-text-NUM"></span> <span id="4-formula"></span></p><p class="ans-text"> <span id="14-text"></span> <span class="ans-text-NUM"></span> <span id="5-formula"></span></p><p class="ans-text"> <span id="15-text"></span> <span class="ans-text-NUM"></span> <span id="6-formula"></span></p><p class="ans-text"> <span id="16-text"></span> <span class="ans-text-NUM"></span> <span id="7-formula"></span></p><p class="ans-text"> <span id="17-text"></span> <span class="ans-text-NUM"></span> <span id="8-formula"></span></p><p class="ans-text"> <span id="18-text"></span> <span class="ans-text-NUM"></span> <span id="9-formula"></span></p>';
+        } if (type === 'TEMP') {
+            document.getElementById("unit").innerHTML = '<select aria-label="unit selector" name="UNIT" id="UNIT"><option value="K">Kelvin</option><option value="C">Celsius</option><option value="F">Fahrenheit</option></select>';
+            document.getElementById("legend").innerHTML = '<p class="Legend-text"> k = Kelvin </p><p class="Legend-text"> C = Celcius </p><p class="Legend-text"> F = Fahrenhiet/Farenhiet </p>';
+            document.getElementById("1").innerHTML = '<p class="ans-text" > <span id="1-text"></span> <span id="01"></span></p><p class="ans-text" > <span id="2-text"></span> <span id="02"></span></p>';
+            document.getElementById("2").innerHTML = '<p class="ans-text"> <span id="3-text"></span> <span class="ans-text-NUM"></span> <span id="1-formula"></span></p><p class="ans-text"> <span id="4-text"></span> <span class="ans-text-NUM"></span> <span id="2-formula"></span></p>';
+        } if (type === 'LIQ') {
+            document.getElementById("unit").innerHTML = '<select aria-label="unit selector" name="UNIT" id="UNIT"><option value="L">Liters</option><option value="CL">Centiliters</option><option value="ML">Milliliters</option><option value="OZ">Ounce</option></select>';
+            document.getElementById("legend").innerHTML = '<p class="Legend-text"> L = Liter/litro </p><p class="Legend-text"> CL = Centiliter/Centilitro </p><p class="Legend-text"> ML = Mililitre/Mililitro </p><p class="Legend-text"> OZ = Ounce/Onza </p>';
+            document.getElementById("1").innerHTML = '<p class="ans-text" > <span id="1-text"></span> <span id="01"></span></p><p class="ans-text" > <span id="2-text"></span> <span id="02"></span></p><p class="ans-text" > <span id="3-text"></span> <span id="03"></span></p>';
+            document.getElementById("2").innerHTML = '<p class="ans-text"> <span id="4-text"></span> <span class="ans-text-NUM"></span> <span id="1-formula"></span></p><p class="ans-text"> <span id="5-text"></span> <span class="ans-text-NUM"></span> <span id="2-formula"></span></p><p class="ans-text"> <span id="6-text"></span> <span class="ans-text-NUM"></span> <span id="3-formula"></span></p>';
+        };
+    };
+
+    function Do() {
+        let type = document.getElementById("TYPE"). value || 'null';
+        if (type === 'null') {
+            alert("Please select a type of measurement.")
+        } if (type === 'LEN') {
+            Len()
+        } if (type === 'TIME') {
+            Time()
+            document.getElementsByClassName("delete-1").visibility = 'hidden';
+        } if (type === 'MASS') {
+            Mass()
+        } if (type === 'TEMP') {
+            Temp()
+        } if (type === 'LIQ') {
+            Liquids()
+        };
+    };
+
+};
+
+// !PAGE CODE
+
+
 
 if (document.URL.includes("pa.html")) {
     console.log("you are in the PA page.");

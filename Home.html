@@ -36,19 +36,6 @@
     </div>
   </div>
   <div class="main-text-div">
-    <div class="main-div-nav" id="react-1">
-        <h1>Conversions</h1>
-        <a class="Program-link" href="/len.html">Length</a>
-        <br />
-        <a class="Program-link" href="/time.html">Time</a>
-        <br />
-        <a class="Program-link" href="/mass.html">Mass</a>
-        <br />
-        <a class="Program-link" href="/temp.html">Temperature</a>
-        <br />
-        <a class="Program-link" href="/liquids.html">Liquids</a>
-        <p>If you'd like more conversions please write to me at <a href="mailto:Riboldi.Program@gmail.com">Riboldi.Program@gmail.com</a>.</p>
-    </div>    
     <div class="main-div-nav" id="react-2">
       <h1>General Formulas</h1>
       <a class="Program-link" href="/re.html">RE </a>
@@ -73,6 +60,47 @@
     <p>It is made with JavaScript, CSS, and HTML. All the operations take place on the client side and NO information is shared with me. The math is done with JavaScript and the looks with HTML and CSS.</p>
     <h1>Why?</h1>
     <p>Mostly because I don't like doing math myself, but also because it helps me practice my web-making skills.</p>
+  </div>
+  <div>
+    <!-- !MOVE THE CONVERSIONS PAGE HERE -->
+    <form action="">
+      <select name="TYPE" id="TYPE">
+        <option value="null">Select an Option</option>
+        <option value="LEN">length</option>
+        <option value="TIME">Time</option>
+        <option value="MASS">Mass</option>
+        <option value="TEMP">Temperature</option>
+        <option value="LIQ">Liquids</option>
+      </select>
+      <button onclick="Type()" class="btn-default" type="button" id="BTN-1">Enter</button>
+      <br>
+      <input
+      type="number"
+      placeholder="Number"
+      name="mass"
+      id="NUM"
+      />
+      <span id="unit"></span>
+      <button onclick="Do()" class="btn-default" type="button" id="BTN-2">Enter</button>
+    </form>
+    <div class="Ans-block , vertical-align" id="react-4">
+      <h2 class="ans-text">
+        The answer: 
+      </h2>
+      <div id="ans">
+          <span id="1"></span>
+        <p id="1-IF">
+      To get your answer enter a number in the left slot and the value.
+      </p>
+        <h2 class="ans-text">Formulas</h2>
+          <span id="2"></span>
+        <p id="2-IF">To get the formulas please enter a number and select a unit. </p>
+        </div>
+    </div>
+    <div class="Legend-block, vertical-align" id="react-5">
+      <h2 class="Legend-text"> The Legend: </h2>
+      <span id="legend"></span>
+    </div>
   </div>
   <hr>
   <footer>
