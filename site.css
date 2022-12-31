@@ -55,11 +55,6 @@
     font-family: 'Poppins'; 
 }
 
-#singup-nav {
-    border-radius: 2mm;
-    background-color: rgb(255, 240, 0);
-}
-
 /* *customizing  */
 
 #W3C {
@@ -90,23 +85,10 @@
 #try-tot {
     width: 250px;
 }
-
 /* *LOGIN PAGE */
 .NEEDS_MARGIN {
     margin-left: 2%;
 }
-
-/* *LOGEDIN PAGE */
-
-.loggedInPageDisplayDivs {
-    display: inline-block;
-    width: 33%;
-    background-color: rgb(255, 240, 0);
-    border-radius: 5mm;
-    height: 8cm;
-}
-
-/* ! Tittle */
 
 /* *main page stuff */
 
@@ -213,11 +195,11 @@ button {
 body {
     font-family: 'Poppins';
     background-color: #020206;
-    color: #f0d6db;
+    color: #cacaca;
 }
 
 h1,h2,h3,h4,h5,h6,p {
-    color: #f0d6db;
+    color: #cacaca;
     margin-left: 2%;
 }
 
