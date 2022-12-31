@@ -5,7 +5,7 @@
     background-color: #020206;
     font-size: 1em;
     font-family: 'Poppins';
-    color: #f0d6db;
+    color: #cacaca;
     padding: 8px 5px 8px 5px;
 }
 
@@ -48,6 +48,8 @@
 .center {
     vertical-align: middle;
     font-weight: 600;
+    width: auto;
+    height: 50px;
 }
 
 .body-content {
@@ -201,12 +203,6 @@ body {
 h1,h2,h3,h4,h5,h6,p {
     color: #cacaca;
     margin-left: 2%;
-}
-
-a {
-    color: rgb(0, 81, 255);
-    cursor: pointer;
-    /* text-decoration: underline; */
 }
 
 p.subfordoc {
