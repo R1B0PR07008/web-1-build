@@ -1,5 +1,8 @@
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
 
+
+
+
 //* optimizing for phone use!
 function elementWidth(i, n, w) {
     for (i; i <= n; i++) {

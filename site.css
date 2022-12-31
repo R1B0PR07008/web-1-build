@@ -2,11 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 .navbar {
-    background-color: rgb(255, 255, 255);
+    background-color: #020206;
     font-size: 1em;
     font-family: 'Poppins';
-    color: rgb(0, 0, 0);
+    color: #f0d6db;
     padding: 8px 5px 8px 5px;
+}
+
+.navbar-brand:hover {
+    color: #ff3436;  
 }
 
 .navbar a {
@@ -112,8 +116,7 @@
 
 #insta-logo {
     width: auto;
-    height: 30px;
-    margin-left: 3%;
+    height: 40px;
 }
 
 #insta-link {
@@ -128,7 +131,7 @@
 }
 
 #Tittle-Div {
-    background-image: url(/img/WEB-1NewNewTittleImage.png);
+    background-image: url(/img/WEB-1.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 18cm;
@@ -136,9 +139,10 @@
 
 .main-div-nav {
     display: inline-block;
-    background-color: rgb(255, 240, 0);
+    background-color: #e63743;
     min-height: 330px;
-    width: 49.8%;
+    width: 48.5%;
+    margin: 0.5%;
     border-radius: 2mm;
     vertical-align: top;
 }
@@ -151,13 +155,15 @@ input {
     border-color: inherit;
     border-style: none;
     height: 30px;
-    background-color: #ffffff;
+    background-color: #363636;
     border-color: black;
+    color: #cacaca;
     border-style: ridge;
     border-width: 0.8mm;
     font-size: larger;
     font-weight: 600;
     font-family: 'Poppins';
+    margin-left: 1%;
 }
 
 .btn-default {
@@ -165,13 +171,14 @@ input {
     margin: 2mm;
     height: 30px;
     border-radius: 1.5mm;
-    background-color: #ffffff;
+    background-color: #363636;
+    color: #cacaca;
     border-style: none;
     font-size: larger;
     font-weight: 600;
-    background-color: #cacaca;
     min-width: 100px;
     font-family: 'Poppins';
+    margin-left: 1%;
 }
 
 select {
@@ -180,12 +187,14 @@ select {
     border-radius: 1.5mm;
     border-style: ridge;
     border-width: 0.8mm;
+    background-color: #363636;
     border-color: black;
     font-size: larger;
     font-weight: 600;
-    color: black;
+    color: #cacaca;
     padding: 1mm;
     font-family: 'Poppins';
+    margin-left: 1%;
 }
 
 #TYPE {
@@ -203,12 +212,12 @@ button {
 
 body {
     font-family: 'Poppins';
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: #020206;
+    color: #f0d6db;
 }
 
 h1,h2,h3,h4,h5,h6,p {
-    color: rgb(0, 0, 0);
+    color: #f0d6db;
     margin-left: 2%;
 }
 
@@ -228,7 +237,7 @@ h1.doc {
 
 /* All Conversion pages */
 .Ans-block {
-    background-color: rgb(255, 240, 0);
+    background-color: #e63743;
     width: 60%;
     height: auto;
     border-radius: 5mm;
@@ -237,7 +246,7 @@ h1.doc {
 }
 
 .Legend-block {
-    background-color: rgb(255, 240, 0);
+    background-color: #e63743;
     width: 35%;
     height: auto;
     border-radius: 5mm;
@@ -250,7 +259,7 @@ h1.doc {
 
 .vertical-align {
     border-radius: 5mm;
-    background-color: rgb(255, 240, 0);
+    background-color: #e63743;
     margin: 2mm;
     vertical-align: top;
     display: inline-block;
@@ -270,59 +279,25 @@ p.ans-footer {
 
 /* !MEMBERSHIP PAGE */
 
-div.membership-page {
-    background-color: rgb(255, 240, 0);
-    width: 25%;
-    height: auto;
-    border-radius: 5mm;
-    display: inline-block;
-
-}
-
-#free {
-    /* margin-left: 12.5%; */
-    margin-left: 25%;
-}
-
-.Membership-page-normal_text {
-    font-size: large;
-    font-weight: 500;
-}
-
-.Membership-page-text {
-    padding: 5%;
-    text-align: center;
-    font-size: large;
-    font-weight: 500;
-}
-
-.Membership-page-text-list {
-    padding: 5%;
-    padding-left: 5%;
-    text-align: left;
-}
-
-.Membership-page-h2_tittles {
-    font-size: .8cm;
-}
-
-#top {
-    padding-top: 4cm;
-    font-size: .8cm;
-}
-
-.Membership-page-tittle {
-    text-align: center;
-    font-size: 1cm;
-}
-
 /* Conventions, Program, tri programs */
 .Program-link {
     text-decoration: underline;
-    color: rgb(49, 49, 49);
+    color: #cacaca;
     font-weight: 600;
     font-size: large;
     margin-left: 3%;
+}
+
+.Program-link-red {
+    text-decoration: underline;
+    color: #cacaca;
+    font-weight: 600;
+    font-size: large;
+    margin-left: 3%;
+}
+
+.Program-link:hover {
+    color: #ff3436;
 }
 
 /* PA Program*/
