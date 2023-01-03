@@ -22,11 +22,14 @@
   />
   <title>HI!</title>
 </head>
-<body onload="phoneMode('h')">
+<body id="_0" onload="phoneMode('h')">
   <div id="Tittle-Div">
     <div class="navbar">
       <a href="/Home.html" class="navbar-brand" id="nav-text">Home</a>
+      <input type="range" value="1" min="1" max="2" onload="phoneMode('h')" onchange="lightDarkMode(); phoneMode('h')" id="lightDarkSelector">
+      <span id="lightDarkSelector-text"></span> 
     </div>
+    <hr id="hr-nav">
     <div id="Main-Tittle-div">
       <h1 id="Tittle">
       Sience 
@@ -36,24 +39,26 @@
     </div>
   </div>
   <div class="main-text-div">
+
     <div class="main-div-nav" id="react-2">
       <h1>General Formulas</h1>
-      <a class="Program-link-red" href="/re.html">RE </a>
+      <a class="Program-link-red" id="link-1" href="/re.html">RE </a>
       <br />
-      <a class="Program-link-red" href="/qf.html">Quadratic Functions </a>
+      <a class="Program-link-red" id="link-2" href="/qf.html">Quadratic Functions </a>
       <br />
-      <a class="Program-link-red" href="/qf2.html"
-        >Quadratic Functions | Graphing </a
-      >
+      <a class="Program-link-red" id="link-3" href="/qf2.html"
+        >Quadratic Functions | Graphing </a>
       <br />
-      <a class="Program-link-red" href="/pa.html">Pressure Program </a>
+      <a class="Program-link-red" id="link-4" href="/pa.html">Pressure Program </a>
       <p>If you'd like more Formulas please write to me at <a href="mailto:Riboldi.Program@gmail.com">Riboldi.Program@gmail.com</a>.</p>
-    </div>    
+    </div>  
+
     <div class="main-div-nav" id="react-3">
       <h1>Triangle Formulas</h1>
-      <a class="Program-link-red" href="./trithingys.html">Triangle formulas</a>
+      <a class="Program-link-red" id="link-5" href="./trithingys.html">Triangle formulas</a>
       <p>The program works for all triangle formulas, though if you'd like me to add more specific triangle formulas please write to me at <a href="mailto:Riboldi.Program@gmail.com">Riboldi.Program@gmail.com</a>. </p>
     </div>
+
     <h1>What is this?</h1>
     <p>This is a small, in progress, website ment to make math problems easier. it is mostly just a project of mine to practice web-making skills. </p>
     <h1>How does it work?</h1>
@@ -61,8 +66,7 @@
     <h1>Why?</h1>
     <p>Mostly because I don't like doing math myself, but also because it helps me practice my web-making skills.</p>
   </div>
-  <div>
-    <!-- !MOVE THE CONVERSIONS PAGE HERE -->
+      <div id="weird-hight">
     <form action="">
       <select name="TYPE" id="TYPE">
         <option value="null">Select an Option</option>
@@ -97,19 +101,20 @@
         <p id="2-IF">To get the formulas please enter a number and select a unit. </p>
         </div>
     </div>
-    <div class="Legend-block, vertical-align" id="react-5">
+    <div class="Legend-block , vertical-align" id="react-5">
       <h2 class="Legend-text"> The Legend: </h2>
       <span id="legend"></span>
     </div>
   </div>
+<div>
   <hr>
   <footer>
     <p>To contact me write an email to:</p>
-    <a class="Program-link" href="mailto:riboldi.program@gmail.com">
+    <a class="Program-link" id="link-6" href="mailto:riboldi.program@gmail.com">
       Riboldi.Program@gmail.com</a
     >
     <p>Or follow me on instagram for more updates: </p>
-    <a class="insta, Program-link" id="insta-link" href="https://www.instagram.com/r1b0pr07008/">@science_calc</a>
+    <a class="insta , Program-link" id="link-7" href="https://www.instagram.com/r1b0pr07008/">@science_calc</a>
     <a href="https://www.instagram.com/science_calc/"><img class="insta" id="insta-logo" src="./img/Instagram-logo-transparent-PNG.png" alt="instagram logo"></a>
     <br />
     
@@ -126,8 +131,10 @@
               alt="Valid CSS!" />
       </a>
   </p>
-  <a class="Program-link" href="/disclamer.html" id="Dis">DISCLAMER</a>
-  </footer>
+  <a class="Program-link" id="link-8" href="/disclamer.html">DISCLAMER</a>
+  </footer>  
+</div>
+
 </body>
 <script src="/site.js"></script>
 

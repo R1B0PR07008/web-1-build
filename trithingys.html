@@ -23,10 +23,12 @@
   <title>!</title>
   
 </head>
-<body onload="phoneMode('t3')">
+<body id="_0" onload="phoneMode('t3'); lightDarkMode()">
     <div class="navbar">
       <span id="nav"></span>
-      <a href="/Home.html" class="navbar-brand, center" id="nav-text">Home</a>
+            <a href="/Home.html" class="navbar-brand, center" id="nav-text">Home</a>
+      <input type="range" value="1" min="1" max="2" onload="phoneMode('t3')" onchange="lightDarkMode(); phoneMode('t3'); nav()" id="lightDarkSelector">
+      <span id="lightDarkSelector-text"></span>
     </div>  
   <h1> Triangle Formulas Programs
 </h1>
@@ -79,7 +81,7 @@
     </div>
   </div>
 
-  <div class="Legend-block, vertical-align" id="react-5">
+  <div class="Legend-block , vertical-align" id="react-5">
     <h2 class="Legend-text"> The Legend: </h2>
     <img src="/img/WEB-1__1_-removebg.png" alt="explanation for dumb people" id="img-1-WEB-1">
     <h2 class="Legend-text"> Types of triangles: </h2>

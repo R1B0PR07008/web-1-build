@@ -23,10 +23,12 @@
   <title>!</title>
 </head>
 
-<body onload="phoneMode('q2')">
+<body id="_0" onload="phoneMode('q2'); lightDarkMode()">
     <div class="navbar">
       <span id="nav"></span>
-      <a href="/Home.html" class="navbar-brand, center" id="nav-text">Home</a>
+            <a href="/Home.html" class="navbar-brand, center" id="nav-text">Home</a>
+      <input type="range" value="1" min="1" max="2" onload="phoneMode('q2')" onchange="lightDarkMode(); phoneMode('q2'); nav()" id="lightDarkSelector">
+      <span id="lightDarkSelector-text"></span>
     </div>
 <h1> Quadratic Functions Program
 </h1>
@@ -95,7 +97,7 @@
   </div>
 </div>
 
-<div class="Legend-block, vertical-align" id="react-9">
+<div class="Legend-block , vertical-align" id="react-9">
   <h2 class="Legend-text"> The Legend: </h2>
   <p class="Legend-text"> A = A </p>
   <p class="Legend-text"> B = B </p>

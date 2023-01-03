@@ -21,15 +21,63 @@ function element(n) {
 
 function nav() {
     if (window.innerWidth > 630) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center, dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center, dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "1.2em"
+
+        if (window.innerWidth < 10000 && window.innerWidth >= 1000 ) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '60%';
+        } else if (window.innerWidth < 999 && window.innerWidth >= 857 ) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '30%';
+        } else if (window.innerWidth < 856 && window.innerWidth >= 750 ) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '20%';
+        } else if (window.innerWidth < 749 && window.innerWidth >= 665 ) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '9%';
+        } else if (window.innerWidth < 664 && window.innerWidth >= 630 ) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '5%';
+        }
     }
     else if (window.innerWidth < 630 ) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/white-hamburger-menu-icon-24.jpg" alt="Menu Button"></button><div class="dropdown-content"><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
-        document.getElementById("nav-text").style.fontSize = "2em"
-    }
+        console.log("screen is small than 630px")
+        
+        let element = document.getElementById("lightDarkSelector").value;
+        let img = "white-hamburger-menu-icon-24.jpg"
 
+        if (element === '1') {
+            img = 'menu_FILL0_wght500_GRAD0_opsz40.svg'
+        } else {
+            img = 'white-hamburger-menu-icon-24.jpg'
+        }
+
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav-text").style.fontSize = "2em"
+
+        if (window.innerWidth > 320 && window.innerWidth <= 420) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '7%';
+        } else if (window.innerWidth > 420 && window.innerWidth <= 500) {
+        document.getElementById("lightDarkSelector").style.marginLeft = '10%';
+        } else if (window.innerWidth > 501 && window.innerWidth <= 600) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '20%';
+        } else if (window.innerWidth > 601 && window.innerWidth <= 630) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '30%';
+        };
+    }
 };
+
+function navAdjust() {
+    if (window.innerWidth <= 1203 && window.innerWidth >= 1011) {
+        document.getElementById("lightDarkSelector").style.marginLeft = '80%';
+    } else if (window.innerWidth < 1011 && window.innerWidth >= 813) {
+        document.getElementById("lightDarkSelector").style.marginLeft = '74%';
+    } else if (window.innerWidth < 813 && window.innerWidth >= 705) {
+        document.getElementById("lightDarkSelector").style.marginLeft = '65%';
+    } else if (window.innerWidth < 705 && window.innerWidth >= 551) {
+        document.getElementById("lightDarkSelector").style.marginLeft = '55%';
+    } else if (window.innerWidth < 551 && window.innerWidth >= 455) {
+        document.getElementById("lightDarkSelector").style.marginLeft = '45%';
+    } else if (window.innerWidth < 455) {
+        document.getElementById("lightDarkSelector").style.marginLeft = '35%';
+    }
+}
 
 function phoneMode(p) {
         if (p === 'h') {
@@ -46,6 +94,9 @@ function phoneMode(p) {
                 else {
                     document.getElementById("Tittle-Div").style.backgroundImage = "/img/WEB-1NewNewTittleImage.png";
                 };
+
+                navAdjust()
+
             }; 
             if (window.innerWidth <= 910) {
                 console.log(window.innerWidth)
@@ -170,6 +221,94 @@ function Hide(UNIT) {
             document.getElementsByClassName("ans-text").visibility = "visible";
         };
 };
+
+//* making dark/light mode
+
+function elementProgramLink(i, n, c) {
+    for (i; i <= n; i++) {
+        let element = document.getElementById("link-" + i).style.color = c;
+    };
+    return element;
+}
+
+function lightDarkMode() {
+    let elementValue = document.getElementById("lightDarkSelector").value;
+    console.log(elementValue)
+    let ansBlock = document.querySelector(".Ans-block");
+    let legendBlock = document.querySelector(".Legend-block");
+
+    if (elementValue === "1") { // light mode
+
+        if (document.URL.includes("Home")) {
+            elementProgramLink(1, 8, "#000000")
+            console.log("light mode selected")
+            document.getElementById("_0").style.backgroundColor = "#FFFFFF";
+            document.getElementById("_0").style.color = "#000000";
+            ansBlock.style.backgroundColor = "#fff000";
+            legendBlock.style.backgroundColor = "#fff000";
+            document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#fff000";
+            document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#fff000";
+            document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1NewNewTittleImage.png)';
+            document.querySelector(".navbar").style.backgroundColor = '#FFFFFF';
+            document.querySelector(".navbar-brand").style.color = '#000000';
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#fff000"
+    
+            document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.'
+            document.getElementById("lightDarkSelector-text").style.color = '#000000'
+            document.cookie = 'mode=light'
+        } else {
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#fff000"
+            document.querySelector(".navbar").style.backgroundColor = '#FFFFFF';
+            document.querySelector(".navbar").style.color = '#000000';
+            console.log("not home page");
+            console.log("light mode selected");
+            document.getElementById("_0").style.backgroundColor = "#FFFFFF";
+            document.getElementById("_0").style.color = "#000000";
+            ansBlock.style.backgroundColor = "#fff000";
+            legendBlock.style.backgroundColor = "#fff000";
+            document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.'
+            document.getElementById("lightDarkSelector-text").style.color = '#000000'
+            document.cookie = 'mode=light'
+        }
+    }   
+    if (elementValue === "2") {
+        console.log("dark mode")
+        document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.'
+        document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
+
+        if (document.URL.includes("Home")) {
+            elementProgramLink(1, 8, "#cacaca")
+            document.getElementById("_0").style.backgroundColor = "#020206";
+            document.getElementById("_0").style.color = "#cacaca";
+            ansBlock.style.backgroundColor = "#e63743";
+            legendBlock.style.backgroundColor = "#e63743";
+            document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#e63743";
+            document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#e63743";
+            document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1.png)';
+            document.querySelector(".navbar").style.backgroundColor = '#020206';
+            document.querySelector(".navbar-brand").style.color = '#cacaca';
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743"
+            document.cookie = 'mode=dark'
+        } else {
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743"
+            document.querySelector(".navbar").style.backgroundColor = '#020206';
+            document.querySelector(".navbar").style.color = '#cacaca';
+            console.log("not home page");
+            console.log("light mode selected");
+            document.getElementById("_0").style.backgroundColor = "#020206";
+            document.getElementById("_0").style.color = "#cacaca";
+            ansBlock.style.backgroundColor = "#e63743";
+            legendBlock.style.backgroundColor = "#e63743";
+            document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.'
+            document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
+            document.cookie = 'mode=dark'
+        }
+
+
+
+        
+    }
+}
 
 // ! CODE FOR CONVERSIONS
 
@@ -1322,6 +1461,8 @@ if (document.URL.includes("Home.html") || document.URL.includes("home")) {
     console.log("you are in the home page")
     let type = document.getElementById("TYPE").value || 'null';
 
+    lightDarkMode()
+
     function Type() {
         let type = document.getElementById("TYPE").value || 'null';
         if (type === 'null') {
@@ -1376,9 +1517,8 @@ if (document.URL.includes("Home.html") || document.URL.includes("home")) {
 
 // !PAGE CODE
 
-
-
 if (document.URL.includes("pa.html")) {
+    
     console.log("you are in the PA page.");
 
     let f1 = document.getElementById("PA-F1").value || 0;
@@ -1439,6 +1579,7 @@ if (document.URL.includes("pa.html")) {
 };
 
 if (document.URL.includes("qf.html")) {
+
     console.log("you are in the quadratic functions page. ");
 
 
@@ -1484,6 +1625,7 @@ if (document.URL.includes("qf.html")) {
 };
 
 if (document.URL.includes("qf2.html")) {
+
     console.log("You are in the qf2 page.")
 
     function Hide_qf2(a,b,c,x1,x2,x3) {
@@ -1766,6 +1908,7 @@ if (document.URL.includes("re.html")) {
 };
 
 if (document.URL.includes("trithingys.html")) {
+    
     console.log("You are in the triangle formulas page.")
 
 

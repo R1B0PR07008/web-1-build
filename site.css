@@ -57,7 +57,48 @@
     font-family: 'Poppins'; 
 }
 
+#hr-nav{
+    margin-top: 0%;
+}
+
+#lightDarkSelector {
+    appearance: initial;
+    margin-left: 80%;
+    vertical-align: middle;
+    width: 1cm;
+    height: 20px;
+    cursor: grab;
+    border-width: 0px;
+    background-color: #e63743;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#lightDarkSelector::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 20px;
+    width: 0.5cm;
+    border-radius: 8px;
+    background: #cacaca;
+    cursor: pointer;
+}
+
+#lightDarkSelector::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 20px;
+    color: #cacaca;
+}
+
+#lightDarkSelector:focus {
+    outline: none;
+}
+
 /* *customizing  */
+
+#weird-hight {
+    min-height: 500px;
+}
 
 #W3C {
     border:0;
@@ -101,10 +142,6 @@
 #insta-logo {
     width: auto;
     height: 40px;
-}
-
-#insta-link {
-    font-size: 1.2em;
 }
 
 #Tittle {
@@ -194,14 +231,14 @@ button {
     color: inherit;
 }
 
-body {
+body#_0 {
     font-family: 'Poppins';
     background-color: #020206;
     color: #cacaca;
+    margin: 0px;
 }
 
 h1,h2,h3,h4,h5,h6,p {
-    color: #cacaca;
     margin-left: 2%;
 }
 
@@ -229,15 +266,14 @@ h1.doc {
     height: auto;
     border-radius: 5mm;
     margin-left: 4%;
+    margin-right: 2mm;
     margin-top: .5%;
     margin-bottom: 2%;
-    position: absolute;
     vertical-align: top;
 }
 
 .vertical-align {
     border-radius: 5mm;
-    background-color: #e63743;
     margin: 2mm;
     vertical-align: top;
     display: inline-block;
@@ -293,7 +329,6 @@ p.ans-footer {
 
 /* Dropdown Button */
 .dropbtn {
-    /* color: white; */
     padding: 16px;
     font-size: 16px;
     border: none;
