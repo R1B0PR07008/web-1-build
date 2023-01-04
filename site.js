@@ -25,7 +25,7 @@ function nav() {
         document.getElementById("nav-text").style.fontSize = "1.2em"
 
         if (window.innerWidth < 10000 && window.innerWidth >= 1000 ) {
-            document.getElementById("lightDarkSelector").style.marginLeft = '60%';
+            document.getElementById("lightDarkSelector").style.marginLeft = '55%';
         } else if (window.innerWidth < 999 && window.innerWidth >= 857 ) {
             document.getElementById("lightDarkSelector").style.marginLeft = '30%';
         } else if (window.innerWidth < 856 && window.innerWidth >= 750 ) {
@@ -270,8 +270,7 @@ function lightDarkMode() {
             document.getElementById("lightDarkSelector-text").style.color = '#000000';
             document.cookie = 'mode=light';
         }
-    }   
-    if (elementValue === "2") {
+    } else if (elementValue === "2") {
         console.log("dark mode")
         document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.'
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
