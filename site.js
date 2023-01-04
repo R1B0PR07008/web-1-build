@@ -240,8 +240,8 @@ function lightDarkMode() {
     if (elementValue === "1") { // light mode
 
         if (document.URL.includes("Home")) {
-            elementProgramLink(1, 8, "#000000")
-            console.log("light mode selected")
+            elementProgramLink(1, 8, "#000000");
+            console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
             document.getElementById("_0").style.color = "#000000";
             ansBlock.style.backgroundColor = "#fff000";
@@ -251,13 +251,13 @@ function lightDarkMode() {
             document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1NewNewTittleImage.png)';
             document.querySelector(".navbar").style.backgroundColor = '#FFFFFF';
             document.querySelector(".navbar-brand").style.color = '#000000';
-            document.getElementById("lightDarkSelector").style.backgroundColor = "#fff000"
-    
-            document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.'
-            document.getElementById("lightDarkSelector-text").style.color = '#000000'
-            document.cookie = 'mode=light'
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#fff000";
+
+            document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.';
+            document.getElementById("lightDarkSelector-text").style.color = '#000000';
+            document.cookie = 'mode=light';
         } else {
-            document.getElementById("lightDarkSelector").style.backgroundColor = "#fff000"
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#fff000";
             document.querySelector(".navbar").style.backgroundColor = '#FFFFFF';
             document.querySelector(".navbar").style.color = '#000000';
             console.log("not home page");
@@ -266,9 +266,9 @@ function lightDarkMode() {
             document.getElementById("_0").style.color = "#000000";
             ansBlock.style.backgroundColor = "#fff000";
             legendBlock.style.backgroundColor = "#fff000";
-            document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.'
-            document.getElementById("lightDarkSelector-text").style.color = '#000000'
-            document.cookie = 'mode=light'
+            document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.';
+            document.getElementById("lightDarkSelector-text").style.color = '#000000';
+            document.cookie = 'mode=light';
         }
     }   
     if (elementValue === "2") {
@@ -277,7 +277,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("Home")) {
-            elementProgramLink(1, 8, "#cacaca")
+            elementProgramLink(1, 8, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -287,8 +287,8 @@ function lightDarkMode() {
             document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1.png)';
             document.querySelector(".navbar").style.backgroundColor = '#020206';
             document.querySelector(".navbar-brand").style.color = '#cacaca';
-            document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743"
-            document.cookie = 'mode=dark'
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743";
+            document.cookie = 'mode=dark';
         } else {
             document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743"
             document.querySelector(".navbar").style.backgroundColor = '#020206';
@@ -299,9 +299,9 @@ function lightDarkMode() {
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
             legendBlock.style.backgroundColor = "#e63743";
-            document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.'
-            document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
-            document.cookie = 'mode=dark'
+            document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.';
+            document.getElementById("lightDarkSelector-text").style.color = '#cacaca';
+            document.cookie = 'mode=dark';
         }
 
 
