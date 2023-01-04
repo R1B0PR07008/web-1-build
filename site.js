@@ -239,7 +239,7 @@ function lightDarkMode() {
 
     if (elementValue === "1") { // light mode
 
-        if (document.URL.includes("ome")) {
+        if (document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
             elementProgramLink(1, 8, "#000000");
             console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
@@ -275,7 +275,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.'
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
-        if (document.URL.includes("ome")) {
+        if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
             elementProgramLink(1, 8, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
@@ -1461,7 +1461,7 @@ function Liquids() {
     };
 };
 
-if (document.URL.includes("ome.html") || document.URL.includes("ome")) {
+if (document.URL.includes("ome.html") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
     console.log("you are in the home page")
     let type = document.getElementById("TYPE").value || 'null';
 
