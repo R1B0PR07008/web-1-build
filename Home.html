@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="./site.js">
-    lightDarkMode()
-  </script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4BFXZ4QH6"></script>
 <script>
@@ -29,7 +26,7 @@
   <div id="Tittle-Div">
     <div class="navbar">
       <a href="/Home.html" class="navbar-brand" id="nav-text">Home</a>
-      <input type="range" value="1" min="1" max="2" onload="phoneMode('h'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('h')" id="lightDarkSelector">
+      <input aria-label="light mode and dark mode switch" type="range" value="1" min="1" max="2" onload="phoneMode('h'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('h')" id="lightDarkSelector">
       <span id="lightDarkSelector-text" onload="dontBreakcPlease()"></span> 
     </div>
     <hr id="hr-nav">
@@ -61,18 +58,13 @@
       <a class="Program-link-red" id="link-5" href="./trithingys.html">Triangle formulas</a>
       <p>The program works for all triangle formulas, though if you'd like me to add more specific triangle formulas please write to me at <a href="mailto:Riboldi.Program@gmail.com">Riboldi.Program@gmail.com</a>. </p>
     </div>
-
-    <h1>What is this?</h1>
-    <p>This is a small, in progress, website ment to make math problems easier. it is mostly just a project of mine to practice web-making skills. </p>
-    <h1>How does it work?</h1>
-    <p>It is made with JavaScript, CSS, and HTML. All the operations take place on the client side and NO information is shared with me. The math is done with JavaScript and the looks with HTML and CSS.</p>
-    <h1>Why?</h1>
-    <p>Mostly because I don't like doing math myself, but also because it helps me practice my web-making skills.</p>
   </div>
+  <br>
       <div id="weird-hight">
+        <h1>Conversions</h1>
     <form action="">
-      <select name="TYPE" id="TYPE">
-        <option value="null">Select an Option</option>
+      <select aria-label="type of measurement(length, mass, ect...)" name="TYPE" id="TYPE">
+        <option value="null">Select a Type of measurement</option>
         <option value="LEN">length</option>
         <option value="TIME">Time</option>
         <option value="MASS">Mass</option>

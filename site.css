@@ -62,7 +62,6 @@
 }
 
 #lightDarkSelector {
-    appearance: initial;
     margin-left: 80%;
     vertical-align: middle;
     width: 1cm;
@@ -72,6 +71,7 @@
     background-color: #FFF000;
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
 }
 
 #lightDarkSelector::-webkit-slider-thumb {
@@ -219,7 +219,7 @@ select {
 }
 
 #TYPE {
-    width: 200px;
+    width: 340px;
 }
 
 mail { 
