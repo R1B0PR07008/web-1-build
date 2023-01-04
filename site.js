@@ -239,7 +239,7 @@ function lightDarkMode() {
 
     if (elementValue === "1") { // light mode
 
-        if (document.URL.includes("Home")) {
+        if (document.URL.includes("ome")) {
             elementProgramLink(1, 8, "#000000");
             console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
