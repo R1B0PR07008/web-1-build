@@ -232,7 +232,7 @@ function elementProgramLink(i, n, c) {
 }
 
 function lightDarkMode() {
-    let elementValue = document.getElementById("lightDarkSelector").value;
+    let elementValue = document.getElementById("lightDarkSelector").value || 1;
     console.log(elementValue)
     let ansBlock = document.querySelector(".Ans-block");
     let legendBlock = document.querySelector(".Legend-block");
