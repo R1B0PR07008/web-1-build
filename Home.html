@@ -22,77 +22,10 @@
   />
   <title>HI!</title>
 </head>
-<body id="_0" onload=" 
-
-if (elementValue === '1') {
-
-  if (document.URL.includes('ome')) {
-      elementProgramLink(1, 8, '#000000');
-      console.log('light mode selected');
-      document.getElementById('_0').style.backgroundColor = '#FFFFFF';
-      document.getElementById('_0').style.color = '#000000';
-      ansBlock.style.backgroundColor = '#fff000';
-      legendBlock.style.backgroundColor = '#fff000';
-      document.querySelector('#react-2.main-div-nav').style.backgroundColor = '#fff000';
-      document.querySelector('#react-3.main-div-nav').style.backgroundColor = '#fff000';
-      document.getElementById('Tittle-Div').style.backgroundImage = 'url(./img/WEB-1NewNewTittleImage.png)';
-      document.querySelector('.navbar').style.backgroundColor ='#FFFFFF';
-      document.querySelector('.navbar-brand').style.color = '#000000';
-      document.getElementById('lightDarkSelector').style.backgroundColor = '#fff000';
-
-      document.getElementById('lightDarkSelector-text').innerHTML = 'Light Mode.';
-      document.getElementById('lightDarkSelector-text').style.color = '#000000';
-      document.cookie = 'mode=light';
-  } else {
-      document.getElementById('lightDarkSelector').style.backgroundColor = '#fff000';
-      document.querySelector('.navbar').style.backgroundColor = '#FFFFFF';
-      document.querySelector('.navbar').style.color = '#000000';
-      console.log('not home page');
-      console.log('light mode selected');
-      document.getElementById('_0').style.backgroundColor = '#FFFFFF';
-      document.getElementById('_0').style.color = '#000000';
-      ansBlock.style.backgroundColor = '#fff000';
-      legendBlock.style.backgroundColor = '#fff000';
-      document.getElementById('lightDarkSelector-text').innerHTML = 'Light Mode.';
-      document.getElementById('lightDarkSelector-text').style.color = '#000000';
-      document.cookie = 'mode=light';
-  }
-} else if (elementValue === '2') {
-  console.log('dark mode')
-  document.getElementById('lightDarkSelector-text').innerHTML = 'Dark Mode.';
-  document.getElementById('lightDarkSelector-text').style.color = '#cacaca';
-
-  if (document.URL.includes('ome')) {
-      elementProgramLink(1, 8, '#cacaca');
-      document.getElementById('_0').style.backgroundColor = '#020206';
-      document.getElementById('_0').style.color = '#cacaca';
-      ansBlock.style.backgroundColor = '#e63743';
-      legendBlock.style.backgroundColor = '#e63743';
-      document.querySelector('#react-2.main-div-nav').style.backgroundColor = '#e63743';
-      document.querySelector('#react-3.main-div-nav').style.backgroundColor = '#e63743';
-      document.getElementById('Tittle-Div').style.backgroundImage = 'url(./img/WEB-1.png)';
-      document.querySelector('.navbar').style.backgroundColor = '#020206';
-      document.querySelector('.navbar-brand').style.color = '#cacaca';
-      document.getElementById('lightDarkSelector').style.backgroundColor = '#e63743';
-      document.cookie = 'mode=dark';
-  } else {
-      document.getElementById('lightDarkSelector').style.backgroundColor = '#e63743'
-      document.querySelector('.navbar').style.backgroundColor = '#020206';
-      document.querySelector('.navbar').style.color = '#cacaca';
-      console.log('not home page');
-      console.log('light mode selected');
-      document.getElementById('_0').style.backgroundColor = '#020206';
-      document.getElementById('_0').style.color = '#cacaca';
-      ansBlock.style.backgroundColor = '#e63743';
-      legendBlock.style.backgroundColor = '#e63743';
-      document.getElementById('lightDarkSelector-text').innerHTML = 'Dark Mode.';
-      document.getElementById('lightDarkSelector-text').style.color = '#cacaca';
-      document.cookie = 'mode=dark';
-  }
-}; phoneMode('h')">
+<body id="_0" onload="lightDarkMode(); phoneMode('h')">
   <div id="Tittle-Div">
     <div class="navbar">
-      <a href="/Home.html" class="navbar-brand" id="nav-text">Home</a>
+      <a onload="document.getElementById('nav-text').click()" href="/Home.html" class="navbar-brand" id="nav-text">Home</a>
       <input type="range" value="1" min="1" max="2" onload="phoneMode('h'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('h')" id="lightDarkSelector">
       <span id="lightDarkSelector-text" onload="dontBreakcPlease()"></span> 
     </div>
