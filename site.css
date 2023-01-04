@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
 .navbar {
-    background-color: #020206;
+    background-color: #FFFFFF;
     font-size: 1em;
     font-family: 'Poppins';
-    color: #cacaca;
+    color: #000000;
     padding: 8px 5px 8px 5px;
 }
 
 .navbar-brand:hover {
-    color: #ff3436;  
+    color: #4cd9e8;  
 }
 
 .navbar a {
@@ -69,7 +69,7 @@
     height: 20px;
     cursor: grab;
     border-width: 0px;
-    background-color: #e63743;
+    background-color: #FFF000;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -152,7 +152,7 @@
 }
 
 #Tittle-Div {
-    background-image: url(/img/WEB-1.png);
+    background-image: url(/img/WEB-1NewNewTittleImage.png);
     background-size: contain;
     background-repeat: no-repeat;
     height: 18cm;
@@ -160,7 +160,7 @@
 
 .main-div-nav {
     display: inline-block;
-    background-color: #e63743;
+    background-color: #FFF000;
     min-height: 330px;
     width: 48.5%;
     margin: 0.5%;
@@ -252,7 +252,7 @@ h1.doc {
 
 /* All Conversion pages */
 .Ans-block {
-    background-color: #e63743;
+    background-color: #FFF000;
     width: 60%;
     height: auto;
     border-radius: 5mm;
@@ -261,7 +261,7 @@ h1.doc {
 }
 
 .Legend-block {
-    background-color: #e63743;
+    background-color: #FFF000; 
     width: 35%;
     height: auto;
     border-radius: 5mm;
@@ -296,7 +296,7 @@ p.ans-footer {
 /* Conventions, Program, tri programs */
 .Program-link {
     text-decoration: underline;
-    color: #cacaca;
+    color: #000000;
     font-weight: 600;
     font-size: large;
     margin-left: 3%;
@@ -304,14 +304,14 @@ p.ans-footer {
 
 .Program-link-red {
     text-decoration: underline;
-    color: #cacaca;
+    color: #000000;
     font-weight: 600;
     font-size: large;
     margin-left: 3%;
 }
 
 .Program-link:hover {
-    color: #ff3436;
+    color: #4cd9e8;
 }
 
 /* PA Program*/
