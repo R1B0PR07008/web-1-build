@@ -310,6 +310,11 @@ function lightDarkMode() {
     }
 }
 
+function dontBreakcPlease() {
+    document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.'
+    document.getElementById("lightDarkSelector-text").style.color = '#000000'
+}
+ 
 // ! CODE FOR CONVERSIONS
 
 function Len() {
