@@ -276,7 +276,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.'
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
-        if (document.URL.includes("Home")) {
+        if (document.URL.includes("ome")) {
             elementProgramLink(1, 8, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
