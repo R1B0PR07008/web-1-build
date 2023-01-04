@@ -1461,7 +1461,7 @@ function Liquids() {
     };
 };
 
-if (document.URL.includes("Home.html") || document.URL.includes("home")) {
+if (document.URL.includes("ome.html") || document.URL.includes("ome")) {
     console.log("you are in the home page")
     let type = document.getElementById("TYPE").value || 'null';
 

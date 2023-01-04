@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="./site.js">
+    lightDarkMode()
+  </script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4BFXZ4QH6"></script>
 <script>
@@ -25,7 +28,7 @@
 <body id="_0" onload="lightDarkMode(); phoneMode('h')">
   <div id="Tittle-Div">
     <div class="navbar">
-      <a onload="document.getElementById('nav-text').click()" href="/Home.html" class="navbar-brand" id="nav-text">Home</a>
+      <a href="/Home.html" class="navbar-brand" id="nav-text">Home</a>
       <input type="range" value="1" min="1" max="2" onload="phoneMode('h'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('h')" id="lightDarkSelector">
       <span id="lightDarkSelector-text" onload="dontBreakcPlease()"></span> 
     </div>
