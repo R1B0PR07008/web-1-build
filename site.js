@@ -25,7 +25,7 @@ function nav() {
         document.getElementById("nav-text").style.fontSize = "1.2em"
 
         if (window.innerWidth < 10000 && window.innerWidth >= 1000 ) {
-            document.getElementById("lightDarkSelector").style.marginLeft = '55%';
+            document.getElementById("lightDarkSelector").style.marginLeft = '52%';
         } else if (window.innerWidth < 999 && window.innerWidth >= 857 ) {
             document.getElementById("lightDarkSelector").style.marginLeft = '30%';
         } else if (window.innerWidth < 856 && window.innerWidth >= 750 ) {
@@ -301,19 +301,46 @@ function lightDarkMode() {
             document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.';
             document.getElementById("lightDarkSelector-text").style.color = '#cacaca';
             document.cookie = 'mode=dark';
-        }
-
-
-
-        
+        }   
     }
 }
 
-function dontBreakcPlease() {
-    document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.'
-    document.getElementById("lightDarkSelector-text").style.color = '#000000'
+function lightDarkCookie() {
+    if (document.cookie.includes('mode=dark')) {
+        document.cookie = 'mode=dark';
+        document.getElementById("lightDarkSelector").value = '2'
+        console.log("dark mode")
+        document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.'
+        document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
+
+        if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
+            elementProgramLink(1, 8, "#cacaca");
+            document.getElementById("_0").style.backgroundColor = "#020206";
+            document.getElementById("_0").style.color = "#cacaca";
+            ansBlock.style.backgroundColor = "#e63743";
+            legendBlock.style.backgroundColor = "#e63743";
+            document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#e63743";
+            document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#e63743";
+            document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1.png)';
+            document.querySelector(".navbar").style.backgroundColor = '#020206';
+            document.querySelector(".navbar-brand").style.color = '#cacaca';
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743";
+        } else {
+            document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743"
+            document.querySelector(".navbar").style.backgroundColor = '#020206';
+            document.querySelector(".navbar").style.color = '#cacaca';
+            console.log("not home page");
+            console.log("light mode selected");
+            document.getElementById("_0").style.backgroundColor = "#020206";
+            document.getElementById("_0").style.color = "#cacaca";
+            ansBlock.style.backgroundColor = "#e63743";
+            legendBlock.style.backgroundColor = "#e63743";
+            document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.';
+            document.getElementById("lightDarkSelector-text").style.color = '#cacaca';
+        }   
+    }
 }
- 
+
 // ! CODE FOR CONVERSIONS
 
 function Len() {
@@ -1462,10 +1489,10 @@ function Liquids() {
 };
 
 if (document.URL.includes("ome.html") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
+    lightDarkCookie()
+    lightDarkMode()
     console.log("you are in the home page")
     let type = document.getElementById("TYPE").value || 'null';
-
-    lightDarkMode()
 
     function Type() {
         let type = document.getElementById("TYPE").value || 'null';
@@ -1522,8 +1549,8 @@ if (document.URL.includes("ome.html") || document.URL.includes("ome") || documen
 // !PAGE CODE
 
 if (document.URL.includes("pa.html")) {
-    
     console.log("you are in the PA page.");
+    lightDarkCookie()
 
     let f1 = document.getElementById("PA-F1").value || 0;
     let f2 = document.getElementById("PA-F2").value || 0;
@@ -1583,9 +1610,8 @@ if (document.URL.includes("pa.html")) {
 };
 
 if (document.URL.includes("qf.html")) {
-
     console.log("you are in the quadratic functions page. ");
-
+    lightDarkCookie()
 
     function Hide_qf(a,b,c) {
         if (a === 0 && b === 0 && c === 0) {
@@ -1629,8 +1655,8 @@ if (document.URL.includes("qf.html")) {
 };
 
 if (document.URL.includes("qf2.html")) {
-
     console.log("You are in the qf2 page.")
+    lightDarkCookie()
 
     function Hide_qf2(a,b,c,x1,x2,x3) {
         if (a === null && b === null && c === null && x1 === null && x2 === null && x3 === null) {
@@ -1730,6 +1756,7 @@ if (document.URL.includes("qf2.html")) {
 
 if (document.URL.includes("re.html")) {
     console.log("you are in the re page")
+    lightDarkCookie()
 
     function Hide_RE(num_res,r1,r2,r3,r4,r5) {
         if (num_res === "null") {
@@ -1912,9 +1939,8 @@ if (document.URL.includes("re.html")) {
 };
 
 if (document.URL.includes("trithingys.html")) {
-    
     console.log("You are in the triangle formulas page.")
-
+    lightDarkCookie()
 
     function TRYTHINGYS() {
         let top_ = document.getElementById('TRY-1-NEEDS_MARGIN').value || 1;
