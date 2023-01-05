@@ -217,7 +217,6 @@ function Hide(UNIT) {
         ) {
             document.getElementById('1-IF').style.visibility = "hidden";
             document.getElementById('2-IF').style.visibility = "hidden";
-            document.getElementById('ans-text').style.visibility = "visible";
             document.getElementsByClassName("ans-text").visibility = "visible";
         };
 };
