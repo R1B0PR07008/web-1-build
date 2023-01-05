@@ -248,14 +248,17 @@ function lightDarkMode() {
             legendBlock.style.backgroundColor = "#fff000";
             document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#fff000";
             document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#fff000";
-            document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1NewNewTittleImage.png)';
             document.querySelector(".navbar").style.backgroundColor = '#FFFFFF';
             document.querySelector(".navbar-brand").style.color = '#000000';
             document.getElementById("lightDarkSelector").style.backgroundColor = "#fff000";
-
             document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.';
             document.getElementById("lightDarkSelector-text").style.color = '#000000';
             document.cookie = 'mode=light';
+
+            if (window.innerWidth > 790) {
+                document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1NewNewTittleImage.png)';
+            }
+
         } else {
             document.getElementById("lightDarkSelector").style.backgroundColor = "#fff000";
             document.querySelector(".navbar").style.backgroundColor = '#FFFFFF';
@@ -283,11 +286,15 @@ function lightDarkMode() {
             legendBlock.style.backgroundColor = "#e63743";
             document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#e63743";
             document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#e63743";
-            document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1.png)';
             document.querySelector(".navbar").style.backgroundColor = '#020206';
             document.querySelector(".navbar-brand").style.color = '#cacaca';
             document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743";
             document.cookie = 'mode=dark';
+
+            if (window.innerWidth > 790) {
+                document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1.png)';
+            }
+
         } else {
             document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743"
             document.querySelector(".navbar").style.backgroundColor = '#020206';
@@ -321,10 +328,16 @@ function lightDarkCookie() {
             legendBlock.style.backgroundColor = "#e63743";
             document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#e63743";
             document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#e63743";
-            document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1.png)';
             document.querySelector(".navbar").style.backgroundColor = '#020206';
             document.querySelector(".navbar-brand").style.color = '#cacaca';
             document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743";
+
+            if (window.innerWidth > 790) {
+                document.getElementById("Tittle-Div").style.backgroundImage = 'url(./img/WEB-1.png)';
+            }
+
+            phoneMode('h');
+
         } else {
             document.getElementById("lightDarkSelector").style.backgroundColor = "#e63743"
             document.querySelector(".navbar").style.backgroundColor = '#020206';
@@ -1489,8 +1502,9 @@ function Liquids() {
 };
 
 if (document.URL.includes("ome.html") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
-    lightDarkCookie()
-    lightDarkMode()
+    lightDarkCookie();
+    lightDarkMode();
+    phoneMode('h');
     console.log("you are in the home page")
     let type = document.getElementById("TYPE").value || 'null';
 
