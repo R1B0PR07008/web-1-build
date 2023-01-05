@@ -313,6 +313,10 @@ function lightDarkMode() {
 }
 
 function lightDarkCookie() {
+
+    let ansBlock = document.querySelector(".Ans-block");
+    let legendBlock = document.querySelector(".Legend-block");
+
     if (document.cookie.includes('mode=dark')) {
         document.cookie = 'mode=dark';
         document.getElementById("lightDarkSelector").value = '2'
