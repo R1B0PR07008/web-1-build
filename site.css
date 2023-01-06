@@ -293,7 +293,7 @@ p.ans-footer {
 
 /* !MEMBERSHIP PAGE */
 
-/* Conventions, Program, tri programs */
+/** Conventions, Program, tri programs */
 .Program-link {
     text-decoration: underline;
     color: #000000;
@@ -314,6 +314,49 @@ p.ans-footer {
     color: #4cd9e8;
 }
 
+/** Re program */
+
+#re-range {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    vertical-align: top;
+    border: none;
+}
+
+#re-range::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: .5rem;
+    background-color: #acacac;
+    border-radius: 5mm;
+}
+
+#re-range::-moz-range-track {
+    -moz-appearance: none;
+    height: .5rem;
+    background-color: #acacac;
+    border-radius: 5mm;
+}
+
+#re-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 30px;
+    background-color: #cacaca;
+    width: 10px;
+    border-radius: 5mm;  
+    margin-top: -10px;
+}
+
+#re-output {
+    margin-right: 0.5%;
+    width: 10px;
+}
+
+#re-output {
+    vertical-align: text-bottom;
+    font-size: 1.2em;
+}
 /* PA Program*/
 
 .btne {

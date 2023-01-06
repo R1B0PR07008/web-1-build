@@ -33,52 +33,66 @@
 </h1>
 <br>
   <form action="" method="post">
-    <input
-      type="number"
-      placeholder="R1"
-      name="R1"
-      id="RE-R1"
-      class="pa-f1-a1-MARGIN"
-    />
-    <input
-    type="number"
-    placeholder="R2"
-    name="R2"
-    id="RE-R2"
-    />
-    <input
-      type="number"
-      placeholder="R3"
-      name="R3"
-      id="RE-R3"
-    />
-    <input
-      type="number"
-      placeholder="R4"
-      name="R4"
-      id="RE-R4"
-    />
-    <input
-    type="number"
-    placeholder="R5"
-    name="R5"
-    id="RE-R5"
-  />
-  <br>
   <select class="pa-f1-a1-MARGIN" aria-label="type of circuit" name="sprl" id="RE-SRPL">
     <option value="null">Select type of circuit</option>
     <option value="SR">Series Circuit</option>
     <option value="PL">Parallel Circuit</option>
   </select>
-  <select aria-label="amount of resistors" name="num-of-recis" id="RE-#RECIS">
-    <option value="null">Select amount of resistors</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-  </select>
-  <button onclick="RE()" class="btn-default" type="button" id="BTN-1-PA">Enter</button>  
+  <input aria-label="number of resistors" min="2" value="2" max="50" type="range" id="re-range" oninput="displayOutput(); rInput()">
+  <span id="re-output"></span>
+  <br>
+  <span id="re-inputs-1"></span>
+  <span id="re-inputs-2"></span>
+  <span id="re-inputs-3"></span>
+  <span id="re-inputs-4"></span>
+  <span id="re-inputs-5"></span>
+  <span id="re-inputs-6"></span>
+  <span id="re-inputs-7"></span>
+  <span id="re-inputs-8"></span>
+  <span id="re-inputs-9"></span>
+  <span id="re-inputs-10"></span>
+  <span id="re-inputs-11"></span>
+  <span id="re-inputs-12"></span>
+  <span id="re-inputs-13"></span>
+  <span id="re-inputs-14"></span>
+  <span id="re-inputs-15"></span>
+  <span id="re-inputs-16"></span>
+  <span id="re-inputs-17"></span>
+  <span id="re-inputs-18"></span>
+  <span id="re-inputs-19"></span>
+  <span id="re-inputs-20"></span>
+  <span id="re-inputs-21"></span>
+  <span id="re-inputs-22"></span>
+  <span id="re-inputs-23"></span>
+  <span id="re-inputs-24"></span>
+  <span id="re-inputs-25"></span>
+  <span id="re-inputs-26"></span>
+  <span id="re-inputs-27"></span>
+  <span id="re-inputs-28"></span>
+  <span id="re-inputs-29"></span>
+  <span id="re-inputs-30"></span>
+  <span id="re-inputs-31"></span>
+  <span id="re-inputs-32"></span>
+  <span id="re-inputs-33"></span>
+  <span id="re-inputs-34"></span>
+  <span id="re-inputs-35"></span>
+  <span id="re-inputs-36"></span>
+  <span id="re-inputs-37"></span>
+  <span id="re-inputs-38"></span>
+  <span id="re-inputs-39"></span>
+  <span id="re-inputs-40"></span>
+  <span id="re-inputs-41"></span>
+  <span id="re-inputs-42"></span>
+  <span id="re-inputs-43"></span>
+  <span id="re-inputs-44"></span>
+  <span id="re-inputs-45"></span>
+  <span id="re-inputs-46"></span>
+  <span id="re-inputs-47"></span>
+  <span id="re-inputs-48"></span>
+  <span id="re-inputs-49"></span>
+  <span id="re-inputs-50"></span>
+  <br>
+  <button onclick="rOutput()" class="btn-default" type="button" id="BTN-1-re">Enter</button>
   </form>
   <div class="Ans-block , vertical-align" id="react-6">
     <h2 class="ans-text">
