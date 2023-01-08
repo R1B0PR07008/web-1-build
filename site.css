@@ -168,6 +168,21 @@
     vertical-align: top;
 }
 
+#main-text-div-sec {
+    text-align: center;
+    padding: 5vw;
+    font-size: larger;
+    font-weight: 500;
+    padding-bottom: 0%;
+}
+
+.main-text-div-sec-div {
+    height: 250px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
 /* *Other Stuff */
 
 input {
@@ -314,6 +329,56 @@ p.ans-footer {
     color: #4cd9e8;
 }
 
+/** triangle page */
+
+#tri-sec {
+    text-align: center;
+    padding: 7vw;
+    font-size: larger;
+    font-weight: 500;
+    padding-bottom: 0%;
+    padding-top: 1vw;
+}
+
+
+/** qf Program */
+
+#qf-sec {
+    text-align: center;
+    padding: 7vw;
+    font-size: larger;
+    font-weight: 500;
+    padding-bottom: 0%;
+    padding-top: 1vw;
+}
+
+.qf-imgSmall {
+    width: auto;
+    height: 350px;
+    margin: 0%;
+}
+
+.qf-imgSmaller {
+    width: auto;
+    height: 80px;
+    margin: 0%;
+}
+
+#qf-img-1 {
+    margin: 0%;   
+}
+
+.qf-sec-div {
+    display: inline-block;
+    width: 35%;
+    min-height: 250px;
+    vertical-align: top;
+}
+
+.noMARGIN {
+    margin: 0%;
+}
+
 /** Re program */
 
 #re-range {
@@ -357,7 +422,34 @@ p.ans-footer {
     vertical-align: text-bottom;
     font-size: 1.2em;
 }
-/* PA Program*/
+
+#re-sec {
+    text-align: center;
+    padding: 7vw;
+    font-size: larger;
+    font-weight: 500;
+    padding-bottom: 0%;
+}
+
+.re-imgSmall {
+    width: auto;
+    height: 180px;
+}
+
+.re-imgSmall-2 {
+    height: auto;
+    width: 250px;
+}
+
+.re-sec-div {
+    display: inline-block;
+    width: 35%;
+    min-height: 250px;
+    vertical-align: top;
+    margin: 4mm;
+}
+
+/** PA Program*/
 
 .btne {
     background-color: rgb(122, 63, 63);
@@ -366,6 +458,23 @@ p.ans-footer {
 
 .Equal {
     display: inline;
+}
+
+#pa-sec {
+    text-align: center;
+    padding: 7vw;
+    font-size: larger;
+    font-weight: 500;
+    padding-bottom: 0%;
+}
+
+#pa-imgSmall {
+    width: 80%;
+    height: auto;
+}
+
+.maketini {
+    width: 30%;
 }
 
 /* Dropdown css */

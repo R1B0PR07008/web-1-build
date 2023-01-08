@@ -84,6 +84,7 @@ function phoneMode(p) {
             if (window.innerWidth <= 870) {
                 console.log('Phone screen');
                 elementWidth(2, 3, 99)
+                elementWidth(14, 15, 99)
                 element(2).style.marginBottom = "2mm";
                 document.getElementById("Tittle").style.fontSize = "800%";
                 if (window.innerWidth <= 790) {
@@ -126,6 +127,9 @@ function phoneMode(p) {
                 console.log(window.innerWidth)
                 console.log("Phone Screen")
                 elementWidth(10, 11, 99)
+                elementWidth(18, 19, 99)
+                document.getElementById("qf-img-1").style.height = '100px';
+
             }
             else {
                 element(10).style.width = "60%"
@@ -138,6 +142,7 @@ function phoneMode(p) {
                 console.log(window.innerWidth)
                 console.log("Phone Screen")
                 elementWidth(8, 9, 99)
+                elementWidth(18, 19, 99)
             }
             else {
                 element(8).style.width = "60%"
@@ -150,6 +155,7 @@ function phoneMode(p) {
                 console.log(window.innerWidth)
                 console.log("Phone Screen")
                 elementWidth(6, 7, 99)
+                elementWidth(16, 17, 99)
             }
             else {
                 element(6).style.width = "60%"
@@ -239,7 +245,7 @@ function lightDarkMode() {
     if (elementValue === "1") { // light mode
 
         if (document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 8, "#000000");
+            elementProgramLink(1, 10, "#000000");
             console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
             document.getElementById("_0").style.color = "#000000";
@@ -271,6 +277,21 @@ function lightDarkMode() {
             document.getElementById("lightDarkSelector-text").innerHTML = 'Light Mode.';
             document.getElementById("lightDarkSelector-text").style.color = '#000000';
             document.cookie = 'mode=light';
+            elementProgramLink(6, 8, "#000000");
+
+
+            if (document.URL.includes("re.html")) {
+                document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (1).png" alt="a parallel circuit" class="re-imgSmall">';
+                document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (4).png" alt="Formula for parallel" class="re-imgSmall-2">';
+                document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesWhite.png" alt="a series circuit" class="re-imgSmall">';
+                document.getElementById('re-img-4').innerHTML = '<img src="./img/re1 (2).png" alt="series formula" class="re-imgSmall-2">';
+            } else if (document.URL.includes("qf")) {
+                document.getElementById('qf-img-1').innerHTML = '<img src="./img/graph-1.png" alt="graph" class="qf-imgSmall">';
+                document.getElementById('qf-img-2').innerHTML = '<img src="./img/qf-function (2).png" alt="quadratic functions equation" class="qf-imgSmaller">';
+                document.getElementById('qf-img-3').innerHTML = '<img src="./img/xFormula (1).png" alt="formula to find x" class="qf-imgSmaller">';
+            } else if (document.URL.includes("pa.html")) {
+                document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (2).png" alt="example of pa formula" id="pa-imgSmall">'
+            }
 
         }
 
@@ -280,7 +301,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 8, "#cacaca");
+            elementProgramLink(1, 10, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -309,7 +330,20 @@ function lightDarkMode() {
             document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.';
             document.getElementById("lightDarkSelector-text").style.color = '#cacaca';
             document.cookie = 'mode=dark';
+            elementProgramLink(6, 8, "#cacaca");
 
+            if (document.URL.includes("re.html")) {
+                document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (2).png" alt="a parallel circuit" class="re-imgSmall">';
+                document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (3).png" alt="Formula for parallel" class="re-imgSmall-2">';
+                document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesBlack.png" alt="a series circuit" class="re-imgSmall">';
+                document.getElementById('re-img-4').innerHTML = '<img src="./img/re1 (1).png" alt="series formula" class="re-imgSmall-2">';
+            } else if (document.URL.includes("qf")) {
+                document.getElementById('qf-img-1').innerHTML = '<img src="./img/graph-2.png" alt="graph" class="qf-imgSmall">';
+                document.getElementById('qf-img-2').innerHTML = '<img src="./img/qf-function (1).png" alt="quadratic functions equation" class="qf-imgSmaller">';
+                document.getElementById('qf-img-3').innerHTML = '<img src="./img/xFormula (2).png" alt="formula to find x" class="qf-imgSmaller">';
+            } else if (document.URL.includes("pa.html")) {
+                document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (1).png" alt="example of pa formula" id="pa-imgSmall">'
+            }
         }   
     }
 }
