@@ -574,7 +574,7 @@ function Len() {
         document.getElementById("20-text").innerHTML = "FT to NMI";
 
 
-        document.getElementById("01").innerHTML = (NUM * 3.281 );
+        document.getElementById("01").innerHTML = (NUM / 3.281 );
         document.getElementById("02").innerHTML = (NUM / 3281  );
         document.getElementById("03").innerHTML = (NUM * 30.48 );
         document.getElementById("04").innerHTML = (NUM * 3     );
