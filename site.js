@@ -361,7 +361,7 @@ function lightDarkCookie() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 8, "#cacaca");
+            elementProgramLink(1, 10, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -1546,7 +1546,6 @@ if (document.URL.includes("ome.html") || document.URL.includes("ome") || documen
     lightDarkMode();
     phoneMode('h');
     console.log("you are in the home page")
-    let type = document.getElementById("TYPE").value || 'null';
 
     function Type() {
         let type = document.getElementById("TYPE").value || 'null';
@@ -1577,6 +1576,9 @@ if (document.URL.includes("ome.html") || document.URL.includes("ome") || documen
             document.getElementById("2").innerHTML = '<p class="ans-text"> <span id="4-text"></span> <span class="ans-text-NUM"></span> <span id="1-formula"></span></p><p class="ans-text"> <span id="5-text"></span> <span class="ans-text-NUM"></span> <span id="2-formula"></span></p><p class="ans-text"> <span id="6-text"></span> <span class="ans-text-NUM"></span> <span id="3-formula"></span></p>';
         };
     };
+
+    let type = document.getElementById("TYPE").value || 'null';
+    document.getElementById("TYPE").addEventListener('change', Type, false);
 
     function Do() {
         let type = document.getElementById("TYPE"). value || 'null';
