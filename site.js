@@ -1580,6 +1580,9 @@ if (document.URL.includes("ome.html") || document.URL.includes("ome") || documen
         };
     };
 
+    let type = document.getElementById("TYPE").value || 'null';
+    document.getElementById("TYPE").addEventListener('change', Type, false);
+
     function Do() {
         let type = document.getElementById("TYPE"). value || 'null';
         if (type === 'null') {
