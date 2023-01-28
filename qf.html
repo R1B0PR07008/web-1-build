@@ -26,55 +26,29 @@
     <div class="navbar">
       <span id="nav"></span>
       <a href="/Home.html" class="navbar-brand, center" id="nav-text">Home</a>
-      <input aria-label="light mode and dark mode switch"  type="range" value="1" min="1" max="2" onload="phoneMode('q'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('q'); nav()" id="lightDarkSelector">
-      <span id="lightDarkSelector-text" onload="dontBreakcPlease()"></span>
+      <div id="lightdark-floatRight">
+        <input aria-label="light mode and dark mode switch" type="range" value="1" min="1" max="2" onload="phoneMode('q'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('q')" id="lightDarkSelector">
+        <span id="lightDarkSelector-text"></span>
+        </div>
     </div>
   <h1> Quadratic Functions Program
   </h1>
-  <form action="" method="post">
-    <input
-      type="number"
-      placeholder="A"
-      name="A"
-      id="QF-A"
-      class="QF-MARGIN"
-    />
-    <input
-      type="number"
-      placeholder="B"
-      name="B"
-      id="QF-B"
-    />
-    <input
-      type="number"
-      placeholder="C"
-      name="C"
-      id="QF-C"
-    />
-    <button onclick="Qf()" class="btn-default" type="button" id="BTN-1-PA">Enter</button>
-    <button onclick="location.href='qf2.html'" class="btn-default" type="button">Enter more "x" values</button>  
-  </form>
+  <form action="" method="post"><input  type="number"  placeholder="A"  name="A"  id="QF-A"  class="QF-MARGIN"/><input  type="number"  placeholder="B"  name="B"  id="QF-B"/><input  type="number"  placeholder="C"  name="C"  id="QF-C"/><button onclick="Qf()" class="btn-default" type="button" id="BTN-1-PA">Enter</button><button onclick="location.href='qf2.html'" class="btn-default" type="button">Enter more "x" values</button>  </form>
 <div class="Ans-block , vertical-align" id="react-10">
   <h2 class="ans-text">
-    The answer: 
+    The answer:
   </h2>
   <p id="ans-footer">
     To get your answer enter a number in the indicated slots.
   </p>
   <div id="ans">
-    <p>Your first X value is: <span id="qf-1"></span> </p>
-    <p>Your first Y value is: <span id="qf-2"></span> </p>
+    <p>Your first X value is: <span id="qf-1"></span> </p><p>Your first Y value is: <span id="qf-2"></span> </p>
   </div>
 </div>
 
 <div class="Legend-block , vertical-align" id="react-11">
   <h2 class="Legend-text"> The Legend: </h2>
-  <p class="Legend-text"> A = A </p>
-  <p class="Legend-text"> B = B </p>
-  <p class="Legend-text"> C = C </p>
-  <h3 class="Legend-text"> Requirements and Use Instructions: </h3>
-  <p class="Legend-text"> You will probably need 8th grade or higher knowledge. </p>
-  <p class="Legend-text"> Please enter A, B ,C values before pressing the "Enter More X Values" button. </p>
+  <p class="Legend-text"> A = A </p><p class="Legend-text"> B = B </p><p class="Legend-text"> C = C </p><h3 class="Legend-text"> Requirements and Use Instructions: </h3><p class="Legend-text"> You will probably need 8th grade or higher knowledge. </p><p class="Legend-text"> Please enter A, B ,C values before pressing the "Enter More X Values" button. </p>
 </div>
 <section id="qf-sec">
   <h1>what is it?</h1>

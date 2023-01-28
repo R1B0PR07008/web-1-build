@@ -1,5 +1,5 @@
 console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
-
+console.log(window.innerWidth)
 
 
 
@@ -20,25 +20,23 @@ function element(n) {
 };
 
 function nav() {
-    if (window.innerWidth > 630) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+    if (window.innerWidth > 767) {
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "1.2em"
 
         if (window.innerWidth < 10000 && window.innerWidth >= 1000 ) {
-            document.getElementById("lightDarkSelector").style.marginLeft = '52%';
-        } else if (window.innerWidth < 999 && window.innerWidth >= 857 ) {
-            document.getElementById("lightDarkSelector").style.marginLeft = '30%';
-        } else if (window.innerWidth < 856 && window.innerWidth >= 750 ) {
-            document.getElementById("lightDarkSelector").style.marginLeft = '20%';
-        } else if (window.innerWidth < 749 && window.innerWidth >= 665 ) {
-            document.getElementById("lightDarkSelector").style.marginLeft = '9%';
-        } else if (window.innerWidth < 664 && window.innerWidth >= 630 ) {
-            document.getElementById("lightDarkSelector").style.marginLeft = '5%';
+            document.getElementById("lightDarkSelector").style.marginLeft = '40%';
+        } else if (window.innerWidth <= 999 && window.innerWidth >= 857 ) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '12%';
+        } else if (window.innerWidth <= 856 && window.innerWidth >= 781 ) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '3%';
+        } else if (window.innerWidth <= 780 && window.innerWidth >= 767 ) {
+            document.getElementById("lightDarkSelector").style.marginLeft = '1%';
         }
     }
-    else if (window.innerWidth < 630 ) {
-        console.log("screen is small than 630px")
-        
+    else if (window.innerWidth < 767) {
+        console.log("screen is small than 767px")
+
         let element = document.getElementById("lightDarkSelector").value;
         let img = "white-hamburger-menu-icon-24.jpg"
 
@@ -48,7 +46,7 @@ function nav() {
             img = 'white-hamburger-menu-icon-24.jpg'
         }
 
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1>General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "2em"
 
         if (window.innerWidth > 320 && window.innerWidth <= 420) {
@@ -57,7 +55,7 @@ function nav() {
         document.getElementById("lightDarkSelector").style.marginLeft = '10%';
         } else if (window.innerWidth > 501 && window.innerWidth <= 600) {
             document.getElementById("lightDarkSelector").style.marginLeft = '20%';
-        } else if (window.innerWidth > 601 && window.innerWidth <= 630) {
+        } else if (window.innerWidth > 601 && window.innerWidth <= 767) {
             document.getElementById("lightDarkSelector").style.marginLeft = '30%';
         };
     }
@@ -83,7 +81,7 @@ function phoneMode(p) {
         if (p === 'h') {
             if (window.innerWidth <= 870) {
                 console.log('Phone screen');
-                elementWidth(2, 3, 99)
+                elementWidth(1, 3, 99)
                 elementWidth(14, 15, 99)
                 element(2).style.marginBottom = "2mm";
                 document.getElementById("Tittle").style.fontSize = "800%";
@@ -98,7 +96,7 @@ function phoneMode(p) {
 
                 navAdjust()
 
-            }; 
+            };
             if (window.innerWidth <= 910) {
                 console.log(window.innerWidth)
                 console.log("Phone Screen")
@@ -110,7 +108,7 @@ function phoneMode(p) {
                 element(5).style.width = "35%"
             }
         } else if (p === 'p') {
-            nav()            
+            nav()
             if (window.innerWidth <= 910) {
                 console.log(window.innerWidth)
                 console.log("Phone Screen")
@@ -174,8 +172,32 @@ function phoneMode(p) {
                 element(4).style.minHeight = "600px"
                 element(5).style.width = "35%"
             }
+        } else if (p === 'f') {
+            nav()
+            if (window.innerWidth <= 910) {
+                console.log(window.innerWidth)
+                console.log("Phone Screen")
+                elementWidth(20, 21, 99)
+            }
+            else {
+                element(20).style.width = "60%"
+                element(20).style.minHeight = "600px"
+                element(21).style.width = "35%"
+            }
+        } else if (p === 'l') {
+            nav()
+            if (window.innerWidth <= 910) {
+                console.log(window.innerWidth)
+                console.log("Phone Screen")
+                elementWidth(22, 23, 99)
+            }
+            else {
+                element(22).style.width = "60%"
+                element(22).style.minHeight = "600px"
+                element(23).style.width = "35%"
+            }
         }
-}; 
+};
 
 function Hide(UNIT) {
         let un = 'undefined';
@@ -187,7 +209,7 @@ function Hide(UNIT) {
         } if (
              UNIT === 'M' ||
              UNIT === 'KM' ||
-             UNIT === 'CM' || 
+             UNIT === 'CM' ||
              UNIT === 'FT' ||
              UNIT === 'YD' ||
              UNIT === 'MI' ||
@@ -245,12 +267,13 @@ function lightDarkMode() {
     if (elementValue === "1") { // light mode
 
         if (document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 10, "#000000");
+            elementProgramLink(1, 12, "#000000");
             console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
             document.getElementById("_0").style.color = "#000000";
             ansBlock.style.backgroundColor = "#fff000";
             legendBlock.style.backgroundColor = "#fff000";
+            document.querySelector("#react-1.main-div-nav").style.backgroundColor = "#fff000";
             document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#fff000";
             document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#fff000";
             document.querySelector(".navbar").style.backgroundColor = '#FFFFFF';
@@ -291,6 +314,10 @@ function lightDarkMode() {
                 document.getElementById('qf-img-3').innerHTML = '<img src="./img/xFormula (1).png" alt="formula to find x" class="qf-imgSmaller">';
             } else if (document.URL.includes("pa.html")) {
                 document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (2).png" alt="example of pa formula" id="pa-imgSmall">'
+            } else if (document.URL.includes('fractions.html')) {
+                document.getElementById('link-1-F').style.color = '#000000';
+            } else if (document.URL.includes('Linear.html')) {
+                document.getElementById('L-Type').style.backgroundColor = '#FFF000';
             }
 
         }
@@ -301,11 +328,12 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 10, "#cacaca");
+            elementProgramLink(1, 12, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
             legendBlock.style.backgroundColor = "#e63743";
+            document.querySelector("#react-1.main-div-nav").style.backgroundColor = "#e63743";
             document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#e63743";
             document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#e63743";
             document.querySelector(".navbar").style.backgroundColor = '#020206';
@@ -343,6 +371,10 @@ function lightDarkMode() {
                 document.getElementById('qf-img-3').innerHTML = '<img src="./img/xFormula (2).png" alt="formula to find x" class="qf-imgSmaller">';
             } else if (document.URL.includes("pa.html")) {
                 document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (1).png" alt="example of pa formula" id="pa-imgSmall">'
+            } else if (document.URL.includes('fractions.html')) {
+                document.getElementById('link-1-F').style.color = '#cacaca';
+            }  else if (document.URL.includes('Linear.html')) {
+                document.getElementById('L-Type').style.backgroundColor = '#e63743';
             }
         }   
     }
@@ -361,11 +393,12 @@ function lightDarkCookie() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 10, "#cacaca");
+            elementProgramLink(1, 12, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
             legendBlock.style.backgroundColor = "#e63743";
+            document.querySelector("#react-1.main-div-nav").style.backgroundColor = "#e63743";
             document.querySelector("#react-2.main-div-nav").style.backgroundColor = "#e63743";
             document.querySelector("#react-3.main-div-nav").style.backgroundColor = "#e63743";
             document.querySelector(".navbar").style.backgroundColor = '#020206';
@@ -390,7 +423,24 @@ function lightDarkCookie() {
             legendBlock.style.backgroundColor = "#e63743";
             document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.';
             document.getElementById("lightDarkSelector-text").style.color = '#cacaca';
-        }   
+        }
+
+        if (document.URL.includes("re.html")) {
+            document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (2).png" alt="a parallel circuit" class="re-imgSmall">';
+            document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (3).png" alt="Formula for parallel" class="re-imgSmall-2">';
+            document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesBlack.png" alt="a series circuit" class="re-imgSmall">';
+            document.getElementById('re-img-4').innerHTML = '<img src="./img/re1 (1).png" alt="series formula" class="re-imgSmall-2">';
+        } else if (document.URL.includes("qf")) {
+            document.getElementById('qf-img-1').innerHTML = '<img src="./img/graph-2.png" alt="graph" class="qf-imgSmall">';
+            document.getElementById('qf-img-2').innerHTML = '<img src="./img/qf-function (1).png" alt="quadratic functions equation" class="qf-imgSmaller">';
+            document.getElementById('qf-img-3').innerHTML = '<img src="./img/xFormula (2).png" alt="formula to find x" class="qf-imgSmaller">';
+        } else if (document.URL.includes("pa.html")) {
+            document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (1).png" alt="example of pa formula" id="pa-imgSmall">'
+        } else if (document.URL.includes('fractions.html')) {
+            document.getElementById('link-1-F').style.color = '#cacaca';
+        }  else if (document.URL.includes('Linear.html')) {
+            document.getElementById('L-Type').style.backgroundColor = '#e63743';
+        }
     }
 }
 
@@ -560,7 +610,7 @@ function Len() {
         document.getElementById("8-text").innerHTML = "FT to μM ";
         document.getElementById("9-text").innerHTML = "FT to NM ";
         document.getElementById("10-text").innerHTML = "FT to NMI";
-        
+
 
         document.getElementById("11-text").innerHTML = "FTto M:";
         document.getElementById("12-text").innerHTML = "FTto KM:";
@@ -1641,7 +1691,6 @@ if (document.URL.includes("pa.html")) {
         console.log("a1 "+ a1);
         console.log("a2 "+ a2);
 
-        Hide_pa(f1, f2, a1, a2);
 
         if (f1 === 0) {
             let st1 = a1 * f2;
@@ -1914,7 +1963,7 @@ if (document.URL.includes("trithingys.html")) {
         } if (tot === 'ACC') {
             document.getElementById('try-1-1').innerHTML = "Force";
             document.getElementById('try-2-1').innerHTML = "Mass:";
-            document.getElementById('try-3-1').innerHTML = "Acceleration:";  
+            document.getElementById('try-3-1').innerHTML = "Acceleration:";
         } if (tot === 'V') {
             document.getElementById('try-1-1').innerHTML = "Voltage:";
             document.getElementById('try-2-1').innerHTML = "Resistance:";
@@ -1939,3 +1988,309 @@ if (document.URL.includes("trithingys.html")) {
     };
 
 };
+
+//! function for both fraction and linear programs.
+
+function decimaltoFraction(n) {
+    let num = n+"";
+    if (num == '0') {
+      ans = '0/0'
+    }
+    if (num.includes("0.")) {
+      ans = (n * 10)+'/10';
+    } else if (num.includes("0.0")) {
+      ans = (n * 100)+'/100';
+    } else if (num.includes("0.00")) {
+      ans = (n * 1000)+'/1000';
+    }
+    return ans;
+}
+
+
+if (document.URL.includes("fractions.html")) {
+    console.log("you are in the fractions page!");
+    lightDarkCookie();
+
+    function simplify(str) {
+        var result = '', data = str.split('/'),
+            numOne = Number(data[0]),
+            numTwo = Number(data[1]);
+        for (var i = Math.max(numOne, numTwo); i > 1; i--) {
+        if ((numOne % i == 0) && (numTwo % i == 0)) {
+            numOne /= i;
+            numTwo /= i;
+        }
+        }
+        if (numTwo === 1) {
+        result = numOne.toString()
+        } else {
+        result = numOne.toString() + '/' + numTwo.toString()
+        }
+        return result
+    }
+
+    function Frac() {
+        let oper = document.getElementById("F-Operaiton").value || null;
+        let num1 = document.getElementById("numerator-1").value || 1;
+        let num2 = document.getElementById("numerator-2").value || 1;
+        let dem1 = document.getElementById("denominator-1").value || 1;
+        let dem2 = document.getElementById("denominator-2").value || 1;
+        console.log("num1 "+num1);
+        console.log("num2 "+num2);
+        console.log("dem1 "+dem1);
+        console.log("dem2 "+dem2);
+
+        if (oper === 'Tiem') {
+            let n1 = (num1 *  num2);
+            let n2 = (dem1 *  dem2);
+            document.getElementById('F-Ans').innerHTML = ''+simplify(''+n1+'/'+n2);
+
+            document.getElementById("F-decimal").innerHTML = (n1 / n2)
+
+        } else if (oper === 'divide') {
+            let num2_ = dem2;
+            let dem2_ = num2;
+            console.log("num2_ " + num2_)
+            console.log("dem2_ " + dem2_)
+            let n1 = (num1 *  num2_);
+            let n2 = (dem1 *  dem2_);
+            document.getElementById('F-Ans').innerHTML = ''+simplify(''+n1+'/'+n2);
+
+            document.getElementById("F-decimal").innerHTML = (n1 / n2);
+        } else if (oper == 'add') {
+
+            let n1 = num1 / dem1;
+            let n2 = num2 / dem2;
+
+            let n = n1 + n2;
+            document.getElementById("F-decimal").innerHTML = n;
+
+            console.log("ans "+n);
+
+            document.getElementById('F-Ans').innerHTML = ''+simplify(decimaltoFraction(n));
+
+        } else if (oper == 'subs') {
+            let n1 = num1 / dem1;
+            let n2 = num2 / dem2;
+
+            let n = n1 - n2;
+            document.getElementById("F-decimal").innerHTML = n;
+
+            console.log("ans "+n);
+
+            document.getElementById('F-Ans').innerHTML = ''+simplify(decimaltoFraction(n));
+
+        };
+    };
+};
+
+if (document.URL.includes("Linear.html")) {
+    console.log("you are in the linear functions program.");
+    lightDarkCookie();
+
+    function inputType() {
+        let type = document.getElementById('L-Type').value || 1;
+        console.log("switch value: "+type);
+
+        if (type === 1 || type === "1") {
+            console.log("in input mode 1");
+            document.getElementById('L-input').innerHTML = '<div class="normi-Vertical-align"><input type="number"placeholder="Y2"name="L-y2"id="L-y2"class="maketini-f"/><br/><input type="number"placeholder="X2"name="L-x2"id="L-x2"class="maketini-f"/></div><div class="normi-Vertical-align"><input type="number"placeholder="Y1"name="L-y1"id="L-y1"class="maketini-f"/><br/><input type="number"placeholder="X1"name="L-x1"id="L-x1"class="maketini-f"/> </div>';
+            document.getElementById('L-rangeStatus').innerHTML = 'Click this to input only the slope.';
+        } else if (type === 2 || type === "2") {
+            console.log("in input mode 2");
+            document.getElementById('L-input').innerHTML = '<input type="number"placeholder="Slope(M)"name="L-m"id="L-m"/><br/><p> please enter slope in decimals<p/>';
+            document.getElementById('L-rangeStatus').innerHTML = 'Click this to input individual points on the graph.';
+        }
+
+    }
+    function decimaltoFractionY(n) {
+        let num = n+"";
+        let y = 0
+        if (num == '0') {
+            y = 0 
+        }
+        if (num.includes("0.")) {
+            y = n*10
+        } else if (num.includes("0.0")) {
+            y = n*100
+        } else if (num.includes("0.00")) {
+            y = n*1000
+        }
+        return y
+      }
+      
+      function decimaltoFractionX(n) {
+        let num = n+"";
+        let y = 0
+        if (num == '0') {
+            y = 0 
+        }
+        if (num.includes("0.")) {
+            y = 10
+        } else if (num.includes("0.0")) {
+            y = 100
+        } else if (num.includes("0.00")) {
+            y = 1000
+        }
+        return y
+      }
+      
+      
+      function simplify(str) {
+        var result = '', data = str.split('/'),
+            numOne = Number(data[0]),
+            numTwo = Number(data[1]);
+        for (var i = Math.max(numOne, numTwo); i > 1; i--) {
+        if ((numOne % i == 0) && (numTwo % i == 0)) {
+            numOne /= i;
+            numTwo /= i;
+        }
+        }
+        if (numTwo === 1) {
+        result = numOne.toString()
+        } else {
+        result = numOne.toString() + '/' + numTwo.toString()
+        }
+        return result
+      }
+      
+      
+      function Linear() {
+        let type = document.getElementById('L-Type').value || 1;
+      
+        if (type === '1') {
+            let y1 = document.getElementById('L-y1').value || null;
+            let y2 = document.getElementById('L-y2').value || null;
+            let x1 = document.getElementById('L-x1').value || null;
+            let x2 = document.getElementById('L-x2').value || null;
+      
+            let b = document.getElementById('L-b').value || null;
+      
+            let y = y2 - y1;
+            console.log('y= '+y)
+            let x = x2 - x1;
+            console.log('x= '+x)
+      
+            let m = y/x;
+            console.log('slope: '+m);
+            decimaltoFraction(m);
+      
+            let p1Y = 0
+      
+            let p1X = (-(b))/m
+            console.log('test: '+(-2*0.5))
+            console.log('-b: '+(-(b)))
+            console.log('X: '+p1X);
+      
+            let fracY_ = decimaltoFractionY(m);
+            let fracX_ = decimaltoFractionX(m);
+      
+            simplify(decimaltoFraction(''+fracY_+'/'+fracX_))
+            document.getElementById('F-Ans').innerHTML = ''+simplify(decimaltoFraction(''+fracY_+'/'+fracX_))
+      
+            let simpli = simplify(''+fracY_+'/'+fracX_);
+      
+            let fracY = 0;
+            let fracX = 0; 
+      
+            if (simpli.substring(0 , 1) === '-') {
+                fracY = simpli.substring(1, 2);
+                fracX = simpli.substring(3 , 4)
+            } else {
+                fracY = simpli.substring(0, 1);
+                fracX = simpli.substring(2 , 1)                
+            }
+      
+            console.log('fracY: '+fracY);
+            console.log('fracX: '+fracX);
+      
+            let p3Y = 0;
+            let p3X = 0;             
+      
+      
+            if (simpli.substring(0 , 1) === '-') {
+                p2Y = p1Y + (fracY) * 1;
+                p2X = p1X - (fracX) * 1;
+                p3Y = p2Y + (fracY) * 1;
+                p3X = p2X - (fracX) * 1;
+            } else {
+                p2Y = p1Y + (fracY) * 1;
+                p2X = p1X + (fracX) * 1;
+                p3Y = p2Y + (fracY) * 1;
+                p3X = p2X + (fracX) * 1;                
+            }
+      
+      
+      
+            document.getElementById('L-point1-X').innerHTML = p1X;
+            document.getElementById('L-point1Y').innerHTML = p1Y;
+            document.getElementById('L-point2-X').innerHTML = p2X;
+            document.getElementById('L-point2Y').innerHTML = p2Y;
+            document.getElementById('L-point3-X').innerHTML = p3X;
+            document.getElementById('L-point3Y').innerHTML = p3Y;
+      
+        } else if (type === '2') {
+            let b = document.getElementById('L-b').value || null;
+      
+            let m = document.getElementById('L-m').value || null;
+            console.log('slope: '+m);
+            decimaltoFraction(m);
+      
+            let p1Y = 0
+      
+            let p1X = (-(b))/m
+            console.log('test: '+(-2*0.5))
+            console.log('-b: '+(-(b)))
+            console.log('X: '+p1X);
+      
+            let fracY_ = decimaltoFractionY(m);
+            let fracX_ = decimaltoFractionX(m);
+      
+            simplify(decimaltoFraction(''+fracY_+'/'+fracX_))
+            document.getElementById('F-Ans').innerHTML = ''+simplify(decimaltoFraction(''+fracY_+'/'+fracX_))
+      
+            let simpli = simplify(''+fracY_+'/'+fracX_);
+      
+            let fracY = 0;
+            let fracX = 0; 
+      
+            if (simpli.substring(0 , 1) === '-') {
+                fracY = simpli.substring(1, 2);
+                fracX = simpli.substring(3 , 4)
+            } else {
+                fracY = simpli.substring(0, 1);
+                fracX = simpli.substring(2 , 1)                
+            }
+      
+            console.log('fracY: '+fracY);
+            console.log('fracX: '+fracX);
+      
+            let p3Y = 0;
+            let p3X = 0;             
+      
+      
+            if (simpli.substring(0 , 1) === '-') {
+                p2Y = p1Y + (fracY) * 1;
+                p2X = p1X - (fracX) * 1;
+                p3Y = p2Y + (fracY) * 1;
+                p3X = p2X - (fracX) * 1;
+            } else {
+                p2Y = p1Y + (fracY) * 1;
+                p2X = p1X + (fracX) * 1;
+                p3Y = p2Y + (fracY) * 1;
+                p3X = p2X + (fracX) * 1;                
+            }
+      
+      
+      
+            document.getElementById('L-point1-X').innerHTML = p1X;
+            document.getElementById('L-point1Y').innerHTML = p1Y;
+            document.getElementById('L-point2-X').innerHTML = p2X;
+            document.getElementById('L-point2Y').innerHTML = p2Y;
+            document.getElementById('L-point3-X').innerHTML = p3X;
+            document.getElementById('L-point3Y').innerHTML = p3Y;
+        }
+      
+      
+      }
+}

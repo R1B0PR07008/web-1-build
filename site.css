@@ -24,22 +24,6 @@
     border-radius: 30px;
 }
 
-.navbar-brand-right {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-top: .28%;
-    display: inline;
-    float: right;
-}
-
-.navbar-brand-right-base {
-    font-size: 1.2em;
-    font-weight: 600;
-    float: right;
-    border-left: 30px;
-    margin-left: 30px;
-}
-
 .navbar-item {
     font-variant: small-caps;
     margin-left: 30px;
@@ -61,8 +45,22 @@
     margin-top: 0%;
 }
 
+#lightdark-floatRight-h {
+    float: right;
+    width: 140px
+}
+
+#lightdark-floatRight {
+    margin: 1.2%;
+    float: right;
+    width: 230px;
+}
+
+#lightDarkSelector-text {
+    vertical-align: middle;
+}
+
 #lightDarkSelector {
-    margin-left: 80%;
     vertical-align: middle;
     width: 1cm;
     height: 20px;
@@ -162,7 +160,7 @@
     display: inline-block;
     background-color: #FFF000;
     min-height: 330px;
-    width: 48.5%;
+    width: 32%;
     margin: 0.5%;
     border-radius: 2mm;
     vertical-align: top;
@@ -453,7 +451,6 @@ p.ans-footer {
 
 .btne {
     background-color: rgb(122, 63, 63);
-    
 }
 
 .Equal {
@@ -475,6 +472,97 @@ p.ans-footer {
 
 .maketini {
     width: 30%;
+}
+
+/** Fraction program */ 
+
+.normi-Vertical-align {
+    display: inline-block;
+    width: 23%;
+    margin-left: 2mm;
+    vertical-align: top;
+}
+
+#f-morewidth {
+    width: 40%;
+}
+
+.maketini-f {
+    width: 95%;
+    margin-right: 2mm;
+}
+
+#F-Operaiton {
+    vertical-align: super;
+    min-width: 120px;
+}
+
+.imgSMALL {
+    height: auto;
+    width: 100%;
+}
+
+#F-sympli {
+    vertical-align: top;
+    width: 130px;
+}
+
+#F-numeratorAns {
+    margin-left: 2mm;
+}
+
+#F-denominatorAns {
+    margin-left: 2mm;
+}
+
+#F-decimal {
+    margin-left: 2mm;
+}
+
+#f-deAns {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+/** linear functions program */
+
+
+#L-Type {
+    margin-left: 2%;
+    vertical-align: middle;
+    width: 1cm;
+    height: 20px;
+    cursor: grab;
+    border-width: 0px;
+    background-color: #FFF000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#L-Type::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 20px;
+    width: 0.5cm;
+    border-radius: 8px;
+    background: #cacaca;
+    cursor: pointer;
+}
+
+#L-Type::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 20px;
+    color: #cacaca;
+}
+
+#L-Type:focus {
+    outline: none;
+}
+
+#maketini-p-l {
+    width: max-content;
+    display: contents;
 }
 
 /* Dropdown css */

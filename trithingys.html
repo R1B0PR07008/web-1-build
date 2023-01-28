@@ -27,46 +27,14 @@
     <div class="navbar">
       <span id="nav"></span>
             <a href="/Home.html" class="navbar-brand, center" id="nav-text">Home</a>
-      <input aria-label="light mode and dark mode switch" type="range" value="1" min="1" max="2" onload="phoneMode('h'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('h')" id="lightDarkSelector">
-      <output></output>
-      <span id="lightDarkSelector-text"></span> 
+            <div id="lightdark-floatRight">
+              <input aria-label="light mode and dark mode switch" type="range" value="1" min="1" max="2" onload="phoneMode('t3'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('t3')" id="lightDarkSelector">
+              <span id="lightDarkSelector-text"></span>
+              </div>
     </div>  
   <h1> Triangle Formulas Programs
 </h1>
-  <form action="" method="post">
-    <input
-      type="number"
-      placeholder="Top number"
-      name="function"
-      id="TRY-1-NEEDS_MARGIN"
-    />
-    <br>
-    <input
-      type="number"
-      placeholder="Left number"
-      name="function"
-      id="TRY-2"
-    />   
-    <input
-    type="number"
-    placeholder="Right number"
-    name="function"
-    id="TRY-3"
-    />   
-    <br>
-    <select aria-label="type of triangles" name="tot" id="try-tot">
-      <option value="null">select type of triangle</option>
-      <option value="RHO">RHO</option>
-      <option value="Q">Q</option>
-      <option value="EC">ec</option>
-      <option value="ACC">acceleration</option>
-      <option value="V">V</option>
-      <option value="V2">V^2</option>
-      <option value="F">Forces</option>
-      <option value="LAMBDA">Wavelength(λ)</option>
-    </select>
-    <button onclick="TRYTHINGYS()" class="btn-default" type="button" id="BTN-1-TRY">Enter</button>
-  </form>
+  <form action="" method="post"><input  type="number"  placeholder="Top number"  name="function"  id="TRY-1-NEEDS_MARGIN"/><br><input  type="number"  placeholder="Left number"  name="function"  id="TRY-2"/>   <input type="number"placeholder="Right number"name="function"id="TRY-3"/>   <br><select aria-label="type of triangles" name="tot" id="try-tot">  <option value="null">select type of triangle</option>  <option value="RHO">RHO</option>  <option value="Q">Q</option>  <option value="EC">ec</option>  <option value="ACC">acceleration</option>  <option value="V">V</option>  <option value="V2">V^2</option>  <option value="F">Forces</option>  <option value="LAMBDA">Wavelength(λ)</option></select><button onclick="TRYTHINGYS()" class="btn-default" type="button" id="BTN-1-TRY">Enter</button></form>
 
   <div class="Ans-block , vertical-align" id="react-4">
     <h2 class="ans-text">
@@ -76,24 +44,13 @@
     To get your answer enter a number in the left slot and the value.
     </p>
     <div id="ans">
-      <p class="ans-text"><span id="try-1-1">Top number:</span> <span id="try-1"></span></p>
-      <p class="ans-text"><span id="try-2-1">Left number:</span> <span id="try-2"></span></p> 
-      <p class="ans-text"><span id="try-3-1">Right number:</span> <span id="try-3"></span></p>
+      <p class="ans-text"><span id="try-1-1">Top number:</span> <span id="try-1"></span></p><p class="ans-text"><span id="try-2-1">Left number:</span> <span id="try-2"></span></p> <p class="ans-text"><span id="try-3-1">Right number:</span> <span id="try-3"></span></p>
     </div>
   </div>
 
   <div class="Legend-block , vertical-align" id="react-5">
     <h2 class="Legend-text"> The Legend: </h2>
-    <img src="/img/WEB-1__1_-removebg.png" alt="explanation for dumb people" id="img-1-WEB-1">
-    <h2 class="Legend-text"> Types of triangles: </h2>
-    <p class="Legend-text"> RHO = Density</p>
-    <p class="Legend-text"> Q = Charge</p>
-    <p class="Legend-text"> EC = ?</p>
-    <p class="Legend-text"> Acceleration = Acceleration</p>
-    <p class="Legend-text"> V = Voltage</p>
-    <p class="Legend-text"> V^2 = Voltage squared</p>
-    <p class="Legend-text"> Forces = Force</p>
-    <p class="Legend-text"> λ = Wavelength </p>
+    <img src="/img/WEB-1__1_-removebg.png" alt="explanation for dumb people" id="img-1-WEB-1"><h2 class="Legend-text"> Types of triangles: </h2><p class="Legend-text"> RHO = Density</p><p class="Legend-text"> Q = Charge</p><p class="Legend-text"> EC = ?</p><p class="Legend-text"> Acceleration = Acceleration</p><p class="Legend-text"> V = Voltage</p><p class="Legend-text"> V^2 = Voltage squared</p><p class="Legend-text"> Forces = Force</p><p class="Legend-text"> λ = Wavelength </p>
   </div>
   <section id="tri-sec">
     <h1>What is it/how does it work?</h1>

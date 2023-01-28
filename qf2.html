@@ -27,55 +27,14 @@
     <div class="navbar">
       <span id="nav"></span>
             <a href="/Home.html" class="navbar-brand, center" id="nav-text">Home</a>
-      <input aria-label="light mode and dark mode switch"  type="range" value="1" min="1" max="2" onload="phoneMode('q2'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('q2'); nav()" id="lightDarkSelector">
-      <span id="lightDarkSelector-text"></span> 
+            <div id="lightdark-floatRight">
+              <input aria-label="light mode and dark mode switch" type="range" value="1" min="1" max="2" onload="phoneMode('q2'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('q2')" id="lightDarkSelector">
+              <span id="lightDarkSelector-text"></span>
+              </div>
     </div>
 <h1> Quadratic Functions Program
 </h1>
-  <form action="" method="post">
-    <input
-      type="number"
-      placeholder="A"
-      name="A"
-      id="QF-A"
-      class="QF-MARGIN"
-    />
-    <input
-      type="number"
-      placeholder="B"
-      name="B"
-      id="QF-B"
-    />
-    <input
-      type="number"
-      placeholder="C"
-      name="C"
-      id="QF-C"
-    />
-    <button onclick="Qf()" class="btn-default" type="button" id="BTN-1-PA">Enter Y Values</button>
-    <br>
-    <input
-    type="number"
-    placeholder="X1"
-    name="x1"
-    id="QF2-x1"
-    class="QF-MARGIN"
-  />
-  <input
-    type="number"
-    placeholder="X2"
-    name="x2"
-    id="QF2-x2"
-  />
-  <input
-    type="number"
-    placeholder="X3"
-    name="x3"
-    id="QF2-x3"
-  />
-    
-    <button onclick="Qfx()" class="btn-default" type="button">Enter X values</button>  
-  </form>
+  <form action="" method="post">  <input    type="number"    placeholder="A"    name="A"    id="QF-A"    class="QF-MARGIN"  />  <input    type="number"    placeholder="B"    name="B"    id="QF-B"  />  <input    type="number"    placeholder="C"    name="C"    id="QF-C"  />  <button onclick="Qf()" class="btn-default" type="button" id="BTN-1-PA">Enter Y Values</button>  <br>  <input  type="number"  placeholder="X1"  name="x1"  id="QF2-x1"  class="QF-MARGIN"/><input  type="number"  placeholder="X2"  name="x2"  id="QF2-x2"/><input  type="number"  placeholder="X3"  name="x3"  id="QF2-x3"/>  <button onclick="Qfx()" class="btn-default" type="button">Enter X values</button>  </form>
 
 <div class="Ans-block , vertical-align" id="react-8">
   <h2 class="ans-text">
@@ -85,29 +44,16 @@
   To get your answer enter a number in the indicated slots.
   </p>
   <div id="ans">
-    <p>Your first X value is: <span id="qf-1"></span></p>
-    <p>Your first Y value is: <span id="qf-2"></span></p>
+    <p>Your first X value is: <span id="qf-1"></span></p><p>Your first Y value is: <span id="qf-2"></span></p>
   </div>
   <br>
   <div id="ans-2">
-    <p>Second Coordinate <span id="qf2-1"></span> , <span id="qf2-1-2"></span></p>
-    <p>Third Coordinate <span id="qf2-2"></span> , <span id="qf2-2-2"></span></p>
-    <p>Fourth Coordinate <span id="qf2-3"></span> , <span id="qf2-3-2"></span></p>
-    <p>Then just duplicate the points on the other side of the Symmetry line.</p>
+    <p>Second Coordinate <span id="qf2-1"></span> , <span id="qf2-1-2"></span></p><p>Third Coordinate <span id="qf2-2"></span> , <span id="qf2-2-2"></span></p><p>Fourth Coordinate <span id="qf2-3"></span> , <span id="qf2-3-2"></span></p><p>Then just duplicate the points on the other side of the Symmetry line.</p>
   </div>
 </div>
 
 <div class="Legend-block , vertical-align" id="react-9">
-  <h2 class="Legend-text"> The Legend: </h2>
-  <p class="Legend-text"> A = A </p>
-  <p class="Legend-text"> B = B </p>
-  <p class="Legend-text"> C = C </p>
-  <p class="Legend-text"> X1 = first X value </p>
-  <p class="Legend-text"> X2 = second X value </p>
-  <p class="Legend-text"> X3 = Third X value </p>
-  <h3 class="Legend-text"> Requirements: </h3>
-  <p class="Legend-text"> You will probably need 8th grade or higher knowledge. </p>
-  <p class="Legend-text"> Please enter A, B ,C values before pressing the "Enter More X Values" button. </p>
+  <h2 class="Legend-text"> The Legend: </h2><p class="Legend-text"> A = A </p><p class="Legend-text"> B = B </p><p class="Legend-text"> C = C </p><p class="Legend-text"> X1 = first X value </p><p class="Legend-text"> X2 = second X value </p><p class="Legend-text"> X3 = Third X value </p><h3 class="Legend-text"> Requirements: </h3><p class="Legend-text"> You will probably need 8th grade or higher knowledge. </p><p class="Legend-text"> Please enter A, B ,C values before pressing the "Enter More X Values" button. </p>
 </div>
 <section id="qf-sec">
   <h1>what is it?</h1>
