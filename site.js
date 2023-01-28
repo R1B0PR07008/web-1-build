@@ -39,25 +39,8 @@ function nav() {
         document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1>General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "2em"
         document.getElementById('lightdark-floatRight').style.marginTop = '5.5mm';
-
     }
 };
-
-function navAdjust() {
-    if (window.innerWidth <= 1203 && window.innerWidth >= 1011) {
-        document.getElementById("lightDarkSelector").style.marginLeft = '80%';
-    } else if (window.innerWidth < 1011 && window.innerWidth >= 813) {
-        document.getElementById("lightDarkSelector").style.marginLeft = '74%';
-    } else if (window.innerWidth < 813 && window.innerWidth >= 705) {
-        document.getElementById("lightDarkSelector").style.marginLeft = '65%';
-    } else if (window.innerWidth < 705 && window.innerWidth >= 551) {
-        document.getElementById("lightDarkSelector").style.marginLeft = '55%';
-    } else if (window.innerWidth < 551 && window.innerWidth >= 455) {
-        document.getElementById("lightDarkSelector").style.marginLeft = '45%';
-    } else if (window.innerWidth < 455) {
-        document.getElementById("lightDarkSelector").style.marginLeft = '35%';
-    }
-}
 
 function phoneMode(p) {
         if (p === 'h') {
@@ -71,12 +54,12 @@ function phoneMode(p) {
                     document.getElementById("nav-text").style.fontSize = "2em"
                     document.getElementById("Tittle-Div").style.backgroundImage = "none";
                     document.getElementById("Tittle").style.fontSize = "800%";
+                    document.getElementById('lightdark-floatRight-h').style.marginTop = '3.3mm';
                 }
                 else {
                     document.getElementById("Tittle-Div").style.backgroundImage = "/img/WEB-1NewNewTittleImage.png";
                 };
 
-                navAdjust()
 
             };
             if (window.innerWidth <= 910) {
