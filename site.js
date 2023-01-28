@@ -281,7 +281,7 @@ function lightDarkMode() {
                 document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (2).png" alt="example of pa formula" id="pa-imgSmall">'
             } else if (document.URL.includes('fractions')) {
                 document.getElementById('link-1-F').style.color = '#000000';
-            } else if (document.URL.includes('Linear')) {
+            } else if (document.URL.includes('linear')) {
                 document.getElementById('L-Type').style.backgroundColor = '#FFF000';
             }
 
@@ -338,7 +338,7 @@ function lightDarkMode() {
                 document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (1).png" alt="example of pa formula" id="pa-imgSmall">'
             } else if (document.URL.includes('fractions')) {
                 document.getElementById('link-1-F').style.color = '#cacaca';
-            }  else if (document.URL.includes('Linear')) {
+            }  else if (document.URL.includes('linear')) {
                 document.getElementById('L-Type').style.backgroundColor = '#e63743';
             }
         }   
@@ -403,7 +403,7 @@ function lightDarkCookie() {
             document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (1).png" alt="example of pa formula" id="pa-imgSmall">'
         } else if (document.URL.includes('fractions')) {
             document.getElementById('link-1-F').style.color = '#cacaca';
-        }  else if (document.URL.includes('Linear')) {
+        }  else if (document.URL.includes('linear')) {
             document.getElementById('L-Type').style.backgroundColor = '#e63743';
         }
     }
