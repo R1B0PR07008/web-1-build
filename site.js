@@ -268,7 +268,7 @@ function lightDarkMode() {
             elementProgramLink(6, 8, "#000000");
 
 
-            if (document.URL.includes("re.html")) {
+            if (document.URL.includes("re")) {
                 document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (1).png" alt="a parallel circuit" class="re-imgSmall">';
                 document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (4).png" alt="Formula for parallel" class="re-imgSmall-2">';
                 document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesWhite.png" alt="a series circuit" class="re-imgSmall">';
@@ -277,11 +277,11 @@ function lightDarkMode() {
                 document.getElementById('qf-img-1').innerHTML = '<img src="./img/graph-1.png" alt="graph" class="qf-imgSmall">';
                 document.getElementById('qf-img-2').innerHTML = '<img src="./img/qf-function (2).png" alt="quadratic functions equation" class="qf-imgSmaller">';
                 document.getElementById('qf-img-3').innerHTML = '<img src="./img/xFormula (1).png" alt="formula to find x" class="qf-imgSmaller">';
-            } else if (document.URL.includes("pa.html")) {
+            } else if (document.URL.includes("pa")) {
                 document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (2).png" alt="example of pa formula" id="pa-imgSmall">'
-            } else if (document.URL.includes('fractions.html')) {
+            } else if (document.URL.includes('fractions')) {
                 document.getElementById('link-1-F').style.color = '#000000';
-            } else if (document.URL.includes('Linear.html')) {
+            } else if (document.URL.includes('Linear')) {
                 document.getElementById('L-Type').style.backgroundColor = '#FFF000';
             }
 
@@ -325,7 +325,7 @@ function lightDarkMode() {
             document.cookie = 'mode=dark';
             elementProgramLink(6, 8, "#cacaca");
 
-            if (document.URL.includes("re.html")) {
+            if (document.URL.includes("re")) {
                 document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (2).png" alt="a parallel circuit" class="re-imgSmall">';
                 document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (3).png" alt="Formula for parallel" class="re-imgSmall-2">';
                 document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesBlack.png" alt="a series circuit" class="re-imgSmall">';
@@ -334,11 +334,11 @@ function lightDarkMode() {
                 document.getElementById('qf-img-1').innerHTML = '<img src="./img/graph-2.png" alt="graph" class="qf-imgSmall">';
                 document.getElementById('qf-img-2').innerHTML = '<img src="./img/qf-function (1).png" alt="quadratic functions equation" class="qf-imgSmaller">';
                 document.getElementById('qf-img-3').innerHTML = '<img src="./img/xFormula (2).png" alt="formula to find x" class="qf-imgSmaller">';
-            } else if (document.URL.includes("pa.html")) {
+            } else if (document.URL.includes("pa")) {
                 document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (1).png" alt="example of pa formula" id="pa-imgSmall">'
-            } else if (document.URL.includes('fractions.html')) {
+            } else if (document.URL.includes('fractions')) {
                 document.getElementById('link-1-F').style.color = '#cacaca';
-            }  else if (document.URL.includes('Linear.html')) {
+            }  else if (document.URL.includes('Linear')) {
                 document.getElementById('L-Type').style.backgroundColor = '#e63743';
             }
         }   
@@ -390,7 +390,7 @@ function lightDarkCookie() {
             document.getElementById("lightDarkSelector-text").style.color = '#cacaca';
         }
 
-        if (document.URL.includes("re.html")) {
+        if (document.URL.includes("re")) {
             document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (2).png" alt="a parallel circuit" class="re-imgSmall">';
             document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (3).png" alt="Formula for parallel" class="re-imgSmall-2">';
             document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesBlack.png" alt="a series circuit" class="re-imgSmall">';
@@ -399,11 +399,11 @@ function lightDarkCookie() {
             document.getElementById('qf-img-1').innerHTML = '<img src="./img/graph-2.png" alt="graph" class="qf-imgSmall">';
             document.getElementById('qf-img-2').innerHTML = '<img src="./img/qf-function (1).png" alt="quadratic functions equation" class="qf-imgSmaller">';
             document.getElementById('qf-img-3').innerHTML = '<img src="./img/xFormula (2).png" alt="formula to find x" class="qf-imgSmaller">';
-        } else if (document.URL.includes("pa.html")) {
+        } else if (document.URL.includes("pa")) {
             document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (1).png" alt="example of pa formula" id="pa-imgSmall">'
-        } else if (document.URL.includes('fractions.html')) {
+        } else if (document.URL.includes('fractions')) {
             document.getElementById('link-1-F').style.color = '#cacaca';
-        }  else if (document.URL.includes('Linear.html')) {
+        }  else if (document.URL.includes('Linear')) {
             document.getElementById('L-Type').style.backgroundColor = '#e63743';
         }
     }
@@ -1556,7 +1556,7 @@ function Liquids() {
     };
 };
 
-if (document.URL.includes("ome.html") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
+if (document.URL.includes("ome") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
     lightDarkCookie();
     lightDarkMode();
     phoneMode('h');
@@ -1617,7 +1617,7 @@ if (document.URL.includes("ome.html") || document.URL.includes("ome") || documen
 
 // !PAGE CODE
 
-if (document.URL.includes("pa.html")) {
+if (document.URL.includes("pa")) {
     console.log("you are in the PA page.");
     lightDarkCookie()
 
@@ -1677,7 +1677,7 @@ if (document.URL.includes("pa.html")) {
     };
 };
 
-if (document.URL.includes("qf.html")) {
+if (document.URL.includes("qf")) {
     console.log("you are in the quadratic functions page. ");
     lightDarkCookie()
 
@@ -1722,7 +1722,7 @@ if (document.URL.includes("qf.html")) {
     };
 };
 
-if (document.URL.includes("qf2.html")) {
+if (document.URL.includes("qf2")) {
     console.log("You are in the qf2 page.")
     lightDarkCookie()
 
@@ -1822,7 +1822,7 @@ if (document.URL.includes("qf2.html")) {
     };
 };
 
-if (document.URL.includes("re.html")) {
+if (document.URL.includes("re")) {
 
     function displayOutput() {
         let element = document.getElementById("re-range").value;
@@ -1885,7 +1885,7 @@ if (document.URL.includes("re.html")) {
     lightDarkCookie()
 };
 
-if (document.URL.includes("trithingys.html")) {
+if (document.URL.includes("trithingys")) {
     console.log("You are in the triangle formulas page.")
     lightDarkCookie()
 
@@ -1972,7 +1972,7 @@ function decimaltoFraction(n) {
 }
 
 
-if (document.URL.includes("fractions.html")) {
+if (document.URL.includes("fractions")) {
     console.log("you are in the fractions page!");
     lightDarkCookie();
 
@@ -2049,7 +2049,7 @@ if (document.URL.includes("fractions.html")) {
     };
 };
 
-if (document.URL.includes("Linear.html")) {
+if (document.URL.includes("Linear")) {
     console.log("you are in the linear functions program.");
     lightDarkCookie();
 
@@ -2068,6 +2068,7 @@ if (document.URL.includes("Linear.html")) {
         }
 
     }
+    
     function decimaltoFractionY(n) {
         let num = n+"";
         let y = 0
