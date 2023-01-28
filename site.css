@@ -567,6 +567,27 @@ p.ans-footer {
     display: contents;
 }
 
+/** FQ program */
+
+.FQ-img-tini {
+    height: auto;
+    width: 200px;
+}
+
+.inline {
+    display: inline;
+    width: 90%;
+}
+
+.p-inline {
+    width: max-content;
+    margin-right: 0%;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    display: inline-block;
+    vertical-align: top;
+}
+
 /* Dropdown css */
 
 /* Dropdown Button */

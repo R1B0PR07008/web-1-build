@@ -21,7 +21,7 @@ function element(n) {
 
 function nav() {
     if (window.innerWidth > 767) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/fq.html">Factoring Quadratics</a><br><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "1.2em"
     }
     else if (window.innerWidth < 767) {
@@ -36,7 +36,7 @@ function nav() {
             img = 'white-hamburger-menu-icon-24.jpg'
         }
 
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1>General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a><h1>General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1>General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a><h1>General Formulas</h1><a class="Program-link" href="/fq.html">Factoring Quadratics</a><br><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/pa.html">Pressure Program </a><h1>Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "2em"
         document.getElementById('lightdark-floatRight').style.marginTop = '5.5mm';
     }
@@ -161,6 +161,18 @@ function phoneMode(p) {
                 element(22).style.minHeight = "600px"
                 element(23).style.width = "35%"
             }
+        } else if (p === 'fq') {
+            nav()
+            if (window.innerWidth <= 910) {
+                console.log(window.innerWidth)
+                console.log("Phone Screen")
+                elementWidth(24, 25, 99)
+            }
+            else {
+                element(24).style.width = "60%"
+                element(24).style.minHeight = "600px"
+                element(25).style.width = "35%"
+            }
         }
 };
 
@@ -232,7 +244,7 @@ function lightDarkMode() {
     if (elementValue === "1") { // light mode
 
         if (document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 12, "#000000");
+            elementProgramLink(1, 13, "#000000");
             console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
             document.getElementById("_0").style.color = "#000000";
@@ -283,6 +295,13 @@ function lightDarkMode() {
                 document.getElementById('link-1-F').style.color = '#000000';
             } else if (document.URL.includes('linear')) {
                 document.getElementById('L-Type').style.backgroundColor = '#FFF000';
+            } else if (document.URL.includes('fq')) {
+                console.log('awd')
+                document.getElementById('FQ-imgSwap').innerHTML = '<img src="./img/fq (1).png" alt="simple q formula" class="FQ-img-tini">';
+                document.getElementById('FQ-imgSwap-2').innerHTML = '<img src="./img/FQ-2 (1).png" alt="simple q formula" class="FQ-img-tini">';
+                document.getElementById('FQ-imgSwap-3').innerHTML = '<img src="./img/FQ-3 (2).png" alt="simple q formula" class="FQ-img-tini">';
+                document.getElementById('FQ-imgSwap-4').innerHTML = '<img src="./img/FQ-4 (2).png" alt="simple q  formula" class="FQ-img-tini">';
+                document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (2).png" alt="simple q formula" class="FQ-img-tini">';
             }
 
         }
@@ -293,7 +312,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 12, "#cacaca");
+            elementProgramLink(1, 13, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -340,8 +359,15 @@ function lightDarkMode() {
                 document.getElementById('link-1-F').style.color = '#cacaca';
             }  else if (document.URL.includes('linear')) {
                 document.getElementById('L-Type').style.backgroundColor = '#e63743';
+            } else if (document.URL.includes('fq')) {
+                console.log('awdwd')
+                document.getElementById('FQ-imgSwap').innerHTML = '<img src="./img/fq (2).png" alt="simple q formula" class="FQ-img-tini">';
+                document.getElementById('FQ-imgSwap-2').innerHTML = '<img src="./img/FQ-2 (2).png" alt="simple q formula" class="FQ-img-tini">';
+                document.getElementById('FQ-imgSwap-3').innerHTML = '<img src="./img/FQ-3 (1).png" alt="simple q formula" class="FQ-img-tini">';
+                document.getElementById('FQ-imgSwap-4').innerHTML = '<img src="./img/FQ-4 (1).png" alt="simple q  formula" class="FQ-img-tini">';
+                document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (1).png" alt="simple q formula" class="FQ-img-tini">';
             }
-        }   
+        }
     }
 }
 
@@ -358,7 +384,7 @@ function lightDarkCookie() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 12, "#cacaca");
+            elementProgramLink(1, 13, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -405,6 +431,12 @@ function lightDarkCookie() {
             document.getElementById('link-1-F').style.color = '#cacaca';
         }  else if (document.URL.includes('linear')) {
             document.getElementById('L-Type').style.backgroundColor = '#e63743';
+        } else if (document.URL.includes('fq')) {
+            document.getElementById('FQ-imgSwap').innerHTML = '<img src="./img/fq (2).png" alt="simple q formula" class="FQ-img-tini">';
+            document.getElementById('FQ-imgSwap-2').innerHTML = '<img src="./img/FQ-2 (2).png" alt="simple q formula" class="FQ-img-tini">';
+            document.getElementById('FQ-imgSwap-3').innerHTML = '<img src="./img/FQ-3 (1).png" alt="simple q formula" class="FQ-img-tini">';
+            document.getElementById('FQ-imgSwap-4').innerHTML = '<img src="./img/FQ-4 (1).png" alt="simple q  formula" class="FQ-img-tini">';
+            document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (1).png" alt="simple q formula" class="FQ-img-tini">';
         }
     }
 }
@@ -2211,30 +2243,29 @@ if (document.URL.includes("linear")) {
       
             let fracY_ = decimaltoFractionY(m);
             let fracX_ = decimaltoFractionX(m);
-      
+
             simplify(decimaltoFraction(''+fracY_+'/'+fracX_))
             document.getElementById('F-Ans').innerHTML = ''+simplify(decimaltoFraction(''+fracY_+'/'+fracX_))
-      
+
             let simpli = simplify(''+fracY_+'/'+fracX_);
-      
+
             let fracY = 0;
-            let fracX = 0; 
-      
+            let fracX = 0;
+
             if (simpli.substring(0 , 1) === '-') {
                 fracY = simpli.substring(1, 2);
                 fracX = simpli.substring(3 , 4)
             } else {
                 fracY = simpli.substring(0, 1);
-                fracX = simpli.substring(2 , 1)                
+                fracX = simpli.substring(2 , 1)
             }
-      
+
             console.log('fracY: '+fracY);
             console.log('fracX: '+fracX);
-      
+
             let p3Y = 0;
-            let p3X = 0;             
-      
-      
+            let p3X = 0;
+
             if (simpli.substring(0 , 1) === '-') {
                 p2Y = p1Y + (fracY) * 1;
                 p2X = p1X - (fracX) * 1;
@@ -2244,11 +2275,9 @@ if (document.URL.includes("linear")) {
                 p2Y = p1Y + (fracY) * 1;
                 p2X = p1X + (fracX) * 1;
                 p3Y = p2Y + (fracY) * 1;
-                p3X = p2X + (fracX) * 1;                
+                p3X = p2X + (fracX) * 1;
             }
-      
-      
-      
+
             document.getElementById('L-point1-X').innerHTML = p1X;
             document.getElementById('L-point1Y').innerHTML = p1Y;
             document.getElementById('L-point2-X').innerHTML = p2X;
@@ -2256,7 +2285,70 @@ if (document.URL.includes("linear")) {
             document.getElementById('L-point3-X').innerHTML = p3X;
             document.getElementById('L-point3Y').innerHTML = p3Y;
         }
-      
-      
+
       }
+}
+
+if (document.URL.includes('fq')) {
+    lightDarkCookie()
+    function getfactors() {
+        let A = document.getElementById('QF-A').value;
+        console.log('A: '+A);
+        let B = document.getElementById('QF-B').value;
+        console.log('B: '+B);
+        let C = document.getElementById('QF-C').value;
+        console.log('C: '+C);
+        let quad = ''+A+'x^2+'+B+'x+'+C+'=0';
+        console.log(quad)
+        var myreg = /(.*?)x\^2/;
+        var a = myreg.exec(quad);
+        a = a[1];
+        if (a==0) {
+            alert('a may not be equal to zero.  Enter another function');
+            return;
+        }
+        var myreg = /x\^2\+(.*?)x/;
+        var b = myreg.exec(quad);
+        b = b[1];
+        var myreg = /x\+(.*?)=/;
+        var c = myreg.exec(quad);
+        c = c[1];
+        var disc = (b*b-4*a*c);
+        if (disc!=0) {
+            disc = disc/Math.abs(disc);
+        }
+        switch (disc) {
+            case -1:
+                alert('The roots of this function are not real.  Please enter another function');
+                return;
+                break;
+            case 1:
+                if (Math.sqrt((b*b-4*a*c))==Math.round(Math.sqrt((b*b-4*a*c)))) {
+                    if (-1*((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a)<0) { 
+                        var op1 = ' - '; 
+                    } else { 
+                        var op1 = ' + '; 
+                    }
+                    if (-1*((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a)<0) { 
+                        var op2 = ' - '; 
+                    } else { 
+                        var op2 = ' + '; 
+                    }
+                    document.getElementById('FQ-ANS').innerHTML = ('( x' + op1 + Math.abs(((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a)) + ' )( x' + op2 + Math.abs(((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a)) + ' )');
+                } else {
+                    alert ('The roots of this function are not rational, and therefore this function does not factor');
+                }
+                break;
+            case 0:
+                if ((b/a)<0) {
+                    alert('( x' + ' + ' + (0-b/(2*a)) + ')( x' + ' + ' + (0-b/(2*a)) + ' )');
+                } else {
+                    alert('( x' + ' - ' + (b/(2*a)) + ')( x' + ' - ' + (b/(2*a)) + ' )');
+                }
+                break;
+            default:
+                alert('There is a problem with your syntax');
+                return
+        }
+    }
 }
