@@ -2049,7 +2049,7 @@ if (document.URL.includes("fractions")) {
     };
 };
 
-if (document.URL.includes("Linear")) {
+if (document.URL.includes("linear")) {
     console.log("you are in the linear functions program.");
     lightDarkCookie();
 
