@@ -20,11 +20,11 @@ function element(n) {
 };
 
 function nav() {
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 836) {
         document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics</a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "1.2em"
     }
-    else if (window.innerWidth < 767) {
+    else if (window.innerWidth <= 836) {
         console.log("screen is small than 767px")
 
         let element = document.getElementById("lightDarkSelector").value;
