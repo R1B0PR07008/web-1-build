@@ -2324,17 +2324,26 @@ if (document.URL.includes('fq')) {
                 break;
             case 1:
                 if (Math.sqrt((b*b-4*a*c))==Math.round(Math.sqrt((b*b-4*a*c)))) {
-                    if (-1*((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a)<0) { 
+                    if (-1*((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a)<0) {
                         var op1 = ' - '; 
                     } else { 
                         var op1 = ' + '; 
                     }
-                    if (-1*((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a)<0) { 
+                    if (-1*((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a)<0) {
                         var op2 = ' - '; 
                     } else { 
                         var op2 = ' + '; 
                     }
-                    document.getElementById('FQ-ANS').innerHTML = ('( x' + op1 + Math.abs(((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a)) + ' )( x' + op2 + Math.abs(((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a)) + ' )');
+                    if ((Math.abs(((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a))) < 1 && (Math.abs(((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a))) < 1) {
+                        document.getElementById('FQ-ANS').innerHTML = ('('+A+'x' + op1 + A*(Math.abs(((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a))) + ' )('+A+'x' + op2 + A*(Math.abs(((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a))) + ' )'); 
+                    } else if ((Math.abs(((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a))) < 1){
+                        document.getElementById('FQ-ANS').innerHTML = ('( x' + op1 + (Math.abs(((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a))) + ' )('+A+ 'x' + op2 + A*(Math.abs(((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a))) + ' )'); 
+                    }else if ((Math.abs(((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a))) < 1){
+                        document.getElementById('FQ-ANS').innerHTML = ('('+A+'x' + op1 + A*(Math.abs(((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a))) + ' )('+ 'x' + op2 + (Math.abs(((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a))) + ' )'); 
+                    } else {
+                        document.getElementById('FQ-ANS').innerHTML = ('( x' + op1 + (Math.abs(((-1*b)+Math.sqrt(b*b-4*a*c))/(2*a))) + ' )('+ 'x' + op2 + (Math.abs(((-1*b)-Math.sqrt(b*b-4*a*c))/(2*a))) + ' )'); 
+
+                    }
                 } else {
                     alert ('The roots of this function are not rational, and therefore this function does not factor');
                 }
