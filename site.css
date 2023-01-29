@@ -340,6 +340,9 @@ p.ans-footer {
     padding-top: 1vw;
 }
 
+.maketini-t {
+    width: 25%;
+}
 
 /** qf Program */
 
@@ -587,6 +590,8 @@ p.ans-footer {
     display: inline-block;
     vertical-align: top;
 }
+
+
 
 /* Dropdown css */
 
