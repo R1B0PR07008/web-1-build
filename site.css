@@ -590,6 +590,10 @@ p.ans-footer {
 
 /* Dropdown css */
 
+.balck {
+    color: #000000;
+}
+
 /* Dropdown Button */
 .dropbtn {
     padding: 16px;
