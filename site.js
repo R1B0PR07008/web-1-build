@@ -50,7 +50,7 @@ function phoneMode(p) {
                 elementWidth(14, 15, 99)
                 element(2).style.marginBottom = "2mm";
                 document.getElementById("Tittle").style.fontSize = "800%";
-                if (window.innerWidth <= 790) {
+                if (window.innerWidth <= 1107) {
                     document.getElementById("nav-text").style.fontSize = "2em"
                     document.getElementById("Tittle-Div").style.backgroundImage = "none";
                     document.getElementById("Tittle").style.fontSize = "800%";
