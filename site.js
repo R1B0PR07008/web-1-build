@@ -293,7 +293,7 @@ function lightDarkMode() {
                 document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (2).png" alt="example of pa formula" id="pa-imgSmall">'
             } else if (document.URL.includes('fractions')) {
                 document.getElementById('link-1-F').style.color = '#000000';
-            } else if (document.URL.includes('linear')) {
+            } else if (document.URL.includes('linear') || document.URL.includes('Linear')) {
                 document.getElementById('L-Type').style.backgroundColor = '#FFF000';
             } else if (document.URL.includes('fq')) {
                 console.log('awd')
@@ -357,7 +357,7 @@ function lightDarkMode() {
                 document.getElementById('pa-img-1').innerHTML = '<img src="./img/paEzample (1).png" alt="example of pa formula" id="pa-imgSmall">'
             } else if (document.URL.includes('fractions')) {
                 document.getElementById('link-1-F').style.color = '#cacaca';
-            }  else if (document.URL.includes('linear')) {
+            }  else if (document.URL.includes('linear') || document.URL.includes('Linear')) {
                 document.getElementById('L-Type').style.backgroundColor = '#e63743';
             } else if (document.URL.includes('fq')) {
                 console.log('awdwd')
