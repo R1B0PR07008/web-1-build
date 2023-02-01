@@ -44,21 +44,21 @@ function nav() {
 
 function phoneMode(p) {
         if (p === 'h') {
+            if (window.innerWidth <= 1107) {
+                document.getElementById("nav-text").style.fontSize = "2em"
+                document.getElementById("Tittle-Div").style.backgroundImage = "none";
+                document.getElementById("Tittle").style.fontSize = "800%";
+                document.getElementById('lightdark-floatRight-h').style.marginTop = '3.3mm';
+            }
+            else {
+                document.getElementById("Tittle-Div").style.backgroundImage = "/img/WEB-1NewNewTittleImage.png";
+            };
             if (window.innerWidth <= 870) {
                 console.log('Phone screen');
                 elementWidth(1, 3, 99)
                 elementWidth(14, 15, 99)
                 element(2).style.marginBottom = "2mm";
                 document.getElementById("Tittle").style.fontSize = "800%";
-                if (window.innerWidth <= 1107) {
-                    document.getElementById("nav-text").style.fontSize = "2em"
-                    document.getElementById("Tittle-Div").style.backgroundImage = "none";
-                    document.getElementById("Tittle").style.fontSize = "800%";
-                    document.getElementById('lightdark-floatRight-h').style.marginTop = '3.3mm';
-                }
-                else {
-                    document.getElementById("Tittle-Div").style.backgroundImage = "/img/WEB-1NewNewTittleImage.png";
-                };
 
 
             };
