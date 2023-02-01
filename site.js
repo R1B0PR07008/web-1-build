@@ -21,7 +21,7 @@ function element(n) {
 
 function nav() {
     if (window.innerWidth > 836) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics(BETA V2) </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "1.2em"
     }
     else if (window.innerWidth <= 836) {
@@ -36,7 +36,7 @@ function nav() {
             img = 'white-hamburger-menu-icon-24.jpg'
         }
 
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1 class="balck">General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><h1 class="balck">General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics(BETA V2)</a><a class="Program-link" href="/pa.html">Pressure Program </a><h1 class="balck">Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1 class="balck">General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><h1 class="balck">General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics</a><a class="Program-link" href="/pa.html">Pressure Program </a><h1 class="balck">Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "2em"
         document.getElementById('lightdark-floatRight').style.marginTop = '5.5mm';
     }
@@ -2619,6 +2619,31 @@ if (document.URL.includes('fq')) {
                         }else if (facA[i-1] * (facC[i-2]) + facA[i]*(facC[i-3]) === 1*B) {
                             console.log(facA[i-1] * (facC[i-2]) + facA[i]*(facC[i-3]))
                             console.log('('+facA[i-1]+'x-'+facC[i-3]+')('+facA[i]+'x-'+facC[i-2]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x+'+facC[i-3]+')('+facA[i]+'x+'+facC[i-2]+')';
+                            break
+                        }else if (facA[i-2] * -1*(facC[i-1]) + facA[i-3]*-1*(facC[i]) === 1*B) {
+                            console.log(facA[i-2] * -1*(facC[i-1]) + facA[i-3]*-1*(facC[i]))
+                            console.log('('+facA[i-2]+'x-'+facC[i]+')('+facA[i-3]+'x-'+facC[i-1]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x-'+facC[i-1]+')('+facA[i]+'x-'+facC[i]+')';
+                            break
+                        }else if (facA[i-2] * -1*(facC[i-1]) + facA[i-3]*-1*(facC[i]) === 1*B) {
+                            console.log(facA[i-2] * -1*(facC[i-1]) + facA[i-3]*-1*(facC[i]))
+                            console.log('('+facA[i-2]+'x-'+facC[i]+')('+facA[i-3]+'x-'+facC[i-1]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x-'+facC[i-1]+')('+facA[i]+'x-'+facC[i]+')';
+                            break
+                        }else if (facA[i-2] * (facC[i-1]) + facA[i-3]*-1*(facC[i]) === 1*B) {
+                            console.log(facA[i-2] * (facC[i-1]) + facA[i-3]*-1*(facC[i]))
+                            console.log('('+facA[i-2]+'x-'+facC[i]+')('+facA[i-3]+'x-'+facC[i-1]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x+'+facC[i-2]+')('+facA[i]+'x-'+facC[i-3]+')';
+                            break
+                        }else if (facA[i-2] * -1*(facC[i-1]) + facA[i-3]*(facC[i]) === 1*B) {
+                            console.log(facA[i-2] * -1*(facC[i-1]) + facA[i-3]*(facC[i]))
+                            console.log('('+facA[i-2]+'x-'+facC[i]+')('+facA[i-3]+'x-'+facC[i-1]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x-'+facC[i-2]+')('+facA[i]+'x+'+facC[i-3]+')';
+                            break
+                        }else if (facA[i-2] * (facC[i-1]) + facA[i-3]*(facC[i]) === 1*B) {
+                            console.log(facA[i-2] * (facC[i-1]) + facA[i-3]*(facC[i]))
+                            console.log('('+facA[i-2]+'x-'+facC[i]+')('+facA[i-3]+'x-'+facC[i-1]+')');
                             document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x+'+facC[i-2]+')('+facA[i]+'x+'+facC[i-3]+')';
                             break
                         }else {
