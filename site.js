@@ -21,7 +21,7 @@ function element(n) {
 
 function nav() {
     if (window.innerWidth > 836) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics(BETA)</a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics(BETA V2) </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "1.2em"
     }
     else if (window.innerWidth <= 836) {
@@ -36,7 +36,7 @@ function nav() {
             img = 'white-hamburger-menu-icon-24.jpg'
         }
 
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1 class="balck">General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a><h1 class="balck">General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics(BETA)</a><a class="Program-link" href="/pa.html">Pressure Program </a><h1 class="balck">Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1 class="balck">General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><a class="Program-link" href="./Linear.html">Linear functions</a><h1 class="balck">General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics(BETA V2)</a><a class="Program-link" href="/pa.html">Pressure Program </a><h1 class="balck">Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "2em"
         document.getElementById('lightdark-floatRight').style.marginTop = '5.5mm';
     }
@@ -2291,13 +2291,7 @@ if (document.URL.includes("linear")) {
 
 if (document.URL.includes('fq')) {
     lightDarkCookie()
-    function getfactors() {
-        let A = document.getElementById('QF-A').value;
-        console.log('A: '+A);
-        let B = document.getElementById('QF-B').value;
-        console.log('B: '+B);
-        let C = document.getElementById('QF-C').value;
-        console.log('C: '+C);
+    function getfactors(A, B, C) {
         let quad = ''+A+'x^2+'+B+'x+'+C+'=0';
         console.log(quad)
         var myreg = /(.*?)x\^2/;
@@ -2359,5 +2353,304 @@ if (document.URL.includes('fq')) {
                 alert('There is a problem with your syntax');
                 return
         }
+    }
+
+    function findFactors(number) {
+        const factorNumbers = [];
+        for (let i = 1; i <= number; i++) {
+          if (number % i === 0) {
+            factorNumbers.push(i);
+            factorNumbers.push(number/i);
+          }
+        }
+        return factorNumbers;
+      }
+
+    function fq() {
+        let A = document.getElementById('QF-A').value;
+        let B = document.getElementById('QF-B').value;
+        let C = document.getElementById('QF-C').value;
+
+        if (findFactors(A) == [1, A] && findFactors(C) == [1, C] || A == 1) {
+            getfactors(A, B, C)
+        } else {
+            console.log(findFactors(Math.abs(A)));
+            console.log(findFactors(Math.abs(C)));
+
+            function combine() {
+                for (let i = 1; i <= 20; i++){
+                    // if (i == 1) {
+                    //     console.log('0');
+                    //     let facA = findFactors(Math.abs(A));
+                    //     let facC = findFactors(Math.abs(C));
+                    //     console.log(facA)
+                    //     console.log('test:')
+                    //     console.log(facA[0]*facA[4])
+                    //     console.log(facC)
+                    //     let B = 1*(document.getElementById('QF-B').value);
+                    //     console.log(B)
+
+                    //     if (facA[0] * facC[1] + facA[1]*facC[0] === 1*B) {
+                    //         console.log(facA[0] * facC[1] + facA[1]*facC[0] )
+                    //         console.log('('+facA[0]+'x+'+facC[0]+')('+facA[1]+'x+'+facC[1]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[0]+'x+'+facC[0]+')('+facA[1]+'x+'+facC[1]+')';
+                    //         break
+                    //     }else if (facA[0] * -1*(facC[1]) + facA[1]*facC[0] === 1*B) {
+                    //         console.log(facA[0] * -1*(facC[1]) + facA[1]*facC[0] )
+                    //         console.log('('+facA[0]+'x-'+facC[0]+')('+facA[1]+'x+'+facC[1]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[0]+'x-'+facC[0]+')('+facA[1]+'x+'+facC[1]+')';
+                    //         break
+                    //     }else if (facA[0] * facC[1] + facA[1]*-1*(facC[0]) === 1*B) {
+                    //         console.log(facA[0] * facC[1] + facA[1]*-1*(facC[0]))
+                    //         console.log('('+facA[0]+'x+'+facC[0]+')('+facA[1]+'x-'+facC[1]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[0]+'x+'+facC[0]+')('+facA[1]+'x-'+facC[1]+')';
+                    //         break
+                    //     }else if (facA[0] * -1*(facC[1]) + facA[1]*-1*(facC[0]) === 1*B) {
+                    //         console.log(facA[0] * -1*(facC[1]) + facA[1]*-1*(facC[0]))
+                    //         console.log('('+facA[0]+'x-'+facC[0]+')('+facA[1]+'x-'+facC[1]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[0]+'x-'+facC[0]+')('+facA[1]+'x-'+facC[1]+')';
+                    //         break
+                    //     }else {
+                    //         console.log((facA[0] * facC[1]) + (facA[1]*facC[0]) )
+
+                    //         console.log(facA[0] * -0*(facC[1]) + facA[1]*facC[0] )
+
+                    //         console.log(facA[0] * facC[1] + facA[1]*-0*(facC[0]))
+
+                    //         console.log(facA[0] * -0*(facC[1]) + facA[1]*-0*(facC[0]))
+
+                    //         console.log('no')
+                    //     }
+                    // }else if (i == 2) {
+                    //     console.log('2');
+                    //     let facA = findFactors(Math.abs(A));
+                    //     let facC = findFactors(Math.abs(C));
+                    //     console.log(facA)
+                    //     console.log(facC)
+                    //     let B = document.getElementById('QF-B').value;
+
+                    //     if (facA[2] * facC[3] + facA[3]*facC[2] === 1*B) {
+                    //         console.log(facA[2] * facC[3] + facA[3]*facC[2])
+                    //         console.log('('+facA[2]+'x+'+facC[2]+')('+facA[3]+'x+'+facC[3]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[2]+'+'+facC[2]+')('+facA[3]+'x+'+facC[3]+')';
+                    //         break
+                    //     }else if (facA[2] * -1*facC[3] + facA[3]*facC[2] === 1*B) {
+                    //         console.log(facA[2] * -1*facC[3] + facA[3]*facC[2])
+                    //         console.log('('+facA[2]+'x-'+facC[2]+')('+facA[3]+'x+'+facC[3]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[2]+'-'+facC[2]+')('+facA[3]+'x+'+facC[3]+')';
+                    //         break
+                    //     }else if (facA[2] * facC[3] + facA[3]*-1*facC[2] === 1*B) {
+                    //         console.log(facA[2] * facC[3] + facA[3]*-1*facC[2])
+                    //         console.log('('+facA[2]+'x+'+facC[2]+')('+facA[3]+'x-'+facC[3]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML ='('+facA[2]+'+'+facC[2]+')('+facA[3]+'x-'+facC[3]+')';
+                    //         break
+                    //     }else if (facA[2] * -1*facC[3] + facA[3]*-1*facC[2] === 1*B) {
+                    //         console.log(facA[2] * -1*facC[3] + facA[3]*-1*facC[2])
+                    //         console.log('('+facA[2]+'x-'+facC[2]+')('+facA[3]+'x-'+facC[3]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[2]+'x-'+facC[2]+')('+facA[3]+'x-'+facC[3]+')';
+                    //         break
+                    //     }else {
+                    //         console.log(facA[2] * facC[3] + facA[3]*facC[2])
+
+                    //         console.log(facA[2] * -1*facC[3] + facA[3]*facC[2])
+
+                    //         console.log(facA[2] * facC[3] + facA[3]*-1*facC[2])
+
+                    //         console.log(facA[2] * -1*facC[3] + facA[3]*-1*facC[2])
+
+                    //         console.log('no')
+                    //     }
+                    // }else if (i == 3) {
+                    //     console.log('3');
+                    //     let facA = findFactors(Math.abs(A));
+                    //     let facC = findFactors(Math.abs(C));
+                    //     console.log(facA)
+                    //     console.log(facC)
+                    //     let B = document.getElementById('QF-B').value;
+
+                    //     if (facA[4] * facC[5] + facA[5]*facC[4] === 1*B) {
+                    //         console.log(facA[4] * facC[5] + facA[5]*facC[4])
+                    //         console.log('('+facA[4]+'x+'+facC[4]+')('+facA[5]+'x+'+facC[5]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[4]+'x+'+facC[4]+')('+facA[5]+'x+'+facC[5]+')';
+                    //         break
+                    //     }else if (facA[4] * -1*facC[5] + facA[5]*facC[4] === 1*B) {
+                    //         console.log(facA[4] * -1*facC[5] + facA[5]*facC[4])
+                    //         console.log('('+facA[4]+'x-'+facC[4]+')('+facA[5]+'x+'+facC[5]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML ='('+facA[4]+'x-'+facC[4]+')('+facA[5]+'x+'+facC[5]+')';
+                    //         break
+                    //     }else if (facA[4] * facC[5] + facA[5]*-1*facC[4] === 1*B) {
+                    //         console.log(facA[4] * facC[5] + facA[5]*-1*facC[4])
+                    //         console.log('('+facA[4]+'x+'+facC[4]+')('+facA[5]+'x-'+facC[5]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[4]+'x+'+facC[4]+')('+facA[5]+'x-'+facC[5]+')';
+                    //         break
+                    //     }else if (facA[4] * -1*facC[5] + facA[5]*-1*facC[4] === 1*B) {
+                    //         console.log(facA[4] * -1*facC[5] + facA[5]*-1*facC[4])
+                    //         console.log('('+facA[4]+'x-'+facC[4]+')('+facA[5]+'x-'+facC[5]+')');
+                    //         document.getElementById('fQ-ANS').innerHTML ='('+facA[4]+'x-'+facC[4]+')('+facA[5]+'x-'+facC[5]+')';
+                    //         break
+                    //     }else {
+                    //         console.log(facA[4] * facC[5] + facA[5]*facC[4])
+
+                    //         console.log(facA[4] * -1*facC[5] + facA[5]*facC[4])
+
+                    //         console.log(facA[4] * facC[5] + facA[5]*-1*facC[4])
+
+                    //         console.log(facA[4] * -1*facC[5] + facA[5]*-1*facC[4])
+
+                    //         console.log('no')
+                    //     }
+                    // }else if (i == 4) {
+                    //     console.log('4');
+                    //     let facA = findFactors(Math.abs(A));
+                    //     let facC = findFactors(Math.abs(C));
+                    //     console.log(facA)
+                    //     console.log(facC)
+                    //     let B = document.getElementById('QF-B').value;
+
+                    //     if (facA[6] * facC[7] + facA[7]*facC[6] === 1*B) {
+                    //         console.log(facA[6] * facC[7] + facA[7]*facC[6])
+                    //         console.log('('+facA[6]+'x+'+facC[6]+')('+facA[7]+'x+'+facC[7]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[6]+'x+'+facC[6]+')('+facA[7]+'x+'+facC[7]+')';
+                    //         break
+                    //     }else if (facA[6] * -1*facC[7] + facA[7]*facC[6] === 1*B) {
+                    //         console.log(facA[6] * -1*facC[7] + facA[7]*facC[6])
+                    //         console.log('('+facA[6]+'x-'+facC[6]+')('+facA[7]+'x+'+facC[7]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[6]+'x-'+facC[6]+')('+facA[7]+'x+'+facC[7]+')';
+                    //         break
+                    //     }else if (facA[6] * facC[7] + facA[7]*-1*facC[6] === 1*B) {
+                    //         console.log(facA[6] * facC[7] + facA[7]*-1*facC[6])
+                    //         console.log('('+facA[6]+'x+'+facC[6]+')('+facA[7]+'x-'+facC[7]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[6]+'x+'+facC[6]+')('+facA[7]+'x-'+facC[7]+')';
+                    //         break
+                    //     }else if (facA[6] * -1*facC[7] + facA[7]*-1*facC[6] === 1*B) {
+                    //         console.log(facA[6] * -1*facC[7] + facA[7]*-1*facC[6])
+                    //         console.log('('+facA[6]+'x-'+facC[6]+')('+facA[7]+'x-'+facC[7]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML ='('+facA[6]+'x-'+facC[6]+')('+facA[7]+'x-'+facC[7]+')';
+                    //         break
+                    //     }else {
+                    //         console.log(facA[6] * facC[7] + facA[7]*facC[6])
+
+                    //         console.log(facA[6] * -1*facC[7] + facA[7]*facC[6])
+
+                    //         console.log(facA[6] * facC[7] + facA[7]*-1*facC[6])
+                    //         console.log(facA[6] * -1*facC[7] + facA[7]*-1*facC[6])
+                    //         console.log('no')
+                    //     }
+                    // }else if (i == 5) {
+                    //     console.log('5');
+                    //     let facA = findFactors(Math.abs(A));
+                    //     let facC = findFactors(Math.abs(C));
+                    //     console.log(facA)
+                    //     console.log(facC)
+                    //     let B = document.getElementById('QF-B').value;
+
+                    //     if (facA[8] * facC[9] + facA[9]*facC[8] === 1*B) {
+                    //         console.log('('+facA[8]+'x+'+facC[8]+')('+facA[9]+'x+'+facC[9]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML ='('+facA[8]+'x+'+facC[8]+')('+facA[9]+'x+'+facC[9]+')';
+                    //         break
+                    //     }else if (facA[8] * -1*facC[9] + facA[9]*facC[8] === 1*B) {
+                    //         console.log('('+facA[8]+'x-'+facC[8]+')('+facA[9]+'x+'+facC[9]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[8]+'x-'+facC[8]+')('+facA[9]+'x+'+facC[9]+')';
+                    //         break
+                    //     }else if (facA[8] * facC[9] + facA[9]*-1*facC[8] === 1*B) {
+                    //         console.log('('+facA[8]+'x+'+facC[8]+')('+facA[9]+'x-'+facC[9]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML ='('+facA[8]+'x+'+facC[8]+')('+facA[9]+'x-'+facC[9]+')';
+                    //         break
+                    //     }else if (facA[8] * -1*facC[9] + facA[9]*-1*facC[8] === 1*B) {
+                    //         console.log('('+facA[8]+'x-'+facC[8]+')('+facA[9]+'x-'+facC[9]+')');
+                    //         document.getElementById('FQ-ANS').innerHTML = '('+facA[8]+'x-'+facC[8]+')('+facA[9]+'x-'+facC[9]+')';
+                    //         break
+                    //     }else {
+                    //         console.log(facA[8] * facC[9] + facA[9]*facC[8])
+                    //         console.log(facA[8] * -1*facC[9] + facA[9]*facC[8])
+                    //         console.log(facA[8] * facC[9] + facA[9]*-1*facC[8])
+                    //         console.log(facA[8] * -1*facC[9] + facA[9]*-1*facC[8])
+                    //         alert('this formula can\'t be factored.')
+                    //         console.log('no')
+                    //     }
+
+                    // }
+                    if (i % 2 != 0) {
+                        console.log('even')
+                        let facA = findFactors(Math.abs(A));
+                        let facC = findFactors(Math.abs(C));
+                        let B = 1*(document.getElementById('QF-B').value);
+
+                        if (facA[i-1] * facC[i] + facA[i]*facC[i-1] === 1*B) {
+                            console.log(facA[i-1] * facC[i] + facA[i]*facC[i-1] )
+                            console.log('('+facA[i-1]+'x+'+facC[i-1]+')('+facA[i]+'x+'+facC[i]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x+'+facC[i-1]+')('+facA[i]+'x+'+facC[i]+')';
+                            break
+                        }else if (facA[i-1] * -1*(facC[i]) + facA[1]*facC[i-1] === 1*B) {
+                            console.log(facA[i-1] * -1*(facC[1]) + facA[1]*facC[i-1] )
+                            console.log('('+facA[i-1]+'x-'+facC[i-1]+')('+facA[1]+'x+'+facC[1]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x-'+facC[i-1]+')('+facA[i]+'x+'+facC[i]+')';
+                            break
+                        }else if (facA[i-1] * facC[i] + facA[i]*-1*(facC[i-1]) === 1*B) {
+                            console.log(facA[i-1] * facC[i] + facA[i]*-1*(facC[i-1]))
+                            console.log('('+facA[i-1]+'x+'+facC[i-1]+')('+facA[i]+'x-'+facC[i]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x+'+facC[i-1]+')('+facA[i]+'x-'+facC[i]+')';
+                            break
+                        }else if (facA[i-1] * -1*(facC[i]) + facA[i]*-1*(facC[i-1]) === 1*B) {
+                            console.log(facA[i-1] * -1*(facC[i]) + facA[i]*-1*(facC[i-1]))
+                            console.log('('+facA[i-1]+'x-'+facC[i-1]+')('+facA[i]+'x-'+facC[i]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x-'+facC[i-1]+')('+facA[i]+'x-'+facC[i]+')';
+                            break
+                        }else if (facA[i-1] * -1*(facC[i-2]) + facA[i]*-1*(facC[i-3]) === 1*B) {
+                            console.log(facA[i-1] * -1*(facC[i-2]) + facA[i]*-1*(facC[i-3]))
+                            console.log('('+facA[i-1]+'x-'+facC[i-3]+')('+facA[i]+'x-'+facC[i-2]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x-'+facC[i-1]+')('+facA[i]+'x-'+facC[i]+')';
+                            break
+                        }else if (facA[i-1] * -1*(facC[i-2]) + facA[i]*-1*(facC[i-3]) === 1*B) {
+                            console.log(facA[i-1] * -1*(facC[i-2]) + facA[i]*-1*(facC[i-3]))
+                            console.log('('+facA[i-1]+'x-'+facC[i-3]+')('+facA[i]+'x-'+facC[i-2]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x-'+facC[i-1]+')('+facA[i]+'x-'+facC[i]+')';
+                            break
+                        }else if (facA[i-1] * (facC[i-2]) + facA[i]*-1*(facC[i-3]) === 1*B) {
+                            console.log(facA[i-1] * (facC[i-2]) + facA[i]*-1*(facC[i-3]))
+                            console.log('('+facA[i-1]+'x-'+facC[i-3]+')('+facA[i]+'x-'+facC[i-2]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x+'+facC[i-2]+')('+facA[i]+'x-'+facC[i-3]+')';
+                            break
+                        }else if (facA[i-1] * -1*(facC[i-2]) + facA[i]*(facC[i-3]) === 1*B) {
+                            console.log(facA[i-1] * -1*(facC[i-2]) + facA[i]*(facC[i-3]))
+                            console.log('('+facA[i-1]+'x-'+facC[i-3]+')('+facA[i]+'x-'+facC[i-2]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x-'+facC[i-2]+')('+facA[i]+'x+'+facC[i-3]+')';
+                            break
+                        }else if (facA[i-1] * (facC[i-2]) + facA[i]*(facC[i-3]) === 1*B) {
+                            console.log(facA[i-1] * (facC[i-2]) + facA[i]*(facC[i-3]))
+                            console.log('('+facA[i-1]+'x-'+facC[i-3]+')('+facA[i]+'x-'+facC[i-2]+')');
+                            document.getElementById('FQ-ANS').innerHTML = '('+facA[i-1]+'x+'+facC[i-2]+')('+facA[i]+'x+'+facC[i-3]+')';
+                            break
+                        }else {
+                            console.log((facA[i-1] * facC[i]) + (facA[i]*facC[i-1]) )
+
+                            console.log(facA[i-1] * -i-1*(facC[i]) + facA[i]*facC[i-1] )
+
+                            console.log(facA[i-1] * facC[i] + facA[i]*-i-1*(facC[i-1]))
+
+                            console.log(facA[i-1] * -i-1*(facC[i]) + facA[i]*-i-1*(facC[i-1]))
+
+                            console.log(facA[i-1] * -1*(facC[i-2]) + facA[i]*-1*(facC[i-3]))
+
+                            console.log(facA[i-1] * (facC[i-2]) + facA[i]*-1*(facC[i-3]))
+
+                            console.log(facA[i-1] * (facC[i-2]) + facA[i]*(facC[i-3]))
+
+                            console.log(facA[i-1] * -1*(facC[i-2]) + facA[i]*(facC[i-3]))
+
+                            console.log('no')
+                            console.log('n= '+i)
+                            console.log(facA[i]+'d'+facC[i])
+                        }
+
+                    }
+                        
+                }
+
+
+            }
+            combine()
+        }
+
     }
 }
