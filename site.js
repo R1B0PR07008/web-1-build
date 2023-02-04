@@ -2734,6 +2734,18 @@ if (document.URL.includes('pytheorem')) {
 
             document.getElementById('Lettar').innerHTML = 'C';
             document.getElementById('PT-ans').innerHTML = ans;
+        }else {
+            if (A**2 + B**2 === C**2) {
+                document.getElementById('ansgle?').innerHTML = ''
+                document.getElementById('hidee').style.visibility = 'hidden';
+                document.getElementById('hidee2').style.visibility = 'visible';
+                document.getElementById('ansgle?').innerHTML = 'Right angle'
+            } else {
+                document.getElementById('ansgle?').innerHTML = ''
+                document.getElementById('hidee').style.visibility = 'hidden';
+                document.getElementById('hidee2').style.visibility = 'visible';
+                document.getElementById('ansgle?').innerHTML = 'Not Right angle'
+            }
         }
     }
 }
