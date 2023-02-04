@@ -591,6 +591,11 @@ p.ans-footer {
     vertical-align: top;
 }
 
+/** PT program */
+
+.maketini-pt {
+    width: 20%;
+}
 
 
 /* Dropdown css */

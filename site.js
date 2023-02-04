@@ -21,7 +21,7 @@ function element(n) {
 
 function nav() {
     if (window.innerWidth > 836) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" id="link-14" href="./pytheorem.html">Pythagorean Theorem</a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics </a><a class="Program-link" href="/pa.html">Pressure Program </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "1.2em"
     }
     else if (window.innerWidth <= 836) {
@@ -36,7 +36,7 @@ function nav() {
             img = 'white-hamburger-menu-icon-24.jpg'
         }
 
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1 class="balck">General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><h1 class="balck">General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics</a><a class="Program-link" href="/pa.html">Pressure Program </a><h1 class="balck">Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1 class="balck">General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><h1 class="balck">General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" id="link-14" href="./pytheorem.html">Pythagorean Theorem</a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics</a><a class="Program-link" href="/pa.html">Pressure Program </a><h1 class="balck">Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "2em"
         document.getElementById('lightdark-floatRight').style.marginTop = '5.5mm';
     }
@@ -244,7 +244,7 @@ function lightDarkMode() {
     if (elementValue === "1") { // light mode
 
         if (document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 13, "#000000");
+            elementProgramLink(1, 14, "#000000");
             console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
             document.getElementById("_0").style.color = "#000000";
@@ -280,7 +280,9 @@ function lightDarkMode() {
             elementProgramLink(6, 8, "#000000");
 
 
-            if (document.URL.includes("re")) {
+            if (document.URL.includes('pytheorem')){
+
+            }else if (document.URL.includes("re")) {
                 document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (1).png" alt="a parallel circuit" class="re-imgSmall">';
                 document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (4).png" alt="Formula for parallel" class="re-imgSmall-2">';
                 document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesWhite.png" alt="a series circuit" class="re-imgSmall">';
@@ -312,7 +314,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 13, "#cacaca");
+            elementProgramLink(1, 14, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -384,7 +386,7 @@ function lightDarkCookie() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 13, "#cacaca");
+            elementProgramLink(1, 14, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -2677,5 +2679,61 @@ if (document.URL.includes('fq')) {
             combine()
         }
 
+    }
+}
+if (document.URL.includes('pytheorem')) {
+    console.log('you are in the Pythagorean Theorem page.');
+
+    document.getElementById('hidee').style.visibility = 'hidden';
+    document.getElementById('hidee?').style.visibility = 'visible';
+
+    function Pythagorean() {
+        document.getElementById('hidee').style.visibility = 'visible';
+        document.getElementById('hidee?').style.visibility = 'hidden';
+
+        let A = document.getElementById('PT-A').value || '0';
+        let B = document.getElementById('PT-B').value || '0';
+        let C = document.getElementById('PT-C').value || '0';
+
+        if (A === '0') {
+            let c = C**2
+            let b = B**2
+
+
+            let st1 = c - b;
+            let ans = Math.sqrt(st1);
+
+            console.log('ans '+ans)
+
+            document.getElementById('Lettar').innerHTML = 'A';
+            document.getElementById('PT-ans').innerHTML = ans;
+        }else if (B === '0') {
+            let c = C**2
+            let b = A**2
+            console.log(c)
+            console.log(b)
+
+
+            let st1 = c - b;
+            console.log(st1)
+            let ans = Math.sqrt(st1);
+
+            console.log('ans '+ans)
+
+            document.getElementById('Lettar').innerHTML = 'B';
+            document.getElementById('PT-ans').innerHTML = ans;
+        }else if (C === '0') {
+            let c = B**2
+            let b = A**2
+
+
+            let st1 = c + b;
+            let ans = Math.sqrt(st1);
+
+            console.log('ans '+ans)
+
+            document.getElementById('Lettar').innerHTML = 'C';
+            document.getElementById('PT-ans').innerHTML = ans;
+        }
     }
 }
