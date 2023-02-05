@@ -22,12 +22,12 @@
   />
   <title>!</title>
 </head>
-<body id="_0" onresize="phoneMode('fq')" onload="phoneMode('fq'); lightDarkMode(); lightDarkCookie()">
+<body id="_0" onresize="phoneMode('pt')" onload="phoneMode('pt'); lightDarkMode(); lightDarkCookie()">
     <div class="navbar">
       <span id="nav"></span>
       <a href="/Home.html" class="navbar-brand, center" id="nav-text">Home</a>
       <div id="lightdark-floatRight">
-        <input aria-label="light mode and dark mode switch" type="range" value="1" min="1" max="2" onload="phoneMode('fq'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('fq')" id="lightDarkSelector">
+        <input aria-label="light mode and dark mode switch" type="range" value="1" min="1" max="2" onload="phoneMode('pt'); lightDarkMode()" onchange="lightDarkMode(); phoneMode('pt')" id="lightDarkSelector">
         <span id="lightDarkSelector-text"></span>
         </div>
     </div>
@@ -36,7 +36,7 @@
   <p>Pythagorean Theorem program</p>
   <form action="" method="post"><input  type="number"  placeholder="A"  name="A"  id="PT-A"  class="maketini-pt"/><input class="maketini-pt" type="number"  placeholder="B"  name="B"  id="PT-B"/><input class="maketini-pt" type="number" placeholder="C"  name="C"  id="PT-C"/><br><button onclick="Pythagorean()" class="btn-default" type="button" id="BTN-1-PA">Enter</button></form>
 
-  <div class="Ans-block , vertical-align" id="react-24">
+  <div class="Ans-block , vertical-align" id="react-26">
     <h2 class="ans-text">
       The answer:
     </h2>
@@ -50,14 +50,40 @@
   </div>
   </div>
 
-  <div class="Legend-block , vertical-align" id="react-25">
+  <div class="Legend-block , vertical-align" id="react-27">
     <h2 class="Legend-text"> The Legend: </h2>
     <p class="Legend-text"> A = A </p><p class="Legend-text"> B = B </p><p class="Legend-text"> C = C </p><h3 class="Legend-text"> Requirements and Use Instructions: </h3><p class="Legend-text"> You will probably need 8th grade or higher knowledge. <br>To get the angle just enter the values, if it not a right angle it will say 'Not Right angle', if it is it will say 'Right angle'. </p>
     
   </div>
 <section id="pa-sec">
-    <p>explanation about how it works is to come. </p>
-<!-- !MAKE IMG FOR EXPLANATION  -->
+    <h1>How does it work?</h1>
+    <div class="pt-inline" id="react-28">
+    <span id="pt-imgReplace-1"><img src="./img/pt-trui.png" alt="triangle for explanation" class="pt-maketini-img"></span>
+    </div>
+    <div class="pt-inline" id="react-29">
+        <p>The pythagorean theorem is a proven theorem used to mesure the sides and type of a triangle. You have the legs, A and B, and the hypothenuse, C.   </p>
+    </div>
+    <h2>Formula:</h2>
+    <div class="pt-inline" id="react-30">
+        <span id="pt-imgReplace-2"><img src="./img/pt-for.png" alt="formula" class="pt-maketini-img"></span>
+    </div>
+    <div class="pt-inline" id="react-31">
+        <p>This is the formula used to calculate the length of any side of the triangle or the type of the triangle. </p>
+        <h2>Here's an example: </h2>
+    </div>
+    <div class="pt-inline" id="react-32">
+        <span id="pt-imgReplace-3"><img class="pt-maketini2-img" src="./img/pt-ex1.png" alt="example"></span>
+    </div>
+    <div class="pt-inline" id="react-33">
+        <p>To find a, you have to simplify C and B, so if B was 7^2 you would simplify it to 49. Then, combine B and C, in this case subtract them, then find the square root of the result. The square root of that result is A. Once done, write down the result and its unit. </p>
+    </div>
+    <h2>To find the type of triangle: </h2>
+    <div class="pt-inline" id="react-34">
+        <span id="pt-imgReplace-4"><img class="pt-maketini2-img" src="./img/pt-ex2.png" alt="example"></span>
+    </div>
+    <div class="pt-inline" id="react-35">
+        <p>Here instead of solving to find a value, you compare them. You fist simplify all the values as explained previously then add them all up and compare them. If they are equal, the triangle is a right triangle otherwise, it is a obtuse or acute triangle.</p>
+    </div>
 </section>
 <hr>
 <footer>

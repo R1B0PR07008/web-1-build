@@ -173,6 +173,18 @@ function phoneMode(p) {
                 element(24).style.minHeight = "600px"
                 element(25).style.width = "35%"
             }
+        } else if (p === 'pt') {
+            nav()
+            if (window.innerWidth <= 910) {
+                console.log(window.innerWidth)
+                console.log("Phone Screen")
+                elementWidth(26, 35, 99)
+            }
+            else {
+                element(26).style.width = "60%"
+                element(26).style.minHeight = "600px"
+                element(27).style.width = "35%"
+            }
         }
 };
 
@@ -281,7 +293,10 @@ function lightDarkMode() {
 
 
             if (document.URL.includes('pytheorem')){
-
+                document.getElementById('pt-imgReplace-1').innerHTML = '<img src="./img/pt-trui.png" alt="triangle for explanation" class="pt-maketini-img">';
+                document.getElementById('pt-imgReplace-2').innerHTML = '<img src="./img/pt-for.png" alt="formula" class="pt-maketini-img">';
+                document.getElementById('pt-imgReplace-3').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex1.png" alt="example">';
+                document.getElementById('pt-imgReplace-4').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex2.png" alt="example">';
             }else if (document.URL.includes("re")) {
                 document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (1).png" alt="a parallel circuit" class="re-imgSmall">';
                 document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (4).png" alt="Formula for parallel" class="re-imgSmall-2">';
@@ -346,7 +361,12 @@ function lightDarkMode() {
             document.cookie = 'mode=dark';
             elementProgramLink(6, 8, "#cacaca");
 
-            if (document.URL.includes("re")) {
+            if (document.URL.includes('pytheorem')){
+                document.getElementById('pt-imgReplace-1').innerHTML = '<img src="./img/pt-trui2.png" alt="triangle for explanation" class="pt-maketini-img">';
+                document.getElementById('pt-imgReplace-2').innerHTML = '<img src="./img/pt-for1.png" alt="formula" class="pt-maketini-img">';
+                document.getElementById('pt-imgReplace-3').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex12.png" alt="example">';
+                document.getElementById('pt-imgReplace-4').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex22.png" alt="example">';
+            }else if (document.URL.includes("re")) {
                 document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (2).png" alt="a parallel circuit" class="re-imgSmall">';
                 document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (3).png" alt="Formula for parallel" class="re-imgSmall-2">';
                 document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesBlack.png" alt="a series circuit" class="re-imgSmall">';
@@ -418,7 +438,12 @@ function lightDarkCookie() {
             document.getElementById("lightDarkSelector-text").style.color = '#cacaca';
         }
 
-        if (document.URL.includes("re")) {
+        if (document.URL.includes('pytheorem')){
+            document.getElementById('pt-imgReplace-1').innerHTML = '<img src="./img/pt-trui2.png" alt="triangle for explanation" class="pt-maketini-img">';
+            document.getElementById('pt-imgReplace-2').innerHTML = '<img src="./img/pt-for1.png" alt="formula" class="pt-maketini-img">';
+            document.getElementById('pt-imgReplace-3').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex12.png" alt="example">';
+            document.getElementById('pt-imgReplace-4').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex22.png" alt="example">';
+        }else if (document.URL.includes("re")) {
             document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (2).png" alt="a parallel circuit" class="re-imgSmall">';
             document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (3).png" alt="Formula for parallel" class="re-imgSmall-2">';
             document.getElementById('re-img-3').innerHTML = '<img src="./img/seriesBlack.png" alt="a series circuit" class="re-imgSmall">';

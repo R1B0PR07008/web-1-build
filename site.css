@@ -597,6 +597,22 @@ p.ans-footer {
     width: 20%;
 }
 
+.pt-maketini-img {
+    height: auto;
+    width: 70%;
+}
+
+.pt-maketini2-img {
+    height: auto;
+    width: 100%;
+}
+
+.pt-inline {
+    vertical-align: top;
+    display: inline-block;
+    width: 49%;
+}
+
 
 /* Dropdown css */
 
