@@ -9,42 +9,62 @@
 
 <url>
   <loc>https://science-calc.com/</loc>
-  <lastmod>2023-01-03T16:48:16+00:00</lastmod>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://science-calc.com/home</loc>
-  <lastmod>2023-01-03T16:48:16+00:00</lastmod>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://science-calc.com/fractions.html</loc>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://science-calc.com/re.html</loc>
-  <lastmod>2023-01-03T16:48:16+00:00</lastmod>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://science-calc.com/pytheorem.html</loc>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://science-calc.com/linear</loc>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://science-calc.com/qf.html</loc>
-  <lastmod>2023-01-03T16:48:16+00:00</lastmod>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://science-calc.com/qf2.html</loc>
-  <lastmod>2023-01-03T16:48:16+00:00</lastmod>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://science-calc.com/fq.html</loc>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://science-calc.com/pa.html</loc>
-  <lastmod>2023-01-03T16:48:16+00:00</lastmod>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://science-calc.com/trithingys.html</loc>
-  <lastmod>2023-01-03T16:48:16+00:00</lastmod>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://science-calc.com/disclamer.html</loc>
-  <lastmod>2023-01-03T16:48:16+00:00</lastmod>
+  <lastmod>2023-02-05T18:17:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
