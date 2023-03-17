@@ -1680,23 +1680,6 @@ if (document.URL.includes("pa")) {
     console.log("you are in the PA page.");
     lightDarkCookie()
 
-    let f1 = document.getElementById("PA-F1").value || 0;
-    let f2 = document.getElementById("PA-F2").value || 0;
-    let a1 = document.getElementById("PA-A1").value || 0;
-    let a2 = document.getElementById("PA-A2").value || 0;
-
-    function Hide_pa(f1, f2, a1, a2) {
-        if (f1 === 0 && f2 === 0 && a1 === 0 && a2 === 0) {
-            document.getElementById("ans-footer").style.visibility = "visible";
-            document.getElementById("ans").style.visibility = "hidden";
-        } else {
-            document.getElementById("ans-footer").style.visibility = "hidden";
-            document.getElementById("ans").style.visibility = "visible";
-        };
-    };
-
-    Hide_pa(f1, f2, a1, a2);
-
     function PA() {
         console.log("btn 'BTN-1-PA' pressed.");
 
