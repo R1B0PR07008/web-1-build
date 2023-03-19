@@ -2577,7 +2577,7 @@ if (document.URL.includes('pytheorem')) {
 }
 
 if (document.URL.includes('trigono')) {
-
+    lightDarkCookie()
     function simplify(str) {
         var result = '', data = str.split('/'),
             numOne = Number(data[0]),
