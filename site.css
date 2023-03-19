@@ -306,8 +306,6 @@ p.ans-footer {
     text-align: center;
 }
 
-/* !MEMBERSHIP PAGE */
-
 /** Conventions, Program, tri programs */
 .Program-link {
     text-decoration: underline;
@@ -612,6 +610,79 @@ p.ans-footer {
     display: inline-block;
     width: 49%;
 }
+
+/** Trigonometry program  */
+#trigo-Type {
+    margin-left: 2%;
+    vertical-align: middle;
+    width: 1cm;
+    height: 20px;
+    cursor: grab;
+    border-width: 0px;
+    background-color: #FFF000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#trigo-Type::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 20px;
+    width: 0.5cm;
+    border-radius: 8px;
+    background: #cacaca;
+    cursor: pointer;
+}
+
+#trigo-Type::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 20px;
+    color: #cacaca;
+}
+
+#trigo-Type:focus {
+    outline: none;
+}
+
+#trigo-Type-2 {
+    margin-left: 2%;
+    vertical-align: middle;
+    width: 1cm;
+    height: 20px;
+    cursor: grab;
+    border-width: 0px;
+    background-color: #FFF000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#trigo-Type-2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 20px;
+    width: 0.5cm;
+    border-radius: 8px;
+    background: #cacaca;
+    cursor: pointer;
+}
+
+#trigo-Type-2::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 20px;
+    color: #cacaca;
+}
+
+#trigo-Type-2:focus {
+    outline: none;
+}
+
+.trigo-img-small {
+    height: auto;
+    width: 80%;
+}
+
 
 
 /* Dropdown css */

@@ -230,7 +230,7 @@ function Hide(UNIT) {
             UNIT === "L" ||
             UNIT === "CL" ||
             UNIT === "ML" ||
-            UNIT === "OZ" 
+            UNIT === "OZ"
         ) {
             document.getElementById('1-IF').style.visibility = "hidden";
             document.getElementById('2-IF').style.visibility = "hidden";
@@ -319,6 +319,10 @@ function lightDarkMode() {
                 document.getElementById('FQ-imgSwap-3').innerHTML = '<img src="./img/FQ-3 (2).png" alt="simple q formula" class="FQ-img-tini">';
                 document.getElementById('FQ-imgSwap-4').innerHTML = '<img src="./img/FQ-4 (2).png" alt="simple q  formula" class="FQ-img-tini">';
                 document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (2).png" alt="simple q formula" class="FQ-img-tini">';
+            }else if (document.URL.includes('trigono')) {
+                document.getElementById("trigo-Type").style.backgroundColor = '#fff000';
+                document.getElementById("trigo-Type-2").style.backgroundColor = '#fff000';
+                
             }
 
         }
@@ -388,6 +392,9 @@ function lightDarkMode() {
                 document.getElementById('FQ-imgSwap-3').innerHTML = '<img src="./img/FQ-3 (1).png" alt="simple q formula" class="FQ-img-tini">';
                 document.getElementById('FQ-imgSwap-4').innerHTML = '<img src="./img/FQ-4 (1).png" alt="simple q  formula" class="FQ-img-tini">';
                 document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (1).png" alt="simple q formula" class="FQ-img-tini">';
+            }else if (document.URL.includes('trigono')) {
+                document.getElementById("trigo-Type").style.backgroundColor = 'rgb(230, 55, 67)';
+                document.getElementById("trigo-Type-2").style.backgroundColor = 'rgb(230, 55, 67)';
             }
         }
     }
@@ -464,10 +471,12 @@ function lightDarkCookie() {
             document.getElementById('FQ-imgSwap-3').innerHTML = '<img src="./img/FQ-3 (1).png" alt="simple q formula" class="FQ-img-tini">';
             document.getElementById('FQ-imgSwap-4').innerHTML = '<img src="./img/FQ-4 (1).png" alt="simple q  formula" class="FQ-img-tini">';
             document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (1).png" alt="simple q formula" class="FQ-img-tini">';
+        }else if (document.URL.includes('trigono')) {
+            document.getElementById("trigo-Type").style.backgroundColor = 'rgb(230, 55, 67)';
+            document.getElementById("trigo-Type-2").style.backgroundColor = 'rgb(230, 55, 67)';
         }
     }
 }
-
 // ! CODE FOR CONVERSIONS
 
 function Len() {
@@ -2564,5 +2573,305 @@ if (document.URL.includes('pytheorem')) {
                 document.getElementById('ansgle?').innerHTML = 'Not Right angle'
             }
         }
+    }
+}
+
+if (document.URL.includes('trigono')) {
+
+    function simplify(str) {
+        var result = '', data = str.split('/'),
+            numOne = Number(data[0]),
+            numTwo = Number(data[1]);
+        for (var i = Math.max(numOne, numTwo); i > 1; i--) {
+        if ((numOne % i == 0) && (numTwo % i == 0)) {
+            numOne /= i;
+            numTwo /= i;
+        }
+        }
+        if (numTwo === 1) {
+        result = numOne.toString()
+        } else {
+        result = numOne.toString() + '/' + numTwo.toString()
+        }
+        return result
+      }
+
+    function inputTipe() {
+        if ( document.getElementById('trigo-Type').value == '1') {
+            document.getElementById('mroe-inpputs').innerHTML = '';
+            document.getElementById('trigo-rangeStatus').innerHTML = 'click here to input angles.';
+            document.getElementById('trigo-warnin2').innerHTML = '';
+            document.getElementById('trigo-warnin1').innerHTML = '';
+
+        } else { 
+            document.getElementById('trigo-rangeStatus').innerHTML = 'click here to colapse the angles inputs.';
+            console.log('warnin is out');
+            document.getElementById('trigo-warnin2').innerHTML = '<p>Take in mind that the answers are rounded to the nearest integer. Look to the second switch in the inputs area to get the full number. I\'d use rounded mode.</p>';
+            document.getElementById('trigo-warnin1').innerHTML = '<input type="range" value="1" max="2" min="1" name="trigo-Type-2" id="trigo-Type-2" onload="inputTypeRound()" onchange="inputTypeRound()"><span id="trigo-roundedStatus">Answers are rounded to the nearest integer.</span>';
+            if(document.getElementById('lightDarkSelector').value == 1){
+                document.getElementById("trigo-Type-2").style.backgroundColor = '#fff000';
+            } else {
+                document.getElementById("trigo-Type-2").style.backgroundColor = 'rgb(230, 55, 67)';
+            }
+            document.getElementById('mroe-inpputs').innerHTML = '<input class="maketini-pt" type="number"  placeholder="X"  name="Beta"  id="trigo-Beta"/><input class="maketini-pt" type="number" placeholder="Y"  name="alpha"  id="trigo-alpha"/><input class="maketini-pt" type="number" placeholder="Z"  name="alpha"  id="trigo-Z"/><br>';
+        }
+    }
+
+    function inputTypeRound() {
+        if ( document.getElementById('trigo-Type-2').value == '1') {
+            document.cookie = 'rounded=yes';
+            document.getElementById('trigo-roundedStatus').innerHTML = 'Answers are rounded to the nearest integer.';
+        } else { 
+            document.getElementById('trigo-roundedStatus').innerHTML = 'Answes aren\'t rounded';
+            document.cookie = 'rounded=no';
+        }
+    }
+
+    function rad_to_deg(n) {
+        let pi = Math.PI;
+        return n * (180/pi);
+    }
+
+    function trigono() {
+
+        let a = 1*(document.getElementById('PT-A').value) || 0;
+        let b = 1*(document.getElementById('PT-B').value) || 0;
+        let c = 1*(document.getElementById('PT-C').value) || 0;
+
+        let angle1 = 0;
+        let angle2 = 0;
+        let angle3 = 0;
+        // program to find angle with sides
+
+        if (c == 0 && b != 0 && a!=0) {
+            c = Math.sqrt(a**2 + b**2);
+            angle1 = rad_to_deg(Math.acos(a/c));
+            document.getElementById('trigo-ans-2').innerHTML = angle1;
+            angle2 = rad_to_deg(Math.acos(b/c));
+            document.getElementById('trigo-ans-3').innerHTML = angle2;
+            if (angle1 != 90 && angle2 != 90 && (angle1+angle2+90) == 180) {
+                angle3 = 90
+                document.getElementById('trigo-ans-1').innerHTML = angle3;
+            }else{
+                alert("This triangle is not a right triangle.");
+                document.getElementById('trigo-ans-1').innerHTML = "NRT";
+            }
+            document.getElementById('trigo-ansSide-1').innerHTML = a;
+            document.getElementById('trigo-ansSide-3').innerHTML = c;
+            document.getElementById('trigo-ansSide-2').innerHTML = b;
+            console.log("c="+c+", angle1= "+angle1+", angle2= "+angle2+", angle3="+angle3)
+        }else if (b == 0&&a!=0&&c!=0) {
+            b = Math.sqrt(c**2-a**2);
+            angle1 = rad_to_deg(Math.acos(a/c));
+            document.getElementById('trigo-ans-2').innerHTML = angle1;
+            angle2 = rad_to_deg(Math.acos(b/c));
+            document.getElementById('trigo-ans-3').innerHTML = angle2;
+            if (angle1 != 90 && angle2 != 90 && (angle1+angle2+90) == 180) {
+                angle3 = 90
+                document.getElementById('trigo-ans-1').innerHTML = angle3;
+            }else{
+                alert("This triangle is not a right triangle.");
+                document.getElementById('trigo-ans-1').innerHTML = "NRT";
+            }
+            document.getElementById('trigo-ansSide-1').innerHTML = a;
+            document.getElementById('trigo-ansSide-3').innerHTML = c;
+            document.getElementById('trigo-ansSide-2').innerHTML = b;
+            console.log("b="+b+", angle1= "+angle1+", angle2= "+angle2+", angle3="+angle3)
+        }else if (a == 0&&b!=0&&c!=0) {
+            a = Math.sqrt(c**2-b**2);
+            angle1 = rad_to_deg(Math.acos(a/c));
+            document.getElementById('trigo-ans-2').innerHTML = angle1;
+            angle2 = rad_to_deg(Math.acos(b/c));
+            document.getElementById('trigo-ans-3').innerHTML = angle2;
+            if (angle1 != 90 && angle2 != 90 && (angle1+angle2+90) == 180) {
+                angle3 = 90
+                document.getElementById('trigo-ans-1').innerHTML = angle3;
+            }else{
+                alert("This triangle is not a right triangle.");
+                document.getElementById('trigo-ans-1').innerHTML = "NRT";
+            }
+            document.getElementById('trigo-ansSide-1').innerHTML = a;
+            document.getElementById('trigo-ansSide-3').innerHTML = c;
+            document.getElementById('trigo-ansSide-2').innerHTML = b;
+            console.log("a="+a+", angle1= "+angle1+", angle2= "+angle2+", angle3="+angle3)
+        }
+
+        if (document.getElementById('trigo-Type').value == 2){
+
+            let alpha = 1*(document.getElementById('trigo-alpha').value) || 0;
+            let rightAngle = 1*(document.getElementById('trigo-Beta').value) || 0;
+            let Z = 1*(document.getElementById('trigo-Z').value) || 0;
+
+            let a = 1*(document.getElementById('PT-A').value) || 0;
+            let b = 1*(document.getElementById('PT-B').value) || 0;
+            let c = 1*(document.getElementById('PT-C').value) || 0;
+            if (c == 0 && b == 0) {
+                console.log(a)
+                console.log(b)
+                console.log(c)
+
+                console.log(alpha);
+                console.log(rightAngle);
+                console.log(Z)
+
+                if (alpha != 0 && Z ==0) {
+                    angle2 = 180-(alpha+90);
+
+                    b = a/Math.tan(angle2 * Math.PI/180);
+                    c = Math.sqrt(a**2+b**2);
+
+                    console.log("c="+c+", b="+b+", angle1= "+alpha+", angle2= "+angle2+", angle3="+90+", angle2 st1="+(alpha+90))
+
+                    document.getElementById('trigo-ans-1').innerHTML = 90;
+                    document.getElementById('trigo-ans-3').innerHTML = angle2;
+                    document.getElementById('trigo-ans-2').innerHTML = alpha;
+
+                    if (document.cookie.includes('rounded=no')){
+                        document.getElementById('trigo-ansSide-1').innerHTML = a;
+                        document.getElementById('trigo-ansSide-3').innerHTML = c;
+                        document.getElementById('trigo-ansSide-2').innerHTML = b;
+                        console.log('ans not rounded');
+                    } else {
+                        document.getElementById('trigo-ansSide-1').innerHTML = Math.round(a);
+                        document.getElementById('trigo-ansSide-3').innerHTML = Math.round(c);
+                        document.getElementById('trigo-ansSide-2').innerHTML = Math.round(b);
+                    }
+
+                }else if (Z != 0) {
+                    angle1 = 180-(Z+90);
+
+                    b = a/Math.tan(Z* Math.PI/180);
+                    c = Math.sqrt(a**2+b**2);
+
+                    console.log("c="+c+", b="+b+", angle1= "+angle1+", angle2= "+Z+", angle3="+90+", angle2 st1="+(Z+90))
+
+                    document.getElementById('trigo-ans-1').innerHTML = 90;
+                    document.getElementById('trigo-ans-3').innerHTML = Z;
+                    document.getElementById('trigo-ans-2').innerHTML = angle1;
+                    if (document.cookie.includes('rounded=no')){
+                        document.getElementById('trigo-ansSide-1').innerHTML = a;
+                        document.getElementById('trigo-ansSide-3').innerHTML = c;
+                        document.getElementById('trigo-ansSide-2').innerHTML = b;
+                        console.log('ans not rounded');
+                    } else {
+                        document.getElementById('trigo-ansSide-1').innerHTML = Math.round(a);
+                        document.getElementById('trigo-ansSide-3').innerHTML = Math.round(c);
+                        document.getElementById('trigo-ansSide-2').innerHTML = Math.round(b);
+                    }
+                }
+            }else if (c == 0 && a == 0) {
+                console.log(a)
+                console.log(b)
+                console.log(c)
+    
+                console.log(alpha);
+                console.log(rightAngle);
+                console.log(Z)
+    
+                if (alpha != 0 && Z ==0) {
+                    console.log("b= "+b)
+                    angle2 = 180-(alpha+90);
+    
+                    a = b/Math.tan(alpha* Math.PI/180);
+                    c = Math.sqrt(a**2+b**2);
+    
+                    console.log("c="+c+", b="+b+", angle1= "+alpha+", angle2= "+angle2+", angle3="+90+", angle2 st1="+(alpha+90))
+    
+                    document.getElementById('trigo-ans-1').innerHTML = 90;
+                    document.getElementById('trigo-ans-3').innerHTML = angle2;
+                    document.getElementById('trigo-ans-2').innerHTML = alpha;
+                    if (document.cookie.includes('rounded=no')){
+                        document.getElementById('trigo-ansSide-1').innerHTML = a;
+                        document.getElementById('trigo-ansSide-3').innerHTML = c;
+                        document.getElementById('trigo-ansSide-2').innerHTML = b;
+                        console.log('ans not rounded');
+                    } else {
+                        document.getElementById('trigo-ansSide-1').innerHTML = Math.round(a);
+                        document.getElementById('trigo-ansSide-3').innerHTML = Math.round(c);
+                        document.getElementById('trigo-ansSide-2').innerHTML = Math.round(b);
+                    }
+                }else if (Z != 0) {
+                    console.log("b= "+b)
+                    angle1 = 180-(Z+90);
+    
+                    a = b*Math.tan(Z* Math.PI/180);
+ 
+                    c = Math.sqrt(a**2+b**2);
+    
+                    console.log("c="+c+", b="+b+", angle1= "+angle1+", angle2= "+Z+", angle3="+90+", angle2 st1="+(Z+90))
+    
+                    document.getElementById('trigo-ans-1').innerHTML = 90;
+                    document.getElementById('trigo-ans-3').innerHTML = Z;
+                    document.getElementById('trigo-ans-2').innerHTML = angle1;
+                    if (document.cookie.includes('rounded=no')){
+                        document.getElementById('trigo-ansSide-1').innerHTML = a;
+                        document.getElementById('trigo-ansSide-3').innerHTML = c;
+                        document.getElementById('trigo-ansSide-2').innerHTML = b;
+                        console.log('ans not rounded');
+                    } else {
+                        document.getElementById('trigo-ansSide-1').innerHTML = Math.round(a);
+                        document.getElementById('trigo-ansSide-3').innerHTML = Math.round(c);
+                        document.getElementById('trigo-ansSide-2').innerHTML = Math.round(b);
+                    }
+                }
+            }else if (b == 0 && a == 0) {
+                console.log(a)
+                console.log(b)
+                console.log(c)
+    
+                console.log(alpha);
+                console.log(rightAngle);
+                console.log(Z)
+    
+                if (alpha != 0 && Z ==0) {
+                    console.log("b= "+b)
+                    angle2 = 180-(alpha+90);
+    
+                    b = c*Math.sin(alpha* Math.PI/180);
+                    a = Math.sqrt(c**2-b**2);
+                    console.log(c**2-b**2)
+    
+                    console.log("c="+c+", b="+b+", angle1= "+alpha+", angle2= "+angle2+", angle3="+90+", angle2 st1="+(alpha+90))
+    
+                    document.getElementById('trigo-ans-1').innerHTML = 90;
+                    document.getElementById('trigo-ans-3').innerHTML = angle2;
+                    document.getElementById('trigo-ans-2').innerHTML = alpha;
+                    if (document.cookie.includes('rounded=no')){
+                        document.getElementById('trigo-ansSide-1').innerHTML = a;
+                        document.getElementById('trigo-ansSide-3').innerHTML = c;
+                        document.getElementById('trigo-ansSide-2').innerHTML = b;
+                        console.log('ans not rounded');
+                    } else {
+                        document.getElementById('trigo-ansSide-1').innerHTML = Math.round(a);
+                        document.getElementById('trigo-ansSide-3').innerHTML = Math.round(c);
+                        document.getElementById('trigo-ansSide-2').innerHTML = Math.round(b);
+                    }
+                }else if (Z != 0) {
+                    console.log("b= "+b)
+                    angle1 = 180-(Z+90);
+    
+                    b = c*Math.sin(Z* Math.PI/180);
+                    a = Math.sqrt(c**2-b**2);
+    
+                    console.log("c="+c+", b="+b+", angle1= "+angle1+", angle2= "+Z+", angle3="+90+", angle2 st1="+(Z+90))
+    
+                    document.getElementById('trigo-ans-1').innerHTML = 90;
+                    document.getElementById('trigo-ans-3').innerHTML = Z;
+                    document.getElementById('trigo-ans-2').innerHTML = angle1;
+                    if (document.cookie.includes('rounded=no')){
+                        document.getElementById('trigo-ansSide-1').innerHTML = b;
+                        document.getElementById('trigo-ansSide-3').innerHTML = c;
+                        document.getElementById('trigo-ansSide-2').innerHTML = a;
+                        console.log('ans not rounded');
+                    } else {
+                        document.getElementById('trigo-ansSide-1').innerHTML = Math.round(b);
+                        document.getElementById('trigo-ansSide-3').innerHTML = Math.round(c);
+                        document.getElementById('trigo-ansSide-2').innerHTML = Math.round(a);
+                    }
+                }
+            }
+        }
+        // awd
+
     }
 }
