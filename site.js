@@ -321,7 +321,9 @@ function lightDarkMode() {
                 document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (2).png" alt="simple q formula" class="FQ-img-tini">';
             }else if (document.URL.includes('trigono')) {
                 document.getElementById("trigo-Type").style.backgroundColor = '#fff000';
-                document.getElementById("trigo-Type-2").style.backgroundColor = '#fff000';
+                if (document.getElementById('trigo-Type').value == 2) {
+                    document.getElementById("trigo-Type-2").style.backgroundColor = '#fff000';
+                }
                 
             }
 
@@ -394,7 +396,9 @@ function lightDarkMode() {
                 document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (1).png" alt="simple q formula" class="FQ-img-tini">';
             }else if (document.URL.includes('trigono')) {
                 document.getElementById("trigo-Type").style.backgroundColor = 'rgb(230, 55, 67)';
-                document.getElementById("trigo-Type-2").style.backgroundColor = 'rgb(230, 55, 67)';
+                if (document.getElementById('trigo-Type').value == 2) {
+                    document.getElementById("trigo-Type-2").style.backgroundColor = 'rgb(230, 55, 67)';
+                }
             }
         }
     }
@@ -473,7 +477,9 @@ function lightDarkCookie() {
             document.getElementById('FQ-imgSwap-5').innerHTML = '<img src="./img/FQ-5 (1).png" alt="simple q formula" class="FQ-img-tini">';
         }else if (document.URL.includes('trigono')) {
             document.getElementById("trigo-Type").style.backgroundColor = 'rgb(230, 55, 67)';
-            document.getElementById("trigo-Type-2").style.backgroundColor = 'rgb(230, 55, 67)';
+            if (document.getElementById('trigo-Type').value == 2) {
+                document.getElementById("trigo-Type-2").style.backgroundColor = 'rgb(230, 55, 67)';
+            }
         }
     }
 }
@@ -2578,6 +2584,7 @@ if (document.URL.includes('pytheorem')) {
 
 if (document.URL.includes('trigono')) {
     lightDarkCookie()
+
     function simplify(str) {
         var result = '', data = str.split('/'),
             numOne = Number(data[0]),
@@ -2603,7 +2610,7 @@ if (document.URL.includes('trigono')) {
             document.getElementById('trigo-warnin2').innerHTML = '';
             document.getElementById('trigo-warnin1').innerHTML = '';
 
-        } else { 
+        } else {
             document.getElementById('trigo-rangeStatus').innerHTML = 'click here to colapse the angles inputs.';
             console.log('warnin is out');
             document.getElementById('trigo-warnin2').innerHTML = '<p>Take in mind that the answers are rounded to the nearest integer. Look to the second switch in the inputs area to get the full number. I\'d use rounded mode.</p>';
