@@ -1892,8 +1892,8 @@ else if (document.URL.includes("qf2")) {
 }
 
 else if (document.URL.includes('interest')) {
-    lightDarkCookie()
-    console.log("you are in the interest page")
+    console.log("you are in the interest page");
+    lightDarkCookie();
 
     function iInputs() {
         let mode = document.getElementById('i-selectMode').value;
@@ -2971,8 +2971,8 @@ else if (document.URL.includes('trigono')) {
 }
 
 else if (document.URL.includes('circle')) {
-    lightDarkCookie()
     console.log("you are in the circles and stuff page");
+    lightDarkCookie();
 
     function CRinputs() {
         mode = document.getElementById('cr-selectMode').value
