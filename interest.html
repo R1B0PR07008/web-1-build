@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4BFXZ4QH6"></script>
 <script>
@@ -13,8 +15,6 @@
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1989521317779813"
      crossorigin="anonymous"></script>
   <link rel="icon" href="./img/WEB-1-logo.png" type="image/x-icon">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link
     rel="stylesheet"
     type="text/css"
@@ -31,22 +31,32 @@
         <span id="lightDarkSelector-text"></span>
         </div>
     </div>
-  <h1>Trigonometry Program
+  <h1>Interest and Depreciation program (BETA)
 </h1>
-  <p>Trigonometry program</p>
-  <form action="" method="post"><input type="range" value="1" max="2" min="1" name="trigo-Type" id="trigo-Type" onload="inputTipe()" onchange="inputTipe()" ><span id="trigo-rangeStatus">click here to input angles. </span><br><br><input  type="number"  placeholder="A"  name="A"  id="PT-A"  class="maketini-pt"/><input class="maketini-pt" type="number"  placeholder="B"  name="B"  id="PT-B"/><input class="maketini-pt" type="number" placeholder="C"  name="C"  id="PT-C"/><br><span id="mroe-inpputs"></span><button onclick="trigono()" class="btn-default" type="button" id="BTN-1-PA">Enter</button><span id="trigo-warnin1"></span></form>
+  <p>Beta just means that some features are missing, the math is all correct.</p>
+  <form action="" method="post">
+    <select name="i-select" id="i-selectMode" onchange="iInputs();">
+        <option value="0">Simple Interest</option>
+        <option value="1">Depreciation</option>
+        <option value="2">Compound Interest</option>
+        <option value="3">Depreciation by Year</option>
+    </select>
+    <br><br>
+    <span id="i-inputs">
+        <input type="float" placeholder="r" id="i-in-1"><input type="float" placeholder="P" id="i-in-2"><input type="float" placeholder="FV" id="i-in-3"><input type="float" placeholder="t" id="i-in-4">
+    </span>
+    <button onclick="interest()" class="btn-default" type="button" id="BTN-1-PA">Enter</button>
+</form>
 
   <div class="Ans-block , vertical-align" id="react-26">
     <h2 class="ans-text">
       The answer:</h2>
-      <p>A = <span id="trigo-ansSide-1"></span></p>
-      <p>B = <span id="trigo-ansSide-2"></span></p>
-      <p>C = <span id="trigo-ansSide-3"></span></p>
-      <p>X = <span id="trigo-ans-1"></span></p>
-      <p>Y = <span id="trigo-ans-2"></span></p>
-      <p>Z = <span id="trigo-ans-3"></span></p>
-      <span id="trigo-warnin2"></span>
-      <span id="more-ans?">
+        <span id="i-ans">
+            <p>FV = <span id="ans-1"></span></p><p>r = <span id="ans-2"></span></p><p>P or PV = <span id="ans-3"></span></p><p>T = <span id="ans-4"></span></p>
+        </span>
+        <span id="i-ans-2">
+            <!-- <p> Year <span id="i-ans-2-1"></span>: <span id="i-ans-2-2"></span></p> -->
+        </span>
       </span>
     <br>
   </div>
@@ -54,8 +64,10 @@
 
   <div class="Legend-block , vertical-align" id="react-27">
     <h2 class="Legend-text"> The Legend: </h2>
-    <img src="./img/trigono-triangle.png" alt="a triangle to describe the sides" class="trigo-img-small" >
-    <p>Make sure to get the correct orientation to get the right answer. </p>
+    <p>r = rate</p>
+    <p>P = present value</p>
+    <p>FV = future value(not currently enabled)</p>
+    <p>t = time(years)</p>
 
   </div>
 <hr>
@@ -75,8 +87,6 @@
     - You need me to add a formula <br>
     - You need help with the site
   </p>
-  <p>
-</p>
 <a class="Program-link" id="link-8" href="/disclamer.html">DISCLAMER</a>
 </footer>
 </body>

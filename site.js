@@ -1,4 +1,4 @@
-console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it.");
+console.log("hi, welcome to WEB-1. I see you're looking at the code. I wouldn't really trust it since it is my first website but you can get some inspiration from it. Also, please don't copy it.");
 console.log(window.innerWidth)
 
 
@@ -256,7 +256,7 @@ function lightDarkMode() {
     if (elementValue === "1") { // light mode
 
         if (document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 14, "#000000");
+            elementProgramLink(1, 16, "#000000");
             console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
             document.getElementById("_0").style.color = "#000000";
@@ -297,6 +297,10 @@ function lightDarkMode() {
                 document.getElementById('pt-imgReplace-2').innerHTML = '<img src="./img/pt-for.png" alt="formula" class="pt-maketini-img">';
                 document.getElementById('pt-imgReplace-3').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex1.png" alt="example">';
                 document.getElementById('pt-imgReplace-4').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex2.png" alt="example">';
+            }else if (document.URL.includes("interest")){
+                
+            }else if (document.URL.includes('circle')){
+                document.getElementById('cir-img').innerHTML = '<img src="./img/interesting/WEB-1 (3).png" id="i-img" alt="">';
             }else if (document.URL.includes("re")) {
                 document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (1).png" alt="a parallel circuit" class="re-imgSmall">';
                 document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (4).png" alt="Formula for parallel" class="re-imgSmall-2">';
@@ -335,7 +339,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 14, "#cacaca");
+            elementProgramLink(1, 16, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -372,6 +376,10 @@ function lightDarkMode() {
                 document.getElementById('pt-imgReplace-2').innerHTML = '<img src="./img/pt-for1.png" alt="formula" class="pt-maketini-img">';
                 document.getElementById('pt-imgReplace-3').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex12.png" alt="example">';
                 document.getElementById('pt-imgReplace-4').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex22.png" alt="example">';
+            }else if (document.URL.includes("interest")){
+
+            }else if (document.URL.includes('circle')){
+                document.getElementById('cir-img').innerHTML = '<img src="./img/interesting/WEB-1 (4).png" id="i-img" alt="">';
             }else if (document.URL.includes("re")) {
                 document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (2).png" alt="a parallel circuit" class="re-imgSmall">';
                 document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (3).png" alt="Formula for parallel" class="re-imgSmall-2">';
@@ -417,7 +425,7 @@ function lightDarkCookie() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 14, "#cacaca");
+            elementProgramLink(1, 16, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -454,6 +462,10 @@ function lightDarkCookie() {
             document.getElementById('pt-imgReplace-2').innerHTML = '<img src="./img/pt-for1.png" alt="formula" class="pt-maketini-img">';
             document.getElementById('pt-imgReplace-3').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex12.png" alt="example">';
             document.getElementById('pt-imgReplace-4').innerHTML = '<img class="pt-maketini2-img" src="./img/pt-ex22.png" alt="example">';
+        }else if (document.URL.includes("interest")){
+                
+        }else if (document.URL.includes('circle')){
+            document.getElementById('cir-img').innerHTML = '<img src="./img/interesting/WEB-1 (4).png" id="i-img" alt="">';
         }else if (document.URL.includes("re")) {
             document.getElementById('re-img-1').innerHTML = '<img src="./img/Science Calc Info (2).png" alt="a parallel circuit" class="re-imgSmall">';
             document.getElementById('re-img-2').innerHTML = '<img src="./img/Science Calc Info (3).png" alt="Formula for parallel" class="re-imgSmall-2">';
@@ -1732,9 +1744,9 @@ if (document.URL.includes("pa")) {
             // st1 == step 1
         };
     };
-};
+} 
 
-if (document.URL.includes("qf")) {
+else if (document.URL.includes("qf")) {
     console.log("you are in the quadratic functions page. ");
     lightDarkCookie()
 
@@ -1777,9 +1789,9 @@ if (document.URL.includes("qf")) {
         document.getElementById("qf-2").innerHTML = (A+B+C);
 
     };
-};
+}
 
-if (document.URL.includes("qf2")) {
+else if (document.URL.includes("qf2")) {
     console.log("You are in the qf2 page.")
     lightDarkCookie()
 
@@ -1877,9 +1889,70 @@ if (document.URL.includes("qf2")) {
         console.log(x3);
         console.log(solve_y(a,b,c,x3));
     };
-};
+}
 
-if (document.URL.includes("re")) {
+else if (document.URL.includes('interest')) {
+    console.log("you are in the interest page")
+
+    function iInputs() {
+        let mode = document.getElementById('i-selectMode').value;
+        if (mode == '2') {
+            document.getElementById('i-inputs').innerHTML = '<input type="float" placeholder="r" id="i-in-1"><input type="float" placeholder="P" id="i-in-2"><input type="float" placeholder="FV" id="i-in-3"><input type="float" placeholder="k" id="i-in-4"><input type="float" placeholder="n" id="i-in-5">';
+        } else {
+            document.getElementById('i-inputs').innerHTML = '<input type="float" placeholder="r" id="i-in-1"><input type="float" placeholder="P" id="i-in-2"><input type="float" placeholder="FV" id="i-in-3"><input type="float" placeholder="k" id="i-in-4">';
+        }
+    }
+
+    function interest() {
+        let mode = document.getElementById("i-selectMode").value;
+        let r = document.getElementById('i-in-1').value;
+        let p = document.getElementById('i-in-2').value;
+        let fv = document.getElementById('i-in-3').value;
+        let t = document.getElementById('i-in-4').value;
+
+        outputs = [];
+
+        if (mode == '0') { // normal Interest
+            document.getElementById('i-ans').innerHTML = '<p>FV = <span id="ans-1"></span></p><p>r = <span id="ans-2"></span></p><p>P or PV = <span id="ans-3"></span></p><p>T = <span id="ans-4"></span></p>';
+            console.log('0');
+            i = p * (r/100) * t;
+            document.getElementById('ans-1').innerHTML = i;
+        } else if (mode == '1') { // depreciation 
+            document.getElementById('i-ans').innerHTML = '<p>FV = <span id="ans-1"></span></p><p>r = <span id="ans-2"></span></p><p>P or PV = <span id="ans-3"></span></p><p>T = <span id="ans-4"></span></p>';
+            console.log('1');
+            let n = document.getElementById('i-in-5').value;
+
+            i = p*(1-((r/100)/n))**(t*n) || p*(1-(r/100))**t;
+            document.getElementById('ans-1').innerHTML = i;
+        } else if (mode == '2') { // compound interest
+            document.getElementById('i-ans').innerHTML = '<p>FV = <span id="ans-1"></span></p><p>r = <span id="ans-2"></span></p><p>P or PV = <span id="ans-3"></span></p><p>T = <span id="ans-4"></span></p>';
+            console.log('2');
+            let n = document.getElementById('i-in-5').value;
+
+            i = p*(1+((r/100)/n))**(t*n) || p*(1+(r/100))**t;
+            document.getElementById('ans-1').innerHTML = i;
+        } else if (mode == '3') { // year by year depreciation 
+            console.log('3');
+            
+            for (i = 1; i <= t; i++) {
+                console.log(i)
+                
+                x = p*(1-r/100)**(i);
+
+                output = '<p> Year '+i+': '+x+'</p>';
+                console.log('output: '+output)
+                outputs.push(output)
+                document.getElementById('i-ans').innerHTML = '';
+            }
+            console.log('outputs'+outputs)
+            out = outputs.join(' ');
+            }
+            console.log('out: '+out)
+        document.getElementById('i-ans-2').innerHTML = out;
+    }
+}
+
+else if (document.URL.includes("re")) {
 
     function displayOutput() {
         let element = document.getElementById("re-range").value;
@@ -1940,9 +2013,9 @@ if (document.URL.includes("re")) {
     
     console.log("you are in the re page")
     lightDarkCookie()
-};
+}
 
-if (document.URL.includes("trithingys")) {
+else if (document.URL.includes("trithingys")) {
     console.log("You are in the triangle formulas page.")
     lightDarkCookie()
 
@@ -2009,27 +2082,25 @@ if (document.URL.includes("trithingys")) {
         };
     };
 
-};
-
-//! function for both fraction and linear programs.
-
-function decimaltoFraction(n) {
-    let num = n+"";
-    if (num == '0') {
-      ans = '0/0'
-    }
-    if (num.includes("0.")) {
-      ans = (n * 10)+'/10';
-    } else if (num.includes("0.0")) {
-      ans = (n * 100)+'/100';
-    } else if (num.includes("0.00")) {
-      ans = (n * 1000)+'/1000';
-    }
-    return ans;
 }
 
+else if (document.URL.includes("fractions")) {
 
-if (document.URL.includes("fractions")) {
+    function decimaltoFraction(n) {
+        let num = n+"";
+        if (num == '0') {
+            ans = '0/0'
+        }
+        if (num.includes("0.")) {
+          ans = (n * 10)+'/10';
+        } else if (num.includes("0.0")) {
+          ans = (n * 100)+'/100';
+        } else if (num.includes("0.00")) {
+          ans = (n * 1000)+'/1000';
+        }
+        return ans;
+    }
+
     console.log("you are in the fractions page!");
     lightDarkCookie();
 
@@ -2104,9 +2175,24 @@ if (document.URL.includes("fractions")) {
 
         };
     };
-};
+}
 
-if (document.URL.includes("linear")) {
+else if (document.URL.includes("linear")) {
+    function decimaltoFraction(n) {
+        let num = n+"";
+        if (num == '0') {
+            ans = '0/0'
+        }
+        if (num.includes("0.")) {
+          ans = (n * 10)+'/10';
+        } else if (num.includes("0.0")) {
+          ans = (n * 100)+'/100';
+        } else if (num.includes("0.00")) {
+          ans = (n * 1000)+'/1000';
+        }
+        return ans;
+    }
+    
     console.log("you are in the linear functions program.");
     lightDarkCookie();
 
@@ -2314,7 +2400,7 @@ if (document.URL.includes("linear")) {
       }
 }
 
-if (document.URL.includes('fq')) {
+else if (document.URL.includes('fq')) {
     lightDarkCookie()
     function getfactors(A, B, C) {
         let quad = ''+A+'x^2+'+B+'x+'+C+'=0';
@@ -2513,7 +2599,8 @@ if (document.URL.includes('fq')) {
 
     }
 }
-if (document.URL.includes('pytheorem')) {
+
+else if (document.URL.includes('pytheorem')) {
     console.log('you are in the Pythagorean Theorem page.');
 
     document.getElementById('hidee').style.visibility = 'hidden';
@@ -2582,7 +2669,7 @@ if (document.URL.includes('pytheorem')) {
     }
 }
 
-if (document.URL.includes('trigono')) {
+else if (document.URL.includes('trigono')) {
     lightDarkCookie()
 
     function simplify(str) {
@@ -2878,7 +2965,77 @@ if (document.URL.includes('trigono')) {
                 }
             }
         }
-        // awd
 
     }
+}
+
+else if (document.URL.includes('circle')) {
+    lightDarkCookie()
+    console.log("you are in the circles and stuff page");
+
+    function CRinputs() {
+        mode = document.getElementById('cr-selectMode').value
+        if (mode == '0') {
+            document.getElementById('cr-ans').innerHTML = '<p>c = <span id="ans-1"></span></p><p>A = <span id="ans-2"></span></p>'
+            document.getElementById('cr-inputs').innerHTML = '<input type="float" placeholder="Radius" id="CR-1"><input type="float" placeholder="Diameter" id="CR-2">'
+        } else if (mode == '1') {
+            document.getElementById('cr-ans').innerHTML = '<p>l = <span id="ans-1"></span></p><p>A = <span id="ans-2"></span></p><p>P = <span id="ans-3"></span></p>'
+            document.getElementById('cr-inputs').innerHTML = '<input type="float" placeholder="Center Angle" id="CR-1"><input type="float" placeholder="Radius" id="CR-2">'
+        } else if (mode == '2') {
+            document.getElementById('cr-ans').innerHTML = '<p>θ = <span id="ans-1"></span></p>'
+            document.getElementById('cr-inputs').innerHTML = '<input type="float" placeholder="Arc Length" id="CR-1"><input type="float" placeholder="Area" id="CR-2"><input type="float" placeholder="Radius" id="CR-3">'
+        } else if (mode == '3') {
+            document.getElementById('cr-ans').innerHTML = '<p>r = <span id="ans-1"></span></p>'
+            document.getElementById('cr-inputs').innerHTML = '<input type="float" placeholder="Arc Length" id="CR-1"><input type="float" placeholder="Area" id="CR-2"><input type="float" placeholder="Center Angle" id="CR-3">'
+        }
+    }
+
+    function curcles() {
+        mode = document.getElementById('cr-selectMode').value
+
+        if (mode == '0') {
+            r = document.getElementById('CR-1').value || document.getElementById('CR-2').value / 2
+            c = (2*Math.PI*r)
+            document.getElementById('ans-1').innerHTML = c
+            a = (Math.PI*r**2)
+            document.getElementById('ans-2').innerHTML = a
+
+        } else if (mode == '1') {
+            r = document.getElementById('CR-2').value
+            O = document.getElementById('CR-1').value
+
+            l = (O/360)*(2*Math.PI*r)
+            document.getElementById('ans-1').innerHTML = l
+            a = (O/360)*(Math.PI*r**2)
+            document.getElementById('ans-2').innerHTML = a
+            p = 2*r+l
+            document.getElementById('ans-3').innerHTML = p
+
+        } else if (mode == '2') {
+            a = document.getElementById('CR-2').value || 0
+            l = document.getElementById('CR-1').value || 0
+            r = document.getElementById('CR-3').value || 0
+
+            if (a == 0) {
+                O = (l*360)/(2*Math.PI*r)
+            } else {
+                O = (a*360)/(Math.PI*r**2)
+            }
+            document.getElementById('ans-1').innerHTML = O
+
+        } else if (mode == '3') {
+            a = document.getElementById('CR-2').value || 0
+            l = document.getElementById('CR-1').value || 0
+            O = document.getElementById('CR-3').value || 0
+
+            if (a == 0) {
+                r = (l*360)/(O*2*Math.PI)
+                console.log(r)
+            } else {
+                r = (a*360)/(Math.PI*O)
+            }
+            document.getElementById('ans-1').innerHTML = r
+        }
+    }
+
 }
