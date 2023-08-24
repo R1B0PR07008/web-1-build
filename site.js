@@ -185,6 +185,30 @@ function phoneMode(p) {
                 element(26).style.minHeight = "600px"
                 element(27).style.width = "35%"
             }
+        } else if (p === 'in') {
+            nav()
+            if (window.innerWidth <= 910) {
+                console.log(window.innerWidth)
+                console.log("Phone Screen")
+                elementWidth(26, 35, 99)
+            }
+            else {
+                element(26).style.width = "60%"
+                element(26).style.minHeight = "600px"
+                element(27).style.width = "35%"
+            }
+        }else if (p === 'ci') {
+            nav()
+            if (window.innerWidth <= 910) {
+                console.log(window.innerWidth)
+                console.log("Phone Screen")
+                elementWidth(26, 35, 99)
+            }
+            else {
+                element(26).style.width = "60%"
+                element(26).style.minHeight = "600px"
+                element(27).style.width = "35%"
+            }
         }
 };
 
