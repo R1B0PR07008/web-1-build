@@ -1892,6 +1892,7 @@ else if (document.URL.includes("qf2")) {
 }
 
 else if (document.URL.includes('interest')) {
+    lightDarkCookie()
     console.log("you are in the interest page")
 
     function iInputs() {
