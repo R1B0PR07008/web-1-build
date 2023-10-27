@@ -3101,7 +3101,7 @@ else if (document.URL.includes('22')) {
             n2_ = n2/2;
             n3_ = 0;
 
-            if (!squared_nums.includes(n2)) {
+            if (!squared_nums.includes(n3)) {
                 if (n3 < 0) {
                     if (n2 < 0) {
                         console.log("wDA DADW")
@@ -3117,12 +3117,14 @@ else if (document.URL.includes('22')) {
                         n4 = Math.abs(n3 - n2_**2);
                     }
                 }
+            } else {
+                console.log("DJOEIJDAOIDJ")
             }
 
             console.log(n4 + ' , ' + n2_**2);
 
             if (n3 > n2_**2) {
-                n3_ = Math.sqrt(n3-n4);
+                n3_ = Math.sqrt(Math.abs(n3-n4));
                 console.log(n2_ + ' ,, '+ n3_)
                 if (Math.abs(n2_) == Math.abs(n3_)) {
                     if (n2 > 0) {
@@ -3135,7 +3137,7 @@ else if (document.URL.includes('22')) {
                     console.log('SomE THinG BroKE :(: exit code 1');
                 }
             } else {
-                n3_ = Math.sqrt(n3+n4);
+                n3_ = Math.sqrt(Math.abs(n3+n4));
                 console.log(n2_ + ' , '+ n3_)
                 if (Math.abs(n2_) == Math.abs(n3_)) {
                     if (n2 > 0) {
@@ -3150,7 +3152,7 @@ else if (document.URL.includes('22')) {
             }
         } else if (C2_mode == '2') {
             
-        } 
+        }  
     }
 
     // function ChangeInputsC2() {
