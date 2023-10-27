@@ -702,6 +702,40 @@ p.ans-footer {
     width: 250px;
 }
 
+/** Complete Squares page css  */
+
+#C2-mode {
+    margin-left: 2%;
+    vertical-align: middle;
+    width: 1cm;
+    height: 20px;
+    cursor: grab;
+    border-width: 0px;
+    background-color: #FFF000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#C2-mode::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 20px;
+    width: 0.5cm;
+    border-radius: 8px;
+    background: #cacaca;
+    cursor: pointer;
+}
+
+#C2-mode::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 20px;
+    color: #cacaca;
+}
+
+#C2-mode:focus {
+    outline: none;
+}
 
 /* Dropdown css */
 

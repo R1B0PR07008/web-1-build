@@ -3064,3 +3064,100 @@ else if (document.URL.includes('circle')) {
     }
 
 }
+
+else if (document.URL.includes('22')) {
+    function C2() {
+        C2_mode = document.getElementById('C2-mode').value || '1'
+        if (C2_mode == '1') {
+
+            n1 = document.getElementById('C2-input-1').value*1 || 'x';
+            n2 = document.getElementById('C2-input-2').value*1;
+            n3 = document.getElementById('C2-input-3').value*1;
+            n4 = 0 || 0;
+
+            console.log(n1)
+            console.log(n2)
+            console.log(n3)
+
+            document.getElementById('C2-dem-1').innerHTML = n1
+            document.getElementById('C2-dem-2').innerHTML = n2
+            if (n3 > 0) {
+                document.getElementById('C2-dem-3').innerHTML = "+"+n3
+            }else {
+                document.getElementById('C2-dem-3').innerHTML = n3
+            }
+
+            squared_nums = []
+            squared_nums_ = []
+
+            for (i=1;i<100;i++) {
+                squared_nums.push((i**2));
+                squared_nums_.push(((i**2)*-1));
+            }
+            console.log(squared_nums)
+            console.log(squared_nums_)
+
+            n2_ = n2/2;
+            n3_ = 0;
+
+            if (!squared_nums.includes(n2)) {
+                if (n3 < 0) {
+                    if (n2 < 0) {
+                        console.log("wDA DADW")
+                        n4 = Math.abs(n3 + n2_**2);
+                    } else {
+                        n4 = Math.abs(n3 + n2_**2);
+                    }
+                } else {
+                    if (n2 < 0) {
+                        console.log("wDADADW")
+                        n4 = Math.abs(n3 - n2_**2);
+                    } else {
+                        n4 = Math.abs(n3 - n2_**2);
+                    }
+                }
+            }
+
+            console.log(n4 + ' , ' + n2_**2);
+
+            if (n3 > n2_**2) {
+                n3_ = Math.sqrt(n3-n4);
+                console.log(n2_ + ' ,, '+ n3_)
+                if (Math.abs(n2_) == Math.abs(n3_)) {
+                    if (n2 > 0) {
+                        document.getElementById('C2-ans').innerHTML = '('+n1+'+'+n2_+')^2+'+n4;
+                    }else {
+                        document.getElementById('C2-ans').innerHTML = '('+n1+''+n2_+')^2+'+n4;
+                    }
+                }
+                else {
+                    console.log('SomE THinG BroKE :(: exit code 1');
+                }
+            } else {
+                n3_ = Math.sqrt(n3+n4);
+                console.log(n2_ + ' , '+ n3_)
+                if (Math.abs(n2_) == Math.abs(n3_)) {
+                    if (n2 > 0) {
+                        document.getElementById('C2-ans').innerHTML = '('+n1+'+'+n2_+')^2-'+n4;
+                    }else {
+                        document.getElementById('C2-ans').innerHTML = '('+n1+''+n2_+')^2-'+n4;
+                    }
+                }
+                else {
+                    console.log('SomE THinG BroKE :(: exit code 1');
+                }
+            }
+        } else if (C2_mode == '2') {
+            
+        } 
+    }
+
+    function ChangeInputsC2() {
+        C2_mode = document.getElementById('C2-mode').value || '1'
+        if (C2_mode == '1'){
+            document.getElementById('C2-inputChanger').innerHTML = '<input type="string" placeholder="x^2" name="function" id="C2-input-1"/><input type="number" placeholder="#x" name="function" id="C2-input-2"/><input type="number" placeholder="#^2" name="function" id="C2-input-3"/>'
+        } else if (C2_mode == '2') { 
+            document.getElementById('C2-inputChanger').innerHTML = '<input type="string" placeholder="x" name="function" id="C2-input-1"/><input type="number" placeholder="#" name="function" id="C2-input-2"/>'
+        } 
+    }
+}
