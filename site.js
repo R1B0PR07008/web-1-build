@@ -3068,7 +3068,7 @@ else if (document.URL.includes('circle')) {
 else if (document.URL.includes('22')) {
     function C2() {
         // C2_mode = document.getElementById('C2-mode').value || '1'
-        if (C2_mode == '1' || 1==1) {
+        if (1==1) {
 
             n1 = document.getElementById('C2-input-1').value*1 || 'x';
             n2 = document.getElementById('C2-input-2').value*1;
