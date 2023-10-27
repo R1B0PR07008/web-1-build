@@ -3067,7 +3067,7 @@ else if (document.URL.includes('circle')) {
 
 else if (document.URL.includes('22')) {
     function C2() {
-        C2_mode = document.getElementById('C2-mode').value || '1'
+        // C2_mode = document.getElementById('C2-mode').value || '1'
         if (C2_mode == '1') {
 
             n1 = document.getElementById('C2-input-1').value*1 || 'x';
@@ -3152,12 +3152,12 @@ else if (document.URL.includes('22')) {
         } 
     }
 
-    function ChangeInputsC2() {
-        C2_mode = document.getElementById('C2-mode').value || '1'
-        if (C2_mode == '1'){
-            document.getElementById('C2-inputChanger').innerHTML = '<input type="string" placeholder="x^2" name="function" id="C2-input-1"/><input type="number" placeholder="#x" name="function" id="C2-input-2"/><input type="number" placeholder="#^2" name="function" id="C2-input-3"/>'
-        } else if (C2_mode == '2') { 
-            document.getElementById('C2-inputChanger').innerHTML = '<input type="string" placeholder="x" name="function" id="C2-input-1"/><input type="number" placeholder="#" name="function" id="C2-input-2"/>'
-        } 
-    }
+    // function ChangeInputsC2() {
+    //     C2_mode = document.getElementById('C2-mode').value || '1'
+    //     if (C2_mode == '1'){
+    //         document.getElementById('C2-inputChanger').innerHTML = '<input type="string" placeholder="x^2" name="function" id="C2-input-1"/><input type="number" placeholder="#x" name="function" id="C2-input-2"/><input type="number" placeholder="#^2" name="function" id="C2-input-3"/>'
+    //     } else if (C2_mode == '2') { 
+    //         document.getElementById('C2-inputChanger').innerHTML = '<input type="string" placeholder="x" name="function" id="C2-input-1"/><input type="number" placeholder="#" name="function" id="C2-input-2"/>'
+    //     } 
+    // }
 }
