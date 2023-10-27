@@ -3125,6 +3125,9 @@ else if (document.URL.includes('22')) {
 
             if (n3 > n2_**2) {
                 n3_ = Math.sqrt(Math.abs(n3-n4));
+                if (n3 < 0) {
+                        n3_ = Math.sqrt(Math.abs(n3+n4));
+                }
                 console.log(n2_ + ' ,, '+ n3_)
                 if (Math.abs(n2_) == Math.abs(n3_)) {
                     if (n2 > 0) {
@@ -3138,6 +3141,9 @@ else if (document.URL.includes('22')) {
                 }
             } else {
                 n3_ = Math.sqrt(Math.abs(n3+n4));
+                if (n3 < 0) {
+                        n3_ = Math.sqrt(Math.abs(n3-n4));
+                }
                 console.log(n2_ + ' , '+ n3_)
                 if (Math.abs(n2_) == Math.abs(n3_)) {
                     if (n2 > 0) {
@@ -3149,8 +3155,7 @@ else if (document.URL.includes('22')) {
                 else {
                     console.log('SomE THinG BroKE :(: exit code 1');
                 }
-            }
-        } else if (C2_mode == '2') {
+            } if (C2_mode == '2') {
             
         }  
     }
