@@ -21,7 +21,7 @@ function element(n) {
 
 function nav() {
     if (window.innerWidth > 836) {
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a><a class="Program-link" href="/interest.html">Interest(BETA)</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" id="link-14" href="./pytheorem.html">Pythagorean Theorem</a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics </a><a class="Program-link" href="/pa.html">Pressure Program </a><a class="Program-link" href="/circle.html">Circles(r,d,etc...) </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="center , dropbtn" type="button">General Math</button><div class="dropdown-content"><a class="Program-link" href="./fractions.html">Fractions</a><a class="Program-link" href="/interest.html">Interest(BETA)</a><a class="Program-link" href="./Complete_22.html">Complete Squares</a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">General Formulas</button><div class="dropdown-content"><a class="Program-link" href="/re.html">RE </a><a class="Program-link" id="link-14" href="./pytheorem.html">Pythagorean Theorem</a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics </a><a class="Program-link" href="/pa.html">Pressure Program </a><a class="Program-link" href="/circle.html">Circles(r,d,etc...) </a></div></div><div class="dropdown"><button class="center , dropbtn" type="button">Triangle Formulas</button><div class="dropdown-content"><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "1.2em"
     }
     else if (window.innerWidth <= 836) {
@@ -36,7 +36,7 @@ function nav() {
             img = 'white-hamburger-menu-icon-24.jpg'
         }
 
-        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1 class="balck">General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><a class="Program-link" href="/interest.html">Interest(BETA)</a><h1 class="balck">General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" id="link-14" href="./pytheorem.html">Pythagorean Theorem</a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics</a><a class="Program-link" href="/pa.html">Pressure Program </a><a class="Program-link" href="/circle.html">Circles(r,d,etc...) </a><h1 class="balck">Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
+        document.getElementById("nav").innerHTML = '<div class="dropdown"><button class="dropbtn" type="button"><img class="center" src="./img/'+img+'" alt="Menu Button"></button><div class="dropdown-content"><h1 class="balck">General Math</h1><a class="Program-link" href="/fractions.html">Fractions</a><a class="Program-link" href="/interest.html">Interest(BETA)</a><a class="Program-link" href="./Complete_22.html">Complete Squares</a><h1 class="balck">General Formulas</h1><a class="Program-link" href="/re.html">RE </a><a class="Program-link" id="link-14" href="./pytheorem.html">Pythagorean Theorem</a><a class="Program-link" href="./Linear.html">Linear functions</a><a class="Program-link" href="/qf.html">Quadratic Functions </a><a class="Program-link" href="/qf2.html">Quadratic Functions | Graphing </a><a class="Program-link" href="/fq.html">Factoring Quadratics</a><a class="Program-link" href="/pa.html">Pressure Program </a><a class="Program-link" href="/circle.html">Circles(r,d,etc...) </a><h1 class="balck">Triangle formulas</h1><a class="Program-link" href="./trithingys.html">Triangle formulas</a></div></div>'
         document.getElementById("nav-text").style.fontSize = "2em"
         document.getElementById('lightdark-floatRight').style.marginTop = '5.5mm';
     }
@@ -280,7 +280,7 @@ function lightDarkMode() {
     if (elementValue === "1") { // light mode
 
         if (document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 16, "#000000");
+            elementProgramLink(1, 17, "#000000");
             console.log("light mode selected");
             document.getElementById("_0").style.backgroundColor = "#FFFFFF";
             document.getElementById("_0").style.color = "#000000";
@@ -363,7 +363,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 16, "#cacaca");
+            elementProgramLink(1, 17, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -449,7 +449,7 @@ function lightDarkCookie() {
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
         if (document.URL.includes("ome")|| document.URL === 'https://science-calc.com/') {
-            elementProgramLink(1, 16, "#cacaca");
+            elementProgramLink(1, 17, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
             ansBlock.style.backgroundColor = "#e63743";
@@ -3066,6 +3066,7 @@ else if (document.URL.includes('circle')) {
 }
 
 else if (document.URL.includes('22')) {
+    lightDarkCookie();
     function C2() {
         // C2_mode = document.getElementById('C2-mode').value || '1'
         if (1==1) {
