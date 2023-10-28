@@ -3168,4 +3168,4 @@ else if (document.URL.includes('22')) {
     //         document.getElementById('C2-inputChanger').innerHTML = '<input type="string" placeholder="x" name="function" id="C2-input-1"/><input type="number" placeholder="#" name="function" id="C2-input-2"/>'
     //     } 
     // }
-}
+    }}
