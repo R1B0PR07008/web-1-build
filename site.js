@@ -3067,15 +3067,44 @@ else if (document.URL.includes('circle')) {
 
 else if (document.URL.includes('22')) {
     lightDarkCookie();
+
+    function SeparateNumbers(n) {
+        // Using match with regEx
+        let matches = n.match(/(\d+)/);
+        if (matches) {
+            console.log(matches[0]);
+            return matches[0]
+        }
+    }
+
     function C2() {
         // C2_mode = document.getElementById('C2-mode').value || '1'
         if (1==1) {
 
-            n1 = document.getElementById('C2-input-1').value*1 || 'x';
-            n2 = document.getElementById('C2-input-2').value*1;
-            n3 = document.getElementById('C2-input-3').value*1;
-            n4 = 0 || 0;
+            let n1 = document.getElementById('C2-input-1').value+'';
+            let n2 = document.getElementById('C2-input-2').value*1;
+            let n3 = document.getElementById('C2-input-3').value*1;
+            let n4 = 0 || 0;
+            let n4_status = '+';
+            let n1_ = 0
 
+            if (n1.length > 1) {
+                console.log(n1)
+                n1_ = SeparateNumbers(n1)
+                console.log(`n1_ = ${n1_}`)
+
+                n2 = n2/(n1_*1)
+                console.log(`n2 = ${n2}`)
+                n3 = n3/(n1_*1)
+                console.log(`n3 = ${n3}`)
+
+                n1 = n1.replace(n1_,'')
+                
+            } else {
+                n1_ = n1
+            }
+
+            
             console.log(n1)
             console.log(n2)
             console.log(n3)
@@ -3088,8 +3117,8 @@ else if (document.URL.includes('22')) {
                 document.getElementById('C2-dem-3').innerHTML = n3
             }
 
-            squared_nums = []
-            squared_nums_ = []
+            let squared_nums = []
+            let squared_nums_ = []
 
             for (i=1;i<100;i++) {
                 squared_nums.push((i**2));
@@ -3098,27 +3127,24 @@ else if (document.URL.includes('22')) {
             console.log(squared_nums)
             console.log(squared_nums_)
 
-            n2_ = n2/2;
-            n3_ = 0;
+            let n2_ = n2/2;
+            let n3_ = 0;
 
-            if (!squared_nums.includes(n3)) {
-                if (n3 < 0) {
-                    if (n2 < 0) {
-                        console.log("wDA DADW")
-                        n4 = Math.abs(n3 + n2_**2);
-                    } else {
-                        n4 = Math.abs(n3 + n2_**2);
-                    }
+            
+            if (n3 < 0) {
+                if (n2 < 0) {
+                    console.log("wDA DADW")
+                    n4 = Math.abs(n3 + n2_**2);
                 } else {
-                    if (n2 < 0) {
-                        console.log("wDADADW")
-                        n4 = Math.abs(n3 - n2_**2);
-                    } else {
-                        n4 = Math.abs(n3 - n2_**2);
-                    }
+                    n4 = Math.abs(n3 + n2_**2);
                 }
             } else {
-                console.log("DJOEIJDAOIDJ")
+                if (n2 < 0) {
+                    console.log("wDADADW")
+                    n4 = Math.abs(n3 - n2_**2);
+                } else {
+                    n4 = Math.abs(n3 - n2_**2);
+                }
             }
 
             console.log(n4 + ' , ' + n2_**2);
@@ -3148,16 +3174,52 @@ else if (document.URL.includes('22')) {
                 if (Math.abs(n2_) == Math.abs(n3_)) {
                     if (n2 > 0) {
                         document.getElementById('C2-ans').innerHTML = '('+n1+'+'+n2_+')^2-'+n4;
+                        n4_status = '-'
                     }else {
                         document.getElementById('C2-ans').innerHTML = '('+n1+''+n2_+')^2-'+n4;
+                        n4_status = '-'
                     }
                 }
                 else {
                     console.log('SomE THinG BroKE :(: exit code 1');
                 }
-            } if (C2_mode == '2') {
-            
-        }  
+
+                //* code to get the two zeros, I think
+
+                let x1 = 'Can\'t be done.' // complete answers
+                let x2 = 'Can\'t be done.'
+                let x1_ = 'Can\'t be done.' // incomplete answers
+                let x2_ = 'Can\'t be done.'
+
+                if (n2 > 0 ) {
+                    if (n4_status == '-') {
+                        console.log(' d2qdqakm')
+                        x1_ = 'x='+n2_+'+√ '+n4
+                        x2_ = 'x='+n2_+'-√ '+n4
+                        x1 = n2_+Math.sqrt(n4)
+                        x2 = n2_-Math.sqrt(n4)
+                    } else {
+                        console.log(' d2qdqakm dawd1122')
+                    }
+                } else if (n2 < 0) {
+                    if (n4_status == '-') {
+                        console.log('apowdj    ddawd')
+                        x1_ = 'x='+n2_+'+√ '+n4
+                        x2_ = 'x='+n2_+'-√ '+n4
+                        x1 = -n2_+Math.sqrt(n4)
+                        x2 = -n2_-Math.sqrt(n4)
+                    } else {
+                        console.log('apowdj    ddawd wdaw1223')
+                    }
+                }
+                
+                // document.getElementById('C2-ans-2').innerHTML = x1
+                // document.getElementById('C2-ans-3').innerHTML = x2
+                // document.getElementById('C2-ans-2-2').innerHTML = x1_
+                // document.getElementById('C2-ans-3-2').innerHTML = x2_
+
+                console.log(x1+ ' , x2: ' +x2+ ' , x1_: ' +x1_+ ' , x2_: ' +x2_)
+            } 
     }
 
     // function ChangeInputsC2() {
@@ -3168,4 +3230,4 @@ else if (document.URL.includes('22')) {
     //         document.getElementById('C2-inputChanger').innerHTML = '<input type="string" placeholder="x" name="function" id="C2-input-1"/><input type="number" placeholder="#" name="function" id="C2-input-2"/>'
     //     } 
     // }
-    }}
+}}
