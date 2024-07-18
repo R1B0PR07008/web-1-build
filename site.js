@@ -1977,6 +1977,75 @@ else if (document.URL.includes('interest')) {
     }
 }
 
+else if (document.URL.includes('pytheorem')) {
+    console.log('you are in the Pythagorean Theorem page.');
+
+    document.getElementById('hidee').style.visibility = 'hidden';
+    document.getElementById('hidee?').style.visibility = 'visible';
+
+    function Pythagorean() {
+        document.getElementById('hidee').style.visibility = 'visible';
+        document.getElementById('hidee?').style.visibility = 'hidden';
+
+        let A = document.getElementById('PT-A').value || '0';
+        let B = document.getElementById('PT-B').value || '0';
+        let C = document.getElementById('PT-C').value || '0';
+
+        if (A === '0') {
+            let c = C**2
+            let b = B**2
+
+
+            let st1 = c - b;
+            let ans = Math.sqrt(st1);
+
+            console.log('ans '+ans)
+
+            document.getElementById('Lettar').innerHTML = 'A';
+            document.getElementById('PT-ans').innerHTML = ans;
+        }else if (B === '0') {
+            let c = C**2
+            let b = A**2
+            console.log(c)
+            console.log(b)
+
+
+            let st1 = c - b;
+            console.log(st1)
+            let ans = Math.sqrt(st1);
+
+            console.log('ans '+ans)
+
+            document.getElementById('Lettar').innerHTML = 'B';
+            document.getElementById('PT-ans').innerHTML = ans;
+        }else if (C === '0') {
+            let c = B**2
+            let b = A**2
+
+
+            let st1 = c + b;
+            let ans = Math.sqrt(st1);
+
+            console.log('ans '+ans)
+
+            document.getElementById('Lettar').innerHTML = 'C';
+            document.getElementById('PT-ans').innerHTML = ans;
+        }else {
+            if (A**2 + B**2 === C**2) {
+                document.getElementById('ansgle?').innerHTML = ''
+                document.getElementById('hidee').style.visibility = 'hidden';
+                document.getElementById('hidee2').style.visibility = 'visible';
+                document.getElementById('ansgle?').innerHTML = 'Right angle'
+            } else {
+                document.getElementById('ansgle?').innerHTML = ''
+                document.getElementById('hidee').style.visibility = 'hidden';
+                document.getElementById('hidee2').style.visibility = 'visible';
+                document.getElementById('ansgle?').innerHTML = 'Not Right angle'
+            }
+        }
+    }
+}
+
 else if (document.URL.includes("re")) {
 
     function displayOutput() {
@@ -2622,75 +2691,6 @@ else if (document.URL.includes('fq')) {
             combine()
         }
 
-    }
-}
-
-else if (document.URL.includes('pytheorem')) {
-    console.log('you are in the Pythagorean Theorem page.');
-
-    document.getElementById('hidee').style.visibility = 'hidden';
-    document.getElementById('hidee?').style.visibility = 'visible';
-
-    function Pythagorean() {
-        document.getElementById('hidee').style.visibility = 'visible';
-        document.getElementById('hidee?').style.visibility = 'hidden';
-
-        let A = document.getElementById('PT-A').value || '0';
-        let B = document.getElementById('PT-B').value || '0';
-        let C = document.getElementById('PT-C').value || '0';
-
-        if (A === '0') {
-            let c = C**2
-            let b = B**2
-
-
-            let st1 = c - b;
-            let ans = Math.sqrt(st1);
-
-            console.log('ans '+ans)
-
-            document.getElementById('Lettar').innerHTML = 'A';
-            document.getElementById('PT-ans').innerHTML = ans;
-        }else if (B === '0') {
-            let c = C**2
-            let b = A**2
-            console.log(c)
-            console.log(b)
-
-
-            let st1 = c - b;
-            console.log(st1)
-            let ans = Math.sqrt(st1);
-
-            console.log('ans '+ans)
-
-            document.getElementById('Lettar').innerHTML = 'B';
-            document.getElementById('PT-ans').innerHTML = ans;
-        }else if (C === '0') {
-            let c = B**2
-            let b = A**2
-
-
-            let st1 = c + b;
-            let ans = Math.sqrt(st1);
-
-            console.log('ans '+ans)
-
-            document.getElementById('Lettar').innerHTML = 'C';
-            document.getElementById('PT-ans').innerHTML = ans;
-        }else {
-            if (A**2 + B**2 === C**2) {
-                document.getElementById('ansgle?').innerHTML = ''
-                document.getElementById('hidee').style.visibility = 'hidden';
-                document.getElementById('hidee2').style.visibility = 'visible';
-                document.getElementById('ansgle?').innerHTML = 'Right angle'
-            } else {
-                document.getElementById('ansgle?').innerHTML = ''
-                document.getElementById('hidee').style.visibility = 'hidden';
-                document.getElementById('hidee2').style.visibility = 'visible';
-                document.getElementById('ansgle?').innerHTML = 'Not Right angle'
-            }
-        }
     }
 }
 
