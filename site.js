@@ -1666,7 +1666,7 @@ function Liquids() {
     };
 };
 
-if (document.URL.includes("ome") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/' || document.URL.includes('https://science-calc.netlify.app/' || document.URL === 'https://flourishing-bubblegum-5c730a.netlify.app')) {
+if (document.URL.includes("ome") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/' || document.URL ==('https://science-calc.netlify.app/')|| document.URL === 'https://flourishing-bubblegum-5c730a.netlify.app') {
     lightDarkCookie();
     lightDarkMode();
     phoneMode('h');
