@@ -1666,7 +1666,7 @@ function Liquids() {
     };
 };
 
-if (document.URL.includes("ome") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/') {
+if (document.URL.includes("ome") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/' || document.URL.includes('https://science-calc.netlify.app/')) {
     lightDarkCookie();
     lightDarkMode();
     phoneMode('h');
