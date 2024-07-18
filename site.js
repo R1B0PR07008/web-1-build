@@ -362,7 +362,7 @@ function lightDarkMode() {
         document.getElementById("lightDarkSelector-text").innerHTML = 'Dark Mode.'
         document.getElementById("lightDarkSelector-text").style.color = '#cacaca'
 
-        if (document.URL.includes("ome") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/' || document.URL.includes('science-calc.netlify.app/')|| document.URL === 'https://flourishing-bubblegum-5c730a.netlify.app') {
+        if (document.URL.includes("ome") || document.URL.includes("ome") || document.URL === 'https://science-calc.com/' || document.URL === 'science-calc.netlify.app/' || document.URL === 'https://flourishing-bubblegum-5c730a.netlify.app') {
             elementProgramLink(1, 17, "#cacaca");
             document.getElementById("_0").style.backgroundColor = "#020206";
             document.getElementById("_0").style.color = "#cacaca";
