@@ -3231,3 +3231,22 @@ else if (document.URL.includes('22')) {
     //     } 
     // }
 }}
+
+else if (document.URL.includes('amortization')) {
+    function love() {
+        let n = document.getElementById('love-N').value || 0
+        let i = document.getElementById('love-I').value || 0
+        let pv = document.getElementById('love-PV').value || 0
+        let pmt = document.getElementById('love-PMT').value || 0
+        let fv = document.getElementById('love-FV').value || 0
+        let ppy = document.getElementById('love-PPy').value || 0
+        let cpy = document.getElementById('love-CPy').value || 0
+        let pmt_at = document.getElementById('love-PMT_at').value || 0
+
+        console.log(n)
+
+        document.getElementById('love-ans-N').innerHTML = n
+
+        
+    }
+}

@@ -183,7 +183,7 @@
     vertical-align: top;
 }
 
-/* *Other Stuff */
+/* * STANDARDS Stuff */
 
 input {
     margin-left: 0.5%;
@@ -737,7 +737,62 @@ p.ans-footer {
     outline: none;
 }
 
-/* Dropdown css */
+/** Love (Amortization) Program  */
+
+#love-div1-inputs {
+    width: 30%;
+    border-color: #FFF000;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    margin: 1%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#love-div2-outputs {
+    width: 64%;
+    background-color: #FFF000;
+    height: 300px;
+    margin: 1%;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Love-input {
+    margin-top: 0.5mm; 
+    margin-bottom: 0.5mm; 
+    margin-left: 6%; 
+    margin-right: 5%; 
+    width: 85%;
+}
+
+.love-btn {
+    margin-top: 0.5mm; 
+    margin-left: 6%; 
+    margin-right: 5%; 
+    height: 30px;
+    border-radius: 1.5mm;
+    background-color: #363636;
+    color: #cacaca;
+    border-style: none;
+    font-size: larger;
+    font-weight: 600;
+    min-width: 100px;
+    font-family: 'Poppins';
+    margin-bottom: 5mm;
+}
+
+.love-h2 {
+    margin-left: 6%
+}
+
+#love-N {
+    margin-top: 2mm;
+}
+
+/** Dropdown css */
 
 .balck {
     color: #000000;
